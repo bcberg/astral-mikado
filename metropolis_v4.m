@@ -35,8 +35,8 @@ maxConvChecks = input('Max number of convergence checks: ');
 %% Run Metropolis
 
 monitor = true;
-[E, convergedE, state] = metropolisMikado(nodes, springs, springCatalog,...
-    totForce, kbT, springK, maxConvChecks, monitor);
+% [E, convergedE, state] = metropolisMikado(nodes, springs, springCatalog,...
+%    totForce, kbT, springK, maxConvChecks, monitor);
 
 directory = ['smallnet1.25_f',num2str(totForce)];
 mkdir(directory)
