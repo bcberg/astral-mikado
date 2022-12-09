@@ -29,19 +29,24 @@ useFraction = sum(springs(:,4)) / (Nstick * l);
 
 %% Run Metropolis for many forces
 
-forcesweep = [0, logspace(-1, 1, 9)];
-for idx = 1:length(forcesweep)
+forcesweep = [0, logspace(-1, 1, 7)];
+save([directory,'/netStats.mat'])
+parfor idx = 1:length(forcesweep)
     totForce = forcesweep(idx);
     kbT = 0.5;
     springK = 1;
     [convE, endState] = metropolisMikado(nodes,springs,catalog, ...
         totForce, kbT, springK, maxConvChecks, directory);
-    downsampleFactor_conv = round(length(convE) / 1e5);
-    convE = downsample(convE, downsampleFactor_conv);
     subdirectory = [directory,'/f',num2str(totForce)];
-    save([subdirectory,'/workspace.mat'])
+    filename = [subdirectory,'/endData.mat'];
+    parsave(filename, convE, endState);
 end
 
+%% Saving function
+
+function parsave(filename, convE, endState)
+    save(filename, 'convE', 'endState')
+end
 %% Post-analysis
 
 % subdirectory = [directory,'/f',num2str(totForce)];

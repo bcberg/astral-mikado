@@ -11,20 +11,24 @@ ntCheck = 5e5;
 ntAdmit = 2.5e4;
 epsilonBulk = 1;
 epsilonTop = 1;
-E = zeros(3*ntCheck,1);
+
+% E = zeros(3*ntCheck,1);
+% idx = 1;    % separate index for energy vector
+E = 0;
 converged = false;
-downsampleFactor = 1e3;
 nt = 1;
-idx = 1;    % separate index for energy vector
+downsampleFactor = 2.5e3;
+bytesPerDouble = 8;
+
 numAcceptsBulk = 0;
 numAcceptsTop = 0;
 numVisitsTop = 0;
 
 subdirectory = [directory,'/f',num2str(totForce)];
 mkdir(subdirectory);
-filename = [subdirectory,'/energyLog.txt'];
+filename = [subdirectory,'/energyLog.bin'];
 fileID = fopen(filename,'w');
-fprintf(fileID,'0\n');
+fwrite(fileID,E,'double');
 fclose(fileID);
 fileID = fopen(filename,'a');
 frame = 1;
@@ -46,11 +50,13 @@ while ~converged && checksCompleted < maxConvChecks
             springCatalog, force, springK);
         if rand < exp(-deltaE/kbT)
             state(alteredNode,1:2) = newPosition;
-            E(idx+1) = E(idx) + deltaE;
+            % E(idx+1) = E(idx) + deltaE;
+            E = E + deltaE;
             numAcceptsTop = numAcceptsTop + 1;
-        else
+%         else
             % do not accept the perturbation (i.e., don't move the node)
-            E(idx+1) = E(idx);
+            % E(idx+1) = E(idx);
+            % E = E; (don't need to 'do nothing')
         end
     else
         newPosition = state(alteredNode,1:2) + epsilonBulk * (2*rand(1,2) - 1);
@@ -58,16 +64,17 @@ while ~converged && checksCompleted < maxConvChecks
             springCatalog, force, springK);
         if rand < exp(-deltaE/kbT)
             state(alteredNode,1:2) = newPosition;
-            E(idx+1) = E(idx) + deltaE;
+            % E(idx+1) = E(idx) + deltaE;
+            E = E + deltaE;
             numAcceptsBulk = numAcceptsBulk + 1;
-        else
+%         else
             % do not accept the perturbation (i.e., don't move the node)
-            E(idx+1) = E(idx);
+            % E(idx+1) = E(idx);
         end
     end
 
     % record energy value
-    fprintf(fileID,'%f\n',E(idx+1));
+    fwrite(fileID,E,'double');
 
     % snapshot recordings
     if mod(nt,1e7) == 0
@@ -105,11 +112,20 @@ while ~converged && checksCompleted < maxConvChecks
 
     % convergence check
     if nt == 3 * ntCheck
+        fclose('all');
         if checksCompleted == 0
             ksstat = 1; % automatically fail first check
         else
-            E1 = downsample(E(1:ntCheck),downsampleFactor);
-            E2 = downsample(E(ntCheck + 1 : end),downsampleFactor);
+            fileID = fopen(filename,'r');
+            whereToRead = bytesPerDouble * ntCheck;
+            fseek(fileID, whereToRead, 'bof');
+            skip = bytesPerDouble * (downsampleFactor - 1); % read an element at multiples of 'downsampleFactor'
+            twoThirdsE = fread(fileID,'double',skip);
+            fclose(fileID);
+
+            midpt = floor(length(twoThirdsE)/2);
+            E1 = twoThirdsE(1:midpt);
+            E2 = twoThirdsE(midpt+1:end);
             [~,~,ksstat] = kstest2(E1,E2);
         end
         
@@ -117,20 +133,26 @@ while ~converged && checksCompleted < maxConvChecks
             % if null hypothesis that E1 and E2 are same is rejected
             ntCheck = 3 * ntCheck;
             downsampleFactor = 3 * downsampleFactor;
-            % toss first third of E to save memory
-            lastE = E(idx + 1);
-            E = zeros(2*ntCheck,1);
-            idx = 0;
-            E(idx+1) = lastE;
+%           all of this is unnecessary, no longer storing E in memory
+%             % toss first third of E to save memory
+%             E = E(idx + 1);
+%             E = zeros(2*ntCheck,1);
+%             idx = 0;
+%             E(idx+1) = E;
         else
             % null hypothesis not rejected -> distributions similar enough
-            convergedE = E;
+            fileID = fopen(filename,'r');
+            fseek(fileID, whereToRead, 'bof');
+            skip = (1e5 - 1) * bytesPerDouble;
+            convergedE = fread(fileID,'double',skip);
+            fclose(fileID);
             converged = true;
         end
+        fileID = fopen(filename,'a');
         checksCompleted = checksCompleted + 1;
     end
     nt = nt + 1;
-    idx = idx + 1;
+    % idx = idx + 1;
 end
 fclose(fileID);
 end
