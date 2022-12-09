@@ -15,7 +15,7 @@ density = 2.5;
 Nstick = round(L^2 * density / l);
 
 trial = 1;
-maxConvChecks = 8;
+maxConvChecks = 10;
 directory = ['mikadoNet_density',num2str(density),'_netnum',num2str(trial)];
 mkdir(directory);
 
@@ -27,14 +27,20 @@ mkdir(directory);
 % (length used in a spring) / (total length of all sticks)
 useFraction = sum(springs(:,4)) / (Nstick * l);
 
-%% Run Metropolis
+%% Run Metropolis for many forces
 
-totForce = 1;
-kbT = 0.5;
-springK = 1;
-[convE, endState] = metropolisMikado(nodes,springs,catalog, ...
-    totForce, kbT, springK, maxConvChecks, directory);
-save([directory,'/workspace.mat'])
+forcesweep = [0, logspace(-1, 1, 9)];
+for idx = 1:length(forcesweep)
+    totForce = forcesweep(idx);
+    kbT = 0.5;
+    springK = 1;
+    [convE, endState] = metropolisMikado(nodes,springs,catalog, ...
+        totForce, kbT, springK, maxConvChecks, directory);
+    downsampleFactor_conv = round(length(convE) / 1e5);
+    convE = downsample(convE, downsampleFactor_conv);
+    subdirectory = [directory,'/f',num2str(totForce)];
+    save([subdirectory,'/workspace.mat'])
+end
 
 %% Post-analysis
 
