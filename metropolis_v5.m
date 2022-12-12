@@ -21,7 +21,8 @@ mkdir(directory);
 
 %% Generate network
 
-[nodes, springs, catalog, ~] = generateMikadoNetwork(Nstick,l,L);
+% [nodes,springs,catalog,stickCross,basePoints,orient]
+[nodes, springs, catalog, ~, ~, ~] = generateMikadoNetwork(Nstick,l,L);
 
 % wasted length quantifier
 % (length used in a spring) / (total length of all sticks)

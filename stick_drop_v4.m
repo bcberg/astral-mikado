@@ -60,7 +60,7 @@ hold on
 for idx = 1:size(springs,1)
     nodeA = springs(idx,1);
     nodeB = springs(idx,2);
-    coords = [nodes(nodeA,:); nodes(nodeB,:)];
+    coords = [nodes(nodeA,1:2); nodes(nodeB,1:2)];
     plot(coords(:,1), coords(:,2), '.b-')
 end
 xlim([-0.1*L,1.1*L])

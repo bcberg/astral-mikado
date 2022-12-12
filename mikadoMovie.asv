@@ -24,12 +24,12 @@ set(0,'defaultAxesTickLabelInterpreter','latex')
 %%%%%%%%%%
 
 %%% Method 3: when rendering from force sweeps
-superdirectory = 'C:\Users\bcber\Documents\1-UCI\Q1\Allard-Rotation\mikadoNet_density2.5_netnum1';
+superdirectory = "C:\Users\bcber\Documents\1-UCI\Q1\Allard-Rotation\mikadoNet_density2.5_netnum1\";
 totForce = 0;
-load([superdirectory,'/netStats.mat'])
+load([superdirectory,'netStats.mat'])
 state = nodes;
-directory = [superdirectory,'/f',num2str(totForce)];
-save([directory,'/frame0.mat'],'state')
+directory = [directory,'f',num2str(totForce)];
+save([directory,'\frame0.mat'],'state')
 
 clear nodes state
 
@@ -42,10 +42,10 @@ v.FrameRate = 10; % adjust manually
 open(v);
 message = ['Compiling movie... (0/',num2str(numFrames),')'];
 f = waitbar(0,message);
-for idx = 1:numFrames
+for idx = 0:numFrames
     message = ['Compiling movie... (', num2str(idx),'/',num2str(numFrames),')'];
     waitbar(idx/numFrames,f,message)
-    frame = renderFrame(directory,framesToRender(idx),springs,L);
+    frame = renderFrame(directory,idx,springs,L);
     writeVideo(v,frame);
 end
 close(f);
@@ -64,8 +64,8 @@ function frame = renderFrame(directory,idx,springs,L)
         coords = [state(nodeA,:); state(nodeB,:)];
         plot(coords(:,1), coords(:,2), '.b-')
     end
-    xlim([-0.25*L, 1.25*L]) % adjust manually
-    ylim([-0.25*L, 1.25*L])
+    xlim([-0.25*L, 4*L]) % adjust manually
+    ylim([-0.25*L, 1.1*L])
     frame = getframe(fig);
     clf
 end

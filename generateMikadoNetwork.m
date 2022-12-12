@@ -1,4 +1,4 @@
-function [nodes,springs,catalog,stickCross] = generateMikadoNetwork(Nstick,l,L)
+function [nodes,springs,catalog,stickCross,basePoints,orient] = generateMikadoNetwork(Nstick,l,L)
 %GENERATEMIKADONETWORK generates a network of springs from randomly placed
 %sticks
 %   Detailed explanation goes here
