@@ -25,7 +25,7 @@ set(0,'defaultAxesTickLabelInterpreter','latex')
 
 %%% Method 3: when rendering from force sweeps
 superdirectory = 'C:\Users\bcber\Documents\1-UCI\Q1\Allard-Rotation\mikadoNet_density2.5_netnum1';
-totForce = 0;
+totForce = 10; % CHECK THIS
 load([superdirectory,'/netStats.mat'])
 state = nodes;
 directory = [superdirectory,'/f',num2str(totForce)];
@@ -35,7 +35,7 @@ clear nodes state
 
 %% Create the movie
 
-framesToRender = 0:4:400;
+framesToRender = 0:4:500;
 numFrames = length(framesToRender);
 v = VideoWriter([directory,'/movie.avi']);
 v.FrameRate = 10; % adjust manually
@@ -64,7 +64,7 @@ function frame = renderFrame(directory,idx,springs,L)
         coords = [state(nodeA,:); state(nodeB,:)];
         plot(coords(:,1), coords(:,2), '.b-')
     end
-    xlim([-0.25*L, 1.25*L]) % adjust manually
+    xlim([-0.25*L, 2.25*L]) % adjust manually (2.25 for f10)
     ylim([-0.25*L, 1.25*L])
     frame = getframe(fig);
     clf
