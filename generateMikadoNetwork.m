@@ -1,6 +1,6 @@
 function [nodes,springs,catalog,stickCross,basePoints,orient] = generateMikadoNetwork(Nstick,l,L)
-%GENERATEMIKADONETWORK generates a network of springs from randomly placed
-%sticks
+% GENERATEMIKADONETWORK generates a network of springs from randomly placed
+% sticks
 %   Detailed explanation goes here
 
 basePoints = L * rand([Nstick,2]);  % uniform draw of (bx_i,by_i) from [0,L]
@@ -53,7 +53,7 @@ function [nodes, association] = findNodes(basePoints,orient,l)
 end
 
 function [nodes, association] = findBoundaryNodes(basePoints, orient, l, L, Nstick)
-%   FINDBOUNDARYNODES defines nodes where sticks cross either
+% FINDBOUNDARYNODES defines nodes where sticks cross either
 %       (i) the top boundary stick (0,L) -- (L,L) or
 %       (ii) the bottom boundary stick (0,0) -- (L,0)
 %   Later, in Metropolis:
@@ -104,7 +104,7 @@ end
 
 
 function [nodeNum_plus, nodeNum_minus] = closestNodes(nodeNum, checkNums, nodes)
-%   CLOSESTNODE returns the index/indices of (up to two) neighbor node(s)
+% CLOSESTNODES returns the index/indices of (up to two) neighbor node(s)
 %   This index/these indices will refer to the nodes which are closest to
 %   nodeNum, and must be on opposite sides of nodeNum
 %   checkNums lists indices of nodes which fall along one of the sticks
