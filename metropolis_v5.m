@@ -36,7 +36,7 @@ parfor idx = 1:length(forcesweep)
     totForce = forcesweep(idx);
     kbT = 0.5;
     springK = 1;
-    [convE, endState] = metropolisMikado(nodes,springs,catalog, ...
+    [convE, endState] = metropolisMikado_v5(nodes,springs,catalog, ...
         totForce, kbT, springK, maxConvChecks, directory);
     subdirectory = [directory,'/f',num2str(totForce)];
     filename = [subdirectory,'/endData.mat'];
