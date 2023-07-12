@@ -33,15 +33,21 @@ hyparam.ntWrite = 1e3;      % write every ntWrite value of E to disk
 hyparam.ntWriteFrame = 1e7; % write current network config less frequently
 hyparam.nextFrame = 1;      % frame number of next network config write
 
-% directory structure
-trial = 1;
-directory = ['thermalMikado_dens',num2str(density),'_trial',num2str(trial)];
-mkdir(directory);
+%% Directory structure
+
+trial = 2;
+directories.dir = ['thermalMikado_dens',num2str(density),'_trial',num2str(trial)];
+mkdir(directories.dir);
+% when sweeping, the below needs to happen in a loop
+directories.subdir = [directories.dir,'/f',num2str(param.totForce)]; 
+mkdir(directories.subdir);
 
 %% Generate network, specify applied force values
 
 % [nodes,springs,catalog,stickCross,basePoints,orient]
 [nodes, springs, catalog, ~, ~, ~] = generateMikadoNetwork(Nstick,l,L);
+node_rows = size(nodes,1);
+node_cols = 2;      % node coordinates are (x,y) pairs
 
 % wasted length quantifier
 % (length used in a spring) / (total length of all sticks)
@@ -49,7 +55,7 @@ useFraction = sum(springs(:,4)) / (Nstick * l);
 
 % forcesweep = [0, logspace(-1,1,7)];
 
-save([directory,'/initNetStats.mat'])
+save([directories.dir,'/initNetStats.mat'])
 %% Run simulation(s)
 
 convChecksDone = 0;
@@ -57,7 +63,7 @@ converged = false;
 startOrResume = 'start';
 while convChecksDone < hyparam.maxConvChecks && ~converged
     [state, energyLogFile, resumeInfo] = metropolisMikado(nodes, springs, ...
-        catalog, param, hyparam, directory, startOrResume);
+        catalog, param, hyparam, directories, startOrResume);
     % read energyLogFile to check for convergence
     [pValue, KSstat] = convergenceCheck(energyLogFile,hyparam);
     display(KSstat)
@@ -84,4 +90,4 @@ while convChecksDone < hyparam.maxConvChecks && ~converged
     end
     convChecksDone = convChecksDone + 1;
 end
-save([directory,'/endNetStats.mat'])
+save([directories.dir,'/endNetStats.mat'])

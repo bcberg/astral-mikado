@@ -1,5 +1,5 @@
 function [state,energyLogFile,resumeInfo] = metropolisMikado(nodes, ...
-    springs, springCatalog, param, hyparam, directory, startOrResume)
+    springs, springCatalog, param, hyparam, directories, startOrResume)
 % METROPOLISMIKADO perturbs a spring network using Metropolis-Hastings
 %   Inputs:
 %       nodes (Nnodes x 4 double): node information, each row has
@@ -24,8 +24,8 @@ function [state,energyLogFile,resumeInfo] = metropolisMikado(nodes, ...
 %       hyparam (1 x 1 struct): algorithm parameters; has fields nt, E,
 %           ntCheck, maxConvChecks, ntAdmit, pAdmit, epsilonBulk, 
 %           epsilonTop, ksSamples, ntWrite, ntWriteFrame, nextFrame
-%       directory (char vector): directory for storing network configs,
-%           energy logs
+%       directories (1 x 1 struct): locations for storing network configs,
+%           energy logs; has fields dir, subdir
 %       startOrResume (char vector): 'start' or 'resume' network
 %           perturbations
 %   Outputs:
@@ -45,15 +45,16 @@ switch startOrResume
         nt = hyparam.nt;    % should be initialized at 0  
         E = hyparam.E;      % should be initialized at 0
         state = nodes;
-        % set up directories, write initial info to disk
-        subdirectory = [directory,'/f',num2str(param.totForce)];
-        mkdir(subdirectory); %***
-        energyLogFile = [subdirectory,'/energyLog.bin'];
+        % write initial energy to disk
+        energyLogFile = [directories.subdir,'/energyLog.bin'];
         fileID = fopen(energyLogFile,'w');
         fwrite(fileID,E,'double');
         fclose(fileID);
-        label = [subdirectory,'/frame0.mat'];
-        save(label, 'state')
+        % write initial network config to disk
+        frameFile = [directories.subdir,'/frame0.bin'];
+        frameFileID = fopen(frameFile,'w');
+        fwrite(frameFileID,state(:,1:2),'double');
+        fclose(frameFileID);
 
         % adaptive step size counters
         numAcceptsBulk = 0;
@@ -104,8 +105,10 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                label = [subdirectory,'/frame',num2str(frame),'.mat'];
-                save(label, 'state')
+                frameFile = [directories.subdir,'/frame',num2str(frame),'.bin'];
+                frameFileID = fopen(frameFile,'w');
+                fwrite(frameFileID,state(:,1:2),'double');
+                fclose(frameFileID);
                 frame = frame + 1;
             end
 
@@ -146,8 +149,7 @@ switch startOrResume
         nt = hyparam.nt;
         E = hyparam.E;
         state = nodes;
-        subdirectory = [directory,'/f',num2str(param.totForce)];
-        energyLogFile = [subdirectory,'/energyLog.bin'];
+        energyLogFile = [directories.subdir,'/energyLog.bin'];
         % prepare for perturbation loop
         fileID = fopen(energyLogFile,'a');
         frame = hyparam.nextFrame;
@@ -189,8 +191,10 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                label = [subdirectory,'/frame',num2str(frame),'.mat'];
-                save(label, 'state')
+                frameFile = [directories.subdir,'/frame',num2str(frame),'.bin'];
+                frameFileID = fopen(frameFile,'w');
+                fwrite(frameFileID,state(:,1:2),'double');
+                fclose(frameFileID);
                 frame = frame + 1;
             end
         end
