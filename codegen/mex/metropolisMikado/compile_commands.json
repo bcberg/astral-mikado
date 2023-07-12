@@ -1,0 +1,122 @@
+[
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  metropolisMikado_data.cpp -o build/win64/metropolisMikado_data.o",
+    "file": "metropolisMikado_data.cpp",
+    "output": "build/win64/metropolisMikado_data.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  rt_nonfinite.cpp -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  metropolisMikado_initialize.cpp -o build/win64/metropolisMikado_initialize.o",
+    "file": "metropolisMikado_initialize.cpp",
+    "output": "build/win64/metropolisMikado_initialize.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  metropolisMikado_terminate.cpp -o build/win64/metropolisMikado_terminate.o",
+    "file": "metropolisMikado_terminate.cpp",
+    "output": "build/win64/metropolisMikado_terminate.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  metropolisMikado.cpp -o build/win64/metropolisMikado.o",
+    "file": "metropolisMikado.cpp",
+    "output": "build/win64/metropolisMikado.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  find.cpp -o build/win64/find.o",
+    "file": "find.cpp",
+    "output": "build/win64/find.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  indexShapeCheck.cpp -o build/win64/indexShapeCheck.o",
+    "file": "indexShapeCheck.cpp",
+    "output": "build/win64/indexShapeCheck.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  fileManager.cpp -o build/win64/fileManager.o",
+    "file": "fileManager.cpp",
+    "output": "build/win64/fileManager.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  fwrite.cpp -o build/win64/fwrite.o",
+    "file": "fwrite.cpp",
+    "output": "build/win64/fwrite.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  rand.cpp -o build/win64/rand.o",
+    "file": "rand.cpp",
+    "output": "build/win64/rand.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  any1.cpp -o build/win64/any1.o",
+    "file": "any1.cpp",
+    "output": "build/win64/any1.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  norm.cpp -o build/win64/norm.o",
+    "file": "norm.cpp",
+    "output": "build/win64/norm.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  mod.cpp -o build/win64/mod.o",
+    "file": "mod.cpp",
+    "output": "build/win64/mod.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  sprintf.cpp -o build/win64/sprintf.o",
+    "file": "sprintf.cpp",
+    "output": "build/win64/sprintf.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  interface/_coder_metropolisMikado_api.cpp -o build/win64/_coder_metropolisMikado_api.o",
+    "file": "interface/_coder_metropolisMikado_api.cpp",
+    "output": "build/win64/_coder_metropolisMikado_api.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  interface/_coder_metropolisMikado_mex.cpp -o build/win64/_coder_metropolisMikado_mex.o",
+    "file": "interface/_coder_metropolisMikado_mex.cpp",
+    "output": "build/win64/_coder_metropolisMikado_mex.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  eml_int_forloop_overflow_check.cpp -o build/win64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/win64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  metropolisMikado_mexutil.cpp -o build/win64/metropolisMikado_mexutil.o",
+    "file": "metropolisMikado_mexutil.cpp",
+    "output": "build/win64/metropolisMikado_mexutil.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  interface/_coder_metropolisMikado_info.cpp -o build/win64/_coder_metropolisMikado_info.o",
+    "file": "interface/_coder_metropolisMikado_info.cpp",
+    "output": "build/win64/_coder_metropolisMikado_info.o"
+  },
+  {
+    "directory": "C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2023a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\" -I \"C:\\Users\\bcber\\OneDrive\\Documents\\MATLAB\\astral-mikado\\codegen\\mex\\metropolisMikado\\interface\" -I \"C:\\Program Files\\MATLAB\\R2023a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=metropolisMikado_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H -msse2  \"C:/Program Files/MATLAB/R2023a/extern/version/cpp_mexapi_version.cpp\" -o build/win64/cpp_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2023a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.o"
+  }
+]

@@ -26,7 +26,7 @@ function [state,energyLogFile,resumeInfo] = metropolisMikado(nodes, ...
 %           epsilonTop, ksSamples, ntWrite, ntWriteFrame, nextFrame
 %       directories (1 x 1 struct): locations for storing network configs,
 %           energy logs; has fields dir, subdir
-%       startOrResume (char vector): 'start' or 'resume' network
+%       startOrResume (char vector): 's' (start) or 'r' (resume) network
 %           perturbations
 %   Outputs:
 %       state (Nnodes x 4 double): node positions after 3*ntCheck
@@ -40,18 +40,21 @@ movingNodes = find(nodes(:,3) == 1);    % returns indices of moving nodes
 numMovingNodes = length(movingNodes);
 topNodes = find(nodes(:,4) == 1);       % returns indices of "top" nodes
 force = param.totForce / length(topNodes);
+state = nodes;
+energyLogFile = [directories.subdir,'/energyLog.bin'];
+resumeInfo = struct('nt',-1,'E',-1,'epsilonBulk',-1,'epsilonTop',-1,...
+    'nextFrame',-1);    % filler, will be redefined on all successful runs
 switch startOrResume
-    case 'start'    % start perturbing network from initial configuration
+    case 's'    % start perturbing network from initial configuration
         nt = hyparam.nt;    % should be initialized at 0  
         E = hyparam.E;      % should be initialized at 0
-        state = nodes;
         % write initial energy to disk
-        energyLogFile = [directories.subdir,'/energyLog.bin'];
         fileID = fopen(energyLogFile,'w');
         fwrite(fileID,E,'double');
         fclose(fileID);
         % write initial network config to disk
-        frameFile = [directories.subdir,'/frame0.bin'];
+        frameLabel = sprintf('/frame%04d.bin',0);
+        frameFile = [directories.subdir,frameLabel];
         frameFileID = fopen(frameFile,'w');
         fwrite(frameFileID,state(:,1:2),'double');
         fclose(frameFileID);
@@ -105,7 +108,8 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                frameFile = [directories.subdir,'/frame',num2str(frame),'.bin'];
+                frameLabel = sprintf('/frame%03d.bin',int32(frame));
+                frameFile = [directories.subdir,frameLabel];
                 frameFileID = fopen(frameFile,'w');
                 fwrite(frameFileID,state(:,1:2),'double');
                 fclose(frameFileID);
@@ -145,11 +149,9 @@ switch startOrResume
         resumeInfo.epsilonBulk = epsBulk;
         resumeInfo.nextFrame = frame;
 
-    case 'resume'   % resume perturbing network after convergence check
+    case 'r'   % resume perturbing network after convergence check
         nt = hyparam.nt;
         E = hyparam.E;
-        state = nodes;
-        energyLogFile = [directories.subdir,'/energyLog.bin'];
         % prepare for perturbation loop
         fileID = fopen(energyLogFile,'a');
         frame = hyparam.nextFrame;
@@ -191,7 +193,8 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                frameFile = [directories.subdir,'/frame',num2str(frame),'.bin'];
+                frameLabel = sprintf('/frame%03d.bin',int32(frame));
+                frameFile = [directories.subdir,frameLabel];
                 frameFileID = fopen(frameFile,'w');
                 fwrite(frameFileID,state(:,1:2),'double');
                 fclose(frameFileID);

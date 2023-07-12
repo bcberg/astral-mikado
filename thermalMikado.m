@@ -22,20 +22,20 @@ param.springK = 1;
 % Metropolis algorithm hyperparameters
 hyparam.nt = 0;
 hyparam.E = 0;          % start E = 0, adjust after each convergence check
-hyparam.ntCheck = 5e5;      % run 3*ntCheck iters., compare last 2 thirds
-hyparam.maxConvChecks = 10;
+hyparam.ntCheck = 1e6;      % run 3*ntCheck iters., compare last 2 thirds
+hyparam.maxConvChecks = 2;
 hyparam.ntAdmit = 2.5e4;    % num. of steps used to estimate pAdmit
-hyparam.pAdmit = 0.44;      % target probability that a step is accepted
+hyparam.pAdmit = 0.4;      % target probability that a step is accepted
 hyparam.epsilonBulk = 1;
 hyparam.epsilonTop = 1;
 hyparam.ksSamples = 5e2;    % num. of samples (per third) to use in kstest2
-hyparam.ntWrite = 1e3;      % write every ntWrite value of E to disk
+hyparam.ntWrite = 2e3;      % write every ntWrite value of E to disk
 hyparam.ntWriteFrame = 1e7; % write current network config less frequently
 hyparam.nextFrame = 1;      % frame number of next network config write
 
 %% Directory structure
 
-trial = 2;
+trial = 1;
 directories.dir = ['thermalMikado_dens',num2str(density),'_trial',num2str(trial)];
 mkdir(directories.dir);
 % when sweeping, the below needs to happen in a loop
@@ -60,9 +60,9 @@ save([directories.dir,'/initNetStats.mat'])
 
 convChecksDone = 0;
 converged = false;
-startOrResume = 'start';
+startOrResume = 's';
 while convChecksDone < hyparam.maxConvChecks && ~converged
-    [state, energyLogFile, resumeInfo] = metropolisMikado(nodes, springs, ...
+    [state, energyLogFile, resumeInfo] = metropolisMikado_mex(nodes, springs, ...
         catalog, param, hyparam, directories, startOrResume);
     % read energyLogFile to check for convergence
     [pValue, KSstat] = convergenceCheck(energyLogFile,hyparam);
@@ -77,7 +77,7 @@ while convChecksDone < hyparam.maxConvChecks && ~converged
         hyparam.epsilonTop = resumeInfo.epsilonTop;
         hyparam.epsilonBulk = resumeInfo.epsilonBulk;
         hyparam.nextFrame = resumeInfo.nextFrame;
-        startOrResume = 'resume';
+        startOrResume = 'r';
     else
         % null hypothesis not rejected, i.e. distributions similar enough
         converged = true;
