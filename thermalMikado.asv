@@ -47,41 +47,33 @@ mkdir(directory);
 % (length used in a spring) / (total length of all sticks)
 useFraction = sum(springs(:,4)) / (Nstick * l);
 
-% forcesweep = [0, logspace(-1,1,7)];
+forcesweep = [0, logspace(-1,1,7)];
 
 save([directory,'/initNetStats.mat'])
 %% Run simulation(s)
 
 convChecksDone = 0;
-converged = false;
 startOrResume = 'start';
-while convChecksDone < hyparam.maxConvChecks && ~converged
+while convChecksDone < hyparam.maxConvChecks
     [state, energyLogFile, resumeInfo] = metropolisMikado(nodes, springs, ...
         catalog, param, hyparam, directory, startOrResume);
     % read energyLogFile to check for convergence
     [pValue, KSstat] = convergenceCheck(energyLogFile,hyparam);
-    display(KSstat)
+    convChecksDone = convChecksDone + 1;
+
     if KSstat >= 0.01
         % reject null hypothesis that distributions are the same
         % transfer info for resuming perturbations
-        nodes = state;
+        m
         hyparam.nt = resumeInfo.nt;
         hyparam.E = resumeInfo.E;
         hyparam.ntCheck = 3 * hyparam.ntCheck;
         hyparam.epsilonTop = resumeInfo.epsilonTop;
         hyparam.epsilonBulk = resumeInfo.epsilonBulk;
-        hyparam.nextFrame = resumeInfo.nextFrame;
-        startOrResume = 'resume';
+        hyparam.nextFrame = frame;
     else
         % null hypothesis not rejected, i.e. distributions similar enough
-        converged = true;
-        % record converged energy samples
-        fileID = fopen(energyLogFile,'r');
-        bytesPerDouble = 8;
-        whereToRead = bytesPerDouble * hyparam.ntCheck;
-        fseek(fileID, whereToRead, 'bof');
-        convergedE = fread(fileID, 2 * hyparam.ntCheck, 'double');
+
     end
-    convChecksDone = convChecksDone + 1;
+
 end
-save([directory,'/endNetStats.mat'])
