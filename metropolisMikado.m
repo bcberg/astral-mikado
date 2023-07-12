@@ -108,7 +108,7 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                frameLabel = sprintf('/frame%03d.bin',int32(frame));
+                frameLabel = sprintf('/frame%04d.bin',int32(frame));
                 frameFile = [directories.subdir,frameLabel];
                 frameFileID = fopen(frameFile,'w');
                 fwrite(frameFileID,state(:,1:2),'double');
@@ -117,7 +117,7 @@ switch startOrResume
             end
 
             % adaptive step size
-            if mod(nt,hyparam.ntAdmit) == 0
+            if mod(nt,hyparam.ntAdmit) == 0 && nt <= hyparam.ntCheck
                 % adjust epsilonTop
                 if numVisitsTop > 0
                     prob = numAcceptsTop/numVisitsTop;
@@ -193,7 +193,7 @@ switch startOrResume
                 fwrite(fileID,E,'double');
             end
             if mod(nt,hyparam.ntWriteFrame) == 0
-                frameLabel = sprintf('/frame%03d.bin',int32(frame));
+                frameLabel = sprintf('/frame%04d.bin',int32(frame));
                 frameFile = [directories.subdir,frameLabel];
                 frameFileID = fopen(frameFile,'w');
                 fwrite(frameFileID,state(:,1:2),'double');

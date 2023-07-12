@@ -119,7 +119,7 @@ void b_sprintf(const emlrtStack &sp, int32_T varargin_1,
   static const int32_T iv[2]{1, 7};
   static const int32_T iv1[2]{1, 14};
   static const char_T formatSpec[14]{'/', 'f', 'r', 'a', 'm', 'e', '%',
-                                     '0', '3', 'd', '.', 'b', 'i', 'n'};
+                                     '0', '4', 'd', '.', 'b', 'i', 'n'};
   static const char_T u[7]{'s', 'p', 'r', 'i', 'n', 't', 'f'};
   emlrtStack b_st;
   emlrtStack st;

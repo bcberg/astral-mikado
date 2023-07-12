@@ -1210,7 +1210,8 @@ void metropolisMikado(const emlrtStack *sp,
         frame++;
       }
       //  adaptive step size
-      if (coder::b_mod(nt, hyparam->ntAdmit) == 0.0) {
+      if ((coder::b_mod(nt, hyparam->ntAdmit) == 0.0) &&
+          (nt <= hyparam->ntCheck)) {
         //  adjust epsilonTop
         if (numVisitsTop > 0.0) {
           frameFileID = numAcceptsTop / numVisitsTop;

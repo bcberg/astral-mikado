@@ -23,7 +23,7 @@ param.springK = 1;
 hyparam.nt = 0;
 hyparam.E = 0;          % start E = 0, adjust after each convergence check
 hyparam.ntCheck = 1e6;      % run 3*ntCheck iters., compare last 2 thirds
-hyparam.maxConvChecks = 2;
+hyparam.maxConvChecks = 10;
 hyparam.ntAdmit = 2.5e4;    % num. of steps used to estimate pAdmit
 hyparam.pAdmit = 0.4;      % target probability that a step is accepted
 hyparam.epsilonBulk = 1;
