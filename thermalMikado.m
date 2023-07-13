@@ -62,6 +62,8 @@ convChecksDone = 0;
 converged = false;
 startOrResume = 's';
 while convChecksDone < hyparam.maxConvChecks && ~converged
+    % before mex acceleration, 5.5 hrs -> 331*10^7 iterations
+    % after mex acceleration, 5 hrs -> 5.9049*10^10 iterations
     [state, energyLogFile, resumeInfo] = metropolisMikado_mex(nodes, springs, ...
         catalog, param, hyparam, directories, startOrResume);
     % read energyLogFile to check for convergence
