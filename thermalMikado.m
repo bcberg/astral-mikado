@@ -68,7 +68,7 @@ while convChecksDone < hyparam.maxConvChecks && ~converged
         catalog, param, hyparam, directories, startOrResume);
     % read energyLogFile to check for convergence
     [pValue, KSstat] = convergenceCheck(energyLogFile,hyparam);
-    display(KSstat)
+    display(KSstat) %**** change to save all pVals and KSstats
     if KSstat >= 0.01
         % reject null hypothesis that distributions are the same
         % transfer info for resuming perturbations
