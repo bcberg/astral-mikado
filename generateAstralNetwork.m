@@ -127,10 +127,54 @@ elseif isscalar(nodesOnFil)
     nodeOrdering = nodesOnFil;
     return
 end
+numNodesOnFil = length(nodesOnFil);
 nodeCoordsOnFil = nodes(nodesOnFil,:);
 asterIdx = 1 + floor((filIdx-1)/astralNum);
 r0 = centers(asterIdx,:);
 refNode = nodeCoordsOnFil(1,:);
 direction = (refNode - r0) ./ sqrt(sum((refNode - r0).^2));
+% next two lines find dot product "direction * (node - r0)" for all nodes
+nodePointers = nodeCoordsOnFil - repmat(r0,[numNodesOnFil,1]);
+dotProducts = dot(repmat(direction,[numNodesOnFil,1]),nodePointers,2);
+% now sort the dot products in increasing order and sort the node indices
+% using the same permutation
+[~,I] = sort(dotProducts);
+nodeOrdering = nodesOnFil(I);
+end
 
+function [springs,ends] = defineSprings(nodes,filCross,centers,astralNum)
+% DEFINESPRINGS partitions filaments into mechanically productive
+% sub-segments (springs) and dangling ends
+%   Inputs:
+%       nodes (numNodes x 2 double): list of (x,y) coordinates of filament
+%       crossings (excluding astral centers)
+%       filCross (numNodes x 2 double): list of pairs of filament indices
+%       corresponding to the filaments that cross at a particular node;
+%       listed so that filCross(idx,1) < filCross(idx,2)
+%       centers (numAsters x 2 double): (x,y) coordinates of astral centers
+%       astralNum (scalar): number of filaments per aster
+%   Outputs:
+%       springs (numSprings x 4 double): descriptions of mechanically
+%       productive segments, each row has the structure
+%           (1) lesser node index at one end of the spring
+%           (2) greater node index at the other end of the spring
+%           (3) filament index (which filament is the spring on)
+%           (4) the original distance between the nodes
+%       ends (numFil x 2 double): lengths of segments on the ends of each 
+%       filament. ends(:,1) lists the "right" dangling ends, distal to the
+%       astral center. ends(:,2) lists the "left" dangling ends, proximal
+%       to the astral center; these are all 0 if astralNum >= 2.
+numAsters = size(centers,1);
+numFil = numAsters * astralNum;
+springs = [];
+for idx = 1:numFil
+    thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
+    if isempty(thisOrder)
+        % this filament doesn't touch any other asters!
+    elseif isscalar(thisOrder)
+        % this filament may mechanically productive if astralNum >= 2
+    else
+        % there are certainly springs along this filament
+    end
+end
 end
