@@ -31,10 +31,12 @@ end
 
 %% Auxiliary functions
 
-function [nodes, filCross] = findNodes(centers,orients,l,centerCross)
+function [nodes, filCross] = findNodes(centers,orients,l)
 % FINDNODES identifies where filaments cross and records which filaments
-% crossed (Note: does NOT search for intersections between filaments on the
-% same aster)
+% crossed 
+% (Note: filaments are indexed as one would read left to right across the
+% rows of 'orients', and each row represents an aster. This function does
+% NOT search for intersections between filaments on the same aster)
 %   Inputs:
 %       centers (numAsters x 2 double): (x,y) coordinates of astral centers
 %       orients (numAsters x astralNum double): angles giving each 
@@ -102,4 +104,33 @@ else
 end
 end
 
+function nodeOrdering = sortNodes(filIdx,nodes,filCross,centers,astralNum)
+% SORTNODES orders the node indices along a filament
+%   Inputs:
+%       filIdx (scalar): filament index (see note in findNodes for details)
+%       nodes (numNodes x 2 double): list of (x,y) coordinates of filament
+%       crossings (excluding astral centers)
+%       filCross (numNodes x 2 double): list of pairs of filament indices
+%       corresponding to the filaments that cross at a particular node;
+%       listed so that filCross(idx,1) < filCross(idx,2)
+%       centers (numAsters x 2 double): (x,y) coordinates of astral centers
+%       astralNum (scalar): number of filaments per aster
+%   Outputs:
+%       nodeOrdering (double vector): sorted list of node indices appearing
+%       on the specified filament. First element is the node closest to the
+%       astral center. If there are no nodes on this filament, returns [].
+[nodesOnFil,~] = find(filCross == filIdx);
+if isempty(nodesOnFil)
+    nodeOrdering = [];
+    return
+elseif isscalar(nodesOnFil)
+    nodeOrdering = nodesOnFil;
+    return
+end
+nodeCoordsOnFil = nodes(nodesOnFil,:);
+asterIdx = 1 + floor((filIdx-1)/astralNum);
+r0 = centers(asterIdx,:);
+refNode = nodeCoordsOnFil(1,:);
+direction = (refNode - r0) ./ sqrt(sum((refNode - r0).^2));
 
+end
