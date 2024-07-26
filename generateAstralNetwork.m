@@ -7,26 +7,37 @@ function [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astral
 %       length D
 %       astralNum (scalar): (whole) number of filaments per aster
 %   Outputs:
-%       network (struct): has fields 'nodes', 'springs', 'catalog', 'ends'
+%       network (struct): has fields 'nodes', 'augNodes', 'springs', 'ends'
 %           'nodes': see findNodes auxiliary function
+%           'augNodes': see defineSprings auxiliary function
 %           'springs': see defineSprings auxiliary function
-%           'catalog': see springsByNode auxiliary function
 %           'ends': see defineSprings auxiliary function
 %       crossings (struct): has fields 'stickCross' and 'centerCross'
 %           'filCross': see findNodes auxiliary function
-%           'centerCross': see findNodes auxiliary function
+%           'centerCross': which filaments cross at each astral center;
+%           each row represents a center
 %       asters (struct): has fields 'centers', 'orients'
 %           'centers': (x,y) coordinates of astral centers
 %           'orients': angles giving each filament's orientation about its
 %           astral center
+%   Note: currently no boundary/edge is constructed, and the implementation
+%   does not store/compile information for running Metropolis-Hastings
 asters.centers = D * rand([numAsters,2]);
 asters.orients = 2 * pi * rand([numAsters,astralNum]);
 
+[nodes, filCross] = findNodes(asters.centers,asters.orients,l);
+[augNodes, springs, ends] = defineSprings(nodes,filCross,asters.centers, ...
+    l,astralNum);
+
 numFil = numAsters * astralNum;
-% each row in 'centerCross' field records the filaments belonging to that aster
 % aster idx 1 groups filaments 1,2,...,astralNum; and so on
 crossings.centerCross = transpose(reshape(1:numFil,[astralNum,numAsters]));
+crossings.filCross = filCross;
 
+network.nodes = nodes;
+network.augNodes = augNodes;
+network.springs = springs;
+network.ends = ends;
 end
 
 %% Auxiliary functions
@@ -46,7 +57,7 @@ function [nodes, filCross] = findNodes(centers,orients,l)
 %       grouped by each aster
 %   Outputs:
 %       nodes (numNodes x 2 double): list of (x,y) coordinates of filament
-%       crossings (excluding astral centers)
+%       crossings (EXCLUDING astral centers)
 %       filCross (numNodes x 2 double): list of pairs of filament indices
 %       corresponding to the filaments that cross at a particular node;
 %       listed so that filCross(idx,1) < filCross(idx,2)
@@ -73,7 +84,7 @@ if astralNum == 1
             end
         end
     end
-else
+elseif astralNum >= 2
     % routine for "Astral Mikado" networks
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
@@ -109,7 +120,7 @@ function nodeOrdering = sortNodes(filIdx,nodes,filCross,centers,astralNum)
 %   Inputs:
 %       filIdx (scalar): filament index (see note in findNodes for details)
 %       nodes (numNodes x 2 double): list of (x,y) coordinates of filament
-%       crossings (excluding astral centers)
+%       crossings (EXCLUDING astral centers)
 %       filCross (numNodes x 2 double): list of pairs of filament indices
 %       corresponding to the filaments that cross at a particular node;
 %       listed so that filCross(idx,1) < filCross(idx,2)
@@ -142,39 +153,119 @@ dotProducts = dot(repmat(direction,[numNodesOnFil,1]),nodePointers,2);
 nodeOrdering = nodesOnFil(I);
 end
 
-function [springs,ends] = defineSprings(nodes,filCross,centers,astralNum)
-% DEFINESPRINGS partitions filaments into mechanically productive
-% sub-segments (springs) and dangling ends
+function [augNodes,springs,ends] = defineSprings(nodes,filCross,centers, ...
+    l,astralNum)
+% DEFINESPRINGS partitions filaments into node-bounded sub-segments 
+% (springs) and dangling ends
 %   Inputs:
 %       nodes (numNodes x 2 double): list of (x,y) coordinates of filament
-%       crossings (excluding astral centers)
+%       crossings (EXCLUDING astral centers)
 %       filCross (numNodes x 2 double): list of pairs of filament indices
 %       corresponding to the filaments that cross at a particular node;
 %       listed so that filCross(idx,1) < filCross(idx,2)
 %       centers (numAsters x 2 double): (x,y) coordinates of astral centers
+%       l (scalar): length of individual filament
 %       astralNum (scalar): number of filaments per aster
 %   Outputs:
-%       springs (numSprings x 4 double): descriptions of mechanically
-%       productive segments, each row has the structure
-%           (1) lesser node index at one end of the spring
-%           (2) greater node index at the other end of the spring
+%       augNodes (numAsters+numNodes x 2 double)**: conditionally augmented 
+%       node list; if astralNum >= 2, rows 1:numAsters contain (x,y) 
+%       coordinates of astral centers, remaining rows contain (x,y) 
+%       coordinates of inter-aster nodes
+%       **NOTE: if astralNum == 1, augNodes is the same as nodes (centers
+%       are fictitious), so its size is (numNodes x 2)
+%       springs (numSprings x 4 double): descriptions of segments bounded 
+%       by nodes at each end, each row has the structure
+%           (1) lesser augNode index at one end of the spring
+%           (2) greater augNode index at the other end of the spring
 %           (3) filament index (which filament is the spring on)
 %           (4) the original distance between the nodes
 %       ends (numFil x 2 double): lengths of segments on the ends of each 
-%       filament. ends(:,1) lists the "right" dangling ends, distal to the
-%       astral center. ends(:,2) lists the "left" dangling ends, proximal
+%       filament. ends(:,2) lists the "right" dangling ends, distal to the
+%       astral center. ends(:,1) lists the "left" dangling ends, proximal
 %       to the astral center; these are all 0 if astralNum >= 2.
 numAsters = size(centers,1);
 numFil = numAsters * astralNum;
 springs = [];
-for idx = 1:numFil
-    thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
-    if isempty(thisOrder)
-        % this filament doesn't touch any other asters!
-    elseif isscalar(thisOrder)
-        % this filament may mechanically productive if astralNum >= 2
-    else
-        % there are certainly springs along this filament
+ends = zeros(numFil,2);
+
+if astralNum == 1
+    % routine for "Classical Mikado" networks
+    augNodes = nodes;   % centers are fictitious
+    for idx = 1:numFil
+        thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
+        asterIdx = idx;
+        if isempty(thisOrder)
+            % 0 nodes = filament doesn't touch any other asters!
+            ends(idx,2) = l;    % treat unused filament as "right" dangling end
+        elseif isscalar(thisOrder)
+            % 1 node + astralNum == 1 -> two dangling ends
+            r0 = centers(asterIdx,:);
+            nodeCoords = nodes(thisOrder,:);
+            ends(idx,1) = sqrt(sum( (nodeCoords - r0).^2 ));
+            ends(idx,2) = l - ends(idx,2);
+        elseif ~isscalar(thisOrder) && isvector(thisOrder)
+            % >=2 nodes = there are certainly springs along this filament
+            r0 = centers(asterIdx,:);
+            totSpringLength = 0;
+            % pair adjacent nodes to form springs
+            for jdx = 1:(length(thisOrder)-1)
+                nodeIdxL = thisOrder(jdx);
+                nodeL = nodes(nodeIdxL,:);
+                nodeIdxR = thisOrder(jdx+1);
+                nodeR = nodes(nodeIdxR,:);
+                springLength = sqrt(sum( (nodeL - nodeR).^2 ));
+                newSpring = [min([nodeIdxL,nodeIdxR]), ...
+                    max([nodeIdxL,nodeIdxR]), idx, springLength];
+                springs = [springs; newSpring];
+                totSpringLength = totSpringLength + springLength;
+            end
+            proxNode = nodes(thisOrder(1),:);
+            ends(idx,1) = sqrt(sum( (proxNode - r0).^2 ));
+            ends(idx,2) = l - totSpringLength - ends(idx,1);
+        end
+    end
+elseif astralNum >= 2
+    % routine for "Astral Mikado" networks
+    augNodes = [centers; nodes];
+    for idx = 1:numFil
+        thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
+        asterIdx = 1 + floor((idx-1)/astralNum);
+        if isempty(thisOrder)
+            % 0 nodes = filament doesn't touch any other asters!
+            ends(idx,2) = l;    % treat unused filament as "right" dangling end
+        elseif isscalar(thisOrder)
+            % 1 node + astralNum >=2 -> spring between astral center & node
+            r0 = centers(asterIdx,:);
+            nodeCoords = nodes(thisOrder,:);
+            springLength = sqrt(sum( (nodeCoords - r0).^2 ));
+            newSpring = [asterIdx, numAsters+thisOrder, idx, springLength];
+            springs = [springs; newSpring];
+            ends(idx,2) = l - springLength;
+        elseif ~isscalar(thisOrder) && isvector(thisOrder)
+            % >=2 nodes = there are certainly springs along this filament
+            r0 = centers(asterIdx,:);
+            totSpringLength = 0;
+            % like "Classical", but proximal segment to center is spring
+            % also need to account for augmented node indices
+            for jdx = 1:(length(thisOrder)-1)
+                nodeIdxL = thisOrder(jdx);
+                nodeL = nodes(nodeIdxL,:);
+                nodeIdxR = thisOrder(jdx+1);
+                nodeR = nodes(nodeIdxR,:);
+                springLength = sqrt(sum( (nodeL - nodeR).^2 ));
+                newSpring = [numAsters+min([nodeIdxL,nodeIdxR]), ...
+                    numAsters+max([nodeIdxL,nodeIdxR]), idx, springLength];
+                springs = [springs; newSpring];
+                totSpringLength = totSpringLength + springLength;
+            end
+            % recording proximal segment as spring
+            proxNode = nodes(thisOrder(1),:);
+            springLength = sqrt(sum( (proxNode - r0).^2 ));
+            newSpring = [asterIdx, numAsters+thisOrder(1), idx, springLength];
+            springs = [springs; newSpring];
+            totSpringLength = totSpringLength + springLength;
+            ends(idx,2) = l - totSpringLength;
+        end
     end
 end
 end
