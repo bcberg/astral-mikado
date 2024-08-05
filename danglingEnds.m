@@ -45,15 +45,15 @@ for idx = 1:length(nASTlist)
 
     if 0 == mod(idx,tilesPerPage) && idx == tilesPerPage
         % export first page
-        exportgraphics(thisFig,'~/Documents/AstralMikadoCYM/data/endsDistr.pdf', ...
-            'Resolution',300)
+        % exportgraphics(thisFig,'~/Documents/AstralMikadoCYM/data/endsDistr.pdf', ...
+        %     'Resolution',300)
         thisFig = clf(thisFig);
         set(thisFig,'Position',[200,200,1600,1600],'visible','off')
         thisFig = tiledlayout(2,2,'TileSpacing','compact');
     elseif 0 == mod(idx,tilesPerPage) && idx > tilesPerPage
         % export next pages, append to first file
-        exportgraphics(thisFig,'~/Documents/AstralMikadoCYM/data/endsDistr.pdf', ...
-            'Resolution',300,'Append',true)
+        % exportgraphics(thisFig,'~/Documents/AstralMikadoCYM/data/endsDistr.pdf', ...
+        %     'Resolution',300,'Append',true)
         thisFig = clf(thisFig);
         set(thisFig,'Position',[200,200,1600,1600],'visible','off')
         thisFig = tiledlayout(2,2,'TileSpacing','compact');
@@ -63,6 +63,7 @@ end
 %% Mean and total dangling ends
 
 meanEnds = zeros(size(nASTlist));
+meanEndsTrunc = zeros(size(nASTlist));
 useFraction = zeros(size(nASTlist));
 for idx = 1:length(nASTlist)
     astralNum = nASTlist(idx);
@@ -70,19 +71,31 @@ for idx = 1:length(nASTlist)
     numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");
     % (attempt to match Python rounding behavior)
     realFilNum = numAsters * astralNum;
-    meanEnds(idx) = mean(allNets.(networkLabel).ends,"all");
+    if astralNum == 1
+        theseEnds = allNets.(networkLabel).ends;
+        meanEndsTrunc(idx) = mean(theseEnds(theseEnds<=4.9),"all");
+        meanEnds(idx) = mean(allNets.(networkLabel).ends,"all");
+    elseif astralNum >= 2
+        theseEnds = allNets.(networkLabel).ends(:,2);
+        meanEndsTrunc(idx) = mean(theseEnds(theseEnds<=4.9));
+        meanEnds(idx) = mean(allNets.(networkLabel).ends(:,2));
+    end
     useFraction(idx) = 1 - (sum(allNets.(networkLabel).ends,"all") / ...
         (realFilNum * l));
 end
 fig1 = figure(1);
 set(1,'defaultLineLineWidth',0.75)
 yyaxis left
-plot(nASTlist,meanEnds)
+hold on
+plot(nASTlist,meanEndsTrunc,'-b')
+plot(nASTlist,meanEnds,'--b')
+hold off
 ylabel('Mean dangling end length [arb.]')
 yyaxis right
 plot(nASTlist,useFraction)
 ylabel('Use fraction')
 xlabel('Astral number')
-exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/endsSummary.png', ...
-    'Resolution',300)
+legend('Truncated mean','Raw mean','Raw use','Location','south')
+% exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/endsSummary.png', ...
+%     'Resolution',300)
 

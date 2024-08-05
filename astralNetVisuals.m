@@ -9,20 +9,26 @@ set(0,'defaultLegendInterpreter','latex')
 %% testing generation
 
 % tiny test
-astralNum = 1;
-numAsters = 60;
-l = 5;
-D = 10;
-[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+% astralNum = 1;
+% numAsters = 60;
+% l = 5;
+% D = 10;
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+
+% astralNum = 5;
+% numAsters = 12;
+% l = 5;
+% D = 10;
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
 % like cytosim
-% astralNum = 5;
-% rho = 5;
-% l = 5;
-% D = 50;
-% targetFilNum = rho * D^2 / l;
-% numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
-% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+astralNum = 5;
+rho = 5;
+l = 5;
+D = 50;
+targetFilNum = rho * D^2 / l;
+numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
 %% visualizing
 
