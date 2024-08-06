@@ -30,6 +30,10 @@ targetFilNum = rho * D^2 / l;
 numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
 [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
+%% testing connCheck
+
+[connTF, connStats] = connCheck(crossings);
+
 %% visualizing
 
 % aster plot
@@ -46,6 +50,11 @@ for idx = 1:numAsters
     end
 end
 hold off
+if connTF
+    title('Connected!')
+else
+    title('Disconnected!')
+end
 
 % highlight nodes
 figure(2)
@@ -62,6 +71,11 @@ for idx = 1:numAsters
 end
 plot(network.nodes(:,1),network.nodes(:,2),'*m')
 hold off
+if connTF
+    title('Connected!')
+else
+    title('Disconnected!')
+end
 
 % draw spring network
 figure(3)
@@ -79,6 +93,11 @@ for idx = 1:size(network.springs,1)
         % likewise for augNodeB
         plot(network.augNodes(augNodeB,1),network.augNodes(augNodeB,2),'or')
     end
+end
+if connTF
+    title('Connected!')
+else
+    title('Disconnected!')
 end
 
 % dangling end distribution

@@ -12,7 +12,7 @@ function [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astral
 %           'augNodes': see defineSprings auxiliary function
 %           'springs': see defineSprings auxiliary function
 %           'ends': see defineSprings auxiliary function
-%       crossings (struct): has fields 'stickCross' and 'centerCross'
+%       crossings (struct): has fields 'filCross' and 'centerCross'
 %           'filCross': see findNodes auxiliary function
 %           'centerCross': which filaments cross at each astral center;
 %           each row represents a center
