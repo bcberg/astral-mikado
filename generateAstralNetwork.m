@@ -63,10 +63,12 @@ function [nodes, filCross] = findNodes(centers,orients,l)
 %       listed so that filCross(idx,1) < filCross(idx,2)
 [~, astralNum] = size(orients);
 numFil = numel(orients);
-nodes = [];
-filCross = [];
+numNodesGuess = round(numFil^2 / 100);
+nodes = zeros(numNodesGuess,2);
+filCross = zeros(numNodesGuess,2);
 if astralNum == 1
     % routine for "Classical Mikado" networks
+    nodeCount = 0;
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
             A = [cos(orients(idx)), - cos(orients(jdx));
@@ -77,15 +79,17 @@ if astralNum == 1
             t1 = det([b,A(:,2)]) / denom;
             t2 = det([A(:,1),b]) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
+                nodeCount = nodeCount + 1;
                 nodeX = centers(idx,1) + l * cos(orients(idx)) * t1;
                 nodeY = centers(idx,2) + l * sin(orients(idx)) * t1;
-                nodes = [nodes; nodeX, nodeY];
-                filCross = [filCross; idx, jdx];
+                nodes(nodeCount,1:2) = [nodeX, nodeY];
+                filCross(nodeCount,1:2) = [idx,jdx];
             end
         end
     end
 elseif astralNum >= 2
     % routine for "Astral Mikado" networks
+    nodeCount = 0;
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
             asterIdx = 1 + floor((idx-1)/astralNum);
@@ -105,14 +109,17 @@ elseif astralNum >= 2
             t1 = det([b,A(:,2)]) / denom;
             t2 = det([A(:,1),b]) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
-                nodeX = centers(asterIdx,1) + l * cos(orients(asterIdx,filSubIdx)) * t1;
-                nodeY = centers(asterIdx,2) + l * sin(orients(asterIdx,filSubIdx)) * t1;
-                nodes = [nodes; nodeX, nodeY];
-                filCross = [filCross; idx, jdx];
+                nodeCount = nodeCount + 1;
+                nodeX = centers(idx,1) + l * cos(orients(idx)) * t1;
+                nodeY = centers(idx,2) + l * sin(orients(idx)) * t1;
+                nodes(nodeCount,1:2) = [nodeX, nodeY];
+                filCross(nodeCount,1:2) = [idx,jdx];
             end
         end
     end
 end
+nodes = nodes(1:nodeCount,:);
+filCross = filCross(1:nodeCount,:);
 end
 
 function nodeOrdering = sortNodes(filIdx,nodes,filCross,centers,astralNum)
@@ -185,12 +192,14 @@ function [augNodes,springs,ends] = defineSprings(nodes,filCross,centers, ...
 %       to the astral center; these are all 0 if astralNum >= 2.
 numAsters = size(centers,1);
 numFil = numAsters * astralNum;
-springs = [];
+numSpringsGuess = 4 * size(nodes,1);
+springs = zeros(numSpringsGuess,4);
 ends = zeros(numFil,2);
 
 if astralNum == 1
     % routine for "Classical Mikado" networks
     augNodes = nodes;   % centers are fictitious
+    springCount = 0;
     for idx = 1:numFil
         thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
         asterIdx = idx;
@@ -209,6 +218,7 @@ if astralNum == 1
             totSpringLength = 0;
             % pair adjacent nodes to form springs
             for jdx = 1:(length(thisOrder)-1)
+                springCount = springCount + 1;
                 nodeIdxL = thisOrder(jdx);
                 nodeL = nodes(nodeIdxL,:);
                 nodeIdxR = thisOrder(jdx+1);
@@ -216,7 +226,7 @@ if astralNum == 1
                 springLength = sqrt(sum( (nodeL - nodeR).^2 ));
                 newSpring = [min([nodeIdxL,nodeIdxR]), ...
                     max([nodeIdxL,nodeIdxR]), idx, springLength];
-                springs = [springs; newSpring];
+                springs(springCount,:) = newSpring;
                 totSpringLength = totSpringLength + springLength;
             end
             proxNode = nodes(thisOrder(1),:);
@@ -227,6 +237,7 @@ if astralNum == 1
 elseif astralNum >= 2
     % routine for "Astral Mikado" networks
     augNodes = [centers; nodes];
+    springCount = 0;
     for idx = 1:numFil
         thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
         asterIdx = 1 + floor((idx-1)/astralNum);
@@ -235,11 +246,12 @@ elseif astralNum >= 2
             ends(idx,2) = l;    % treat unused filament as "right" dangling end
         elseif isscalar(thisOrder)
             % 1 node + astralNum >=2 -> spring between astral center & node
+            springCount = springCount + 1;
             r0 = centers(asterIdx,:);
             nodeCoords = nodes(thisOrder,:);
             springLength = sqrt(sum( (nodeCoords - r0).^2 ));
             newSpring = [asterIdx, numAsters+thisOrder, idx, springLength];
-            springs = [springs; newSpring];
+            springs(springCount,:) = newSpring;
             ends(idx,2) = l - springLength;
         elseif ~isscalar(thisOrder) && isvector(thisOrder)
             % >=2 nodes = there are certainly springs along this filament
@@ -248,6 +260,7 @@ elseif astralNum >= 2
             % like "Classical", but proximal segment to center is spring
             % also need to account for augmented node indices
             for jdx = 1:(length(thisOrder)-1)
+                springCount = springCount + 1;
                 nodeIdxL = thisOrder(jdx);
                 nodeL = nodes(nodeIdxL,:);
                 nodeIdxR = thisOrder(jdx+1);
@@ -255,17 +268,19 @@ elseif astralNum >= 2
                 springLength = sqrt(sum( (nodeL - nodeR).^2 ));
                 newSpring = [numAsters+min([nodeIdxL,nodeIdxR]), ...
                     numAsters+max([nodeIdxL,nodeIdxR]), idx, springLength];
-                springs = [springs; newSpring];
+                springs(springCount,:) = newSpring;
                 totSpringLength = totSpringLength + springLength;
             end
             % recording proximal segment as spring
+            springCount = springCount + 1;
             proxNode = nodes(thisOrder(1),:);
             springLength = sqrt(sum( (proxNode - r0).^2 ));
             newSpring = [asterIdx, numAsters+thisOrder(1), idx, springLength];
-            springs = [springs; newSpring];
+            springs(springCount,:) = newSpring;
             totSpringLength = totSpringLength + springLength;
             ends(idx,2) = l - totSpringLength;
         end
     end
 end
+springs = springs(1:springCount,:);
 end

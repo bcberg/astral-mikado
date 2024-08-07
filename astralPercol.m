@@ -32,6 +32,7 @@ parfor idx = 1:length(densityRange)
     end
     percProbs(idx) = connCount / sampPerDensity;
 end
+delete(pool);
 
 actualDensities = numAsterVals * (astralNum * l / D^2);
 fig1 = figure(1);
