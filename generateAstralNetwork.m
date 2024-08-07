@@ -63,12 +63,12 @@ function [nodes, filCross] = findNodes(centers,orients,l)
 %       listed so that filCross(idx,1) < filCross(idx,2)
 [~, astralNum] = size(orients);
 numFil = numel(orients);
-numNodesGuess = round(numFil^2 / 100);
+numNodesGuess = round(numFil^2 / 10);
 nodes = zeros(numNodesGuess,2);
 filCross = zeros(numNodesGuess,2);
+nodeCount = 0;
 if astralNum == 1
     % routine for "Classical Mikado" networks
-    nodeCount = 0;
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
             A = [cos(orients(idx)), - cos(orients(jdx));
@@ -89,7 +89,6 @@ if astralNum == 1
     end
 elseif astralNum >= 2
     % routine for "Astral Mikado" networks
-    nodeCount = 0;
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
             asterIdx = 1 + floor((idx-1)/astralNum);
@@ -118,8 +117,13 @@ elseif astralNum >= 2
         end
     end
 end
-nodes = nodes(1:nodeCount,:);
-filCross = filCross(1:nodeCount,:);
+if nodeCount == 0
+    nodes = zeros(0,2);
+    filCross = zeros(0,2);
+elseif nodeCount >= 1
+    nodes = nodes(1:nodeCount,:);
+    filCross = filCross(1:nodeCount,:);
+end
 end
 
 function nodeOrdering = sortNodes(filIdx,nodes,filCross,centers,astralNum)
@@ -192,14 +196,14 @@ function [augNodes,springs,ends] = defineSprings(nodes,filCross,centers, ...
 %       to the astral center; these are all 0 if astralNum >= 2.
 numAsters = size(centers,1);
 numFil = numAsters * astralNum;
-numSpringsGuess = 4 * size(nodes,1);
+numSpringsGuess = 10 * size(nodes,1);
 springs = zeros(numSpringsGuess,4);
 ends = zeros(numFil,2);
-
+springCount = 0;
+augNodes = zeros(0,2);
 if astralNum == 1
     % routine for "Classical Mikado" networks
     augNodes = nodes;   % centers are fictitious
-    springCount = 0;
     for idx = 1:numFil
         thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
         asterIdx = idx;
@@ -209,7 +213,7 @@ if astralNum == 1
         elseif isscalar(thisOrder)
             % 1 node + astralNum == 1 -> two dangling ends
             r0 = centers(asterIdx,:);
-            nodeCoords = nodes(thisOrder,:);
+            nodeCoords = nodes(thisOrder(1),:);
             ends(idx,1) = sqrt(sum( (nodeCoords - r0).^2 ));
             ends(idx,2) = l - ends(idx,2);
         elseif ~isscalar(thisOrder) && isvector(thisOrder)
@@ -237,7 +241,6 @@ if astralNum == 1
 elseif astralNum >= 2
     % routine for "Astral Mikado" networks
     augNodes = [centers; nodes];
-    springCount = 0;
     for idx = 1:numFil
         thisOrder = sortNodes(idx,nodes,filCross,centers,astralNum);
         asterIdx = 1 + floor((idx-1)/astralNum);
@@ -248,7 +251,7 @@ elseif astralNum >= 2
             % 1 node + astralNum >=2 -> spring between astral center & node
             springCount = springCount + 1;
             r0 = centers(asterIdx,:);
-            nodeCoords = nodes(thisOrder,:);
+            nodeCoords = nodes(thisOrder(1),:);
             springLength = sqrt(sum( (nodeCoords - r0).^2 ));
             newSpring = [asterIdx, numAsters+thisOrder, idx, springLength];
             springs(springCount,:) = newSpring;
@@ -282,5 +285,9 @@ elseif astralNum >= 2
         end
     end
 end
-springs = springs(1:springCount,:);
+if springCount == 0
+    springs = zeros(0,4);
+elseif springCount >= 1
+    springs = springs(1:springCount,:);
+end
 end

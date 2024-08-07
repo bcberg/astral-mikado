@@ -23,8 +23,8 @@ pool = parpool(8);
 parfor idx = 1:length(densityRange)
     connCount = 0;
     for jdx = 1:sampPerDensity
-        [~,crossings,~] = generateAstralNetwork(numAsterVals(idx),l,D, ...
-            astralNum);
+        [~,crossings,~] = generateAstralNetwork_mex(numAsterVals(idx), ...
+            l, D, astralNum);
         [connTF,~] = connCheck(crossings);
         if connTF
             connCount = connCount + 1;
