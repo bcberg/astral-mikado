@@ -110,8 +110,8 @@ elseif astralNum >= 2
             t2 = det([A(:,1),b]) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
-                nodeX = centers(idx,1) + l * cos(orients(idx)) * t1;
-                nodeY = centers(idx,2) + l * sin(orients(idx)) * t1;
+                nodeX = centers(asterIdx,1) + l * cos(orients(asterIdx,filSubIdx)) * t1;
+                nodeY = centers(asterIdx,2) + l * sin(orients(asterIdx,filSubIdx)) * t1;
                 nodes(nodeCount,1:2) = [nodeX, nodeY];
                 filCross(nodeCount,1:2) = [idx,jdx];
             end
