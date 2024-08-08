@@ -8,37 +8,39 @@ set(0,'defaultLegendInterpreter','latex')
 
 %% Parameters
 
-sampPerDensity = 200;
+numDensVals = 50;
+sampPerDensity = 1e3;
 l = 5;
 D = 50;
-densityRange = linspace(2,20,20);
+densityRange = linspace(2,25,numDensVals);
 numFilRange = densityRange * D^2 / l;
-astralNum = 1;
+astralNumList = 1:25;
+numNetTypes = length(astralNumList);
 
-%% Percolation probability plot
+%% Percolation probability estimation
 
-numAsterVals = round(numFilRange/astralNum);
-percProbs = zeros(size(densityRange));
+actualDensities = zeros([numNetTypes, numDensVals]);
+percProbs = zeros([numNetTypes, numDensVals]);
 pool = parpool(8);
-parfor idx = 1:length(densityRange)
-    connCount = 0;
-    for jdx = 1:sampPerDensity
-        [~,crossings,~] = generateAstralNetwork_mex(numAsterVals(idx), ...
-            l, D, astralNum);
-        [connTF,~] = connCheck(crossings);
-        if connTF
-            connCount = connCount + 1;
+parfor idx = 1:numNetTypes
+    astralNum = astralNumList(idx);
+    numAsterVals = round(numFilRange/astralNum);
+    actualDensities(idx,:) = numAsterVals * (astralNum * l / D^2);
+    theseProbs = zeros(1,numDensVals);
+    for jdx = 1:numDensVals
+        connCount = 0;
+        for kdx = 1:sampPerDensity
+            [~,crossings,~] = generateAstralNetwork_mex(numAsterVals(jdx), ...
+                l, D, astralNum);
+            [connTF,~] = connCheck(crossings);
+            if connTF
+                connCount = connCount + 1;
+            end
         end
+        theseProbs(jdx) = connCount / sampPerDensity;
     end
-    percProbs(idx) = connCount / sampPerDensity;
+    percProbs(idx,:) = theseProbs;
+    fprintf('Astral number %i finished\n',astralNum)
 end
 delete(pool);
-
-actualDensities = numAsterVals * (astralNum * l / D^2);
-fig1 = figure(1);
-plot(actualDensities,percProbs)
-xlabel('Filament density [$\mu m ^{-1}]$')
-ylabel('Percolation probability')
-title(sprintf('$n_{AST} = %i $',astralNum))
-exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/perc50_nAST01.png', ...
-    'Resolution',300)
+save('~/Documents/AstralMikadoCYM/data/percProbs_D50.mat')

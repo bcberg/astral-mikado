@@ -71,6 +71,11 @@ if astralNum == 1
     % routine for "Classical Mikado" networks
     for idx = 1:(numFil-1)
         for jdx = (idx+1):numFil
+            % if filaments are too far apart, don't look for intersections
+            sepDistSQR = sum( (centers(jdx,:) - centers(idx,:)).^2 );
+            if sepDistSQR > (2*l)^2
+                continue
+            end
             A = [cos(orients(idx)), - cos(orients(jdx));
                 sin(orients(idx)), - sin(orients(jdx))];
             denom = det(A);
@@ -95,6 +100,9 @@ elseif astralNum >= 2
             asterJdx = 1 + floor((jdx-1)/astralNum);
             % skip this filament if it's on the same aster
             if asterIdx == asterJdx
+                continue
+            elseif sum((centers(asterJdx,:) - centers(asterIdx,:)).^2) > (2*l)^2
+                % skip if astral centers (& filaments) are too far apart
                 continue
             end
             % otherwise, check for intersection

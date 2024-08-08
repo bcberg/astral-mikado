@@ -57,142 +57,576 @@ static emlrtRSInfo e_emlrtRSI{
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
-static emlrtRSInfo l_emlrtRSI{
-    280,                                                           // lineNo
-    "defineSprings",                                               // fcnName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
-};
-
-static emlrtRSInfo m_emlrtRSI{
-    271,                                                           // lineNo
+static emlrtRSInfo n_emlrtRSI{
+    288,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo o_emlrtRSI{
-    255,                                                           // lineNo
-    "defineSprings",                                               // fcnName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
-};
-
-static emlrtRSInfo p_emlrtRSI{
-    245,                                                           // lineNo
+    279,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo q_emlrtRSI{
-    237,                                                           // lineNo
+    263,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo r_emlrtRSI{
-    230,                                                           // lineNo
+    253,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo s_emlrtRSI{
-    217,                                                           // lineNo
+    245,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo t_emlrtRSI{
-    208,                                                           // lineNo
+    238,                                                           // lineNo
     "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo u_emlrtRSI{
-    144,                                                           // lineNo
-    "sortNodes",                                                   // fcnName
+    225,                                                           // lineNo
+    "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo v_emlrtRSI{
-    157,                                                           // lineNo
-    "sortNodes",                                                   // fcnName
+    216,                                                           // lineNo
+    "defineSprings",                                               // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo w_emlrtRSI{
-    159,                                                           // lineNo
+    152,                                                           // lineNo
     "sortNodes",                                                   // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo x_emlrtRSI{
-    160,                                                           // lineNo
+    165,                                                           // lineNo
     "sortNodes",                                                   // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo y_emlrtRSI{
-    163,                                                           // lineNo
+    167,                                                           // lineNo
     "sortNodes",                                                   // fcnName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
 };
 
 static emlrtRSInfo ab_emlrtRSI{
+    168,                                                           // lineNo
+    "sortNodes",                                                   // fcnName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
+};
+
+static emlrtRSInfo bb_emlrtRSI{
+    171,                                                           // lineNo
+    "sortNodes",                                                   // fcnName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pathName
+};
+
+static emlrtRSInfo cb_emlrtRSI{
     35,                                                            // lineNo
     "find",                                                        // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo bb_emlrtRSI{
+static emlrtRSInfo db_emlrtRSI{
     158,                                                           // lineNo
     "eml_find",                                                    // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo cb_emlrtRSI{
+static emlrtRSInfo eb_emlrtRSI{
     138,                                                           // lineNo
     "eml_find",                                                    // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo db_emlrtRSI{
+static emlrtRSInfo fb_emlrtRSI{
     253,                                                           // lineNo
     "find_first_nonempty_triples",                                 // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo eb_emlrtRSI{
+static emlrtRSInfo gb_emlrtRSI{
     254,                                                           // lineNo
     "find_first_nonempty_triples",                                 // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo fb_emlrtRSI{
+static emlrtRSInfo hb_emlrtRSI{
     255,                                                           // lineNo
     "find_first_nonempty_triples",                                 // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo kb_emlrtRSI{
+static emlrtRSInfo mb_emlrtRSI{
     70,                                                             // lineNo
     "dot",                                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" // pathName
 };
 
-static emlrtRSInfo lb_emlrtRSI{
+static emlrtRSInfo nb_emlrtRSI{
     37,                                                              // lineNo
     "sort",                                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m" // pathName
 };
 
-static emlrtRSInfo oc_emlrtRSI{
+static emlrtRSInfo qc_emlrtRSI{
     40,                  // lineNo
     "reshapeSizeChecks", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "reshapeSizeChecks.m" // pathName
 };
 
+static emlrtBCInfo emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    75,                                                             // lineNo
+    40,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo b_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    75,                                                             // lineNo
+    57,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo c_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    79,                                                             // lineNo
+    30,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo d_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    79,                                                             // lineNo
+    51,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo e_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    80,                                                             // lineNo
+    29,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo f_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    80,                                                             // lineNo
+    50,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo g_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    82,                                                             // lineNo
+    49,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo h_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    83,                                                             // lineNo
+    25,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo i_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    83,                                                             // lineNo
+    42,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo j_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    88,                                                             // lineNo
+    33,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo k_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    89,                                                             // lineNo
+    33,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo l_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    89,                                                             // lineNo
+    58,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo m_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    104,                                                            // lineNo
+    33,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo n_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    104,                                                            // lineNo
+    55,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo o_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    111,                                                            // lineNo
+    30,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtDCInfo emlrtDCI{
+    111,                                                            // lineNo
+    39,                                                             // colNo
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
+};
+
+static emlrtBCInfo p_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    111,                                                            // lineNo
+    39,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo q_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    111,                                                            // lineNo
+    66,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtDCInfo b_emlrtDCI{
+    111,                                                            // lineNo
+    75,                                                             // colNo
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
+};
+
+static emlrtBCInfo r_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    111,                                                            // lineNo
+    75,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo s_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    112,                                                            // lineNo
+    29,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo t_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    112,                                                            // lineNo
+    38,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo u_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    112,                                                            // lineNo
+    65,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo v_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    112,                                                            // lineNo
+    74,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo w_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    114,                                                            // lineNo
+    54,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo x_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    115,                                                            // lineNo
+    25,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo y_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    115,                                                            // lineNo
+    47,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo ab_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    120,                                                            // lineNo
+    33,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo bb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    120,                                                            // lineNo
+    72,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo cb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    121,                                                            // lineNo
+    33,                                                             // colNo
+    "centers",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo db_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    121,                                                            // lineNo
+    63,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo eb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    121,                                                            // lineNo
+    72,                                                             // colNo
+    "orients",                                                      // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo fb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    90,                                                             // lineNo
+    23,                                                             // colNo
+    "nodes",                                                        // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo gb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    122,                                                            // lineNo
+    23,                                                             // colNo
+    "nodes",                                                        // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo hb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    132,                                                            // lineNo
+    19,                                                             // colNo
+    "nodes",                                                        // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo ib_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    132,                                                            // lineNo
+    21,                                                             // colNo
+    "nodes",                                                        // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo jb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    91,                                                             // lineNo
+    26,                                                             // colNo
+    "filCross",                                                     // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo kb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    123,                                                            // lineNo
+    26,                                                             // colNo
+    "filCross",                                                     // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo lb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    133,                                                            // lineNo
+    25,                                                             // colNo
+    "filCross",                                                     // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo mb_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    133,                                                            // lineNo
+    27,                                                             // colNo
+    "filCross",                                                     // aName
+    "findNodes",                                                    // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
 static emlrtRTEInfo emlrtRTEI{
-    74,                  // lineNo
-    13,                  // colNo
+    81,                  // lineNo
+    23,                  // colNo
     "reshapeSizeChecks", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "reshapeSizeChecks.m" // pName
@@ -207,423 +641,11 @@ static emlrtRTEInfo b_emlrtRTEI{
 };
 
 static emlrtRTEInfo c_emlrtRTEI{
-    81,                  // lineNo
-    23,                  // colNo
+    74,                  // lineNo
+    13,                  // colNo
     "reshapeSizeChecks", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "reshapeSizeChecks.m" // pName
-};
-
-static emlrtBCInfo emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    125,                                                            // lineNo
-    27,                                                             // colNo
-    "filCross",                                                     // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo b_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    125,                                                            // lineNo
-    25,                                                             // colNo
-    "filCross",                                                     // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo c_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    115,                                                            // lineNo
-    26,                                                             // colNo
-    "filCross",                                                     // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo d_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    86,                                                             // lineNo
-    26,                                                             // colNo
-    "filCross",                                                     // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo e_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    124,                                                            // lineNo
-    21,                                                             // colNo
-    "nodes",                                                        // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo f_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    124,                                                            // lineNo
-    19,                                                             // colNo
-    "nodes",                                                        // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo g_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    114,                                                            // lineNo
-    23,                                                             // colNo
-    "nodes",                                                        // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo h_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    85,                                                             // lineNo
-    23,                                                             // colNo
-    "nodes",                                                        // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo i_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    113,                                                            // lineNo
-    72,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo j_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    113,                                                            // lineNo
-    63,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo k_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    113,                                                            // lineNo
-    33,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo l_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    112,                                                            // lineNo
-    72,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo m_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    112,                                                            // lineNo
-    33,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo n_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    107,                                                            // lineNo
-    47,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo o_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    107,                                                            // lineNo
-    25,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo p_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    106,                                                            // lineNo
-    54,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo q_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    106,                                                            // lineNo
-    32,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo r_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    104,                                                            // lineNo
-    74,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo s_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    104,                                                            // lineNo
-    65,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo t_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    104,                                                            // lineNo
-    38,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo u_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    104,                                                            // lineNo
-    29,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo v_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    103,                                                            // lineNo
-    75,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtDCInfo emlrtDCI{
-    103,                                                            // lineNo
-    75,                                                             // colNo
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
-static emlrtBCInfo w_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    103,                                                            // lineNo
-    66,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo x_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    103,                                                            // lineNo
-    39,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtDCInfo b_emlrtDCI{
-    103,                                                            // lineNo
-    39,                                                             // colNo
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
-static emlrtBCInfo y_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    103,                                                            // lineNo
-    30,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo ab_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    84,                                                             // lineNo
-    58,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo bb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    84,                                                             // lineNo
-    33,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo cb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    83,                                                             // lineNo
-    33,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo db_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    78,                                                             // lineNo
-    42,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo eb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    78,                                                             // lineNo
-    25,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo fb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    77,                                                             // lineNo
-    49,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo gb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    77,                                                             // lineNo
-    32,                                                             // colNo
-    "centers",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo hb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    75,                                                             // lineNo
-    50,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo ib_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    75,                                                             // lineNo
-    29,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo jb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    74,                                                             // lineNo
-    51,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo kb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    74,                                                             // lineNo
-    30,                                                             // colNo
-    "orients",                                                      // aName
-    "findNodes",                                                    // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
 };
 
 static emlrtDCInfo c_emlrtDCI{
@@ -658,32 +680,10 @@ static emlrtDCInfo f_emlrtDCI{
     1                                                               // checkKind
 };
 
-static emlrtBCInfo lb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    258,                                                            // lineNo
-    18,                                                             // colNo
-    "ends",                                                         // aName
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo mb_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    284,                                                            // lineNo
-    18,                                                             // colNo
-    "ends",                                                         // aName
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
 static emlrtBCInfo nb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    238,                                                            // lineNo
+    266,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -694,7 +694,7 @@ static emlrtBCInfo nb_emlrtBCI{
 static emlrtBCInfo ob_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    237,                                                            // lineNo
+    292,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -705,7 +705,7 @@ static emlrtBCInfo ob_emlrtBCI{
 static emlrtBCInfo pb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    218,                                                            // lineNo
+    246,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -716,7 +716,7 @@ static emlrtBCInfo pb_emlrtBCI{
 static emlrtBCInfo qb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    217,                                                            // lineNo
+    245,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -727,7 +727,7 @@ static emlrtBCInfo qb_emlrtBCI{
 static emlrtBCInfo rb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    212,                                                            // lineNo
+    226,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -738,7 +738,7 @@ static emlrtBCInfo rb_emlrtBCI{
 static emlrtBCInfo sb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    249,                                                            // lineNo
+    225,                                                            // lineNo
     18,                                                             // colNo
     "ends",                                                         // aName
     "defineSprings",                                                // fName
@@ -746,52 +746,12 @@ static emlrtBCInfo sb_emlrtBCI{
     0                                                               // checkKind
 };
 
-static emlrtDCInfo h_emlrtDCI{
-    201,                                                            // lineNo
-    1,                                                              // colNo
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
-static emlrtDCInfo i_emlrtDCI{
-    200,                                                            // lineNo
-    1,                                                              // colNo
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
-static emlrtDCInfo j_emlrtDCI{
-    201,                                                            // lineNo
-    14,                                                             // colNo
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    4                                                               // checkKind
-};
-
-static emlrtDCInfo k_emlrtDCI{
-    201,                                                            // lineNo
-    14,                                                             // colNo
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
-static emlrtDCInfo l_emlrtDCI{
-    200,                                                            // lineNo
-    17,                                                             // colNo
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    1                                                               // checkKind
-};
-
 static emlrtBCInfo tb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    291,                                                            // lineNo
-    25,                                                             // colNo
-    "springs",                                                      // aName
+    220,                                                            // lineNo
+    18,                                                             // colNo
+    "ends",                                                         // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -800,27 +760,59 @@ static emlrtBCInfo tb_emlrtBCI{
 static emlrtBCInfo ub_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    291,                                                            // lineNo
-    23,                                                             // colNo
-    "springs",                                                      // aName
+    257,                                                            // lineNo
+    18,                                                             // colNo
+    "ends",                                                         // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
 };
 
-static emlrtECInfo emlrtECI{
-    -1,                                                            // nDims
-    257,                                                           // lineNo
-    13,                                                            // colNo
-    "defineSprings",                                               // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
+static emlrtDCInfo h_emlrtDCI{
+    209,                                                            // lineNo
+    1,                                                              // colNo
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
+};
+
+static emlrtDCInfo i_emlrtDCI{
+    208,                                                            // lineNo
+    1,                                                              // colNo
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
+};
+
+static emlrtDCInfo j_emlrtDCI{
+    209,                                                            // lineNo
+    14,                                                             // colNo
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    4                                                               // checkKind
+};
+
+static emlrtDCInfo k_emlrtDCI{
+    209,                                                            // lineNo
+    14,                                                             // colNo
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
+};
+
+static emlrtDCInfo l_emlrtDCI{
+    208,                                                            // lineNo
+    17,                                                             // colNo
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    1                                                               // checkKind
 };
 
 static emlrtBCInfo vb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    257,                                                            // lineNo
-    21,                                                             // colNo
+    299,                                                            // lineNo
+    25,                                                             // colNo
     "springs",                                                      // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
@@ -830,20 +822,28 @@ static emlrtBCInfo vb_emlrtBCI{
 static emlrtBCInfo wb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    279,                                                            // lineNo
-    30,                                                             // colNo
-    "nodes",                                                        // aName
+    299,                                                            // lineNo
+    23,                                                             // colNo
+    "springs",                                                      // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
 };
 
+static emlrtECInfo emlrtECI{
+    -1,                                                            // nDims
+    265,                                                           // lineNo
+    13,                                                            // colNo
+    "defineSprings",                                               // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
+};
+
 static emlrtBCInfo xb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    270,                                                            // lineNo
-    31,                                                             // colNo
-    "nodes",                                                        // aName
+    265,                                                            // lineNo
+    21,                                                             // colNo
+    "springs",                                                      // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -852,9 +852,9 @@ static emlrtBCInfo xb_emlrtBCI{
 static emlrtBCInfo yb_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    269,                                                            // lineNo
-    38,                                                             // colNo
-    "thisOrder",                                                    // aName
+    287,                                                            // lineNo
+    30,                                                             // colNo
+    "nodes",                                                        // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -863,7 +863,7 @@ static emlrtBCInfo yb_emlrtBCI{
 static emlrtBCInfo ac_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    268,                                                            // lineNo
+    278,                                                            // lineNo
     31,                                                             // colNo
     "nodes",                                                        // aName
     "defineSprings",                                                // fName
@@ -874,7 +874,7 @@ static emlrtBCInfo ac_emlrtBCI{
 static emlrtBCInfo bc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    267,                                                            // lineNo
+    277,                                                            // lineNo
     38,                                                             // colNo
     "thisOrder",                                                    // aName
     "defineSprings",                                                // fName
@@ -885,9 +885,9 @@ static emlrtBCInfo bc_emlrtBCI{
 static emlrtBCInfo cc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    261,                                                            // lineNo
-    26,                                                             // colNo
-    "centers",                                                      // aName
+    276,                                                            // lineNo
+    31,                                                             // colNo
+    "nodes",                                                        // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -896,9 +896,9 @@ static emlrtBCInfo cc_emlrtBCI{
 static emlrtBCInfo dc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    254,                                                            // lineNo
-    32,                                                             // colNo
-    "nodes",                                                        // aName
+    275,                                                            // lineNo
+    38,                                                             // colNo
+    "thisOrder",                                                    // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -907,7 +907,7 @@ static emlrtBCInfo dc_emlrtBCI{
 static emlrtBCInfo ec_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    253,                                                            // lineNo
+    269,                                                            // lineNo
     26,                                                             // colNo
     "centers",                                                      // aName
     "defineSprings",                                                // fName
@@ -915,18 +915,11 @@ static emlrtBCInfo ec_emlrtBCI{
     0                                                               // checkKind
 };
 
-static emlrtRTEInfo e_emlrtRTEI{
-    244,                                                           // lineNo
-    15,                                                            // colNo
-    "defineSprings",                                               // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
-};
-
 static emlrtBCInfo fc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    236,                                                            // lineNo
-    30,                                                             // colNo
+    262,                                                            // lineNo
+    32,                                                             // colNo
     "nodes",                                                        // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
@@ -936,20 +929,27 @@ static emlrtBCInfo fc_emlrtBCI{
 static emlrtBCInfo gc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    229,                                                            // lineNo
-    31,                                                             // colNo
-    "nodes",                                                        // aName
+    261,                                                            // lineNo
+    26,                                                             // colNo
+    "centers",                                                      // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
 };
 
+static emlrtRTEInfo e_emlrtRTEI{
+    252,                                                           // lineNo
+    15,                                                            // colNo
+    "defineSprings",                                               // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
+};
+
 static emlrtBCInfo hc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    228,                                                            // lineNo
-    38,                                                             // colNo
-    "thisOrder",                                                    // aName
+    244,                                                            // lineNo
+    30,                                                             // colNo
+    "nodes",                                                        // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -958,7 +958,7 @@ static emlrtBCInfo hc_emlrtBCI{
 static emlrtBCInfo ic_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    227,                                                            // lineNo
+    237,                                                            // lineNo
     31,                                                             // colNo
     "nodes",                                                        // aName
     "defineSprings",                                                // fName
@@ -969,7 +969,7 @@ static emlrtBCInfo ic_emlrtBCI{
 static emlrtBCInfo jc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    226,                                                            // lineNo
+    236,                                                            // lineNo
     38,                                                             // colNo
     "thisOrder",                                                    // aName
     "defineSprings",                                                // fName
@@ -980,9 +980,9 @@ static emlrtBCInfo jc_emlrtBCI{
 static emlrtBCInfo kc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    221,                                                            // lineNo
-    26,                                                             // colNo
-    "centers",                                                      // aName
+    235,                                                            // lineNo
+    31,                                                             // colNo
+    "nodes",                                                        // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -991,9 +991,9 @@ static emlrtBCInfo kc_emlrtBCI{
 static emlrtBCInfo lc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    216,                                                            // lineNo
-    32,                                                             // colNo
-    "nodes",                                                        // aName
+    234,                                                            // lineNo
+    38,                                                             // colNo
+    "thisOrder",                                                    // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
     0                                                               // checkKind
@@ -1002,7 +1002,29 @@ static emlrtBCInfo lc_emlrtBCI{
 static emlrtBCInfo mc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    215,                                                            // lineNo
+    229,                                                            // lineNo
+    26,                                                             // colNo
+    "centers",                                                      // aName
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo nc_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    224,                                                            // lineNo
+    32,                                                             // colNo
+    "nodes",                                                        // aName
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo oc_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    223,                                                            // lineNo
     26,                                                             // colNo
     "centers",                                                      // aName
     "defineSprings",                                                // fName
@@ -1011,7 +1033,7 @@ static emlrtBCInfo mc_emlrtBCI{
 };
 
 static emlrtRTEInfo f_emlrtRTEI{
-    207,                                                           // lineNo
+    215,                                                           // lineNo
     15,                                                            // colNo
     "defineSprings",                                               // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1024,33 +1046,11 @@ static emlrtRTEInfo g_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sqrt.m" // pName
 };
 
-static emlrtBCInfo nc_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    282,                                                            // lineNo
-    21,                                                             // colNo
-    "springs",                                                      // aName
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
-static emlrtBCInfo oc_emlrtBCI{
-    -1,                                                             // iFirst
-    -1,                                                             // iLast
-    233,                                                            // lineNo
-    25,                                                             // colNo
-    "springs",                                                      // aName
-    "defineSprings",                                                // fName
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
-    0                                                               // checkKind
-};
-
 static emlrtBCInfo pc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    274,                                                            // lineNo
-    25,                                                             // colNo
+    290,                                                            // lineNo
+    21,                                                             // colNo
     "springs",                                                      // aName
     "defineSprings",                                                // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
@@ -1060,7 +1060,29 @@ static emlrtBCInfo pc_emlrtBCI{
 static emlrtBCInfo qc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    155,                                                            // lineNo
+    241,                                                            // lineNo
+    25,                                                             // colNo
+    "springs",                                                      // aName
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo rc_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    282,                                                            // lineNo
+    25,                                                             // colNo
+    "springs",                                                      // aName
+    "defineSprings",                                                // fName
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", // pName
+    0                                                               // checkKind
+};
+
+static emlrtBCInfo sc_emlrtBCI{
+    -1,                                                             // iFirst
+    -1,                                                             // iLast
+    163,                                                            // lineNo
     14,                                                             // colNo
     "centers",                                                      // aName
     "sortNodes",                                                    // fName
@@ -1070,7 +1092,7 @@ static emlrtBCInfo qc_emlrtBCI{
 
 static emlrtECInfo b_emlrtECI{
     1,                                                             // nDims
-    159,                                                           // lineNo
+    167,                                                           // lineNo
     16,                                                            // colNo
     "sortNodes",                                                   // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1090,10 +1112,10 @@ static emlrtRTEInfo i_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" // pName
 };
 
-static emlrtBCInfo rc_emlrtBCI{
+static emlrtBCInfo tc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    153,                                                            // lineNo
+    161,                                                            // lineNo
     25,                                                             // colNo
     "nodes",                                                        // aName
     "sortNodes",                                                    // fName
@@ -1101,10 +1123,10 @@ static emlrtBCInfo rc_emlrtBCI{
     0                                                               // checkKind
 };
 
-static emlrtBCInfo sc_emlrtBCI{
+static emlrtBCInfo uc_emlrtBCI{
     -1,                                                             // iFirst
     -1,                                                             // iLast
-    164,                                                            // lineNo
+    172,                                                            // lineNo
     27,                                                             // colNo
     "nodesOnFil",                                                   // aName
     "sortNodes",                                                    // fName
@@ -1141,28 +1163,28 @@ static emlrtRTEInfo q_emlrtRTEI{
 };
 
 static emlrtRTEInfo r_emlrtRTEI{
-    124,                                                           // lineNo
+    132,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo s_emlrtRTEI{
-    125,                                                           // lineNo
+    133,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo t_emlrtRTEI{
-    121,                                                           // lineNo
+    129,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo u_emlrtRTEI{
-    122,                                                           // lineNo
+    130,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1183,56 +1205,56 @@ static emlrtRTEInfo w_emlrtRTEI{
 };
 
 static emlrtRTEInfo y_emlrtRTEI{
-    200,                                                           // lineNo
+    208,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo ab_emlrtRTEI{
-    201,                                                           // lineNo
+    209,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo bb_emlrtRTEI{
-    203,                                                           // lineNo
+    211,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo cb_emlrtRTEI{
-    243,                                                           // lineNo
+    251,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo db_emlrtRTEI{
-    206,                                                           // lineNo
+    214,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo eb_emlrtRTEI{
-    291,                                                           // lineNo
+    299,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo fb_emlrtRTEI{
-    289,                                                           // lineNo
+    297,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo gb_emlrtRTEI{
-    144,                                                           // lineNo
+    152,                                                           // lineNo
     23,                                                            // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1274,14 +1296,14 @@ static emlrtRTEInfo lb_emlrtRTEI{
 };
 
 static emlrtRTEInfo mb_emlrtRTEI{
-    153,                                                           // lineNo
+    161,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo nb_emlrtRTEI{
-    159,                                                           // lineNo
+    167,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1295,28 +1317,28 @@ static emlrtRTEInfo ob_emlrtRTEI{
 };
 
 static emlrtRTEInfo pb_emlrtRTEI{
-    164,                                                           // lineNo
+    172,                                                           // lineNo
     16,                                                            // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo qb_emlrtRTEI{
-    164,                                                           // lineNo
+    172,                                                           // lineNo
     1,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo rb_emlrtRTEI{
-    149,                                                           // lineNo
+    157,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
 };
 
 static emlrtRTEInfo sb_emlrtRTEI{
-    146,                                                           // lineNo
+    154,                                                           // lineNo
     5,                                                             // colNo
     "generateAstralNetwork",                                       // fName
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" // pName
@@ -1434,7 +1456,7 @@ static void defineSprings(const emlrtStack &sp,
                                   static_cast<int32_T>(numFil), &f_emlrtRTEI,
                                   (emlrtConstCTX)&sp);
     for (int32_T idx{0}; idx < i1; idx++) {
-      st.site = &t_emlrtRSI;
+      st.site = &v_emlrtRSI;
       sortNodes(st, static_cast<real_T>(idx) + 1.0, nodes, filCross, centers,
                 1.0, thisOrder);
       if ((thisOrder.size(0) == 0) || (thisOrder.size(1) == 0)) {
@@ -1443,7 +1465,7 @@ static void defineSprings(const emlrtStack &sp,
             ends.size(0)) {
           emlrtDynamicBoundsCheckR2012b(
               static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &rb_emlrtBCI, (emlrtConstCTX)&sp);
+              ends.size(0), &tb_emlrtBCI, (emlrtConstCTX)&sp);
         }
         ends[idx + ends.size(0)] = l;
         //  treat unused filament as "right" dangling end
@@ -1451,13 +1473,124 @@ static void defineSprings(const emlrtStack &sp,
         real_T b_y[2];
         //  1 node + astralNum == 1 -> two dangling ends
         if (idx + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &mc_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &oc_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         if ((static_cast<int32_T>(thisOrder[0]) < 1) ||
             (static_cast<int32_T>(thisOrder[0]) > i)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(thisOrder[0]), 1,
-                                        i, &lc_emlrtBCI, (emlrtConstCTX)&sp);
+                                        i, &nc_emlrtBCI, (emlrtConstCTX)&sp);
+        }
+        numFil = nodes[static_cast<int32_T>(thisOrder[0]) - 1] - centers[idx];
+        b_y[0] = numFil * numFil;
+        numFil =
+            nodes[(static_cast<int32_T>(thisOrder[0]) + nodes.size(0)) - 1] -
+            centers[idx + centers.size(0)];
+        b_y[1] = numFil * numFil;
+        numFil = coder::sumColumnB(b_y);
+        st.site = &u_emlrtRSI;
+        if (numFil < 0.0) {
+          emlrtErrorWithMessageIdR2018a(
+              &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+        }
+        if (static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U) >
+            ends.size(0)) {
+          emlrtDynamicBoundsCheckR2012b(
+              static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
+              ends.size(0), &sb_emlrtBCI, &st);
+        }
+        ends[idx] = muDoubleScalarSqrt(numFil);
+        if (static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U) >
+            ends.size(0)) {
+          emlrtDynamicBoundsCheckR2012b(
+              static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
+              ends.size(0), &rb_emlrtBCI, (emlrtConstCTX)&sp);
+        }
+        ends[idx + ends.size(0)] = l - ends[idx + ends.size(0)];
+      } else {
+        real_T b_y[2];
+        real_T totSpringLength;
+        int32_T n;
+        //  >=2 nodes = there are certainly springs along this filament
+        if (idx + 1 > numAsters_tmp) {
+          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &mc_emlrtBCI,
+                                        (emlrtConstCTX)&sp);
+        }
+        totSpringLength = 0.0;
+        //  pair adjacent nodes to form springs
+        n = thisOrder.size(0) - 2;
+        loop_ub = thisOrder.size(0);
+        for (int32_T jdx{0}; jdx <= n; jdx++) {
+          real_T springLength;
+          int32_T y;
+          springCount++;
+          if (jdx + 1 > loop_ub) {
+            emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, loop_ub, &lc_emlrtBCI,
+                                          (emlrtConstCTX)&sp);
+          }
+          i2 = static_cast<int32_T>(thisOrder[jdx]);
+          if ((i2 < 1) || (i2 > i)) {
+            emlrtDynamicBoundsCheckR2012b(i2, 1, i, &kc_emlrtBCI,
+                                          (emlrtConstCTX)&sp);
+          }
+          if (jdx + 2 > loop_ub) {
+            emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, loop_ub, &jc_emlrtBCI,
+                                          (emlrtConstCTX)&sp);
+          }
+          y = static_cast<int32_T>(thisOrder[jdx + 1]);
+          if ((y < 1) || (y > i)) {
+            emlrtDynamicBoundsCheckR2012b(y, 1, i, &ic_emlrtBCI,
+                                          (emlrtConstCTX)&sp);
+          }
+          numFil = nodes[i2 - 1] - nodes[y - 1];
+          b_y[0] = numFil * numFil;
+          numFil =
+              nodes[(i2 + nodes.size(0)) - 1] - nodes[(y + nodes.size(0)) - 1];
+          b_y[1] = numFil * numFil;
+          springLength = coder::sumColumnB(b_y);
+          st.site = &t_emlrtRSI;
+          if (springLength < 0.0) {
+            emlrtErrorWithMessageIdR2018a(
+                &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+          }
+          springLength = muDoubleScalarSqrt(springLength);
+          numSpringsGuess = thisOrder[jdx + 1];
+          if ((thisOrder[jdx] > numSpringsGuess) ||
+              (muDoubleScalarIsNaN(thisOrder[jdx]) &&
+               (!muDoubleScalarIsNaN(numSpringsGuess)))) {
+            numFil = thisOrder[jdx + 1];
+          } else {
+            numFil = thisOrder[jdx];
+          }
+          if ((!(thisOrder[jdx] < numSpringsGuess)) &&
+              ((!muDoubleScalarIsNaN(thisOrder[jdx])) ||
+               muDoubleScalarIsNaN(numSpringsGuess))) {
+            numSpringsGuess = thisOrder[jdx];
+          }
+          if ((static_cast<int32_T>(springCount) < 1) ||
+              (static_cast<int32_T>(springCount) > springs.size(0))) {
+            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
+                                          springs.size(0), &qc_emlrtBCI,
+                                          (emlrtConstCTX)&sp);
+          }
+          springs[static_cast<int32_T>(springCount) - 1] = numFil;
+          springs[(static_cast<int32_T>(springCount) + springs.size(0)) - 1] =
+              numSpringsGuess;
+          springs[(static_cast<int32_T>(springCount) + springs.size(0) * 2) -
+                  1] = static_cast<real_T>(idx) + 1.0;
+          springs[(static_cast<int32_T>(springCount) + springs.size(0) * 3) -
+                  1] = springLength;
+          totSpringLength += springLength;
+          if (*emlrtBreakCheckR2012bFlagVar != 0) {
+            emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
+          }
+        }
+        if ((static_cast<int32_T>(thisOrder[0]) < 1) ||
+            (static_cast<int32_T>(thisOrder[0]) > i)) {
+          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(thisOrder[0]), 1,
+                                        i, &hc_emlrtBCI, (emlrtConstCTX)&sp);
         }
         numFil = nodes[static_cast<int32_T>(thisOrder[0]) - 1] - centers[idx];
         b_y[0] = numFil * numFil;
@@ -1485,117 +1618,6 @@ static void defineSprings(const emlrtStack &sp,
               static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
               ends.size(0), &pb_emlrtBCI, (emlrtConstCTX)&sp);
         }
-        ends[idx + ends.size(0)] = l - ends[idx + ends.size(0)];
-      } else {
-        real_T b_y[2];
-        real_T totSpringLength;
-        int32_T n;
-        //  >=2 nodes = there are certainly springs along this filament
-        if (idx + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &kc_emlrtBCI,
-                                        (emlrtConstCTX)&sp);
-        }
-        totSpringLength = 0.0;
-        //  pair adjacent nodes to form springs
-        n = thisOrder.size(0) - 2;
-        loop_ub = thisOrder.size(0);
-        for (int32_T jdx{0}; jdx <= n; jdx++) {
-          real_T springLength;
-          int32_T y;
-          springCount++;
-          if (jdx + 1 > loop_ub) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, loop_ub, &jc_emlrtBCI,
-                                          (emlrtConstCTX)&sp);
-          }
-          i2 = static_cast<int32_T>(thisOrder[jdx]);
-          if ((i2 < 1) || (i2 > i)) {
-            emlrtDynamicBoundsCheckR2012b(i2, 1, i, &ic_emlrtBCI,
-                                          (emlrtConstCTX)&sp);
-          }
-          if (jdx + 2 > loop_ub) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, loop_ub, &hc_emlrtBCI,
-                                          (emlrtConstCTX)&sp);
-          }
-          y = static_cast<int32_T>(thisOrder[jdx + 1]);
-          if ((y < 1) || (y > i)) {
-            emlrtDynamicBoundsCheckR2012b(y, 1, i, &gc_emlrtBCI,
-                                          (emlrtConstCTX)&sp);
-          }
-          numFil = nodes[i2 - 1] - nodes[y - 1];
-          b_y[0] = numFil * numFil;
-          numFil =
-              nodes[(i2 + nodes.size(0)) - 1] - nodes[(y + nodes.size(0)) - 1];
-          b_y[1] = numFil * numFil;
-          springLength = coder::sumColumnB(b_y);
-          st.site = &r_emlrtRSI;
-          if (springLength < 0.0) {
-            emlrtErrorWithMessageIdR2018a(
-                &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-          }
-          springLength = muDoubleScalarSqrt(springLength);
-          numSpringsGuess = thisOrder[jdx + 1];
-          if ((thisOrder[jdx] > numSpringsGuess) ||
-              (muDoubleScalarIsNaN(thisOrder[jdx]) &&
-               (!muDoubleScalarIsNaN(numSpringsGuess)))) {
-            numFil = thisOrder[jdx + 1];
-          } else {
-            numFil = thisOrder[jdx];
-          }
-          if ((!(thisOrder[jdx] < numSpringsGuess)) &&
-              ((!muDoubleScalarIsNaN(thisOrder[jdx])) ||
-               muDoubleScalarIsNaN(numSpringsGuess))) {
-            numSpringsGuess = thisOrder[jdx];
-          }
-          if ((static_cast<int32_T>(springCount) < 1) ||
-              (static_cast<int32_T>(springCount) > springs.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
-                                          springs.size(0), &oc_emlrtBCI,
-                                          (emlrtConstCTX)&sp);
-          }
-          springs[static_cast<int32_T>(springCount) - 1] = numFil;
-          springs[(static_cast<int32_T>(springCount) + springs.size(0)) - 1] =
-              numSpringsGuess;
-          springs[(static_cast<int32_T>(springCount) + springs.size(0) * 2) -
-                  1] = static_cast<real_T>(idx) + 1.0;
-          springs[(static_cast<int32_T>(springCount) + springs.size(0) * 3) -
-                  1] = springLength;
-          totSpringLength += springLength;
-          if (*emlrtBreakCheckR2012bFlagVar != 0) {
-            emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-          }
-        }
-        if ((static_cast<int32_T>(thisOrder[0]) < 1) ||
-            (static_cast<int32_T>(thisOrder[0]) > i)) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(thisOrder[0]), 1,
-                                        i, &fc_emlrtBCI, (emlrtConstCTX)&sp);
-        }
-        numFil = nodes[static_cast<int32_T>(thisOrder[0]) - 1] - centers[idx];
-        b_y[0] = numFil * numFil;
-        numFil =
-            nodes[(static_cast<int32_T>(thisOrder[0]) + nodes.size(0)) - 1] -
-            centers[idx + centers.size(0)];
-        b_y[1] = numFil * numFil;
-        numFil = coder::sumColumnB(b_y);
-        st.site = &q_emlrtRSI;
-        if (numFil < 0.0) {
-          emlrtErrorWithMessageIdR2018a(
-              &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-        }
-        if (static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U) >
-            ends.size(0)) {
-          emlrtDynamicBoundsCheckR2012b(
-              static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &ob_emlrtBCI, &st);
-        }
-        ends[idx] = muDoubleScalarSqrt(numFil);
-        if (static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U) >
-            ends.size(0)) {
-          emlrtDynamicBoundsCheckR2012b(
-              static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &nb_emlrtBCI, (emlrtConstCTX)&sp);
-        }
         ends[idx + ends.size(0)] = (l - totSpringLength) - ends[idx];
       }
       if (*emlrtBreakCheckR2012bFlagVar != 0) {
@@ -1621,7 +1643,7 @@ static void defineSprings(const emlrtStack &sp,
                                   (emlrtConstCTX)&sp);
     for (int32_T idx{0}; idx < i1; idx++) {
       int32_T y;
-      st.site = &p_emlrtRSI;
+      st.site = &r_emlrtRSI;
       sortNodes(st, static_cast<real_T>(idx) + 1.0, nodes, filCross, centers,
                 astralNum, thisOrder);
       y = static_cast<int32_T>(muDoubleScalarFloor(
@@ -1632,7 +1654,7 @@ static void defineSprings(const emlrtStack &sp,
             ends.size(0)) {
           emlrtDynamicBoundsCheckR2012b(
               static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &sb_emlrtBCI, (emlrtConstCTX)&sp);
+              ends.size(0), &ub_emlrtBCI, (emlrtConstCTX)&sp);
         }
         ends[idx + ends.size(0)] = l;
         //  treat unused filament as "right" dangling end
@@ -1642,13 +1664,13 @@ static void defineSprings(const emlrtStack &sp,
         //  1 node + astralNum >=2 -> spring between astral center & node
         springCount++;
         if (y + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(y + 1, 1, numAsters_tmp, &ec_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(y + 1, 1, numAsters_tmp, &gc_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         if ((static_cast<int32_T>(thisOrder[0]) < 1) ||
             (static_cast<int32_T>(thisOrder[0]) > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(thisOrder[0]), 1,
-                                        loop_ub, &dc_emlrtBCI,
+                                        loop_ub, &fc_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         numFil = nodes[static_cast<int32_T>(thisOrder[0]) - 1] - centers[y];
@@ -1658,7 +1680,7 @@ static void defineSprings(const emlrtStack &sp,
             centers[y + centers.size(0)];
         b_y[1] = numFil * numFil;
         springLength = coder::sumColumnB(b_y);
-        st.site = &o_emlrtRSI;
+        st.site = &q_emlrtRSI;
         if (springLength < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1672,7 +1694,7 @@ static void defineSprings(const emlrtStack &sp,
         if ((static_cast<int32_T>(springCount) < 1) ||
             (static_cast<int32_T>(springCount) > springs.size(0))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
-                                        springs.size(0), &vb_emlrtBCI,
+                                        springs.size(0), &xb_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         iv[0] = 1;
@@ -1690,7 +1712,7 @@ static void defineSprings(const emlrtStack &sp,
             ends.size(0)) {
           emlrtDynamicBoundsCheckR2012b(
               static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &lb_emlrtBCI, (emlrtConstCTX)&sp);
+              ends.size(0), &nb_emlrtBCI, (emlrtConstCTX)&sp);
         }
         ends[idx + ends.size(0)] = l - springLength;
       } else {
@@ -1700,7 +1722,7 @@ static void defineSprings(const emlrtStack &sp,
         int32_T n;
         //  >=2 nodes = there are certainly springs along this filament
         if (y + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(y + 1, 1, numAsters_tmp, &cc_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(y + 1, 1, numAsters_tmp, &ec_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         totSpringLength = 0.0;
@@ -1711,20 +1733,20 @@ static void defineSprings(const emlrtStack &sp,
           springCount++;
           if (jdx + 1 > thisOrder.size(0)) {
             emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, thisOrder.size(0),
-                                          &bc_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &dc_emlrtBCI, (emlrtConstCTX)&sp);
           }
           i = static_cast<int32_T>(thisOrder[jdx]);
           if ((i < 1) || (i > loop_ub)) {
-            emlrtDynamicBoundsCheckR2012b(i, 1, loop_ub, &ac_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(i, 1, loop_ub, &cc_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           if (jdx + 2 > thisOrder.size(0)) {
             emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, thisOrder.size(0),
-                                          &yb_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &bc_emlrtBCI, (emlrtConstCTX)&sp);
           }
           i2 = static_cast<int32_T>(thisOrder[jdx + 1]);
           if ((i2 < 1) || (i2 > loop_ub)) {
-            emlrtDynamicBoundsCheckR2012b(i2, 1, loop_ub, &xb_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(i2, 1, loop_ub, &ac_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           numFil = nodes[i - 1] - nodes[i2 - 1];
@@ -1733,7 +1755,7 @@ static void defineSprings(const emlrtStack &sp,
               nodes[(i + nodes.size(0)) - 1] - nodes[(i2 + nodes.size(0)) - 1];
           b_y[1] = numFil * numFil;
           springLength = coder::sumColumnB(b_y);
-          st.site = &m_emlrtRSI;
+          st.site = &o_emlrtRSI;
           if (springLength < 0.0) {
             emlrtErrorWithMessageIdR2018a(
                 &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1755,7 +1777,7 @@ static void defineSprings(const emlrtStack &sp,
           if ((static_cast<int32_T>(springCount) < 1) ||
               (static_cast<int32_T>(springCount) > springs.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
-                                          springs.size(0), &pc_emlrtBCI,
+                                          springs.size(0), &rc_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           springs[static_cast<int32_T>(springCount) - 1] =
@@ -1776,7 +1798,7 @@ static void defineSprings(const emlrtStack &sp,
         if ((static_cast<int32_T>(thisOrder[0]) < 1) ||
             (static_cast<int32_T>(thisOrder[0]) > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(thisOrder[0]), 1,
-                                        loop_ub, &wb_emlrtBCI,
+                                        loop_ub, &yb_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         numFil = nodes[static_cast<int32_T>(thisOrder[0]) - 1] - centers[y];
@@ -1786,7 +1808,7 @@ static void defineSprings(const emlrtStack &sp,
             centers[y + centers.size(0)];
         b_y[1] = numFil * numFil;
         springLength = coder::sumColumnB(b_y);
-        st.site = &l_emlrtRSI;
+        st.site = &n_emlrtRSI;
         if (springLength < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1796,7 +1818,7 @@ static void defineSprings(const emlrtStack &sp,
         if ((static_cast<int32_T>(springCount) < 1) ||
             (static_cast<int32_T>(springCount) > springs.size(0))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
-                                        springs.size(0), &nc_emlrtBCI,
+                                        springs.size(0), &pc_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         springs[static_cast<int32_T>(springCount) - 1] =
@@ -1812,7 +1834,7 @@ static void defineSprings(const emlrtStack &sp,
             ends.size(0)) {
           emlrtDynamicBoundsCheckR2012b(
               static_cast<int32_T>(static_cast<uint32_T>(idx) + 1U), 1,
-              ends.size(0), &mb_emlrtBCI, (emlrtConstCTX)&sp);
+              ends.size(0), &ob_emlrtBCI, (emlrtConstCTX)&sp);
         }
         ends[idx + ends.size(0)] = l - totSpringLength;
       }
@@ -1825,14 +1847,14 @@ static void defineSprings(const emlrtStack &sp,
     springs.set_size(&fb_emlrtRTEI, &sp, 0, 4);
   } else {
     if (springs.size(0) < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, springs.size(0), &ub_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(1, 1, springs.size(0), &wb_emlrtBCI,
                                     (emlrtConstCTX)&sp);
     }
     loop_ub = static_cast<int32_T>(springCount);
     if ((static_cast<int32_T>(springCount) < 1) ||
         (static_cast<int32_T>(springCount) > springs.size(0))) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(springCount), 1,
-                                    springs.size(0), &tb_emlrtBCI,
+                                    springs.size(0), &vb_emlrtBCI,
                                     (emlrtConstCTX)&sp);
     }
     for (i = 0; i < 4; i++) {
@@ -1892,17 +1914,17 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
   //        nodeOrdering (double vector): sorted list of node indices appearing
   //        on the specified filament. First element is the node closest to the
   //        astral center. If there are no nodes on this filament, returns [].
-  st.site = &u_emlrtRSI;
+  st.site = &w_emlrtRSI;
   x.set_size(&gb_emlrtRTEI, &st, filCross.size(0), 2);
   loop_ub_tmp = filCross.size(0) << 1;
   for (i = 0; i < loop_ub_tmp; i++) {
     x[i] = (filCross[i] == filIdx);
   }
-  b_st.site = &ab_emlrtRSI;
+  b_st.site = &cb_emlrtRSI;
   if (loop_ub_tmp == 0) {
     i_tmp.set_size(&kb_emlrtRTEI, &b_st, 0);
   } else {
-    c_st.site = &cb_emlrtRSI;
+    c_st.site = &eb_emlrtRSI;
     idx = 0;
     i_tmp.set_size(&hb_emlrtRTEI, &c_st, loop_ub_tmp);
     ii = 1;
@@ -1948,21 +1970,21 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
       }
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &db_emlrtRSI;
+      d_st.site = &fb_emlrtRSI;
       coder::internal::indexShapeCheck(d_st, i_tmp.size(0), iv);
       i_tmp.set_size(&ib_emlrtRTEI, &c_st, i);
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &eb_emlrtRSI;
+      d_st.site = &gb_emlrtRSI;
       coder::internal::indexShapeCheck(d_st, loop_ub_tmp, iv);
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &fb_emlrtRSI;
+      d_st.site = &hb_emlrtRSI;
       coder::internal::indexShapeCheck(d_st, loop_ub_tmp, iv);
     }
   }
   if ((x.size(0) == 1) && (i_tmp.size(0) != 1)) {
-    c_st.site = &bb_emlrtRSI;
+    c_st.site = &db_emlrtRSI;
     coder::internal::warning(c_st);
   }
   loop_ub_tmp = i_tmp.size(0);
@@ -1989,7 +2011,7 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
       for (idx = 0; idx < loop_ub_tmp; idx++) {
         if ((nodesOnFil[idx] < 1) || (nodesOnFil[idx] > nodes.size(0))) {
           emlrtDynamicBoundsCheckR2012b(nodesOnFil[idx], 1, nodes.size(0),
-                                        &rc_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &tc_emlrtBCI, (emlrtConstCTX)&sp);
         }
         nodeCoordsOnFil[idx + nodeCoordsOnFil.size(0) * i] =
             nodes[(nodesOnFil[idx] + nodes.size(0) * i) - 1];
@@ -1999,7 +2021,7 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     if ((static_cast<int32_T>(y_tmp + 1.0) < 1) ||
         (static_cast<int32_T>(y_tmp + 1.0) > centers.size(0))) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y_tmp + 1.0), 1,
-                                    centers.size(0), &qc_emlrtBCI,
+                                    centers.size(0), &sc_emlrtBCI,
                                     (emlrtConstCTX)&sp);
     }
     d = centers[static_cast<int32_T>(y_tmp + 1.0) - 1];
@@ -2011,7 +2033,7 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     a_tmp[1] = d1;
     y[1] = d1 * d1;
     y_tmp = coder::sumColumnB(y);
-    st.site = &v_emlrtRSI;
+    st.site = &x_emlrtRSI;
     if (y_tmp < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &st, &g_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -2023,7 +2045,7 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     y[1] = d2;
     b_nodesOnFil[0] = nodesOnFil.size(0);
     b_nodesOnFil[1] = 1.0;
-    st.site = &w_emlrtRSI;
+    st.site = &y_emlrtRSI;
     coder::repmat(st, y, b_nodesOnFil, a);
     if ((i_tmp.size(0) != a.size(0)) && (a.size(0) != 1)) {
       emlrtDimSizeImpxCheckR2021b(i_tmp.size(0), a.size(0), &b_emlrtECI,
@@ -2042,12 +2064,12 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     for (i = ii; i < idx; i++) {
       nodeCoordsOnFil[i] = nodeCoordsOnFil[i] - a[i];
     }
-    st.site = &x_emlrtRSI;
+    st.site = &ab_emlrtRSI;
     r = _mm_loadu_pd(&a_tmp[0]);
     _mm_storeu_pd(&a_tmp[0], _mm_div_pd(r, _mm_set1_pd(y_tmp)));
     b_nodesOnFil[0] = nodesOnFil.size(0);
     b_nodesOnFil[1] = 1.0;
-    b_st.site = &x_emlrtRSI;
+    b_st.site = &ab_emlrtRSI;
     coder::repmat(b_st, a_tmp, b_nodesOnFil, a);
     a_tmp[0] = a.size(0);
     y[0] = nodeCoordsOnFil.size(0);
@@ -2072,9 +2094,9 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     i = a.size(0);
     dotProducts.set_size(&ob_emlrtRTEI, &st, a.size(0));
     idx = -1;
-    b_st.site = &kb_emlrtRSI;
+    b_st.site = &mb_emlrtRSI;
     if (a.size(0) > 2147483646) {
-      c_st.site = &jb_emlrtRSI;
+      c_st.site = &lb_emlrtRSI;
       coder::check_forloop_overflow_error(c_st);
     }
     for (jj = 0; jj < i; jj++) {
@@ -2085,14 +2107,14 @@ static void sortNodes(const emlrtStack &sp, real_T filIdx,
     }
     //  now sort the dot products in increasing order and sort the node indices
     //  using the same permutation
-    st.site = &y_emlrtRSI;
-    b_st.site = &lb_emlrtRSI;
+    st.site = &bb_emlrtRSI;
+    b_st.site = &nb_emlrtRSI;
     coder::internal::sort(b_st, dotProducts, i_tmp);
     idx = i_tmp.size(0);
     dotProducts.set_size(&pb_emlrtRTEI, &sp, i_tmp.size(0));
     for (i = 0; i < idx; i++) {
       if ((i_tmp[i] < 1) || (i_tmp[i] > loop_ub_tmp)) {
-        emlrtDynamicBoundsCheckR2012b(i_tmp[i], 1, loop_ub_tmp, &sc_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i_tmp[i], 1, loop_ub_tmp, &uc_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       dotProducts[i] = nodesOnFil[i_tmp[i] - 1];
@@ -2114,12 +2136,9 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   coder::array<real_T, 2U> r1;
   emlrtStack b_st;
   emlrtStack st;
-  real_T A[4];
   real_T b_b[2];
   real_T b_numAsters[2];
-  real_T A_tmp;
   real_T a;
-  real_T b_A_tmp;
   real_T numNodesGuess;
   int32_T i;
   int32_T loop_ub;
@@ -2241,117 +2260,145 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
     for (maxdimlen = 0; maxdimlen <= numFil; maxdimlen++) {
       i = (loop_ub - maxdimlen) - 2;
       if (i >= 0) {
-        A_tmp = muDoubleScalarCos(asters->orients[maxdimlen]);
-        A[0] = A_tmp;
-        b_A_tmp = muDoubleScalarSin(asters->orients[maxdimlen]);
-        A[1] = b_A_tmp;
-        a = 1.0 / l;
+        a = 2.0 * l;
       }
       for (int32_T jdx{0}; jdx <= i; jdx++) {
-        real_T c_b[4];
         real_T b_jdx;
-        real_T denom;
+        real_T d;
+        real_T d1;
+        real_T d2;
         b_jdx = ((static_cast<real_T>(maxdimlen) + 1.0) + 1.0) +
                 static_cast<real_T>(jdx);
-        if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
-          emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub, &kb_emlrtBCI,
-                                        &st);
-        }
-        if ((static_cast<int32_T>(b_jdx) < 1) ||
-            (static_cast<int32_T>(b_jdx) > loop_ub)) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1, loop_ub,
-                                        &jb_emlrtBCI, &st);
-        }
-        if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
-          emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub, &ib_emlrtBCI,
-                                        &st);
-        }
-        if ((static_cast<int32_T>(b_jdx) < 1) ||
-            (static_cast<int32_T>(b_jdx) > loop_ub)) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1, loop_ub,
-                                        &hb_emlrtBCI, &st);
-        }
-        numNodesGuess = asters->orients[static_cast<int32_T>(b_jdx) - 1];
-        A[2] = -muDoubleScalarCos(numNodesGuess);
-        A[3] = -muDoubleScalarSin(numNodesGuess);
-        denom = coder::det(A);
-        if ((static_cast<int32_T>(b_jdx) < 1) ||
-            (static_cast<int32_T>(b_jdx) > asters->centers.size(0))) {
+        //  if filaments are too far apart, don't look for intersections
+        out = ((static_cast<int32_T>(b_jdx) < 1) ||
+               (static_cast<int32_T>(b_jdx) > asters->centers.size(0)));
+        if (out) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1,
-                                        asters->centers.size(0), &gb_emlrtBCI,
+                                        asters->centers.size(0), &emlrtBCI,
                                         &st);
         }
-        if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > asters->centers.size(0))) {
+        if ((static_cast<int32_T>(static_cast<uint32_T>(maxdimlen) + 1U) < 1) ||
+            (static_cast<int32_T>(static_cast<uint32_T>(maxdimlen) + 1U) >
+             asters->centers.size(0))) {
           emlrtDynamicBoundsCheckR2012b(
-              maxdimlen + 1, 1, asters->centers.size(0), &fb_emlrtBCI, &st);
+              static_cast<int32_T>(static_cast<uint32_T>(maxdimlen) + 1U), 1,
+              asters->centers.size(0), &b_emlrtBCI, &st);
         }
-        if ((static_cast<int32_T>(b_jdx) < 1) ||
-            (static_cast<int32_T>(b_jdx) > asters->centers.size(0))) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1,
-                                        asters->centers.size(0), &eb_emlrtBCI,
-                                        &st);
-        }
-        if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > asters->centers.size(0))) {
-          emlrtDynamicBoundsCheckR2012b(
-              maxdimlen + 1, 1, asters->centers.size(0), &db_emlrtBCI, &st);
-        }
-        b_b[0] = a * (asters->centers[static_cast<int32_T>(b_jdx) - 1] -
-                      asters->centers[maxdimlen]);
-        b_b[1] = a * (asters->centers[(static_cast<int32_T>(b_jdx) +
-                                       asters->centers.size(0)) -
-                                      1] -
-                      asters->centers[maxdimlen + asters->centers.size(0)]);
-        c_b[0] = b_b[0];
-        c_b[2] = A[2];
-        c_b[1] = b_b[1];
-        c_b[3] = A[3];
-        numNodesGuess = coder::det(c_b) / denom;
-        if (muDoubleScalarAbs(numNodesGuess - 0.5) <= 0.5) {
-          c_b[0] = A_tmp;
-          c_b[2] = b_b[0];
-          c_b[1] = b_A_tmp;
-          c_b[3] = b_b[1];
-          if (muDoubleScalarAbs(coder::det(c_b) / denom - 0.5) <= 0.5) {
-            nodeCount++;
-            if ((maxdimlen + 1 < 1) ||
-                (maxdimlen + 1 > asters->centers.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(
-                  maxdimlen + 1, 1, asters->centers.size(0), &cb_emlrtBCI, &st);
+        d = asters->centers[static_cast<int32_T>(b_jdx) - 1];
+        d1 = d - asters->centers[maxdimlen];
+        b_numAsters[0] = d1 * d1;
+        d2 = asters->centers[(static_cast<int32_T>(b_jdx) +
+                              asters->centers.size(0)) -
+                             1];
+        d1 = d2 - asters->centers[maxdimlen + asters->centers.size(0)];
+        b_numAsters[1] = d1 * d1;
+        if (!(coder::sumColumnB(b_numAsters) > a * a)) {
+          real_T A[4];
+          real_T c_b[4];
+          real_T A_tmp;
+          real_T b_A_tmp;
+          real_T c_A_tmp;
+          real_T denom;
+          if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
+            emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub,
+                                          &c_emlrtBCI, &st);
+          }
+          if ((static_cast<int32_T>(b_jdx) < 1) ||
+              (static_cast<int32_T>(b_jdx) > loop_ub)) {
+            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1,
+                                          loop_ub, &d_emlrtBCI, &st);
+          }
+          if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
+            emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub,
+                                          &e_emlrtBCI, &st);
+          }
+          if ((static_cast<int32_T>(b_jdx) < 1) ||
+              (static_cast<int32_T>(b_jdx) > loop_ub)) {
+            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1,
+                                          loop_ub, &f_emlrtBCI, &st);
+          }
+          A_tmp = muDoubleScalarCos(asters->orients[maxdimlen]);
+          A[0] = A_tmp;
+          b_A_tmp = asters->orients[static_cast<int32_T>(b_jdx) - 1];
+          A[2] = -muDoubleScalarCos(b_A_tmp);
+          c_A_tmp = muDoubleScalarSin(asters->orients[maxdimlen]);
+          A[1] = c_A_tmp;
+          A[3] = -muDoubleScalarSin(b_A_tmp);
+          denom = coder::det(A);
+          numNodesGuess = 1.0 / l;
+          if ((maxdimlen + 1 < 1) ||
+              (maxdimlen + 1 > asters->centers.size(0))) {
+            emlrtDynamicBoundsCheckR2012b(
+                maxdimlen + 1, 1, asters->centers.size(0), &g_emlrtBCI, &st);
+          }
+          if ((static_cast<int32_T>(b_jdx) < 1) ||
+              (static_cast<int32_T>(b_jdx) > asters->centers.size(0))) {
+            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_jdx), 1,
+                                          asters->centers.size(0), &h_emlrtBCI,
+                                          &st);
+          }
+          if ((maxdimlen + 1 < 1) ||
+              (maxdimlen + 1 > asters->centers.size(0))) {
+            emlrtDynamicBoundsCheckR2012b(
+                maxdimlen + 1, 1, asters->centers.size(0), &i_emlrtBCI, &st);
+          }
+          b_b[0] = numNodesGuess * (d - asters->centers[maxdimlen]);
+          b_b[1] = numNodesGuess *
+                   (d2 - asters->centers[maxdimlen + asters->centers.size(0)]);
+          c_b[0] = b_b[0];
+          c_b[2] = A[2];
+          c_b[1] = b_b[1];
+          c_b[3] = A[3];
+          numNodesGuess = coder::det(c_b) / denom;
+          if (muDoubleScalarAbs(numNodesGuess - 0.5) <= 0.5) {
+            c_b[0] = A_tmp;
+            c_b[2] = b_b[0];
+            c_b[1] = c_A_tmp;
+            c_b[3] = b_b[1];
+            if (muDoubleScalarAbs(coder::det(c_b) / denom - 0.5) <= 0.5) {
+              nodeCount++;
+              if ((maxdimlen + 1 < 1) ||
+                  (maxdimlen + 1 > asters->centers.size(0))) {
+                emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1,
+                                              asters->centers.size(0),
+                                              &j_emlrtBCI, &st);
+              }
+              if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
+                emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub,
+                                              &l_emlrtBCI, &st);
+              }
+              if ((maxdimlen + 1 < 1) ||
+                  (maxdimlen + 1 > asters->centers.size(0))) {
+                emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1,
+                                              asters->centers.size(0),
+                                              &k_emlrtBCI, &st);
+              }
+              if ((static_cast<int32_T>(nodeCount) < 1) ||
+                  (static_cast<int32_T>(nodeCount) > network->nodes.size(0))) {
+                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
+                                              1, network->nodes.size(0),
+                                              &fb_emlrtBCI, &st);
+              }
+              network->nodes[static_cast<int32_T>(nodeCount) - 1] =
+                  asters->centers[maxdimlen] + l * A_tmp * numNodesGuess;
+              network->nodes[(static_cast<int32_T>(nodeCount) +
+                              network->nodes.size(0)) -
+                             1] =
+                  asters->centers[maxdimlen + asters->centers.size(0)] +
+                  l * c_A_tmp * numNodesGuess;
+              if ((static_cast<int32_T>(nodeCount) < 1) ||
+                  (static_cast<int32_T>(nodeCount) >
+                   crossings->filCross.size(0))) {
+                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
+                                              1, crossings->filCross.size(0),
+                                              &jb_emlrtBCI, &st);
+              }
+              crossings->filCross[static_cast<int32_T>(nodeCount) - 1] =
+                  static_cast<real_T>(maxdimlen) + 1.0;
+              crossings->filCross[(static_cast<int32_T>(nodeCount) +
+                                   crossings->filCross.size(0)) -
+                                  1] = b_jdx;
             }
-            if ((maxdimlen + 1 < 1) || (maxdimlen + 1 > loop_ub)) {
-              emlrtDynamicBoundsCheckR2012b(maxdimlen + 1, 1, loop_ub,
-                                            &ab_emlrtBCI, &st);
-            }
-            if ((maxdimlen + 1 < 1) ||
-                (maxdimlen + 1 > asters->centers.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(
-                  maxdimlen + 1, 1, asters->centers.size(0), &bb_emlrtBCI, &st);
-            }
-            if ((static_cast<int32_T>(nodeCount) < 1) ||
-                (static_cast<int32_T>(nodeCount) > network->nodes.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount), 1,
-                                            network->nodes.size(0), &h_emlrtBCI,
-                                            &st);
-            }
-            network->nodes[static_cast<int32_T>(nodeCount) - 1] =
-                asters->centers[maxdimlen] + l * A_tmp * numNodesGuess;
-            network->nodes[(static_cast<int32_T>(nodeCount) +
-                            network->nodes.size(0)) -
-                           1] =
-                asters->centers[maxdimlen + asters->centers.size(0)] +
-                l * b_A_tmp * numNodesGuess;
-            if ((static_cast<int32_T>(nodeCount) < 1) ||
-                (static_cast<int32_T>(nodeCount) >
-                 crossings->filCross.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount), 1,
-                                            crossings->filCross.size(0),
-                                            &d_emlrtBCI, &st);
-            }
-            crossings->filCross[static_cast<int32_T>(nodeCount) - 1] =
-                static_cast<real_T>(maxdimlen) + 1.0;
-            crossings->filCross[(static_cast<int32_T>(nodeCount) +
-                                 crossings->filCross.size(0)) -
-                                1] = b_jdx;
           }
         }
         if (*emlrtBreakCheckR2012bFlagVar != 0) {
@@ -2378,105 +2425,16 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
             muDoubleScalarFloor((b_jdx - 1.0) / static_cast<real_T>(vectorUB));
         //  skip this filament if it's on the same aster
         if (!(y + 1.0 == b_y + 1.0)) {
-          real_T c_b[4];
-          real_T b_b_tmp;
-          real_T b_tmp;
-          real_T denom;
-          real_T filSubIdx;
-          //  otherwise, check for intersection
-          numNodesGuess =
-              muDoubleScalarRem(static_cast<real_T>(maxdimlen) + 1.0,
-                                static_cast<real_T>(vectorUB));
-          filSubIdx = numNodesGuess +
-                      static_cast<real_T>(vectorUB * (numNodesGuess == 0.0));
-          numNodesGuess =
-              muDoubleScalarRem(b_jdx, static_cast<real_T>(vectorUB));
-          numNodesGuess +=
-              static_cast<real_T>(vectorUB * (numNodesGuess == 0.0));
-          out = ((static_cast<int32_T>(y + 1.0) < 1) ||
-                 (static_cast<int32_T>(y + 1.0) > asters->orients.size(0)));
+          real_T d;
+          real_T d1;
+          real_T d2;
+          real_T d3;
+          a = 2.0 * l;
+          out = ((static_cast<int32_T>(b_y + 1.0) < 1) ||
+                 (static_cast<int32_T>(b_y + 1.0) > asters->centers.size(0)));
           if (out) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                          asters->orients.size(0), &y_emlrtBCI,
-                                          &st);
-          }
-          if (filSubIdx != static_cast<int32_T>(filSubIdx)) {
-            emlrtIntegerCheckR2012b(filSubIdx, &b_emlrtDCI, &st);
-          }
-          if ((static_cast<int32_T>(filSubIdx) < 1) ||
-              (static_cast<int32_T>(filSubIdx) > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx), 1,
-                                          vectorUB, &x_emlrtBCI, &st);
-          }
-          if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
-              (static_cast<int32_T>(b_y + 1.0) > asters->orients.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
-                                          asters->orients.size(0), &w_emlrtBCI,
-                                          &st);
-          }
-          if (numNodesGuess != static_cast<int32_T>(numNodesGuess)) {
-            emlrtIntegerCheckR2012b(numNodesGuess, &emlrtDCI, &st);
-          }
-          if ((static_cast<int32_T>(numNodesGuess) < 1) ||
-              (static_cast<int32_T>(numNodesGuess) > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(numNodesGuess),
-                                          1, vectorUB, &v_emlrtBCI, &st);
-          }
-          if ((static_cast<int32_T>(y + 1.0) < 1) ||
-              (static_cast<int32_T>(y + 1.0) > asters->orients.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                          asters->orients.size(0), &u_emlrtBCI,
-                                          &st);
-          }
-          if ((static_cast<int32_T>(filSubIdx) < 1) ||
-              (static_cast<int32_T>(filSubIdx) > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx), 1,
-                                          vectorUB, &t_emlrtBCI, &st);
-          }
-          if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
-              (static_cast<int32_T>(b_y + 1.0) > asters->orients.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
-                                          asters->orients.size(0), &s_emlrtBCI,
-                                          &st);
-          }
-          if ((static_cast<int32_T>(numNodesGuess) < 1) ||
-              (static_cast<int32_T>(numNodesGuess) > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(numNodesGuess),
-                                          1, vectorUB, &r_emlrtBCI, &st);
-          }
-          A_tmp = asters->orients[(static_cast<int32_T>(y + 1.0) +
-                                   asters->orients.size(0) *
-                                       (static_cast<int32_T>(filSubIdx) - 1)) -
-                                  1];
-          b_A_tmp = muDoubleScalarCos(A_tmp);
-          A[0] = b_A_tmp;
-          numNodesGuess =
-              asters->orients[(static_cast<int32_T>(b_y + 1.0) +
-                               asters->orients.size(0) *
-                                   (static_cast<int32_T>(numNodesGuess) - 1)) -
-                              1];
-          A[2] = -muDoubleScalarCos(numNodesGuess);
-          A_tmp = muDoubleScalarSin(A_tmp);
-          A[1] = A_tmp;
-          A[3] = -muDoubleScalarSin(numNodesGuess);
-          denom = coder::det(A);
-          a = 1.0 / l;
-          if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
-              (static_cast<int32_T>(b_y + 1.0) > asters->centers.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
-                                          asters->centers.size(0), &q_emlrtBCI,
-                                          &st);
-          }
-          if ((static_cast<int32_T>(y + 1.0) < 1) ||
-              (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                          asters->centers.size(0), &p_emlrtBCI,
-                                          &st);
-          }
-          if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
-              (static_cast<int32_T>(b_y + 1.0) > asters->centers.size(0))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
-                                          asters->centers.size(0), &o_emlrtBCI,
+                                          asters->centers.size(0), &m_emlrtBCI,
                                           &st);
           }
           if ((static_cast<int32_T>(y + 1.0) < 1) ||
@@ -2485,80 +2443,193 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                                           asters->centers.size(0), &n_emlrtBCI,
                                           &st);
           }
-          b_tmp = asters->centers[static_cast<int32_T>(y + 1.0) - 1];
-          b_b[0] = a * (asters->centers[static_cast<int32_T>(b_y + 1.0) - 1] -
-                        b_tmp);
-          b_b_tmp = asters->centers[(static_cast<int32_T>(y + 1.0) +
-                                     asters->centers.size(0)) -
-                                    1];
-          b_b[1] = a * (asters->centers[(static_cast<int32_T>(b_y + 1.0) +
-                                         asters->centers.size(0)) -
-                                        1] -
-                        b_b_tmp);
-          c_b[0] = b_b[0];
-          c_b[2] = A[2];
-          c_b[1] = b_b[1];
-          c_b[3] = A[3];
-          numNodesGuess = coder::det(c_b) / denom;
-          if (muDoubleScalarAbs(numNodesGuess - 0.5) <= 0.5) {
-            c_b[0] = b_A_tmp;
-            c_b[2] = b_b[0];
-            c_b[1] = A_tmp;
-            c_b[3] = b_b[1];
-            if (muDoubleScalarAbs(coder::det(c_b) / denom - 0.5) <= 0.5) {
-              nodeCount++;
-              if ((static_cast<int32_T>(filSubIdx) < 1) ||
-                  (static_cast<int32_T>(filSubIdx) > vectorUB)) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx),
-                                              1, vectorUB, &l_emlrtBCI, &st);
-              }
-              if ((static_cast<int32_T>(y + 1.0) < 1) ||
-                  (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                              asters->centers.size(0),
-                                              &m_emlrtBCI, &st);
-              }
-              if ((static_cast<int32_T>(y + 1.0) < 1) ||
-                  (static_cast<int32_T>(y + 1.0) > asters->orients.size(0))) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                              asters->orients.size(0),
-                                              &j_emlrtBCI, &st);
-              }
-              if ((static_cast<int32_T>(filSubIdx) < 1) ||
-                  (static_cast<int32_T>(filSubIdx) > vectorUB)) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx),
-                                              1, vectorUB, &i_emlrtBCI, &st);
-              }
-              if ((static_cast<int32_T>(y + 1.0) < 1) ||
-                  (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
-                                              asters->centers.size(0),
-                                              &k_emlrtBCI, &st);
-              }
-              if ((static_cast<int32_T>(nodeCount) < 1) ||
-                  (static_cast<int32_T>(nodeCount) > network->nodes.size(0))) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
-                                              1, network->nodes.size(0),
-                                              &g_emlrtBCI, &st);
-              }
-              network->nodes[static_cast<int32_T>(nodeCount) - 1] =
-                  b_tmp + l * b_A_tmp * numNodesGuess;
-              network->nodes[(static_cast<int32_T>(nodeCount) +
-                              network->nodes.size(0)) -
-                             1] = b_b_tmp + l * A_tmp * numNodesGuess;
-              if ((static_cast<int32_T>(nodeCount) < 1) ||
-                  (static_cast<int32_T>(nodeCount) >
-                   crossings->filCross.size(0))) {
-                emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
-                                              1, crossings->filCross.size(0),
-                                              &c_emlrtBCI, &st);
-              }
-              crossings->filCross[static_cast<int32_T>(nodeCount) - 1] =
-                  static_cast<real_T>(maxdimlen) + 1.0;
-              crossings->filCross[(static_cast<int32_T>(nodeCount) +
-                                   crossings->filCross.size(0)) -
-                                  1] = b_jdx;
+          d = asters->centers[static_cast<int32_T>(y + 1.0) - 1];
+          d1 = asters->centers[static_cast<int32_T>(b_y + 1.0) - 1] - d;
+          b_numAsters[0] = d1 * d1;
+          d2 = asters->centers[(static_cast<int32_T>(y + 1.0) +
+                                asters->centers.size(0)) -
+                               1];
+          d3 = asters->centers[(static_cast<int32_T>(b_y + 1.0) +
+                                asters->centers.size(0)) -
+                               1] -
+               d2;
+          b_numAsters[1] = d3 * d3;
+          if (!(coder::sumColumnB(b_numAsters) > a * a)) {
+            real_T A[4];
+            real_T c_b[4];
+            real_T A_tmp;
+            real_T b_A_tmp;
+            real_T c_A_tmp;
+            real_T denom;
+            real_T filSubIdx;
+            //  otherwise, check for intersection
+            numNodesGuess =
+                muDoubleScalarRem(static_cast<real_T>(maxdimlen) + 1.0,
+                                  static_cast<real_T>(vectorUB));
+            filSubIdx = numNodesGuess +
+                        static_cast<real_T>(vectorUB * (numNodesGuess == 0.0));
+            numNodesGuess =
+                muDoubleScalarRem(b_jdx, static_cast<real_T>(vectorUB));
+            numNodesGuess +=
+                static_cast<real_T>(vectorUB * (numNodesGuess == 0.0));
+            out = ((static_cast<int32_T>(y + 1.0) < 1) ||
+                   (static_cast<int32_T>(y + 1.0) > asters->orients.size(0)));
+            if (out) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
+                                            asters->orients.size(0),
+                                            &o_emlrtBCI, &st);
             }
+            if (filSubIdx != static_cast<int32_T>(filSubIdx)) {
+              emlrtIntegerCheckR2012b(filSubIdx, &emlrtDCI, &st);
+            }
+            if ((static_cast<int32_T>(filSubIdx) < 1) ||
+                (static_cast<int32_T>(filSubIdx) > vectorUB)) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx), 1,
+                                            vectorUB, &p_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
+                (static_cast<int32_T>(b_y + 1.0) > asters->orients.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
+                                            asters->orients.size(0),
+                                            &q_emlrtBCI, &st);
+            }
+            if (numNodesGuess != static_cast<int32_T>(numNodesGuess)) {
+              emlrtIntegerCheckR2012b(numNodesGuess, &b_emlrtDCI, &st);
+            }
+            if ((static_cast<int32_T>(numNodesGuess) < 1) ||
+                (static_cast<int32_T>(numNodesGuess) > vectorUB)) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(numNodesGuess),
+                                            1, vectorUB, &r_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                (static_cast<int32_T>(y + 1.0) > asters->orients.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
+                                            asters->orients.size(0),
+                                            &s_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(filSubIdx) < 1) ||
+                (static_cast<int32_T>(filSubIdx) > vectorUB)) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx), 1,
+                                            vectorUB, &t_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
+                (static_cast<int32_T>(b_y + 1.0) > asters->orients.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
+                                            asters->orients.size(0),
+                                            &u_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(numNodesGuess) < 1) ||
+                (static_cast<int32_T>(numNodesGuess) > vectorUB)) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(numNodesGuess),
+                                            1, vectorUB, &v_emlrtBCI, &st);
+            }
+            A_tmp =
+                asters->orients[(static_cast<int32_T>(y + 1.0) +
+                                 asters->orients.size(0) *
+                                     (static_cast<int32_T>(filSubIdx) - 1)) -
+                                1];
+            b_A_tmp = muDoubleScalarCos(A_tmp);
+            A[0] = b_A_tmp;
+            c_A_tmp =
+                asters
+                    ->orients[(static_cast<int32_T>(b_y + 1.0) +
+                               asters->orients.size(0) *
+                                   (static_cast<int32_T>(numNodesGuess) - 1)) -
+                              1];
+            A[2] = -muDoubleScalarCos(c_A_tmp);
+            A_tmp = muDoubleScalarSin(A_tmp);
+            A[1] = A_tmp;
+            A[3] = -muDoubleScalarSin(c_A_tmp);
+            denom = coder::det(A);
+            a = 1.0 / l;
+            if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
+                                            asters->centers.size(0),
+                                            &w_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(b_y + 1.0) < 1) ||
+                (static_cast<int32_T>(b_y + 1.0) > asters->centers.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_y + 1.0), 1,
+                                            asters->centers.size(0),
+                                            &x_emlrtBCI, &st);
+            }
+            if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
+              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0), 1,
+                                            asters->centers.size(0),
+                                            &y_emlrtBCI, &st);
+            }
+            b_b[0] = a * d1;
+            b_b[1] = a * d3;
+            c_b[0] = b_b[0];
+            c_b[2] = A[2];
+            c_b[1] = b_b[1];
+            c_b[3] = A[3];
+            numNodesGuess = coder::det(c_b) / denom;
+            if (muDoubleScalarAbs(numNodesGuess - 0.5) <= 0.5) {
+              c_b[0] = b_A_tmp;
+              c_b[2] = b_b[0];
+              c_b[1] = A_tmp;
+              c_b[3] = b_b[1];
+              if (muDoubleScalarAbs(coder::det(c_b) / denom - 0.5) <= 0.5) {
+                nodeCount++;
+                if ((static_cast<int32_T>(filSubIdx) < 1) ||
+                    (static_cast<int32_T>(filSubIdx) > vectorUB)) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx),
+                                                1, vectorUB, &bb_emlrtBCI, &st);
+                }
+                if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                    (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0),
+                                                1, asters->centers.size(0),
+                                                &ab_emlrtBCI, &st);
+                }
+                if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                    (static_cast<int32_T>(y + 1.0) > asters->orients.size(0))) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0),
+                                                1, asters->orients.size(0),
+                                                &db_emlrtBCI, &st);
+                }
+                if ((static_cast<int32_T>(filSubIdx) < 1) ||
+                    (static_cast<int32_T>(filSubIdx) > vectorUB)) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(filSubIdx),
+                                                1, vectorUB, &eb_emlrtBCI, &st);
+                }
+                if ((static_cast<int32_T>(y + 1.0) < 1) ||
+                    (static_cast<int32_T>(y + 1.0) > asters->centers.size(0))) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(y + 1.0),
+                                                1, asters->centers.size(0),
+                                                &cb_emlrtBCI, &st);
+                }
+                if ((static_cast<int32_T>(nodeCount) < 1) ||
+                    (static_cast<int32_T>(nodeCount) >
+                     network->nodes.size(0))) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
+                                                1, network->nodes.size(0),
+                                                &gb_emlrtBCI, &st);
+                }
+                network->nodes[static_cast<int32_T>(nodeCount) - 1] =
+                    d + l * b_A_tmp * numNodesGuess;
+                network->nodes[(static_cast<int32_T>(nodeCount) +
+                                network->nodes.size(0)) -
+                               1] = d2 + l * A_tmp * numNodesGuess;
+                if ((static_cast<int32_T>(nodeCount) < 1) ||
+                    (static_cast<int32_T>(nodeCount) >
+                     crossings->filCross.size(0))) {
+                  emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount),
+                                                1, crossings->filCross.size(0),
+                                                &kb_emlrtBCI, &st);
+                }
+                crossings->filCross[static_cast<int32_T>(nodeCount) - 1] =
+                    static_cast<real_T>(maxdimlen) + 1.0;
+                crossings->filCross[(static_cast<int32_T>(nodeCount) +
+                                     crossings->filCross.size(0)) -
+                                    1] = b_jdx;
+              }
+            }
+          } else {
+            //  skip if astral centers (& filaments) are too far apart
           }
         }
         if (*emlrtBreakCheckR2012bFlagVar != 0) {
@@ -2575,14 +2646,14 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
     crossings->filCross.set_size(&u_emlrtRTEI, &st, 0, 2);
   } else {
     if (network->nodes.size(0) < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, network->nodes.size(0), &f_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(1, 1, network->nodes.size(0), &hb_emlrtBCI,
                                     &st);
     }
     loop_ub = static_cast<int32_T>(nodeCount);
     if ((static_cast<int32_T>(nodeCount) < 1) ||
         (static_cast<int32_T>(nodeCount) > network->nodes.size(0))) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount), 1,
-                                    network->nodes.size(0), &e_emlrtBCI, &st);
+                                    network->nodes.size(0), &ib_emlrtBCI, &st);
     }
     for (i = 0; i < 2; i++) {
       for (maxdimlen = 0; maxdimlen < loop_ub; maxdimlen++) {
@@ -2594,12 +2665,12 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                             2);
     if (crossings->filCross.size(0) < 1) {
       emlrtDynamicBoundsCheckR2012b(1, 1, crossings->filCross.size(0),
-                                    &b_emlrtBCI, &st);
+                                    &lb_emlrtBCI, &st);
     }
     if ((static_cast<int32_T>(nodeCount) < 1) ||
         (static_cast<int32_T>(nodeCount) > crossings->filCross.size(0))) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nodeCount), 1,
-                                    crossings->filCross.size(0), &emlrtBCI,
+                                    crossings->filCross.size(0), &mb_emlrtBCI,
                                     &st);
     }
     for (i = 0; i < 2; i++) {
@@ -2633,7 +2704,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   b_b[1] = numAsters;
   st.site = &e_emlrtRSI;
   maxdimlen = r1.size(1);
-  b_st.site = &oc_emlrtRSI;
+  b_st.site = &qc_emlrtRSI;
   coder::internal::assertValidSizeArg(b_st, b_b);
   loop_ub = static_cast<int32_T>(astralNum);
   numFil = static_cast<int32_T>(numAsters);
@@ -2643,12 +2714,12 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   }
   maxdimlen = muIntScalarMax_sint32(maxdimlen, vectorUB);
   if (static_cast<int32_T>(astralNum) > maxdimlen) {
-    emlrtErrorWithMessageIdR2018a(&st, &emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &c_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
   if (static_cast<int32_T>(numAsters) > maxdimlen) {
-    emlrtErrorWithMessageIdR2018a(&st, &emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &c_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
@@ -2664,7 +2735,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   if (static_cast<int32_T>(astralNum) * static_cast<int32_T>(numAsters) !=
       r1.size(1)) {
     emlrtErrorWithMessageIdR2018a(
-        &st, &c_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
+        &st, &emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
         "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
   }
   crossings->centerCross.set_size(&w_emlrtRTEI, sp, numFil, loop_ub);

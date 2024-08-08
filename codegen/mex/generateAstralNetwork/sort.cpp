@@ -17,37 +17,37 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo mb_emlrtRSI{
+static emlrtRSInfo ob_emlrtRSI{
     76,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo nb_emlrtRSI{
+static emlrtRSInfo pb_emlrtRSI{
     79,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo ob_emlrtRSI{
+static emlrtRSInfo qb_emlrtRSI{
     81,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo pb_emlrtRSI{
+static emlrtRSInfo rb_emlrtRSI{
     84,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo qb_emlrtRSI{
+static emlrtRSInfo sb_emlrtRSI{
     87,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo rb_emlrtRSI{
+static emlrtRSInfo tb_emlrtRSI{
     90,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
@@ -87,20 +87,20 @@ void sort(const emlrtStack &sp, array<real_T, 1U> &x, array<int32_T, 1U> &idx)
   vlen = x.size(0) - 1;
   vwork.set_size(&ub_emlrtRTEI, &sp, k);
   idx.set_size(&vb_emlrtRTEI, &sp, k);
-  st.site = &mb_emlrtRSI;
-  st.site = &nb_emlrtRSI;
   st.site = &ob_emlrtRSI;
   st.site = &pb_emlrtRSI;
+  st.site = &qb_emlrtRSI;
+  st.site = &rb_emlrtRSI;
   if (k > 2147483646) {
-    b_st.site = &jb_emlrtRSI;
+    b_st.site = &lb_emlrtRSI;
     check_forloop_overflow_error(b_st);
   }
   for (k = 0; k <= vlen; k++) {
     vwork[k] = x[k];
   }
-  st.site = &qb_emlrtRSI;
+  st.site = &sb_emlrtRSI;
   sortIdx(st, vwork, iidx);
-  st.site = &rb_emlrtRSI;
+  st.site = &tb_emlrtRSI;
   for (k = 0; k <= vlen; k++) {
     x[k] = vwork[k];
     idx[k] = iidx[k];

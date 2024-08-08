@@ -23,6 +23,6 @@
 extern emlrtCTX emlrtRootTLSGlobal;
 extern const volatile char_T *emlrtBreakCheckR2012bFlagVar;
 extern emlrtContext emlrtContextGlobal;
-extern emlrtRSInfo jb_emlrtRSI;
+extern emlrtRSInfo lb_emlrtRSI;
 
 // End of code generation (generateAstralNetwork_data.h)

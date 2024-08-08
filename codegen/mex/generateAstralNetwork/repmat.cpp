@@ -17,13 +17,13 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo hb_emlrtRSI{
+static emlrtRSInfo jb_emlrtRSI{
     38,                                                              // lineNo
     "repmat",                                                        // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" // pathName
 };
 
-static emlrtRSInfo ib_emlrtRSI{
+static emlrtRSInfo kb_emlrtRSI{
     79,                                                              // lineNo
     "repmat",                                                        // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" // pathName
@@ -47,7 +47,7 @@ void repmat(const emlrtStack &sp, const real_T a[2], const real_T varargin_1[2],
   boolean_T overflow;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &hb_emlrtRSI;
+  st.site = &jb_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   internal::assertValidSizeArg(st, varargin_1);
@@ -57,9 +57,9 @@ void repmat(const emlrtStack &sp, const real_T a[2], const real_T varargin_1[2],
   for (int32_T jcol{0}; jcol < 2; jcol++) {
     int32_T ibmat;
     ibmat = jcol * i;
-    st.site = &ib_emlrtRSI;
+    st.site = &kb_emlrtRSI;
     if (overflow) {
-      b_st.site = &jb_emlrtRSI;
+      b_st.site = &lb_emlrtRSI;
       check_forloop_overflow_error(b_st);
     }
     for (int32_T itilerow{0}; itilerow < i; itilerow++) {
