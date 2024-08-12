@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2024a">
-  <configuration build-checksum="3222668891" file="/home/bcberg/Documents/astral-mikado/generateAstralNetwork.prj" location="/home/bcberg/Documents/astral-mikado" name="generateAstralNetwork" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="4233775554" file="/home/bcberg/Documents/astral-mikado/generateAstralNetwork.prj" location="/home/bcberg/Documents/astral-mikado" name="generateAstralNetwork" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -16,7 +16,7 @@
       <param.ExtrinsicCalls>true</param.ExtrinsicCalls>
       <param.IntegrityChecks>true</param.IntegrityChecks>
       <param.SaturateOnIntegerOverflow>true</param.SaturateOnIntegerOverflow>
-      <param.EnableAutoParallelization>false</param.EnableAutoParallelization>
+      <param.EnableAutoParallelization>true</param.EnableAutoParallelization>
       <param.NumberOfCpuThreads>0</param.NumberOfCpuThreads>
       <param.OptimizeReductions>false</param.OptimizeReductions>
       <param.SIMDAcceleration>option.SIMDAcceleration.Portable</param.SIMDAcceleration>
@@ -106,7 +106,6 @@
         <param.ExtrinsicCalls />
         <param.IntegrityChecks />
         <param.SaturateOnIntegerOverflow />
-        <param.EnableAutoParallelization />
         <param.NumberOfCpuThreads />
         <param.OptimizeReductions />
         <param.SIMDAcceleration />
@@ -639,12 +638,12 @@
     <param.hdlParamStorage />
     <var.gc.lastOutputRoot>codegen/mex/generateAstralNetwork</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>MEX_FILE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>3222668891</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>4233775554</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen/mex/generateAstralNetwork</var.cfi.lastOutputRoot>
-    <var.cfi.preBuildChecksum>3682994020</var.cfi.preBuildChecksum>
+    <var.cfi.preBuildChecksum>1092331426</var.cfi.preBuildChecksum>
     <var.lastCfiTestSnippet>[a,b,c]=generateAstralNetwork(20,5,10,3)</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;3192401309&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1359526291&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>

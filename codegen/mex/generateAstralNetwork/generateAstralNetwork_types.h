@@ -14,6 +14,7 @@
 #include "rtwtypes.h"
 #include "coder_array.h"
 #include "emlrt.h"
+#define MAX_THREADS omp_get_max_threads()
 
 // Type Definitions
 struct struct0_T {

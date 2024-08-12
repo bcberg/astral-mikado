@@ -17,50 +17,50 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo ob_emlrtRSI{
+static emlrtRSInfo hc_emlrtRSI{
     76,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo pb_emlrtRSI{
+static emlrtRSInfo ic_emlrtRSI{
     79,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo qb_emlrtRSI{
+static emlrtRSInfo jc_emlrtRSI{
     81,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo rb_emlrtRSI{
+static emlrtRSInfo kc_emlrtRSI{
     84,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo sb_emlrtRSI{
+static emlrtRSInfo lc_emlrtRSI{
     87,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRSInfo tb_emlrtRSI{
+static emlrtRSInfo mc_emlrtRSI{
     90,     // lineNo
     "sort", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRTEInfo ub_emlrtRTEI{
+static emlrtRTEInfo jc_emlrtRTEI{
     56,                                                                // lineNo
     24,                                                                // colNo
     "sort",                                                            // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pName
 };
 
-static emlrtRTEInfo vb_emlrtRTEI{
+static emlrtRTEInfo kc_emlrtRTEI{
     75,                                                                // lineNo
     26,                                                                // colNo
     "sort",                                                            // fName
@@ -85,22 +85,22 @@ void sort(const emlrtStack &sp, array<real_T, 1U> &x, array<int32_T, 1U> &idx)
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   k = x.size(0);
   vlen = x.size(0) - 1;
-  vwork.set_size(&ub_emlrtRTEI, &sp, k);
-  idx.set_size(&vb_emlrtRTEI, &sp, k);
-  st.site = &ob_emlrtRSI;
-  st.site = &pb_emlrtRSI;
-  st.site = &qb_emlrtRSI;
-  st.site = &rb_emlrtRSI;
+  vwork.set_size(&jc_emlrtRTEI, &sp, k);
+  idx.set_size(&kc_emlrtRTEI, &sp, k);
+  st.site = &hc_emlrtRSI;
+  st.site = &ic_emlrtRSI;
+  st.site = &jc_emlrtRSI;
+  st.site = &kc_emlrtRSI;
   if (k > 2147483646) {
-    b_st.site = &lb_emlrtRSI;
+    b_st.site = &t_emlrtRSI;
     check_forloop_overflow_error(b_st);
   }
   for (k = 0; k <= vlen; k++) {
     vwork[k] = x[k];
   }
-  st.site = &sb_emlrtRSI;
+  st.site = &lc_emlrtRSI;
   sortIdx(st, vwork, iidx);
-  st.site = &tb_emlrtRSI;
+  st.site = &mc_emlrtRSI;
   for (k = 0; k <= vlen; k++) {
     x[k] = vwork[k];
     idx[k] = iidx[k];

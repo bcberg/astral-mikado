@@ -11,10 +11,12 @@
 // Include files
 #include "_coder_generateAstralNetwork_mex.h"
 #include "_coder_generateAstralNetwork_api.h"
+#include "generateAstralNetwork.h"
 #include "generateAstralNetwork_data.h"
 #include "generateAstralNetwork_initialize.h"
 #include "generateAstralNetwork_terminate.h"
 #include "rt_nonfinite.h"
+#include "omp.h"
 #include <stdexcept>
 
 void emlrtExceptionBridge();
@@ -57,14 +59,29 @@ void generateAstralNetwork_mexFunction(int32_T nlhs, mxArray *plhs[3],
 void mexFunction(int32_T nlhs, mxArray *plhs[], int32_T nrhs,
                  const mxArray *prhs[])
 {
+  emlrtStack st{
+      nullptr, // site
+      nullptr, // tls
+      nullptr  // prev
+  };
   mexAtExit(&generateAstralNetwork_atexit);
+  emlrtLoadMATLABLibrary("sys/os/glnxa64/libiomp5.so");
+  // Initialize the memory manager.
+  omp_init_lock(&emlrtLockGlobal);
+  omp_init_nest_lock(&generateAstralNetwork_nestLockGlobal);
   // Module initialization.
   generateAstralNetwork_initialize();
+  st.tls = emlrtRootTLSGlobal;
   try { // Dispatch the entry-point.
     generateAstralNetwork_mexFunction(nlhs, plhs, nrhs, prhs);
     // Module termination.
     generateAstralNetwork_terminate();
+    omp_destroy_lock(&emlrtLockGlobal);
+    omp_destroy_nest_lock(&generateAstralNetwork_nestLockGlobal);
   } catch (...) {
+    omp_destroy_lock(&emlrtLockGlobal);
+    omp_destroy_nest_lock(&generateAstralNetwork_nestLockGlobal);
+    emlrtReportParallelRunTimeError(&st);
     emlrtCleanupOnException((emlrtCTX *)emlrtRootTLSGlobal);
     throw;
   }
@@ -72,7 +89,8 @@ void mexFunction(int32_T nlhs, mxArray *plhs[], int32_T nrhs,
 
 emlrtCTX mexFunctionCreateRootTLS()
 {
-  emlrtCreateRootTLSR2022a(&emlrtRootTLSGlobal, &emlrtContextGlobal, nullptr, 1,
+  emlrtCreateRootTLSR2022a(&emlrtRootTLSGlobal, &emlrtContextGlobal,
+                           &emlrtLockerFunction, omp_get_num_procs(),
                            (void *)&emlrtExceptionBridge, "UTF-8", true);
   return emlrtRootTLSGlobal;
 }

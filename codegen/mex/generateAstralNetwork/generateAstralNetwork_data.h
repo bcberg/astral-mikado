@@ -14,6 +14,7 @@
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
+#include "omp.h"
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -23,6 +24,8 @@
 extern emlrtCTX emlrtRootTLSGlobal;
 extern const volatile char_T *emlrtBreakCheckR2012bFlagVar;
 extern emlrtContext emlrtContextGlobal;
-extern emlrtRSInfo lb_emlrtRSI;
+extern emlrtRSInfo t_emlrtRSI;
+extern omp_lock_t emlrtLockGlobal;
+extern omp_nest_lock_t generateAstralNetwork_nestLockGlobal;
 
 // End of code generation (generateAstralNetwork_data.h)

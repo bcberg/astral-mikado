@@ -61,8 +61,10 @@ function [nodes, filCross] = findNodes(centers,orients,l)
 %       filCross (numNodes x 2 double): list of pairs of filament indices
 %       corresponding to the filaments that cross at a particular node;
 %       listed so that filCross(idx,1) < filCross(idx,2)
-[~, astralNum] = size(orients);
+[numAsters, astralNum] = size(orients);
 numFil = numel(orients);
+cosines = cos(orients);
+sines = sin(orients);
 numNodesGuess = round(numFil^2 / 10);
 nodes = zeros(numNodesGuess,2);
 filCross = zeros(numNodesGuess,2);
@@ -70,46 +72,54 @@ nodeCount = 0;
 if astralNum == 1
     % routine for "Classical Mikado" networks
     for idx = 1:(numFil-1)
-        for jdx = (idx+1):numFil
-            % if filaments are too far apart, don't look for intersections
-            sepDistSQR = sum( (centers(jdx,:) - centers(idx,:)).^2 );
-            if sepDistSQR > (2*l)^2
-                continue
-            end
-            A = [cos(orients(idx)), - cos(orients(jdx));
-                sin(orients(idx)), - sin(orients(jdx))];
+        otherFils = (idx+1):numFil;
+        centerSepSQR = sum((repmat(centers(idx,:),[numel(otherFils),1]) - ...
+            centers(otherFils,:)).^2, 2);
+        closeEnough = otherFils(centerSepSQR <= (2*l)^2);
+        for jdx = 1:numel(closeEnough)
+            % % if filaments are too far apart, don't look for intersections
+            % sepDistSQR = sum( (centers(jdx,:) - centers(idx,:)).^2 );
+            % if sepDistSQR > (2*l)^2
+            %     continue
+            % end
+            filOfJdx = closeEnough(jdx);
+            A = [cosines(idx), - cosines(filOfJdx);
+                sines(idx), - sines(filOfJdx)];
             denom = det(A);
-            b = 1/l * [centers(jdx,1) - centers(idx,1);
-                centers(jdx,2) - centers(idx,2)];
+            b = 1/l * [centers(filOfJdx,1) - centers(idx,1);
+                centers(filOfJdx,2) - centers(idx,2)];
             t1 = det([b,A(:,2)]) / denom;
             t2 = det([A(:,1),b]) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
-                nodeX = centers(idx,1) + l * cos(orients(idx)) * t1;
-                nodeY = centers(idx,2) + l * sin(orients(idx)) * t1;
+                nodeX = centers(idx,1) + l * cosines(idx) * t1;
+                nodeY = centers(idx,2) + l * sines(idx) * t1;
                 nodes(nodeCount,1:2) = [nodeX, nodeY];
-                filCross(nodeCount,1:2) = [idx,jdx];
+                filCross(nodeCount,1:2) = [idx,filOfJdx];
             end
         end
     end
 elseif astralNum >= 2
     % routine for "Astral Mikado" networks
-    for idx = 1:(numFil-1)
-        for jdx = (idx+1):numFil
-            asterIdx = 1 + floor((idx-1)/astralNum);
+    % loop only needs to run through the last filament on penultimate aster
+    for idx = 1:((numAsters-1)*astralNum)
+        asterIdx = 1 + floor((idx-1)/astralNum);
+        otherAsters = (asterIdx + 1):numAsters;
+        centerSepSQR = sum((repmat(centers(asterIdx,:), ...
+            [numel(otherAsters),1]) - centers(otherAsters,:)).^2, 2);
+        tooFar = centerSepSQR > (2*l)^2;
+        % start second loop at first filament on the next aster
+        for jdx = (1 + asterIdx*astralNum):numFil
             asterJdx = 1 + floor((jdx-1)/astralNum);
-            % skip this filament if it's on the same aster
-            if asterIdx == asterJdx
-                continue
-            elseif sum((centers(asterJdx,:) - centers(asterIdx,:)).^2) > (2*l)^2
-                % skip if astral centers (& filaments) are too far apart
+            whichOtherAster = asterJdx - asterIdx;
+            if tooFar(whichOtherAster)
                 continue
             end
             % otherwise, check for intersection
             filSubIdx = mod(idx,astralNum) + astralNum * (mod(idx,astralNum)==0);
             filSubJdx = mod(jdx,astralNum) + astralNum * (mod(jdx,astralNum)==0);
-            A = [cos(orients(asterIdx,filSubIdx)), - cos(orients(asterJdx,filSubJdx));
-                sin(orients(asterIdx,filSubIdx)), - sin(orients(asterJdx,filSubJdx))];
+            A = [cosines(asterIdx,filSubIdx), - cosines(asterJdx,filSubJdx);
+                sines(asterIdx,filSubIdx), - sines(asterJdx,filSubJdx)];
             denom = det(A);
             b = 1/l * [centers(asterJdx,1) - centers(asterIdx,1);
                 centers(asterJdx,2) - centers(asterIdx,2)];
@@ -117,8 +127,8 @@ elseif astralNum >= 2
             t2 = det([A(:,1),b]) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
-                nodeX = centers(asterIdx,1) + l * cos(orients(asterIdx,filSubIdx)) * t1;
-                nodeY = centers(asterIdx,2) + l * sin(orients(asterIdx,filSubIdx)) * t1;
+                nodeX = centers(asterIdx,1) + l * cosines(asterIdx,filSubIdx) * t1;
+                nodeY = centers(asterIdx,2) + l * sines(asterIdx,filSubIdx) * t1;
                 nodes(nodeCount,1:2) = [nodeX, nodeY];
                 filCross(nodeCount,1:2) = [idx,jdx];
             end

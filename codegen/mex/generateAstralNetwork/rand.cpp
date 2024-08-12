@@ -34,7 +34,7 @@ static emlrtRSInfo h_emlrtRSI{
     "zerosWithChecks.m" // pathName
 };
 
-static emlrtDCInfo g_emlrtDCI{
+static emlrtDCInfo i_emlrtDCI{
     23,                // lineNo
     13,                // colNo
     "zerosWithChecks", // fName
@@ -43,7 +43,7 @@ static emlrtDCInfo g_emlrtDCI{
     4                    // checkKind
 };
 
-static emlrtRTEInfo x_emlrtRTEI{
+static emlrtRTEInfo jb_emlrtRTEI{
     103,                                                             // lineNo
     24,                                                              // colNo
     "rand",                                                          // fName
@@ -65,12 +65,12 @@ void b_rand(const emlrtStack &sp, const real_T varargin_1[2],
   b_st.site = &h_emlrtRSI;
   mustBeInteger(b_st, varargin_1);
   if (!(varargin_1[0] >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(varargin_1[0], &g_emlrtDCI, &st);
+    emlrtNonNegativeCheckR2012b(varargin_1[0], &i_emlrtDCI, &st);
   }
   if (!(varargin_1[1] >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(varargin_1[1], &g_emlrtDCI, &st);
+    emlrtNonNegativeCheckR2012b(varargin_1[1], &i_emlrtDCI, &st);
   }
-  r.set_size(&x_emlrtRTEI, &st, static_cast<int32_T>(varargin_1[0]), 2);
+  r.set_size(&jb_emlrtRTEI, &st, static_cast<int32_T>(varargin_1[0]), 2);
   st.site = &g_emlrtRSI;
   if (static_cast<int32_T>(varargin_1[0]) != 0) {
     emlrtRandu(&(r.data())[0], static_cast<int32_T>(varargin_1[0]) << 1);
@@ -90,12 +90,12 @@ void c_rand(const emlrtStack &sp, const real_T varargin_1[2],
   b_st.site = &h_emlrtRSI;
   mustBeInteger(b_st, varargin_1);
   if (!(varargin_1[0] >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(varargin_1[0], &g_emlrtDCI, &st);
+    emlrtNonNegativeCheckR2012b(varargin_1[0], &i_emlrtDCI, &st);
   }
   if (!(varargin_1[1] >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(varargin_1[1], &g_emlrtDCI, &st);
+    emlrtNonNegativeCheckR2012b(varargin_1[1], &i_emlrtDCI, &st);
   }
-  r.set_size(&x_emlrtRTEI, &st, static_cast<int32_T>(varargin_1[0]),
+  r.set_size(&jb_emlrtRTEI, &st, static_cast<int32_T>(varargin_1[0]),
              static_cast<int32_T>(varargin_1[1]));
   st.site = &g_emlrtRSI;
   if ((static_cast<int32_T>(varargin_1[0]) != 0) &&

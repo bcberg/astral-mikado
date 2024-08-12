@@ -13,6 +13,7 @@
 #include "_coder_generateAstralNetwork_mex.h"
 #include "generateAstralNetwork_data.h"
 #include "rt_nonfinite.h"
+#include "omp.h"
 
 // Function Declarations
 static void emlrtExitTimeCleanupDtorFcn(const void *r);
@@ -31,6 +32,10 @@ void generateAstralNetwork_atexit()
       nullptr  // prev
   };
   mexFunctionCreateRootTLS();
+  emlrtLoadMATLABLibrary("sys/os/glnxa64/libiomp5.so");
+  // Initialize the memory manager.
+  omp_init_lock(&emlrtLockGlobal);
+  omp_init_nest_lock(&generateAstralNetwork_nestLockGlobal);
   st.tls = emlrtRootTLSGlobal;
   try {
     emlrtPushHeapReferenceStackR2021a(&st, false, nullptr,
@@ -39,7 +44,12 @@ void generateAstralNetwork_atexit()
     emlrtEnterRtStackR2012b(&st);
     emlrtDestroyRootTLS(&emlrtRootTLSGlobal);
     emlrtExitTimeCleanup(&emlrtContextGlobal);
+    omp_destroy_lock(&emlrtLockGlobal);
+    omp_destroy_nest_lock(&generateAstralNetwork_nestLockGlobal);
   } catch (...) {
+    omp_destroy_lock(&emlrtLockGlobal);
+    omp_destroy_nest_lock(&generateAstralNetwork_nestLockGlobal);
+    emlrtReportParallelRunTimeError(&st);
     emlrtCleanupOnException((emlrtCTX *)emlrtRootTLSGlobal);
     throw;
   }

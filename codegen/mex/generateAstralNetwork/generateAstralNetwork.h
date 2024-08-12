@@ -21,6 +21,11 @@
 #include <cstring>
 
 // Function Declarations
+emlrtCTX emlrtGetRootTLSGlobal();
+
+void emlrtLockerFunction(EmlrtLockeeFunction aLockee, emlrtConstCTX aTLS,
+                         void *aData);
+
 void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                            real_T D, real_T astralNum, struct0_T *network,
                            struct1_T *crossings, struct2_T *asters);

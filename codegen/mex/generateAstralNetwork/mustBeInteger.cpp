@@ -15,7 +15,7 @@
 
 // Variable Definitions
 static emlrtRTEInfo
-    d_emlrtRTEI{
+    f_emlrtRTEI{
         13,              // lineNo
         27,              // colNo
         "mustBeInteger", // fName
@@ -42,7 +42,7 @@ void mustBeInteger(const emlrtStack &sp, const real_T A[2])
     }
   }
   if (!p) {
-    emlrtErrorWithMessageIdR2018a(&sp, &d_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&sp, &f_emlrtRTEI,
                                   "MATLAB:validators:mustBeInteger",
                                   "MATLAB:validators:mustBeInteger", 0);
   }

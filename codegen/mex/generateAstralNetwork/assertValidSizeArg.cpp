@@ -14,7 +14,7 @@
 #include "mwmathutil.h"
 
 // Variable Definitions
-static emlrtRTEInfo k_emlrtRTEI{
+static emlrtRTEInfo g_emlrtRTEI{
     49,                   // lineNo
     19,                   // colNo
     "assertValidSizeArg", // fName
@@ -22,7 +22,7 @@ static emlrtRTEInfo k_emlrtRTEI{
     "assertValidSizeArg.m" // pName
 };
 
-static emlrtRTEInfo l_emlrtRTEI{
+static emlrtRTEInfo h_emlrtRTEI{
     64,                   // lineNo
     15,                   // colNo
     "assertValidSizeArg", // fName
@@ -72,7 +72,7 @@ void assertValidSizeArg(const emlrtStack &sp, const real_T varargin_1[2])
   }
   if (guard1) {
     emlrtErrorWithMessageIdR2018a(
-        &sp, &k_emlrtRTEI,
+        &sp, &g_emlrtRTEI,
         "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector",
         "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector", 4, 12,
         MIN_int32_T, 12, MAX_int32_T);
@@ -88,7 +88,7 @@ void assertValidSizeArg(const emlrtStack &sp, const real_T varargin_1[2])
     d *= varargin_1[1];
   }
   if (!(d <= 2.147483647E+9)) {
-    emlrtErrorWithMessageIdR2018a(&sp, &l_emlrtRTEI, "Coder:MATLAB:pmaxsize",
+    emlrtErrorWithMessageIdR2018a(&sp, &h_emlrtRTEI, "Coder:MATLAB:pmaxsize",
                                   "Coder:MATLAB:pmaxsize", 0);
   }
 }
