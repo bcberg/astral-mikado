@@ -47,7 +47,10 @@ numNetTypes = length(astralNumList);
 
 %% Plotting
 
-load('~/Documents/AstralMikadoCYM/data/percProbs_D50.mat')
+% Ubuntu path
+% load('~/Documents/AstralMikadoCYM/data/percProbs_D50.mat')
+% Windows path
+load("C:\Users\bcber\Documents\AstralMikadoCYM\data\percProbs_D50.mat")
 fig1 = figure(1);
 set(fig1,'defaultLineLineWidth',0.75)
 cmap = colormap(turbo(numNetTypes));
@@ -57,9 +60,14 @@ for idx = 1:numNetTypes
         sprintf('nAST%02i',astralNumList(idx)),'Color',cmap(idx,:))
 end
 hold off
-xscale('log')
+xscale('linear')    % 'linear' or 'log'
 legend('Location','eastoutside')
 xlabel('Line density [$\mu m^{-1}$]')
 ylabel('Percolation probability')
-exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/percProbs_D50.png', ...
-    'Resolution',300)
+% exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/percProbs_D50.png', ...
+%     'Resolution',300)
+
+%% heatmap
+
+figure(2)
+pcolor(percProbs)

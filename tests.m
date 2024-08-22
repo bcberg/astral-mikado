@@ -63,14 +63,36 @@ numFil = numel(orients);
 
 %% astral network generation
 
-rho = 5;
+rho = 20;
 astralNum = 5;
 l = 5;
 D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic
 [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
-matTime = toc;
+matTime10 = toc;
+% tic
+% [network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
+% mexTime = toc;
+
+%% 2 x 2 determinants
+
+numIter = 1e4;
+A = rand([2,2,numIter]);
+b = rand([2,numIter]);
+
 tic
-[network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
-mexTime = toc;
+for idx = 1:numIter
+    t1 = det([b(:,idx), A(:,2,idx)]);
+    t2 = det([A(:,1,idx), b(:,idx)]);
+    d = det(A(:,:,idx));
+end
+detTime = toc;
+
+tic
+for idx = 1:numIter
+    t1p = b(1,idx)*A(2,2,idx) - b(2,idx)*A(1,2,idx);
+    t2p = A(1,1,idx)*b(2,idx) - A(2,1,idx)*b(1,idx);
+    dp = A(1,1,idx)*A(2,2,idx) - A(1,2,idx)*A(2,1,idx);
+end
+aritTime = toc;
