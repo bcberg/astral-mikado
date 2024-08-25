@@ -63,14 +63,14 @@ numFil = numel(orients);
 
 %% astral network generation
 
-rho = 20;
+rho = 5;
 astralNum = 5;
 l = 5;
 D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic
-[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
-matTime10 = toc;
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum,'nodesonly');
+matTime = toc;
 % tic
 % [network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
 % mexTime = toc;
@@ -96,3 +96,53 @@ for idx = 1:numIter
     dp = A(1,1,idx)*A(2,2,idx) - A(1,2,idx)*A(2,1,idx);
 end
 aritTime = toc;
+
+%% algorithm to check for percolation
+
+rho = 5;
+astralNum = 5;
+l = 5;
+D = 50;
+numAsters = round(rho * D^2 / (l * astralNum));
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum,'nodesonly');
+
+if astralNum == 1
+    G = graph(crossings.filCross(:,1),crossings.filCross(:,2));
+elseif astralNum >= 2
+    edgesPerCenter = nchoosek(astralNum,2);
+    centerEdges = zeros([numAsters * nchoosek(astralNum,2), 2]);
+    for idx = 1:numAsters
+        centerEdges((1+(idx-1)*edgesPerCenter):idx*edgesPerCenter,:) = ...
+            nchoosek(crossings.centerCross(idx,:),2);
+    end
+    edges = [crossings.filCross; centerEdges];
+    G = graph(edges(:,1),edges(:,2));
+end
+
+[bins,binsizes] = conncomp(G);
+
+% identify nodes that fall outside of (0,0)--(D,0)--(D,D)--(0,D)--(0,0)
+% each node is due to a filCross between two filaments idx and jdx
+% --> these two filaments are in the same connected component compidx
+%       (use bins(idx) to identify compidx)
+
+% note: a node may satisfy two of the below conditions (e.g., above AND to
+% the right)
+nodesAbove = find(network.nodes(:,2) > D);
+filsAbove = reshape(crossings.filCross(nodesAbove,:),1,[]);
+compsAbove = unique(bins(filsAbove));
+
+nodesBelow = find(network.nodes(:,2) < 0);
+filsBelow = reshape(crossings.filCross(nodesBelow,:),1,[]);
+compsBelow = unique(bins(filsBelow));
+
+nodesLeft = find(network.nodes(:,1) < 0);
+filsLeft = reshape(crossings.filCross(nodesLeft,:),1,[]);
+compsLeft = unique(bins(filsLeft));
+
+nodesRight = find(network.nodes(:,1) > D);
+filsRight = reshape(crossings.filCross(nodesRight,:),1,[]);
+compsRight = unique(bins(filsRight));
+
+percTB = any(intersect(compsAbove,compsBelow));
+percLR = any(intersect(compsLeft,compsRight));

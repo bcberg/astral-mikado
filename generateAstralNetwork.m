@@ -1,11 +1,15 @@
-function [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum)
+function [network,crossings,asters] = generateAstralNetwork(numAsters, ...
+    l,D,astralNum,varargin)
 % GENERATEASTRALNETWORK Constructs an astral network and reports properties
-%   Inputs:
+%   REQUIRED Inputs:
 %       numAsters (scalar): (whole) number of asters to distribute
 %       l (scalar): length of individual filament
-%       D (scalar): domain size; asters are distributed in a square of size
-%       length D
+%       D (scalar): domain size; asters are distributed in the square
+%       with corners at (0,0) and (D,D)
 %       astralNum (scalar): (whole) number of filaments per aster
+%   OPTIONAL Inputs:
+%       varargin{1} (string or character vector): specify "nodesonly" to
+%       skip spring definition and return only network.nodes
 %   Outputs:
 %       network (struct): has fields 'nodes', 'augNodes', 'springs', 'ends'
 %           'nodes': see findNodes auxiliary function
@@ -24,20 +28,32 @@ function [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astral
 %   does not store/compile information for running Metropolis-Hastings
 asters.centers = D * rand([numAsters,2]);
 asters.orients = 2 * pi * rand([numAsters,astralNum]);
-
 [nodes, filCross] = findNodes(asters.centers,asters.orients,l);
-[augNodes, springs, ends] = defineSprings(nodes,filCross,asters.centers, ...
-    l,astralNum);
-
 numFil = numAsters * astralNum;
 % aster idx 1 groups filaments 1,2,...,astralNum; and so on
 crossings.centerCross = transpose(reshape(1:numFil,[astralNum,numAsters]));
 crossings.filCross = filCross;
-
-network.nodes = nodes;
-network.augNodes = augNodes;
-network.springs = springs;
-network.ends = ends;
+switch nargin
+    case 4
+        % full network generation
+        [augNodes, springs, ends] = defineSprings(nodes,filCross, ...
+            asters.centers,l,astralNum);
+        network.nodes = nodes;
+        network.augNodes = augNodes;
+        network.springs = springs;
+        network.ends = ends;
+    case 5
+        if strcmp(varargin{1},"nodesonly")
+            % skip spring definition
+            network.nodes = nodes;
+            network.augNodes = zeros(0,2);
+            network.springs = zeros(0,4);
+            network.ends = zeros(0,2);
+        else
+            error("Argument in 5th position must be either 'nodesonly'" + ...
+                " or omitted")
+        end
+end
 end
 
 %% Auxiliary functions
@@ -72,24 +88,27 @@ nodeCount = 0;
 if astralNum == 1
     % routine for "Classical Mikado" networks
     for idx = 1:(numFil-1)
+        % only look for intersections if filaments are close enough
         otherFils = (idx+1):numFil;
         centerSepSQR = sum((repmat(centers(idx,:),[numel(otherFils),1]) - ...
             centers(otherFils,:)).^2, 2);
         closeEnough = otherFils(centerSepSQR <= (2*l)^2);
         for jdx = 1:numel(closeEnough)
-            % % if filaments are too far apart, don't look for intersections
-            % sepDistSQR = sum( (centers(jdx,:) - centers(idx,:)).^2 );
-            % if sepDistSQR > (2*l)^2
-            %     continue
-            % end
             filOfJdx = closeEnough(jdx);
-            A = [cosines(idx), - cosines(filOfJdx);
-                sines(idx), - sines(filOfJdx)];
-            denom = det(A);
-            b = 1/l * [centers(filOfJdx,1) - centers(idx,1);
-                centers(filOfJdx,2) - centers(idx,2)];
-            t1 = det([b,A(:,2)]) / denom;
-            t2 = det([A(:,1),b]) / denom;
+            % legacy code in these comments for readability
+            % A = [cosines(idx), - cosines(filOfJdx);
+            %     sines(idx), - sines(filOfJdx)];
+            % denom = det(A);
+            % b = 1/l * [centers(filOfJdx,1) - centers(idx,1);
+            %     centers(filOfJdx,2) - centers(idx,2)];
+            % t1 = det([b,A(:,2)]) / denom;
+            % t2 = det([A(:,1),b]) / denom;
+            denom = cosines(idx) * (-sines(filOfJdx)) + ...
+                sines(idx)*cosines(filOfJdx);
+            b1 = (centers(filOfJdx,1) - centers(idx,1)) / l;
+            b2 = (centers(filOfJdx,2) - centers(idx,2)) / l;
+            t1 = (b1*(-sines(filOfJdx)) + b2*cosines(filOfJdx)) / denom;
+            t2 = (cosines(idx)*b2 - sines(idx)*b1) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
                 nodeX = centers(idx,1) + l * cosines(idx) * t1;
@@ -111,6 +130,7 @@ elseif astralNum >= 2
         % start second loop at first filament on the next aster
         for jdx = (1 + asterIdx*astralNum):numFil
             asterJdx = 1 + floor((jdx-1)/astralNum);
+            % whichOtherAster finds corrent row in centerSepSQR, tooFar
             whichOtherAster = asterJdx - asterIdx;
             if tooFar(whichOtherAster)
                 continue
@@ -118,13 +138,22 @@ elseif astralNum >= 2
             % otherwise, check for intersection
             filSubIdx = mod(idx,astralNum) + astralNum * (mod(idx,astralNum)==0);
             filSubJdx = mod(jdx,astralNum) + astralNum * (mod(jdx,astralNum)==0);
-            A = [cosines(asterIdx,filSubIdx), - cosines(asterJdx,filSubJdx);
-                sines(asterIdx,filSubIdx), - sines(asterJdx,filSubJdx)];
-            denom = det(A);
-            b = 1/l * [centers(asterJdx,1) - centers(asterIdx,1);
-                centers(asterJdx,2) - centers(asterIdx,2)];
-            t1 = det([b,A(:,2)]) / denom;
-            t2 = det([A(:,1),b]) / denom;
+            % legacy code in these comments for readability
+            % A = [cosines(asterIdx,filSubIdx), - cosines(asterJdx,filSubJdx);
+            %     sines(asterIdx,filSubIdx), - sines(asterJdx,filSubJdx)];
+            % denom = det(A);
+            % b = 1/l * [centers(asterJdx,1) - centers(asterIdx,1);
+            %     centers(asterJdx,2) - centers(asterIdx,2)];
+            % t1 = det([b,A(:,2)]) / denom;
+            % t2 = det([A(:,1),b]) / denom;
+            denom = cosines(asterIdx,filSubIdx)*(-sines(asterJdx,filSubJdx)) + ...
+                sines(asterIdx,filSubIdx)*cosines(asterJdx,filSubJdx);
+            b1 = (centers(asterJdx,1) - centers(asterIdx,1)) / l;
+            b2 = (centers(asterJdx,2) - centers(asterIdx,2)) / l;
+            t1 = (b1*(-sines(asterJdx,filSubJdx)) + ...
+                b2*cosines(asterJdx,filSubJdx)) / denom;
+            t2 = (cosines(asterIdx,filSubIdx)*b2 - ...
+                sines(asterIdx,filSubIdx)*b1) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
                 nodeX = centers(asterIdx,1) + l * cosines(asterIdx,filSubIdx) * t1;

@@ -9,33 +9,38 @@ set(0,'defaultLegendInterpreter','latex')
 %% testing generation
 
 % tiny test
-astralNum = 1;
-numAsters = 60;
-l = 5;
-D = 10;
-[network,crossings,asters] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
+% astralNum = 1;
+% numAsters = 60;
+% l = 5;
+% D = 10;
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
 % astralNum = 5;
 % numAsters = 12;
 % l = 5;
 % D = 10;
-% [network,crossings,asters] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
 % like cytosim
-% astralNum = 5;
-% rho = 5;
-% l = 5;
-% D = 50;
-% targetFilNum = rho * D^2 / l;
-% numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
-% [network,crossings,asters] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
+astralNum = 5;
+rho = 1;
+l = 5;
+D = 50;
+targetFilNum = rho * D^2 / l;
+numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
 
 %% testing connCheck
 
-[connTF, connStats] = connCheck(crossings);
+% [connTF, connStats] = connCheck(crossings);
+
+%% testing percCheck
+
+[percTF, percStats] = percCheck(crossings,network.nodes,D);
 
 %% visualizing
 
+domainBox = [D, D; 0, D; 0, 0; D, 0; D, D];
 % aster plot
 figure(1)
 hold on
@@ -49,12 +54,10 @@ for idx = 1:numAsters
             '-k')
     end
 end
+plot(domainBox(:,1),domainBox(:,2),'--b','LineWidth',0.75)
 hold off
-if connTF
-    title('Connected!')
-else
-    title('Disconnected!')
-end
+percStatus = sprintf('[percTB, percLR] = [%i,%i]',percTF(1),percTF(2));
+title(percStatus)
 
 % highlight nodes
 figure(2)
@@ -70,12 +73,9 @@ for idx = 1:numAsters
     end
 end
 plot(network.nodes(:,1),network.nodes(:,2),'*m')
+plot(domainBox(:,1),domainBox(:,2),'--b','LineWidth',0.75)
 hold off
-if connTF
-    title('Connected!')
-else
-    title('Disconnected!')
-end
+title(percStatus)
 
 % draw spring network
 figure(3)
@@ -94,18 +94,16 @@ for idx = 1:size(network.springs,1)
         plot(network.augNodes(augNodeB,1),network.augNodes(augNodeB,2),'or')
     end
 end
-if connTF
-    title('Connected!')
-else
-    title('Disconnected!')
-end
+plot(domainBox(:,1),domainBox(:,2),'--b','LineWidth',0.75)
+hold off
+title(percStatus)
 
 % dangling end distribution
-figure(4)
-if astralNum == 1
-    histogram(reshape(network.ends,[2*numAsters,1]))
-elseif astralNum >= 2
-    histogram(network.ends(:,2))
-end
-xlabel('Dangling end length')
-ylabel('Counts')
+% figure(4)
+% if astralNum == 1
+%     histogram(reshape(network.ends,[2*numAsters,1]))
+% elseif astralNum >= 2
+%     histogram(network.ends(:,2))
+% end
+% xlabel('Dangling end length')
+% ylabel('Counts')
