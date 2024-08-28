@@ -56,6 +56,7 @@ nodesRight = find(nodes(:,1) > D);
 % top-to-bottom percolation check
 if isempty(nodesAbove) || isempty(nodesBelow)
     percTB = false;
+    tbSpanningComps = [];
 else
     filsAbove = reshape(crossings.filCross(nodesAbove,:),1,[]);
     compsAbove = unique(bins(filsAbove));
@@ -67,6 +68,7 @@ end
 % left-to-right percolation check
 if isempty(nodesLeft) || isempty(nodesRight)
     percLR = false;
+    lrSpanningComps = [];
 else
     filsLeft = reshape(crossings.filCross(nodesLeft,:),1,[]);
     compsLeft = unique(bins(filsLeft));

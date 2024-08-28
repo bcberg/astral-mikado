@@ -1,33 +1,40 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// generateAstralNetwork_internal_types.h
-//
-// Code generation for function 'generateAstralNetwork'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * generateAstralNetwork_internal_types.h
+ *
+ * Code generation for function 'generateAstralNetwork'
+ *
+ */
 
 #pragma once
 
-// Include files
+/* Include files */
 #include "generateAstralNetwork_types.h"
 #include "rtwtypes.h"
 #include "emlrt.h"
 
-// Type Definitions
-struct rtDesignRangeCheckInfo {
+/* Type Definitions */
+#ifndef typedef_rtDesignRangeCheckInfo
+#define typedef_rtDesignRangeCheckInfo
+typedef struct {
   int32_T lineNo;
   int32_T colNo;
   const char_T *fName;
   const char_T *pName;
-};
+} rtDesignRangeCheckInfo;
+#endif /* typedef_rtDesignRangeCheckInfo */
 
-struct rtRunTimeErrorInfo {
+#ifndef typedef_rtRunTimeErrorInfo
+#define typedef_rtRunTimeErrorInfo
+typedef struct {
   int32_T lineNo;
   int32_T colNo;
   const char_T *fName;
   const char_T *pName;
-};
+} rtRunTimeErrorInfo;
+#endif /* typedef_rtRunTimeErrorInfo */
 
-// End of code generation (generateAstralNetwork_internal_types.h)
+/* End of code generation (generateAstralNetwork_internal_types.h) */

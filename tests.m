@@ -63,17 +63,25 @@ numFil = numel(orients);
 
 %% astral network generation
 
-rho = 5;
+rho = 10;
 astralNum = 5;
 l = 5;
 D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic
-[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum,'nodesonly');
+[network1,crossings1,asters1] = generateAstralNetwork(numAsters,l,D, ...
+    astralNum,true);
 matTime = toc;
-% tic
-% [network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D,astralNum);
-% mexTime = toc;
+tic
+[network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D, ...
+    astralNum,true);
+mexTime = toc;
+
+% 2024.08.28 build (mex is C-based)
+%           matTime vs. mexTime
+% rho = 1:  0.0054s     0.0022s
+% rho = 5:  0.0409s     0.0300s
+% rho = 10: 0.1253s     0.1318s
 
 %% 2 x 2 determinants
 
@@ -104,7 +112,8 @@ astralNum = 5;
 l = 5;
 D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
-[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum,'nodesonly');
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D, ...
+    astralNum,true);
 
 if astralNum == 1
     G = graph(crossings.filCross(:,1),crossings.filCross(:,2));

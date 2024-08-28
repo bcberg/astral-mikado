@@ -13,13 +13,15 @@ set(0,'defaultLegendInterpreter','latex')
 % numAsters = 60;
 % l = 5;
 % D = 10;
-% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D, ...
+%     astralNum,false);
 
 % astralNum = 5;
 % numAsters = 12;
 % l = 5;
 % D = 10;
-% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+% [network,crossings,asters] = generateAstralNetwork(numAsters,l,D, ...
+%     astralNum,false);
 
 % like cytosim
 astralNum = 5;
@@ -28,7 +30,8 @@ l = 5;
 D = 50;
 targetFilNum = rho * D^2 / l;
 numAsters = round(targetFilNum/astralNum,TieBreaker="tozero");  % attempt to match Python rounding behavior;
-[network,crossings,asters] = generateAstralNetwork(numAsters,l,D,astralNum);
+[network,crossings,asters] = generateAstralNetwork(numAsters,l,D, ...
+    astralNum,false);
 
 %% testing connCheck
 

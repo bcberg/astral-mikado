@@ -1,30 +1,27 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// sum.h
-//
-// Code generation for function 'sum'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * sum.h
+ *
+ * Code generation for function 'sum'
+ *
+ */
 
 #pragma once
 
-// Include files
+/* Include files */
+#include "generateAstralNetwork_types.h"
 #include "rtwtypes.h"
-#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Function Declarations
-namespace coder {
-void sum(const emlrtStack &sp, const array<real_T, 2U> &x,
-         array<real_T, 1U> &y);
+/* Function Declarations */
+void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y);
 
-}
-
-// End of code generation (sum.h)
+/* End of code generation (sum.h) */

@@ -1,30 +1,28 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// repmat.h
-//
-// Code generation for function 'repmat'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * repmat.h
+ *
+ * Code generation for function 'repmat'
+ *
+ */
 
 #pragma once
 
-// Include files
+/* Include files */
+#include "generateAstralNetwork_types.h"
 #include "rtwtypes.h"
-#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Function Declarations
-namespace coder {
-void repmat(const emlrtStack &sp, const real_T a[2], const real_T varargin_1[2],
-            array<real_T, 2U> &b);
+/* Function Declarations */
+void repmat(const emlrtStack *sp, const real_T a[2], const real_T varargin_1[2],
+            emxArray_real_T *b);
 
-}
-
-// End of code generation (repmat.h)
+/* End of code generation (repmat.h) */

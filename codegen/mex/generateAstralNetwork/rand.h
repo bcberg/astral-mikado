@@ -1,33 +1,31 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// rand.h
-//
-// Code generation for function 'rand'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * rand.h
+ *
+ * Code generation for function 'rand'
+ *
+ */
 
 #pragma once
 
-// Include files
+/* Include files */
+#include "generateAstralNetwork_types.h"
 #include "rtwtypes.h"
-#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Function Declarations
-namespace coder {
-void b_rand(const emlrtStack &sp, const real_T varargin_1[2],
-            array<real_T, 2U> &r);
+/* Function Declarations */
+void b_rand(const emlrtStack *sp, const real_T varargin_1[2],
+            emxArray_real_T *r);
 
-void c_rand(const emlrtStack &sp, const real_T varargin_1[2],
-            array<real_T, 2U> &r);
+void c_rand(const emlrtStack *sp, const real_T varargin_1[2],
+            emxArray_real_T *r);
 
-} // namespace coder
-
-// End of code generation (rand.h)
+/* End of code generation (rand.h) */

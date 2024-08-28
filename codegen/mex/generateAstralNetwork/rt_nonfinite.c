@@ -1,14 +1,15 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// rt_nonfinite.cpp
-//
-// Code generation for function 'generateAstralNetwork'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * rt_nonfinite.c
+ *
+ * Code generation for function 'generateAstralNetwork'
+ *
+ */
 
-// Include files
+/* Include files */
 #include "rt_nonfinite.h"
 #include "matrix.h"
 
@@ -28,4 +29,4 @@ void mex_InitInfAndNan(void)
   mex_rtNaN = mxGetNaN();
   mex_rtNaNF = (real32_T)rtNaN;
 }
-// End of code generation (rt_nonfinite.cpp)
+/* End of code generation (rt_nonfinite.c) */

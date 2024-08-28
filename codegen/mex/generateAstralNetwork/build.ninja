@@ -9,16 +9,16 @@ matlabdir = /usr/local/MATLAB/R2024a
 startdir = /home/bcberg/Documents/astral-mikado
 
 # Toolchain information
-cc = gcc
-cxx = /usr/bin/g++
-linker = gcc
-linkerxx = /usr/bin/g++
+cc = /usr/bin/gcc
+cxx = g++
+linker = /usr/bin/gcc
+linkerxx = g++
 
-cflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=generateAstralNetwork_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME="$matlabdir/sys/os/glnxa64/libiomp5.so" 
+cflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME="$matlabdir/sys/os/glnxa64/libiomp5.so" 
 
-cxxflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=generateAstralNetwork_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME="$matlabdir/sys/os/glnxa64/libiomp5.so" 
+cxxflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME="$matlabdir/sys/os/glnxa64/libiomp5.so" 
 
-ldflags =  -pthread -Wl,--no-undefined  -shared -lstdc++ -Wl,--as-needed -Wl,-rpath-link,$matlabdir/bin/glnxa64 -L"$matlabdir/bin/glnxa64" -Wl,-rpath-link,$matlabdir/extern/bin/glnxa64 -L"$matlabdir/extern/bin/glnxa64" -lMatlabDataArray -lmx -lmex -lm -lmat  -Wl,-Bsymbolic -o generateAstralNetwork_mex.mexa64 -Wl,--exclude-libs,ALL -lemlrt -lcovrt -lut -lmwmathutil -fPIC -L"$matlabdir/sys/os/glnxa64" -liomp5
+ldflags =  -pthread -Wl,--no-undefined -Wl,-rpath-link,$matlabdir/bin/glnxa64 -shared  -L"$matlabdir/bin/glnxa64" -lmx -lmex -lmat -lm -lstdc++  -Wl,-Bsymbolic -o generateAstralNetwork_mex.mexa64 -lemlrt -lcovrt -lut -lmwmathutil -fPIC -L"$matlabdir/sys/os/glnxa64" -liomp5 -Wl,--version-script,generateAstralNetwork_mex.map
 
 linkobjs = 
 
@@ -36,29 +36,30 @@ rule linkxx
     command = $linkerxx $in $linkobjs $ldflags
 
 # Build
-build $builddir/generateAstralNetwork_data.o : cxx $root/generateAstralNetwork_data.cpp
-build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
-build $builddir/generateAstralNetwork_initialize.o : cxx $root/generateAstralNetwork_initialize.cpp
-build $builddir/generateAstralNetwork_terminate.o : cxx $root/generateAstralNetwork_terminate.cpp
-build $builddir/generateAstralNetwork.o : cxx $root/generateAstralNetwork.cpp
-build $builddir/rand.o : cxx $root/rand.cpp
-build $builddir/mustBeInteger.o : cxx $root/mustBeInteger.cpp
-build $builddir/colon.o : cxx $root/colon.cpp
-build $builddir/repmat.o : cxx $root/repmat.cpp
-build $builddir/assertValidSizeArg.o : cxx $root/assertValidSizeArg.cpp
-build $builddir/sum.o : cxx $root/sum.cpp
-build $builddir/det.o : cxx $root/det.cpp
-build $builddir/mod.o : cxx $root/mod.cpp
-build $builddir/indexShapeCheck.o : cxx $root/indexShapeCheck.cpp
-build $builddir/warning.o : cxx $root/warning.cpp
-build $builddir/_coder_generateAstralNetwork_api.o : cxx $root/interface/_coder_generateAstralNetwork_api.cpp
-build $builddir/_coder_generateAstralNetwork_mex.o : cxx $root/interface/_coder_generateAstralNetwork_mex.cpp
-build $builddir/eml_int_forloop_overflow_check.o : cxx $root/eml_int_forloop_overflow_check.cpp
-build $builddir/sumMatrixIncludeNaN.o : cxx $root/sumMatrixIncludeNaN.cpp
-build $builddir/sort.o : cxx $root/sort.cpp
-build $builddir/sortIdx.o : cxx $root/sortIdx.cpp
-build $builddir/_coder_generateAstralNetwork_info.o : cxx $root/interface/_coder_generateAstralNetwork_info.cpp
-build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+build $builddir/generateAstralNetwork_data.o : cc $root/generateAstralNetwork_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/generateAstralNetwork_initialize.o : cc $root/generateAstralNetwork_initialize.c
+build $builddir/generateAstralNetwork_terminate.o : cc $root/generateAstralNetwork_terminate.c
+build $builddir/generateAstralNetwork.o : cc $root/generateAstralNetwork.c
+build $builddir/rand.o : cc $root/rand.c
+build $builddir/mustBeInteger.o : cc $root/mustBeInteger.c
+build $builddir/colon.o : cc $root/colon.c
+build $builddir/repmat.o : cc $root/repmat.c
+build $builddir/assertValidSizeArg.o : cc $root/assertValidSizeArg.c
+build $builddir/sum.o : cc $root/sum.c
+build $builddir/mod.o : cc $root/mod.c
+build $builddir/indexShapeCheck.o : cc $root/indexShapeCheck.c
+build $builddir/warning.o : cc $root/warning.c
+build $builddir/_coder_generateAstralNetwork_api.o : cc $root/interface/_coder_generateAstralNetwork_api.c
+build $builddir/_coder_generateAstralNetwork_mex.o : cc $root/interface/_coder_generateAstralNetwork_mex.c
+build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
+build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
+build $builddir/sin.o : cc $root/sin.c
+build $builddir/sort.o : cc $root/sort.c
+build $builddir/sortIdx.o : cc $root/sortIdx.c
+build $builddir/generateAstralNetwork_emxutil.o : cc $root/generateAstralNetwork_emxutil.c
+build $builddir/_coder_generateAstralNetwork_info.o : cc $root/interface/_coder_generateAstralNetwork_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root/generateAstralNetwork_mex.mexa64 : linkxx $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/det.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/sumMatrixIncludeNaN.o $builddir/sort.o $builddir/sortIdx.o $builddir/_coder_generateAstralNetwork_info.o $builddir/cpp_mexapi_version.o 
+build $root/generateAstralNetwork_mex.mexa64 : link $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/sumMatrixIncludeNaN.o $builddir/sin.o $builddir/sort.o $builddir/sortIdx.o $builddir/generateAstralNetwork_emxutil.o $builddir/_coder_generateAstralNetwork_info.o $builddir/c_mexapi_version.o 

@@ -1,31 +1,27 @@
-//
-// Academic License - for use in teaching, academic research, and meeting
-// course requirements at degree granting institutions only.  Not for
-// government, commercial, or other organizational use.
-//
-// sort.h
-//
-// Code generation for function 'sort'
-//
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * sort.h
+ *
+ * Code generation for function 'sort'
+ *
+ */
 
 #pragma once
 
-// Include files
+/* Include files */
+#include "generateAstralNetwork_types.h"
 #include "rtwtypes.h"
-#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <cmath>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Function Declarations
-namespace coder {
-namespace internal {
-void sort(const emlrtStack &sp, array<real_T, 1U> &x, array<int32_T, 1U> &idx);
+/* Function Declarations */
+void sort(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx);
 
-}
-} // namespace coder
-
-// End of code generation (sort.h)
+/* End of code generation (sort.h) */

@@ -1,15 +1,15 @@
 function [network,crossings,asters] = generateAstralNetwork(numAsters, ...
-    l,D,astralNum,varargin)
+    l,D,astralNum,nodesOnly)
 % GENERATEASTRALNETWORK Constructs an astral network and reports properties
-%   REQUIRED Inputs:
+%   Inputs:
 %       numAsters (scalar): (whole) number of asters to distribute
 %       l (scalar): length of individual filament
 %       D (scalar): domain size; asters are distributed in the square
 %       with corners at (0,0) and (D,D)
 %       astralNum (scalar): (whole) number of filaments per aster
-%   OPTIONAL Inputs:
-%       varargin{1} (string or character vector): specify "nodesonly" to
-%       skip spring definition and return only network.nodes
+%       nodesOnly (boolean): passing true generates nodes only and skips
+%       creation of network fields augNodes, springs, & ends, pass false to
+%       generate all fields
 %   Outputs:
 %       network (struct): has fields 'nodes', 'augNodes', 'springs', 'ends'
 %           'nodes': see findNodes auxiliary function
@@ -33,26 +33,20 @@ numFil = numAsters * astralNum;
 % aster idx 1 groups filaments 1,2,...,astralNum; and so on
 crossings.centerCross = transpose(reshape(1:numFil,[astralNum,numAsters]));
 crossings.filCross = filCross;
-switch nargin
-    case 4
-        % full network generation
-        [augNodes, springs, ends] = defineSprings(nodes,filCross, ...
-            asters.centers,l,astralNum);
-        network.nodes = nodes;
-        network.augNodes = augNodes;
-        network.springs = springs;
-        network.ends = ends;
-    case 5
-        if strcmp(varargin{1},"nodesonly")
-            % skip spring definition
-            network.nodes = nodes;
-            network.augNodes = zeros(0,2);
-            network.springs = zeros(0,4);
-            network.ends = zeros(0,2);
-        else
-            error("Argument in 5th position must be either 'nodesonly'" + ...
-                " or omitted")
-        end
+if nodesOnly
+    % skip spring definition
+    network.nodes = nodes;
+    network.augNodes = zeros(0,2);
+    network.springs = zeros(0,4);
+    network.ends = zeros(0,2);
+else
+    % full network generation
+    [augNodes, springs, ends] = defineSprings(nodes,filCross, ...
+        asters.centers,l,astralNum);
+    network.nodes = nodes;
+    network.augNodes = augNodes;
+    network.springs = springs;
+    network.ends = ends;
 end
 end
 

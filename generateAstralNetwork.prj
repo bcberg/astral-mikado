@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2024a">
-  <configuration build-checksum="4233775554" file="/home/bcberg/Documents/astral-mikado/generateAstralNetwork.prj" location="/home/bcberg/Documents/astral-mikado" name="generateAstralNetwork" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="2254047492" file="/home/bcberg/Documents/astral-mikado/generateAstralNetwork.prj" location="/home/bcberg/Documents/astral-mikado" name="generateAstralNetwork" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -606,6 +606,12 @@
     <param.objective>option.objective.c</param.objective>
     <param.WorkflowStep>workflowSummary</param.WorkflowStep>
     <param.TestSnippets>
+      <item>[a,b,c]=generateAstralNetwork(20,5,10,1,false)</item>
+      <item>[a,b,c]=generateAstralNetwork(20,5,10,1,true)</item>
+      <item>[a,b,c]=generateAstralNetwork(20,5,10,3,true)</item>
+      <item>[a,b,c]=generateAstralNetwork(20,5,10,3,false)</item>
+      <item>[a,b,c]=generateAstralNetwork(20,5,10,3,"nodesonly")</item>
+      <item>generateAstralNetwork(20,5,20,3,"nodesonly")</item>
       <item>[a,b,c]=generateAstralNetwork(20,5,10,3)</item>
       <item>[a,b,c]=generateAstralNetwork(60,5,10,1)</item>
       <item>generateAstralNetwork(60,5,10,1)</item>
@@ -628,22 +634,22 @@
     <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
     <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
     <param.EnableScreener>true</param.EnableScreener>
-    <param.AnnotationChecksum>3483601006</param.AnnotationChecksum>
+    <param.AnnotationChecksum>2125194690</param.AnnotationChecksum>
     <var.LegacyTarget />
     <var.MirrorOnOpen>false</var.MirrorOnOpen>
     <param.FixedPointEnabled>false</param.FixedPointEnabled>
     <var.redirectedInputTypeData />
-    <var.DismissScreener>false</var.DismissScreener>
+    <var.DismissScreener>true</var.DismissScreener>
     <param.unifiedParamStorage />
     <param.hdlParamStorage />
     <var.gc.lastOutputRoot>codegen/mex/generateAstralNetwork</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>MEX_FILE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>4233775554</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>2798851708</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen/mex/generateAstralNetwork</var.cfi.lastOutputRoot>
-    <var.cfi.preBuildChecksum>1092331426</var.cfi.preBuildChecksum>
-    <var.lastCfiTestSnippet>[a,b,c]=generateAstralNetwork(20,5,10,3)</var.lastCfiTestSnippet>
+    <var.cfi.preBuildChecksum>223881008</var.cfi.preBuildChecksum>
+    <var.lastCfiTestSnippet>[a,b,c]=generateAstralNetwork(20,5,10,3,false)</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1359526291&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1739746149&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>
@@ -706,7 +712,7 @@
     <param.cmsis-nn.CalibrationResultFile />
     <param.none.LearnablesCompression>option.none.LearnablesCompression.None</param.none.LearnablesCompression>
     <var.ToolchainCanRunBuildArtifact>true</var.ToolchainCanRunBuildArtifact>
-    <param.TargetLang>option.TargetLang.CPP</param.TargetLang>
+    <param.TargetLang>option.TargetLang.C</param.TargetLang>
     <param.EnableAutoExtrinsicCalls>true</param.EnableAutoExtrinsicCalls>
     <param.EnableImplicitExpansion>true</param.EnableImplicitExpansion>
     <param.UsePreconditions>false</param.UsePreconditions>
@@ -777,7 +783,6 @@
       <var.MirrorOnOpen />
       <param.FixedPointEnabled />
       <var.redirectedInputTypeData />
-      <var.DismissScreener />
       <param.unifiedParamStorage />
       <param.hdlParamStorage />
       <var.outdatedOnRestore />
@@ -840,6 +845,7 @@
       <param.cmsis-nn.CalibrationResultFile />
       <param.none.LearnablesCompression />
       <var.ToolchainCanRunBuildArtifact />
+      <param.TargetLang />
       <param.EnableAutoExtrinsicCalls />
       <param.EnableImplicitExpansion />
       <param.UsePreconditions />
@@ -889,10 +895,12 @@
     </unset>
     <fileset.entrypoints>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}/generateAstralNetwork.m">
-        <Marker>1723055533484</Marker>
+        <Marker>1724874080535</Marker>
       </file>
     </fileset.entrypoints>
-    <fileset.testbench />
+    <fileset.testbench>
+      <file>${PROJECT_ROOT}/astralNetVisuals.m</file>
+    </fileset.testbench>
     <fileset.inputtypes>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}/generateAstralNetwork.m">
         <Inputs fileName="generateAstralNetwork.m" functionName="generateAstralNetwork">
@@ -900,6 +908,7 @@
           <Input Name="l" typeId="0" />
           <Input Name="D" typeId="0" />
           <Input Name="astralNum" typeId="0" />
+          <Input Name="nodesOnly" typeId="1" />
           <idpTable>
             <type typeId="0">
               <Class>double</Class>
@@ -908,6 +917,14 @@
               <InitialValue />
               <UserDefined>false</UserDefined>
               <Complex>false</Complex>
+              <Sparse>false</Sparse>
+            </type>
+            <type typeId="1">
+              <Class>logical</Class>
+              <Size>1 x 1</Size>
+              <Value />
+              <InitialValue />
+              <UserDefined>false</UserDefined>
               <Sparse>false</Sparse>
             </type>
           </idpTable>
@@ -938,7 +955,7 @@
       <vista>false</vista>
       <linux>true</linux>
       <solaris>false</solaris>
-      <osver>6.5.0-45-generic</osver>
+      <osver>6.8.0-40-generic</osver>
       <os32>false</os32>
       <os64>true</os64>
       <arch>glnxa64</arch>
