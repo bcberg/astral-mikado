@@ -9,26 +9,31 @@ set(0,'defaultLegendInterpreter','latex')
 %% Parameters
 
 numDensVals = 50;
-sampPerDensity = 500;
+% Note: there may be fewer density values in certain percolation curves due
+% to requiring integer numbers of asters (density resolution is coarser at
+% higher astral number)
+sampPerDensity = 2000;
 l = 5;
 D = 50;
 densityRange = logspace(-1,1,numDensVals);
 numFilRange = densityRange * D^2 / l;
-astralNumList = 1:25;
+astralNumList = 1:48;
 numNetTypes = length(astralNumList);
+filename = sprintf('percProbs_D%02i',D);
 
 %% Percolation probability estimation
 
-actualDensities = zeros([numNetTypes, numDensVals]);
-percProbs = zeros([numNetTypes, numDensVals]);
+numAstersUsed = cell(numNetTypes,1);
+actualDensities = cell(numNetTypes,1);
+percProbs = cell(numNetTypes,1);
 pool = parpool(8);
 addAttachedFiles(pool,'percCheck.m')
 parfor idx = 1:numNetTypes
     astralNum = astralNumList(idx);
-    numAsterRange = round(numFilRange/astralNum);
-    actualDensities(idx,:) = numAsterRange * (astralNum * l / D^2);
-    theseProbs = zeros(1,numDensVals);
-    for jdx = 1:numDensVals
+    numAsterRange = unique(round(numFilRange/astralNum));
+    thisNumDensVals = length(numAsterRange);
+    theseProbs = zeros(1,thisNumDensVals);
+    for jdx = 1:thisNumDensVals
         percCount = 0;
         for kdx = 1:sampPerDensity
             [network,crossings,~] = generateAstralNetwork_mex(numAsterRange(jdx), ...
@@ -40,11 +45,13 @@ parfor idx = 1:numNetTypes
         end
         theseProbs(jdx) = percCount / sampPerDensity;
     end
-    percProbs(idx,:) = theseProbs;
+    numAstersUsed{idx} = numAsterRange;
+    actualDensities{idx} = numAsterRange * (astralNum * l / D^2);
+    percProbs{idx} = theseProbs;
     fprintf('Astral number %i finished\n',astralNum)
 end
 delete(pool);
-save('~/Documents/AstralMikadoCYM/data/percProbs_D50.mat')
+save(['~/Documents/AstralMikadoCYM/data/',filename,'.mat'])
 
 %% Plotting
 
@@ -57,18 +64,21 @@ set(fig1,'defaultLineLineWidth',0.75)
 cmap = colormap(turbo(numNetTypes));
 hold on
 for idx = 1:numNetTypes
-    plot(actualDensities(idx,:),percProbs(idx,:),'DisplayName', ...
+    % plot(actualDensities(idx,:),percProbs(idx,:),'DisplayName', ...
+    %     sprintf('nAST%02i',astralNumList(idx)),'Color',cmap(idx,:))
+    plot(actualDensities{idx},percProbs{idx},'DisplayName', ...
         sprintf('nAST%02i',astralNumList(idx)),'Color',cmap(idx,:))
 end
 hold off
 xscale('log')    % 'linear' or 'log'
-legend('Location','eastoutside')
+legend('Location','eastoutside','NumColumns',2)
 xlabel('Line density [$\mu m^{-1}$]')
 ylabel('Percolation probability')
-exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/percProbs_D50.png', ...
-    'Resolution',300)
+% exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/percProbs_D50.png', ...
+%     'Resolution',300)
+exportgraphics(fig1,['C:\Users\bcber\Documents\AstralMikadoCYM\data\', ...
+    filename, '.png'], 'Resolution',300)
 
 %% heatmap
 
-% figure(2)
-% pcolor(percProbs)
+% for heatmap, need to interpolate values at each value of densityRange
