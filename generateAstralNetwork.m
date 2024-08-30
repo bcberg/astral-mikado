@@ -124,7 +124,7 @@ elseif astralNum >= 2
         % start second loop at first filament on the next aster
         for jdx = (1 + asterIdx*astralNum):numFil
             asterJdx = 1 + floor((jdx-1)/astralNum);
-            % whichOtherAster finds corrent row in centerSepSQR, tooFar
+            % whichOtherAster finds correct row in centerSepSQR, tooFar
             whichOtherAster = asterJdx - asterIdx;
             if tooFar(whichOtherAster)
                 continue

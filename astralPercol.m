@@ -8,57 +8,65 @@ set(0,'defaultLegendInterpreter','latex')
 
 %% Parameters
 
+recompute = input("Recompute percolation probabilities (1=yes, 0=no)? ");
 numDensVals = 50;
 % Note: there may be fewer density values in certain percolation curves due
 % to requiring integer numbers of asters (density resolution is coarser at
 % higher astral number)
 sampPerDensity = 2000;
 l = 5;
-D = 50;
+if recompute
+    D = input("Enter system size:");
+else
+    % load a particular existing dataset
+    D = 50;
+end
+filename = sprintf('percProbs_D%02i',D);
 densityRange = logspace(-1,1,numDensVals);
-numFilRange = densityRange * D^2 / l;
 astralNumList = 1:48;
 numNetTypes = length(astralNumList);
-filename = sprintf('percProbs_D%02i',D);
 
 %% Percolation probability estimation
 
-numAstersUsed = cell(numNetTypes,1);
-actualDensities = cell(numNetTypes,1);
-percProbs = cell(numNetTypes,1);
-pool = parpool(8);
-addAttachedFiles(pool,'percCheck.m')
-parfor idx = 1:numNetTypes
-    astralNum = astralNumList(idx);
-    numAsterRange = unique(round(numFilRange/astralNum));
-    thisNumDensVals = length(numAsterRange);
-    theseProbs = zeros(1,thisNumDensVals);
-    for jdx = 1:thisNumDensVals
-        percCount = 0;
-        for kdx = 1:sampPerDensity
-            [network,crossings,~] = generateAstralNetwork_mex(numAsterRange(jdx), ...
-                l, D, astralNum, true);
-            [percTF,~] = percCheck(crossings,network.nodes,D);
-            if percTF(1) || percTF(2)
-                percCount = percCount + 1;
+if recompute
+    numFilRange = densityRange * D^2 / l;
+    numAstersUsed = cell(numNetTypes,1);
+    actualDensities = cell(numNetTypes,1);
+    percProbs = cell(numNetTypes,1);
+    pool = parpool(8);
+    addAttachedFiles(pool,'percCheck.m')
+    parfor idx = 1:numNetTypes
+        astralNum = astralNumList(idx);
+        numAsterRange = unique(round(numFilRange/astralNum));
+        thisNumDensVals = length(numAsterRange);
+        theseProbs = zeros(1,thisNumDensVals);
+        for jdx = 1:thisNumDensVals
+            percCount = 0;
+            for kdx = 1:sampPerDensity
+                [network,crossings,~] = generateAstralNetwork_mex(numAsterRange(jdx), ...
+                    l, D, astralNum, true);
+                [percTF,~] = percCheck(crossings,network.nodes,D);
+                if percTF(1) || percTF(2)
+                    percCount = percCount + 1;
+                end
             end
+            theseProbs(jdx) = percCount / sampPerDensity;
         end
-        theseProbs(jdx) = percCount / sampPerDensity;
+        numAstersUsed{idx} = numAsterRange;
+        actualDensities{idx} = numAsterRange * (astralNum * l / D^2);
+        percProbs{idx} = theseProbs;
+        fprintf('Astral number %i finished\n',astralNum)
     end
-    numAstersUsed{idx} = numAsterRange;
-    actualDensities{idx} = numAsterRange * (astralNum * l / D^2);
-    percProbs{idx} = theseProbs;
-    fprintf('Astral number %i finished\n',astralNum)
+    delete(pool);
+    save(['~/Documents/AstralMikadoCYM/data/',filename,'.mat'])
 end
-delete(pool);
-save(['~/Documents/AstralMikadoCYM/data/',filename,'.mat'])
 
 %% Plotting
 
 % Ubuntu path
-load('~/Documents/AstralMikadoCYM/data/percProbs_D50.mat')
+load(['~/Documents/AstralMikadoCYM/data/', filename, '.mat'])
 % Windows path
-% load("C:\Users\bcber\Documents\AstralMikadoCYM\data\percProbs_D50.mat")
+% load(['C:\Users\bcber\Documents\AstralMikadoCYM\data\', filename, '.mat'])
 fig1 = figure(1);
 set(fig1,'defaultLineLineWidth',0.75)
 cmap = colormap(turbo(numNetTypes));
@@ -72,13 +80,35 @@ end
 hold off
 xscale('log')    % 'linear' or 'log'
 legend('Location','eastoutside','NumColumns',2)
-xlabel('Line density [$\mu m^{-1}$]')
+xlabel('Filament density [$\mu m^{-1}$]')
 ylabel('Percolation probability')
-% exportgraphics(fig1,'~/Documents/AstralMikadoCYM/data/percProbs_D50.png', ...
-%     'Resolution',300)
-exportgraphics(fig1,['C:\Users\bcber\Documents\AstralMikadoCYM\data\', ...
-    filename, '.png'], 'Resolution',300)
+% Ubuntu path
+exportgraphics(fig1,['~/Documents/AstralMikadoCYM/data/', ...
+    filename, '_curves.png'], 'Resolution',300)
+% Windows path
+% exportgraphics(fig1,['C:\Users\bcber\Documents\AstralMikadoCYM\data\', ...
+%     filename, '_curves.png'], 'Resolution',300)
 
 %% heatmap
 
-% for heatmap, need to interpolate values at each value of densityRange
+% For heatmap, need to interpolate values at each value of densityRange
+% Currently using cubic splines
+
+percProbsHeatmap = zeros(numNetTypes,numDensVals);
+for idx = 1:numNetTypes
+    percProbsHeatmap(idx,:) = spline(actualDensities{idx}, ...
+        percProbs{idx},densityRange);
+end
+
+fig2 = figure(2);
+pcolor(densityRange,astralNumList,percProbsHeatmap)
+xscale('log')
+xlabel('Filament density [$\mu m^{-1}$]')
+ylabel('Astral number')
+title(sprintf('Domain size: %i',D))
+% Ubuntu path
+exportgraphics(fig2,['~/Documents/AstralMikadoCYM/data/', ...
+    filename, '_heat.png'], 'Resolution',300)
+% Windows path
+% exportgraphics(fig2,['C:\Users\bcber\Documents\AstralMikadoCYM\data\', ...
+%     filename, '_heat.png'], 'Resolution',300)
