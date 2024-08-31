@@ -89,7 +89,7 @@ exportgraphics(fig1,['~/Documents/AstralMikadoCYM/data/', ...
 % exportgraphics(fig1,['C:\Users\bcber\Documents\AstralMikadoCYM\data\', ...
 %     filename, '_curves.png'], 'Resolution',300)
 
-%% heatmap
+%% Heatmap
 
 % For heatmap, need to interpolate values at each value of densityRange
 % Currently using cubic splines
