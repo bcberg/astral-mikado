@@ -155,3 +155,14 @@ compsRight = unique(bins(filsRight));
 
 percTB = any(intersect(compsAbove,compsBelow));
 percLR = any(intersect(compsLeft,compsRight));
+
+%% parfeval tests
+
+pool = parpool(4);
+F = parallel.FevalFuture.empty(10,0);
+for idx = 1:10
+    F(idx) = parfeval(pool,@round,1,idx+0.1);
+end
+out = fetchOutputs(F);
+delete(pool);
+% verdict: out(idx) = round(idx+0.1), as hoped!
