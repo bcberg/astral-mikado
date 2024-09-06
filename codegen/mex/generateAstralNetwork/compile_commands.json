@@ -97,21 +97,15 @@
   },
   {
     "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",
-    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  eml_int_forloop_overflow_check.c -o build/glnxa64/eml_int_forloop_overflow_check.o",
-    "file": "eml_int_forloop_overflow_check.c",
-    "output": "build/glnxa64/eml_int_forloop_overflow_check.o"
-  },
-  {
-    "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",
     "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  sumMatrixIncludeNaN.c -o build/glnxa64/sumMatrixIncludeNaN.o",
     "file": "sumMatrixIncludeNaN.c",
     "output": "build/glnxa64/sumMatrixIncludeNaN.o"
   },
   {
     "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",
-    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  sin.c -o build/glnxa64/sin.o",
-    "file": "sin.c",
-    "output": "build/glnxa64/sin.o"
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  eml_int_forloop_overflow_check.c -o build/glnxa64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.c",
+    "output": "build/glnxa64/eml_int_forloop_overflow_check.o"
   },
   {
     "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",

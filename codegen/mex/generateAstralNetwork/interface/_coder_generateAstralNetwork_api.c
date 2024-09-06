@@ -18,7 +18,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo jc_emlrtRTEI = {
+static emlrtRTEInfo tc_emlrtRTEI = {
     1,                                  /* lineNo */
     1,                                  /* colNo */
     "_coder_generateAstralNetwork_api", /* fName */
@@ -270,9 +270,9 @@ void generateAstralNetwork_api(const mxArray *const prhs[5], int32_T nlhs,
   astralNum = emlrt_marshallIn(&st, emlrtAliasP(prhs[3]), "astralNum");
   nodesOnly = c_emlrt_marshallIn(&st, emlrtAliasP(prhs[4]), "nodesOnly");
   /* Invoke the target function */
-  emxInitStruct_struct0_T(&st, &network, &jc_emlrtRTEI);
-  emxInitStruct_struct1_T(&st, &crossings, &jc_emlrtRTEI);
-  emxInitStruct_struct2_T(&st, &asters, &jc_emlrtRTEI);
+  emxInitStruct_struct0_T(&st, &network, &tc_emlrtRTEI);
+  emxInitStruct_struct1_T(&st, &crossings, &tc_emlrtRTEI);
+  emxInitStruct_struct2_T(&st, &asters, &tc_emlrtRTEI);
   generateAstralNetwork(&st, numAsters, l, D, astralNum, nodesOnly, &network,
                         &crossings, &asters);
   /* Marshall function outputs */

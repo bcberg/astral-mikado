@@ -31,13 +31,6 @@ emlrtContext emlrtContextGlobal = {
 };
 
 emlrtRSInfo s_emlrtRSI = {
-    33,                           /* lineNo */
-    "applyScalarFunctionInPlace", /* fcnName */
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
-    "applyScalarFunctionInPlace.m" /* pathName */
-};
-
-emlrtRSInfo t_emlrtRSI = {
     20,                               /* lineNo */
     "eml_int_forloop_overflow_check", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/eml/"

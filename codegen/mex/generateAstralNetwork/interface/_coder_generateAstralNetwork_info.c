@@ -61,7 +61,7 @@ mxArray *emlrtMexFcnProperties(void)
       emlrtMxCreateString(
           "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739492.526724537));
+                emlrtMxCreateDoubleScalar(739500.69158564811));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));

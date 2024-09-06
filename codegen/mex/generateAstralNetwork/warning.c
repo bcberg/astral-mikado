@@ -30,7 +30,7 @@ static emlrtMCInfo b_emlrtMCI = {
     "warning.m" /* pName */
 };
 
-static emlrtRSInfo kd_emlrtRSI = {
+static emlrtRSInfo jd_emlrtRSI = {
     14,        /* lineNo */
     "warning", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/lib/+coder/+internal/"
@@ -96,7 +96,7 @@ void warning(const emlrtStack *sp)
   m = emlrtCreateCharArray(2, &iv2[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 43, m, &msgID[0]);
   emlrtAssign(&c_y, m);
-  st.site = &kd_emlrtRSI;
+  st.site = &jd_emlrtRSI;
   b_feval(&st, y, feval(&st, b_y, c_y, &emlrtMCI), &b_emlrtMCI);
 }
 

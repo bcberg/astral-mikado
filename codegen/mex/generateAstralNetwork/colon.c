@@ -17,7 +17,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo lb_emlrtRTEI = {
+static emlrtRTEInfo cc_emlrtRTEI = {
     320,                                                          /* lineNo */
     20,                                                           /* colNo */
     "colon",                                                      /* fName */
@@ -56,7 +56,7 @@ void eml_float_colon(const emlrtStack *sp, real_T a, real_T b,
   nm1d2 = y->size[0] * y->size[1];
   y->size[0] = 1;
   y->size[1] = n;
-  emxEnsureCapacity_real_T(sp, y, nm1d2, &lb_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, y, nm1d2, &cc_emlrtRTEI);
   y_data = y->data;
   if (n > 0) {
     y_data[0] = a;

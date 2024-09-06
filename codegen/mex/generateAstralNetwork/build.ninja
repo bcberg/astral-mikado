@@ -52,9 +52,8 @@ build $builddir/indexShapeCheck.o : cc $root/indexShapeCheck.c
 build $builddir/warning.o : cc $root/warning.c
 build $builddir/_coder_generateAstralNetwork_api.o : cc $root/interface/_coder_generateAstralNetwork_api.c
 build $builddir/_coder_generateAstralNetwork_mex.o : cc $root/interface/_coder_generateAstralNetwork_mex.c
-build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
 build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
-build $builddir/sin.o : cc $root/sin.c
+build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
 build $builddir/sort.o : cc $root/sort.c
 build $builddir/sortIdx.o : cc $root/sortIdx.c
 build $builddir/generateAstralNetwork_emxutil.o : cc $root/generateAstralNetwork_emxutil.c
@@ -62,4 +61,4 @@ build $builddir/_coder_generateAstralNetwork_info.o : cc $root/interface/_coder_
 build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root/generateAstralNetwork_mex.mexa64 : link $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/sumMatrixIncludeNaN.o $builddir/sin.o $builddir/sort.o $builddir/sortIdx.o $builddir/generateAstralNetwork_emxutil.o $builddir/_coder_generateAstralNetwork_info.o $builddir/c_mexapi_version.o 
+build $root/generateAstralNetwork_mex.mexa64 : link $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/sumMatrixIncludeNaN.o $builddir/eml_int_forloop_overflow_check.o $builddir/sort.o $builddir/sortIdx.o $builddir/generateAstralNetwork_emxutil.o $builddir/_coder_generateAstralNetwork_info.o $builddir/c_mexapi_version.o 

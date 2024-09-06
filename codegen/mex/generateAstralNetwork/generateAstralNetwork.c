@@ -22,7 +22,6 @@
 #include "rand.h"
 #include "repmat.h"
 #include "rt_nonfinite.h"
-#include "sin.h"
 #include "sort.h"
 #include "sum.h"
 #include "sumMatrixIncludeNaN.h"
@@ -68,21 +67,21 @@ static emlrtRSInfo e_emlrtRSI = {
 };
 
 static emlrtRSInfo i_emlrtRSI = {
-    123,                                                           /* lineNo */
+    132,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo j_emlrtRSI = {
-    121,                                                           /* lineNo */
+    130,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo k_emlrtRSI = {
-    120,                                                           /* lineNo */
+    129,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
@@ -110,209 +109,365 @@ static emlrtRSInfo n_emlrtRSI = {
 };
 
 static emlrtRSInfo o_emlrtRSI = {
-    78,                                                            /* lineNo */
-    "findNodes",                                                   /* fcnName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
-                                                                    */
-};
-
-static emlrtRSInfo p_emlrtRSI = {
     77,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo q_emlrtRSI = {
+static emlrtRSInfo p_emlrtRSI = {
     76,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo r_emlrtRSI = {
+static emlrtRSInfo q_emlrtRSI = {
     11,                                                           /* lineNo */
     "cos",                                                        /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/cos.m" /* pathName */
 };
 
+static emlrtRSInfo r_emlrtRSI = {
+    33,                           /* lineNo */
+    "applyScalarFunctionInPlace", /* fcnName */
+    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
+    "applyScalarFunctionInPlace.m" /* pathName */
+};
+
+static emlrtRSInfo t_emlrtRSI = {
+    11,                                                           /* lineNo */
+    "sin",                                                        /* fcnName */
+    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sin.m" /* pathName */
+};
+
+static emlrtRSInfo u_emlrtRSI = {
+    28,                                                           /* lineNo */
+    "colon",                                                      /* fcnName */
+    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
+};
+
 static emlrtRSInfo v_emlrtRSI = {
+    125,                                                          /* lineNo */
+    "colon",                                                      /* fcnName */
+    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
+};
+
+static emlrtRSInfo gb_emlrtRSI = {
     44,       /* lineNo */
     "mpower", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/mpower.m" /* pathName
                                                                        */
 };
 
-static emlrtRSInfo w_emlrtRSI = {
+static emlrtRSInfo hb_emlrtRSI = {
     71,                                                           /* lineNo */
     "power",                                                      /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/power.m" /* pathName */
 };
 
-static emlrtRSInfo x_emlrtRSI = {
-    28,                                                           /* lineNo */
-    "colon",                                                      /* fcnName */
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
-};
-
-static emlrtRSInfo y_emlrtRSI = {
-    125,                                                          /* lineNo */
-    "colon",                                                      /* fcnName */
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
-};
-
-static emlrtRSInfo jb_emlrtRSI = {
+static emlrtRSInfo ib_emlrtRSI = {
     40,                  /* lineNo */
     "reshapeSizeChecks", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "reshapeSizeChecks.m" /* pathName */
 };
 
-static emlrtRSInfo kb_emlrtRSI = {
-    321,                                                           /* lineNo */
+static emlrtRSInfo jb_emlrtRSI = {
+    339,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo lb_emlrtRSI = {
-    312,                                                           /* lineNo */
+static emlrtRSInfo kb_emlrtRSI = {
+    330,                                                           /* lineNo */
+    "defineSprings",                                               /* fcnName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
+                                                                    */
+};
+
+static emlrtRSInfo mb_emlrtRSI = {
+    314,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo nb_emlrtRSI = {
-    296,                                                           /* lineNo */
+    304,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo ob_emlrtRSI = {
-    286,                                                           /* lineNo */
+    296,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo pb_emlrtRSI = {
-    278,                                                           /* lineNo */
+    289,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo qb_emlrtRSI = {
-    271,                                                           /* lineNo */
+    276,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo rb_emlrtRSI = {
-    258,                                                           /* lineNo */
+    267,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo sb_emlrtRSI = {
-    249,                                                           /* lineNo */
-    "defineSprings",                                               /* fcnName */
+    203,                                                           /* lineNo */
+    "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo tb_emlrtRSI = {
-    185,                                                           /* lineNo */
+    216,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo ub_emlrtRSI = {
-    198,                                                           /* lineNo */
+    218,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo vb_emlrtRSI = {
-    200,                                                           /* lineNo */
+    219,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo wb_emlrtRSI = {
-    201,                                                           /* lineNo */
+    222,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo xb_emlrtRSI = {
-    204,                                                           /* lineNo */
-    "sortNodes",                                                   /* fcnName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
-                                                                    */
-};
-
-static emlrtRSInfo yb_emlrtRSI = {
     35,                                                            /* lineNo */
     "find",                                                        /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo ac_emlrtRSI = {
+static emlrtRSInfo yb_emlrtRSI = {
     158,                                                           /* lineNo */
     "eml_find",                                                    /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo bc_emlrtRSI = {
+static emlrtRSInfo ac_emlrtRSI = {
     138,                                                           /* lineNo */
     "eml_find",                                                    /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo cc_emlrtRSI = {
+static emlrtRSInfo bc_emlrtRSI = {
     253,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo dc_emlrtRSI = {
+static emlrtRSInfo cc_emlrtRSI = {
     254,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo ec_emlrtRSI = {
+static emlrtRSInfo dc_emlrtRSI = {
     255,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo gc_emlrtRSI = {
+static emlrtRSInfo fc_emlrtRSI = {
     70,    /* lineNo */
     "dot", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" /* pathName
                                                                      */
 };
 
-static emlrtRSInfo hc_emlrtRSI = {
+static emlrtRSInfo gc_emlrtRSI = {
     37,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m" /* pathName
                                                                       */
+};
+
+static emlrtBCInfo emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    317,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo b_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    343,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo c_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    297,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo d_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    297,                                                            /* lineNo */
+    54,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo e_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    296,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo f_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    277,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo g_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    277,                                                            /* lineNo */
+    36,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo h_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    276,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo i_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    271,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo j_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    308,                                                            /* lineNo */
+    18,                                                             /* colNo */
+    "ends",                                                         /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtDCInfo emlrtDCI = {
+    260,                                                            /* lineNo */
+    1,                                                              /* colNo */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo b_emlrtDCI = {
+    259,                                                            /* lineNo */
+    1,                                                              /* colNo */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo c_emlrtDCI = {
+    260,                                                            /* lineNo */
+    14,                                                             /* colNo */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    4 /* checkKind */
+};
+
+static emlrtDCInfo d_emlrtDCI = {
+    260,                                                            /* lineNo */
+    14,                                                             /* colNo */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo e_emlrtDCI = {
+    259,                                                            /* lineNo */
+    17,                                                             /* colNo */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
 };
 
 static emlrtRTEInfo emlrtRTEI = {
@@ -339,123 +494,13 @@ static emlrtRTEInfo c_emlrtRTEI = {
     "reshapeSizeChecks.m" /* pName */
 };
 
-static emlrtBCInfo emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    166,                                                            /* lineNo */
-    27,                                                             /* colNo */
-    "filCross",                                                     /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo b_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    166,                                                            /* lineNo */
-    25,                                                             /* colNo */
-    "filCross",                                                     /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo c_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    156,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "filCross",                                                     /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo d_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    111,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "filCross",                                                     /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo e_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    165,                                                            /* lineNo */
-    21,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo f_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    165,                                                            /* lineNo */
-    19,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo g_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    155,                                                            /* lineNo */
-    23,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo h_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    110,                                                            /* lineNo */
-    23,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo i_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    154,                                                            /* lineNo */
-    66,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo j_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    154,                                                            /* lineNo */
-    57,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
 static emlrtBCInfo k_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    154,                                                            /* lineNo */
-    33,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    350,                                                            /* lineNo */
+    25,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -463,21 +508,29 @@ static emlrtBCInfo k_emlrtBCI = {
 static emlrtBCInfo l_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
-    68,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    350,                                                            /* lineNo */
+    23,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
+};
+
+static emlrtECInfo emlrtECI = {
+    -1,                                                            /* nDims */
+    316,                                                           /* lineNo */
+    13,                                                            /* colNo */
+    "defineSprings",                                               /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtBCInfo m_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
-    59,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    316,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -485,10 +538,10 @@ static emlrtBCInfo m_emlrtBCI = {
 static emlrtBCInfo n_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    150,                                                            /* lineNo */
-    32,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
+    338,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -496,10 +549,10 @@ static emlrtBCInfo n_emlrtBCI = {
 static emlrtBCInfo o_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    150,                                                            /* lineNo */
-    23,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
+    329,                                                            /* lineNo */
+    31,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -507,54 +560,32 @@ static emlrtBCInfo o_emlrtBCI = {
 static emlrtBCInfo p_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    149,                                                            /* lineNo */
-    36,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    328,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "thisOrder",                                                    /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
-};
-
-static emlrtRTEInfo d_emlrtRTEI = {
-    125,                                                           /* lineNo */
-    19,                                                            /* colNo */
-    "findNodes",                                                   /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtECInfo emlrtECI = {
-    1,                                                             /* nDims */
-    121,                                                           /* lineNo */
-    29,                                                            /* colNo */
-    "findNodes",                                                   /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtBCInfo q_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    121,                                                            /* lineNo */
-    44,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    327,                                                            /* lineNo */
+    31,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
-};
-
-static emlrtRTEInfo e_emlrtRTEI = {
-    118,                                                           /* lineNo */
-    15,                                                            /* colNo */
-    "findNodes",                                                   /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtBCInfo r_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    109,                                                            /* lineNo */
-    52,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
+    326,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "thisOrder",                                                    /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -562,10 +593,10 @@ static emlrtBCInfo r_emlrtBCI = {
 static emlrtBCInfo s_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    109,                                                            /* lineNo */
-    33,                                                             /* colNo */
+    320,                                                            /* lineNo */
+    26,                                                             /* colNo */
     "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -573,10 +604,10 @@ static emlrtBCInfo s_emlrtBCI = {
 static emlrtBCInfo t_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    108,                                                            /* lineNo */
-    54,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
+    313,                                                            /* lineNo */
+    32,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -584,7 +615,241 @@ static emlrtBCInfo t_emlrtBCI = {
 static emlrtBCInfo u_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    108,                                                            /* lineNo */
+    312,                                                            /* lineNo */
+    26,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtRTEInfo d_emlrtRTEI = {
+    303,                                                           /* lineNo */
+    15,                                                            /* colNo */
+    "defineSprings",                                               /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo v_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    295,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo w_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    288,                                                            /* lineNo */
+    31,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo x_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    287,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "thisOrder",                                                    /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo y_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    286,                                                            /* lineNo */
+    31,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ab_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    285,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "thisOrder",                                                    /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo bb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    280,                                                            /* lineNo */
+    26,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo cb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    275,                                                            /* lineNo */
+    32,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo db_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    274,                                                            /* lineNo */
+    26,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtRTEInfo e_emlrtRTEI = {
+    266,                                                           /* lineNo */
+    15,                                                            /* colNo */
+    "defineSprings",                                               /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo eb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    341,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo fb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    292,                                                            /* lineNo */
+    25,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo gb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    333,                                                            /* lineNo */
+    25,                                                             /* colNo */
+    "springs",                                                      /* aName */
+    "defineSprings",                                                /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo hb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    184,                                                            /* lineNo */
+    27,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ib_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    184,                                                            /* lineNo */
+    25,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo jb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    183,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo kb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    183,                                                            /* lineNo */
+    19,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo lb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    174,                                                            /* lineNo */
+    26,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo mb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    173,                                                            /* lineNo */
+    23,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo nb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    172,                                                            /* lineNo */
+    66,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ob_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    172,                                                            /* lineNo */
+    57,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo pb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    172,                                                            /* lineNo */
     33,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -592,18 +857,281 @@ static emlrtBCInfo u_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo v_emlrtBCI = {
+static emlrtBCInfo qb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    105,                                                            /* lineNo */
-    43,                                                             /* colNo */
+    171,                                                            /* lineNo */
+    68,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo rb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    171,                                                            /* lineNo */
+    59,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtECInfo b_emlrtECI = {
+    -1,                                                            /* nDims */
+    169,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo sb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    169,                                                            /* lineNo */
+    33,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo tb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    169,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtECInfo c_emlrtECI = {
+    -1,                                                            /* nDims */
+    166,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo ub_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    166,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo vb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    166,                                                            /* lineNo */
+    27,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo wb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    159,                                                            /* lineNo */
+    32,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
 
-static emlrtBCInfo w_emlrtBCI = {
+static emlrtBCInfo xb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    159,                                                            /* lineNo */
+    23,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo yb_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    158,                                                            /* lineNo */
+    36,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtRTEInfo g_emlrtRTEI = {
+    134,                                                           /* lineNo */
+    19,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtECInfo d_emlrtECI = {
+    1,                                                             /* nDims */
+    130,                                                           /* lineNo */
+    29,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo ac_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    130,                                                            /* lineNo */
+    44,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtRTEInfo h_emlrtRTEI = {
+    127,                                                           /* lineNo */
+    15,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo bc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    120,                                                            /* lineNo */
+    26,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo cc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    119,                                                            /* lineNo */
+    23,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo dc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    118,                                                            /* lineNo */
+    52,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ec_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    118,                                                            /* lineNo */
+    33,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo fc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    117,                                                            /* lineNo */
+    54,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo gc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    117,                                                            /* lineNo */
+    33,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtECInfo e_emlrtECI = {
+    -1,                                                            /* nDims */
+    115,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo hc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    115,                                                            /* lineNo */
+    33,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ic_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    115,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "filCross",                                                     /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtECInfo f_emlrtECI = {
+    -1,                                                            /* nDims */
+    112,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "findNodes",                                                   /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtBCInfo jc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    112,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo kc_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    112,                                                            /* lineNo */
+    27,                                                             /* colNo */
+    "nodes",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo lc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     105,                                                            /* lineNo */
@@ -614,7 +1142,7 @@ static emlrtBCInfo w_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo x_emlrtBCI = {
+static emlrtBCInfo mc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     91,                                                             /* lineNo */
@@ -625,7 +1153,7 @@ static emlrtBCInfo x_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtECInfo b_emlrtECI = {
+static emlrtECInfo g_emlrtECI = {
     1,                                                             /* nDims */
     87,                                                            /* lineNo */
     29,                                                            /* colNo */
@@ -633,7 +1161,7 @@ static emlrtECInfo b_emlrtECI = {
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtBCInfo y_emlrtBCI = {
+static emlrtBCInfo nc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     87,                                                             /* lineNo */
@@ -644,7 +1172,7 @@ static emlrtBCInfo y_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtDCInfo emlrtDCI = {
+static emlrtDCInfo g_emlrtDCI = {
     79,                                                             /* lineNo */
     15,                                                             /* colNo */
     "findNodes",                                                    /* fName */
@@ -652,7 +1180,15 @@ static emlrtDCInfo emlrtDCI = {
     1 /* checkKind */
 };
 
-static emlrtDCInfo b_emlrtDCI = {
+static emlrtDCInfo h_emlrtDCI = {
+    79,                                                             /* lineNo */
+    15,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    4 /* checkKind */
+};
+
+static emlrtDCInfo i_emlrtDCI = {
     80,                                                             /* lineNo */
     18,                                                             /* colNo */
     "findNodes",                                                    /* fName */
@@ -660,7 +1196,39 @@ static emlrtDCInfo b_emlrtDCI = {
     1 /* checkKind */
 };
 
-static emlrtDCInfo c_emlrtDCI = {
+static emlrtDCInfo j_emlrtDCI = {
+    111,                                                            /* lineNo */
+    35,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo k_emlrtDCI = {
+    114,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo l_emlrtDCI = {
+    165,                                                            /* lineNo */
+    35,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo m_emlrtDCI = {
+    168,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo n_emlrtDCI = {
     79,                                                             /* lineNo */
     1,                                                              /* colNo */
     "findNodes",                                                    /* fName */
@@ -668,7 +1236,7 @@ static emlrtDCInfo c_emlrtDCI = {
     1 /* checkKind */
 };
 
-static emlrtDCInfo d_emlrtDCI = {
+static emlrtDCInfo o_emlrtDCI = {
     80,                                                             /* lineNo */
     1,                                                              /* colNo */
     "findNodes",                                                    /* fName */
@@ -676,7 +1244,7 @@ static emlrtDCInfo d_emlrtDCI = {
     1 /* checkKind */
 };
 
-static emlrtBCInfo ab_emlrtBCI = {
+static emlrtBCInfo oc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     88,                                                             /* lineNo */
@@ -687,7 +1255,7 @@ static emlrtBCInfo ab_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtDCInfo e_emlrtDCI = {
+static emlrtDCInfo p_emlrtDCI = {
     88,                                                             /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
@@ -695,10 +1263,10 @@ static emlrtDCInfo e_emlrtDCI = {
     1 /* checkKind */
 };
 
-static emlrtBCInfo bb_emlrtBCI = {
+static emlrtBCInfo pc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    122,                                                            /* lineNo */
+    131,                                                            /* lineNo */
     47,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -706,15 +1274,15 @@ static emlrtBCInfo bb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtDCInfo f_emlrtDCI = {
-    122,                                                            /* lineNo */
+static emlrtDCInfo q_emlrtDCI = {
+    131,                                                            /* lineNo */
     47,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     1 /* checkKind */
 };
 
-static emlrtBCInfo cb_emlrtBCI = {
+static emlrtBCInfo qc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     89,                                                             /* lineNo */
@@ -725,10 +1293,10 @@ static emlrtBCInfo cb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo db_emlrtBCI = {
+static emlrtBCInfo rc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    129,                                                            /* lineNo */
+    138,                                                            /* lineNo */
     23,                                                             /* colNo */
     "tooFar",                                                       /* aName */
     "findNodes",                                                    /* fName */
@@ -736,7 +1304,7 @@ static emlrtBCInfo db_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo eb_emlrtBCI = {
+static emlrtBCInfo sc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     100,                                                            /* lineNo */
@@ -747,7 +1315,7 @@ static emlrtBCInfo eb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo fb_emlrtBCI = {
+static emlrtBCInfo tc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     100,                                                            /* lineNo */
@@ -758,7 +1326,7 @@ static emlrtBCInfo fb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo gb_emlrtBCI = {
+static emlrtBCInfo uc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     101,                                                            /* lineNo */
@@ -769,7 +1337,7 @@ static emlrtBCInfo gb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo hb_emlrtBCI = {
+static emlrtBCInfo vc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     101,                                                            /* lineNo */
@@ -780,7 +1348,7 @@ static emlrtBCInfo hb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo ib_emlrtBCI = {
+static emlrtBCInfo wc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     102,                                                            /* lineNo */
@@ -791,7 +1359,7 @@ static emlrtBCInfo ib_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo jb_emlrtBCI = {
+static emlrtBCInfo xc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     102,                                                            /* lineNo */
@@ -802,7 +1370,7 @@ static emlrtBCInfo jb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo kb_emlrtBCI = {
+static emlrtBCInfo yc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
     103,                                                            /* lineNo */
@@ -813,513 +1381,13 @@ static emlrtBCInfo kb_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo lb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    104,                                                            /* lineNo */
-    30,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo mb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    104,                                                            /* lineNo */
-    54,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo nb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    143,                                                            /* lineNo */
-    29,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo ob_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    143,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtDCInfo g_emlrtDCI = {
-    143,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtBCInfo pb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    143,                                                            /* lineNo */
-    57,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo qb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    143,                                                            /* lineNo */
-    66,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtDCInfo h_emlrtDCI = {
-    143,                                                            /* lineNo */
-    66,                                                             /* colNo */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtBCInfo rb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    144,                                                            /* lineNo */
-    23,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo sb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    144,                                                            /* lineNo */
-    32,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo tb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    144,                                                            /* lineNo */
-    51,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo ub_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    144,                                                            /* lineNo */
-    60,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo vb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    145,                                                            /* lineNo */
-    27,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo wb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    145,                                                            /* lineNo */
-    49,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo xb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    146,                                                            /* lineNo */
-    49,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo yb_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    147,                                                            /* lineNo */
-    30,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo ac_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    147,                                                            /* lineNo */
-    39,                                                             /* colNo */
-    "sines",                                                        /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo bc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    148,                                                            /* lineNo */
-    28,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo cc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    148,                                                            /* lineNo */
-    37,                                                             /* colNo */
-    "cosines",                                                      /* aName */
-    "findNodes",                                                    /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo dc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    299,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo ec_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    325,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo fc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    279,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo gc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    278,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo hc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    259,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo ic_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    258,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo jc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    253,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo kc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    290,                                                            /* lineNo */
-    18,                                                             /* colNo */
-    "ends",                                                         /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtDCInfo j_emlrtDCI = {
-    242,                                                            /* lineNo */
-    1,                                                              /* colNo */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtDCInfo k_emlrtDCI = {
-    241,                                                            /* lineNo */
-    1,                                                              /* colNo */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtDCInfo l_emlrtDCI = {
-    242,                                                            /* lineNo */
-    14,                                                             /* colNo */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    4 /* checkKind */
-};
-
-static emlrtDCInfo m_emlrtDCI = {
-    242,                                                            /* lineNo */
-    14,                                                             /* colNo */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtDCInfo n_emlrtDCI = {
-    241,                                                            /* lineNo */
-    17,                                                             /* colNo */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    1 /* checkKind */
-};
-
-static emlrtBCInfo lc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    332,                                                            /* lineNo */
-    25,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo mc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    332,                                                            /* lineNo */
-    23,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtECInfo c_emlrtECI = {
-    -1,                                                            /* nDims */
-    298,                                                           /* lineNo */
-    13,                                                            /* colNo */
-    "defineSprings",                                               /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtBCInfo nc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    298,                                                            /* lineNo */
-    21,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo oc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    320,                                                            /* lineNo */
-    30,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo pc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    311,                                                            /* lineNo */
-    31,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo qc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    310,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "thisOrder",                                                    /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo rc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    309,                                                            /* lineNo */
-    31,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo sc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    308,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "thisOrder",                                                    /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo tc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    302,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo uc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    295,                                                            /* lineNo */
-    32,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo vc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    294,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtRTEInfo i_emlrtRTEI = {
-    285,                                                           /* lineNo */
-    15,                                                            /* colNo */
-    "defineSprings",                                               /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtBCInfo wc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    277,                                                            /* lineNo */
-    30,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo xc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    270,                                                            /* lineNo */
-    31,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
-static emlrtBCInfo yc_emlrtBCI = {
-    -1,                                                             /* iFirst */
-    -1,                                                             /* iLast */
-    269,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "thisOrder",                                                    /* aName */
-    "defineSprings",                                                /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
-    0 /* checkKind */
-};
-
 static emlrtBCInfo ad_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    268,                                                            /* lineNo */
-    31,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
+    104,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1327,10 +1395,10 @@ static emlrtBCInfo ad_emlrtBCI = {
 static emlrtBCInfo bd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    267,                                                            /* lineNo */
-    38,                                                             /* colNo */
-    "thisOrder",                                                    /* aName */
-    "defineSprings",                                                /* fName */
+    152,                                                            /* lineNo */
+    29,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1338,21 +1406,29 @@ static emlrtBCInfo bd_emlrtBCI = {
 static emlrtBCInfo cd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    262,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "defineSprings",                                                /* fName */
+    152,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
+};
+
+static emlrtDCInfo r_emlrtDCI = {
+    152,                                                            /* lineNo */
+    38,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
 };
 
 static emlrtBCInfo dd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    257,                                                            /* lineNo */
-    32,                                                             /* colNo */
-    "nodes",                                                        /* aName */
-    "defineSprings",                                                /* fName */
+    152,                                                            /* lineNo */
+    57,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1360,35 +1436,29 @@ static emlrtBCInfo dd_emlrtBCI = {
 static emlrtBCInfo ed_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    256,                                                            /* lineNo */
-    26,                                                             /* colNo */
-    "centers",                                                      /* aName */
-    "defineSprings",                                                /* fName */
+    152,                                                            /* lineNo */
+    66,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
 
-static emlrtRTEInfo j_emlrtRTEI = {
-    248,                                                           /* lineNo */
-    15,                                                            /* colNo */
-    "defineSprings",                                               /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo k_emlrtRTEI = {
-    13,                                                            /* lineNo */
-    9,                                                             /* colNo */
-    "sqrt",                                                        /* fName */
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sqrt.m" /* pName */
+static emlrtDCInfo s_emlrtDCI = {
+    152,                                                            /* lineNo */
+    66,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
 };
 
 static emlrtBCInfo fd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    323,                                                            /* lineNo */
-    21,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
+    153,                                                            /* lineNo */
+    23,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1396,10 +1466,10 @@ static emlrtBCInfo fd_emlrtBCI = {
 static emlrtBCInfo gd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    274,                                                            /* lineNo */
-    25,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
+    153,                                                            /* lineNo */
+    32,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1407,10 +1477,10 @@ static emlrtBCInfo gd_emlrtBCI = {
 static emlrtBCInfo hd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    315,                                                            /* lineNo */
-    25,                                                             /* colNo */
-    "springs",                                                      /* aName */
-    "defineSprings",                                                /* fName */
+    153,                                                            /* lineNo */
+    51,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
     0 /* checkKind */
 };
@@ -1418,7 +1488,127 @@ static emlrtBCInfo hd_emlrtBCI = {
 static emlrtBCInfo id_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    196,                                                            /* lineNo */
+    153,                                                            /* lineNo */
+    60,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo jd_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    154,                                                            /* lineNo */
+    27,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo kd_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    154,                                                            /* lineNo */
+    49,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo ld_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    155,                                                            /* lineNo */
+    49,                                                             /* colNo */
+    "centers",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo md_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    156,                                                            /* lineNo */
+    30,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo nd_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    156,                                                            /* lineNo */
+    39,                                                             /* colNo */
+    "sines",                                                        /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo od_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    157,                                                            /* lineNo */
+    28,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo pd_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    157,                                                            /* lineNo */
+    37,                                                             /* colNo */
+    "cosines",                                                      /* aName */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    0 /* checkKind */
+};
+
+static emlrtDCInfo t_emlrtDCI = {
+    111,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo u_emlrtDCI = {
+    165,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo v_emlrtDCI = {
+    114,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtDCInfo w_emlrtDCI = {
+    168,                                                            /* lineNo */
+    21,                                                             /* colNo */
+    "findNodes",                                                    /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
+    1 /* checkKind */
+};
+
+static emlrtBCInfo qd_emlrtBCI = {
+    -1,                                                             /* iFirst */
+    -1,                                                             /* iLast */
+    214,                                                            /* lineNo */
     14,                                                             /* colNo */
     "centers",                                                      /* aName */
     "sortNodes",                                                    /* fName */
@@ -1426,19 +1616,26 @@ static emlrtBCInfo id_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtECInfo d_emlrtECI = {
+static emlrtECInfo h_emlrtECI = {
     1,                                                             /* nDims */
-    200,                                                           /* lineNo */
+    218,                                                           /* lineNo */
     16,                                                            /* colNo */
     "sortNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo l_emlrtRTEI = {
+static emlrtRTEInfo k_emlrtRTEI = {
     239,                                                           /* lineNo */
     1,                                                             /* colNo */
     "find_first_nonempty_triples",                                 /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
+};
+
+static emlrtRTEInfo l_emlrtRTEI = {
+    13,                                                            /* lineNo */
+    9,                                                             /* colNo */
+    "sqrt",                                                        /* fName */
+    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sqrt.m" /* pName */
 };
 
 static emlrtRTEInfo m_emlrtRTEI = {
@@ -1448,10 +1645,10 @@ static emlrtRTEInfo m_emlrtRTEI = {
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" /* pName */
 };
 
-static emlrtBCInfo jd_emlrtBCI = {
+static emlrtBCInfo rd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    194,                                                            /* lineNo */
+    212,                                                            /* lineNo */
     25,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "sortNodes",                                                    /* fName */
@@ -1459,10 +1656,10 @@ static emlrtBCInfo jd_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo kd_emlrtBCI = {
+static emlrtBCInfo sd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    205,                                                            /* lineNo */
+    223,                                                            /* lineNo */
     27,                                                             /* colNo */
     "nodesOnFil",                                                   /* aName */
     "sortNodes",                                                    /* fName */
@@ -1485,83 +1682,146 @@ static emlrtRTEInfo q_emlrtRTEI = {
 };
 
 static emlrtRTEInfo r_emlrtRTEI = {
-    76,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo s_emlrtRTEI = {
-    77,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo t_emlrtRTEI = {
-    79,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo u_emlrtRTEI = {
-    80,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo v_emlrtRTEI = {
-    165,                                                           /* lineNo */
-    5,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo w_emlrtRTEI = {
-    86,                                                            /* lineNo */
-    9,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo x_emlrtRTEI = {
     34,                                                            /* lineNo */
     43,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo y_emlrtRTEI = {
-    120,                                                           /* lineNo */
-    9,                                                             /* colNo */
+static emlrtRTEInfo s_emlrtRTEI = {
+    34,                                                            /* lineNo */
+    1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo ab_emlrtRTEI = {
-    166,                                                           /* lineNo */
+static emlrtRTEInfo t_emlrtRTEI = {
+    259,                                                           /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo u_emlrtRTEI = {
+    260,                                                           /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo v_emlrtRTEI = {
+    47,                                                            /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
+static emlrtRTEInfo w_emlrtRTEI = {
+    48,                                                            /* lineNo */
+    5,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo x_emlrtRTEI = {
+    1,                                                             /* lineNo */
+    39,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo y_emlrtRTEI = {
+    34,                                                            /* lineNo */
+    35,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo ab_emlrtRTEI = {
+    30,                                                            /* lineNo */
+    27,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
 static emlrtRTEInfo bb_emlrtRTEI = {
+    267,                                                           /* lineNo */
+    9,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo db_emlrtRTEI = {
+    76,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo eb_emlrtRTEI = {
+    77,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo fb_emlrtRTEI = {
+    79,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo gb_emlrtRTEI = {
+    80,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo hb_emlrtRTEI = {
+    183,                                                           /* lineNo */
+    5,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo ib_emlrtRTEI = {
+    86,                                                            /* lineNo */
+    9,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo jb_emlrtRTEI = {
+    129,                                                           /* lineNo */
+    9,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo kb_emlrtRTEI = {
+    184,                                                           /* lineNo */
+    5,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo lb_emlrtRTEI = {
     88,                                                            /* lineNo */
     13,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo cb_emlrtRTEI = {
-    122,                                                           /* lineNo */
+static emlrtRTEInfo mb_emlrtRTEI = {
+    131,                                                           /* lineNo */
     39,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo db_emlrtRTEI =
+static emlrtRTEInfo nb_emlrtRTEI =
     {
         31,            /* lineNo */
         30,            /* colNo */
@@ -1570,189 +1830,196 @@ static emlrtRTEInfo db_emlrtRTEI =
         "unsafeSxfun.m" /* pName */
 };
 
-static emlrtRTEInfo eb_emlrtRTEI = {
-    1,                                                             /* lineNo */
-    39,                                                            /* colNo */
+static emlrtRTEInfo ob_emlrtRTEI = {
+    55,                                                            /* lineNo */
+    30,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo fb_emlrtRTEI = {
-    34,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo gb_emlrtRTEI = {
-    123,                                                           /* lineNo */
+static emlrtRTEInfo pb_emlrtRTEI = {
+    132,                                                           /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo hb_emlrtRTEI = {
+static emlrtRTEInfo qb_emlrtRTEI = {
+    110,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo rb_emlrtRTEI = {
+    111,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo sb_emlrtRTEI = {
+    113,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo tb_emlrtRTEI = {
+    114,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo ub_emlrtRTEI = {
+    164,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo vb_emlrtRTEI = {
+    165,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo wb_emlrtRTEI = {
+    167,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo xb_emlrtRTEI = {
+    168,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo yb_emlrtRTEI = {
     87,                                                            /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo ib_emlrtRTEI = {
-    121,                                                           /* lineNo */
+static emlrtRTEInfo ac_emlrtRTEI = {
+    130,                                                           /* lineNo */
     29,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo jb_emlrtRTEI = {
+static emlrtRTEInfo bc_emlrtRTEI = {
     89,                                                            /* lineNo */
     33,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo ob_emlrtRTEI = {
-    241,                                                           /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo pb_emlrtRTEI = {
-    242,                                                           /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo qb_emlrtRTEI = {
-    284,                                                           /* lineNo */
-    5,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo rb_emlrtRTEI = {
-    247,                                                           /* lineNo */
-    5,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo sb_emlrtRTEI = {
-    332,                                                           /* lineNo */
-    5,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo tb_emlrtRTEI = {
-    249,                                                           /* lineNo */
-    9,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo ub_emlrtRTEI = {
-    185,                                                           /* lineNo */
+static emlrtRTEInfo fc_emlrtRTEI = {
+    203,                                                           /* lineNo */
     23,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo vb_emlrtRTEI = {
+static emlrtRTEInfo gc_emlrtRTEI = {
     195,                                                           /* lineNo */
     24,                                                            /* colNo */
     "find",                                                        /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
-static emlrtRTEInfo wb_emlrtRTEI = {
+static emlrtRTEInfo hc_emlrtRTEI = {
     36,                                                            /* lineNo */
     5,                                                             /* colNo */
     "find",                                                        /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
-static emlrtRTEInfo xb_emlrtRTEI = {
+static emlrtRTEInfo ic_emlrtRTEI = {
     253,                                                           /* lineNo */
     5,                                                             /* colNo */
     "find",                                                        /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
-static emlrtRTEInfo yb_emlrtRTEI = {
-    190,                                                           /* lineNo */
+static emlrtRTEInfo jc_emlrtRTEI = {
+    208,                                                           /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo ac_emlrtRTEI = {
-    194,                                                           /* lineNo */
+static emlrtRTEInfo kc_emlrtRTEI = {
+    212,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo bc_emlrtRTEI = {
-    200,                                                           /* lineNo */
+static emlrtRTEInfo lc_emlrtRTEI = {
+    218,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo cc_emlrtRTEI = {
+static emlrtRTEInfo mc_emlrtRTEI = {
     60,                                                             /* lineNo */
     20,                                                             /* colNo */
     "dot",                                                          /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" /* pName */
 };
 
-static emlrtRTEInfo dc_emlrtRTEI = {
-    205,                                                           /* lineNo */
+static emlrtRTEInfo nc_emlrtRTEI = {
+    223,                                                           /* lineNo */
     16,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo ec_emlrtRTEI = {
-    205,                                                           /* lineNo */
+static emlrtRTEInfo oc_emlrtRTEI = {
+    223,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo fc_emlrtRTEI = {
-    201,                                                           /* lineNo */
+static emlrtRTEInfo pc_emlrtRTEI = {
+    219,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo gc_emlrtRTEI = {
-    170,                                                           /* lineNo */
+static emlrtRTEInfo qc_emlrtRTEI = {
+    188,                                                           /* lineNo */
     25,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo hc_emlrtRTEI = {
+static emlrtRTEInfo rc_emlrtRTEI = {
     247,                                                           /* lineNo */
     17,                                                            /* colNo */
     "find",                                                        /* fName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
-static emlrtRTEInfo ic_emlrtRTEI = {
-    201,                                                           /* lineNo */
+static emlrtRTEInfo sc_emlrtRTEI = {
+    219,                                                           /* lineNo */
     19,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
-static emlrtRTEInfo sc_emlrtRTEI = {
+static emlrtRTEInfo dd_emlrtRTEI = {
     87,                                                            /* lineNo */
     29,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
@@ -1764,11 +2031,9 @@ static void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
                              const emlrtRSInfo in2, const emxArray_real_T *in4,
                              const emxArray_real_T *in5);
 
-static void defineSprings(const emlrtStack *sp, const emxArray_real_T *nodes,
-                          const emxArray_real_T *filCross,
-                          const emxArray_real_T *centers, real_T l,
-                          real_T astralNum, emxArray_real_T *augNodes,
-                          emxArray_real_T *springs, emxArray_real_T *ends);
+static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
+                      const emxArray_real_T *orients, real_T l,
+                      emxArray_real_T *nodes, emxArray_real_T *filCross);
 
 static void sortNodes(const emlrtStack *sp, real_T filIdx,
                       const emxArray_real_T *nodes,
@@ -1803,7 +2068,7 @@ static void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   in5_data = in5->data;
   in4_data = in4->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  emxInit_real_T(sp, &b_in4, 2, &sc_emlrtRTEI);
+  emxInit_real_T(sp, &b_in4, 2, &dd_emlrtRTEI);
   if (in5->size[0] == 1) {
     loop_ub = in4->size[0];
   } else {
@@ -1812,7 +2077,7 @@ static void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   i = b_in4->size[0] * b_in4->size[1];
   b_in4->size[0] = loop_ub;
   b_in4->size[1] = 2;
-  emxEnsureCapacity_real_T(sp, b_in4, i, &sc_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b_in4, i, &dd_emlrtRTEI);
   b_in4_data = b_in4->data;
   stride_0_0 = (in4->size[0] != 1);
   stride_1_0 = (in5->size[0] != 1);
@@ -1843,11 +2108,11 @@ static void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  emxInit_real_T(sp, &r, 2, &db_emlrtRTEI);
+  emxInit_real_T(sp, &r, 2, &nb_emlrtRTEI);
   stride_0_0 = r->size[0] * r->size[1];
   r->size[0] = loop_ub;
   r->size[1] = 2;
-  emxEnsureCapacity_real_T(sp, r, stride_0_0, &db_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, r, stride_0_0, &nb_emlrtRTEI);
   r1 = r->data;
   if (i) {
     for (i1 = 0; i1 < b_loop_ub; i1++) {
@@ -1877,25 +2142,43 @@ static void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 
-static void defineSprings(const emlrtStack *sp, const emxArray_real_T *nodes,
-                          const emxArray_real_T *filCross,
-                          const emxArray_real_T *centers, real_T l,
-                          real_T astralNum, emxArray_real_T *augNodes,
-                          emxArray_real_T *springs, emxArray_real_T *ends)
+static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
+                      const emxArray_real_T *orients, real_T l,
+                      emxArray_real_T *nodes, emxArray_real_T *filCross)
 {
   jmp_buf *volatile emlrtJBStack;
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack d_st;
   emlrtStack st;
-  emxArray_real_T *thisOrder;
+  emxArray_boolean_T *tooFar;
+  emxArray_int32_T *r2;
+  emxArray_real_T *centerSepSQR;
+  emxArray_real_T *cosines;
+  emxArray_real_T *oldNodes;
+  emxArray_real_T *otherAsters;
+  emxArray_real_T *r;
+  emxArray_real_T *r1;
+  emxArray_real_T *sines;
+  real_T b_otherAsters[2];
   const real_T *centers_data;
-  const real_T *nodes_data;
-  real_T numFil;
-  real_T numSpringsGuess;
-  real_T *augNodes_data;
-  real_T *ends_data;
-  real_T *springs_data;
+  const real_T *orients_data;
+  real_T a;
+  real_T c;
+  real_T numNodesGuess;
+  real_T *cosines_data;
+  real_T *filCross_data;
+  real_T *nodes_data;
+  real_T *oldNodes_data;
+  real_T *otherAsters_data;
+  real_T *r3;
+  real_T *r4;
+  real_T *sines_data;
   int32_T iv[2];
-  int32_T newSpring_size[2];
-  int32_T defineSprings_numThreads;
+  int32_T astralNum;
+  int32_T astralNum_tmp;
+  int32_T b_centers;
+  int32_T findNodes_numThreads;
   int32_T i;
   int32_T i1;
   int32_T i2;
@@ -1903,575 +2186,1045 @@ static void defineSprings(const emlrtStack *sp, const emxArray_real_T *nodes,
   int32_T i4;
   int32_T idx;
   int32_T jdx;
+  int32_T k;
   int32_T loop_ub;
+  int32_T loop_ub_tmp;
   int32_T numAsters;
   int32_T numAsters_tmp;
-  uint32_T springCount;
+  int32_T numFil;
+  int32_T *r5;
+  uint32_T nodeCount;
+  boolean_T *tooFar_data;
   st.prev = sp;
   st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  d_st.prev = &c_st;
+  d_st.tls = c_st.tls;
+  orients_data = orients->data;
   centers_data = centers->data;
-  nodes_data = nodes->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  /*  DEFINESPRINGS partitions filaments into node-bounded sub-segments  */
-  /*  (springs) and dangling ends */
+  /*  Auxiliary functions */
+  /*  FINDNODES identifies where filaments cross and records which filaments */
+  /*  crossed  */
+  /*  (Note: filaments are indexed as one would read left to right across the */
+  /*  rows of 'orients', and each row represents an aster. This function does */
+  /*  NOT search for intersections between filaments on the same aster) */
   /*    Inputs: */
+  /*        centers (numAsters x 2 double): (x,y) coordinates of astral centers
+   */
+  /*        orients (numAsters x astralNum double): angles giving each  */
+  /*        filament's orientation about its astral center */
+  /*        l (scalar): length of individual filament */
+  /*        centerCross (numAsters x astralNum double): filament indices */
+  /*        grouped by each aster */
+  /*    Outputs: */
   /*        nodes (numNodes x 2 double): list of (x,y) coordinates of filament
    */
   /*        crossings (EXCLUDING astral centers) */
   /*        filCross (numNodes x 2 double): list of pairs of filament indices */
   /*        corresponding to the filaments that cross at a particular node; */
   /*        listed so that filCross(idx,1) < filCross(idx,2) */
-  /*        centers (numAsters x 2 double): (x,y) coordinates of astral centers
-   */
-  /*        l (scalar): length of individual filament */
-  /*        astralNum (scalar): number of filaments per aster */
-  /*    Outputs: */
-  /*        augNodes (numAsters+numNodes x 2 double)**: conditionally augmented
-   */
-  /*        node list; if astralNum >= 2, rows 1:numAsters contain (x,y)  */
-  /*        coordinates of astral centers, remaining rows contain (x,y)  */
-  /*        coordinates of inter-aster nodes */
-  /*        **NOTE: if astralNum == 1, augNodes is the same as nodes (centers */
-  /*        are fictitious), so its size is (numNodes x 2) */
-  /*        springs (numSprings x 4 double): descriptions of segments bounded */
-  /*        by nodes at each end, each row has the structure */
-  /*            (1) lesser augNode index at one end of the spring */
-  /*            (2) greater augNode index at the other end of the spring */
-  /*            (3) filament index (which filament is the spring on) */
-  /*            (4) the original distance between the nodes */
-  /*        ends (numFil x 2 double): lengths of segments on the ends of each */
-  /*        filament. ends(:,2) lists the "right" dangling ends, distal to the
-   */
-  /*        astral center. ends(:,1) lists the "left" dangling ends, proximal */
-  /*        to the astral center; these are all 0 if astralNum >= 2. */
-  numAsters_tmp = centers->size[0];
-  numAsters = centers->size[0];
-  numFil = (real_T)centers->size[0] * astralNum;
-  numSpringsGuess = 10.0 * (real_T)nodes->size[0];
-  if (numSpringsGuess != (int32_T)numSpringsGuess) {
-    emlrtIntegerCheckR2012b(numSpringsGuess, &n_emlrtDCI, (emlrtConstCTX)sp);
+  astralNum_tmp = orients->size[1];
+  astralNum = orients->size[1];
+  numAsters_tmp = orients->size[0];
+  numAsters = orients->size[0];
+  numFil = orients->size[0] * orients->size[1];
+  st.site = &p_emlrtRSI;
+  emxInit_real_T(&st, &cosines, 2, &db_emlrtRTEI);
+  i = cosines->size[0] * cosines->size[1];
+  cosines->size[0] = orients->size[0];
+  cosines->size[1] = orients->size[1];
+  emxEnsureCapacity_real_T(&st, cosines, i, &db_emlrtRTEI);
+  cosines_data = cosines->data;
+  i = (numFil < 3200);
+  if (i) {
+    for (k = 0; k < numFil; k++) {
+      cosines_data[k] = orients_data[k];
+    }
+  } else {
+    emlrtEnterParallelRegion(&st, omp_in_parallel());
+    emlrtPushJmpBuf(&st, &emlrtJBStack);
+    findNodes_numThreads = emlrtAllocRegionTLSs(
+        st.tls, omp_in_parallel(), omp_get_max_threads(), omp_get_num_procs());
+#pragma omp parallel for num_threads(findNodes_numThreads)
+
+    for (k = 0; k < numFil; k++) {
+      cosines_data[k] = orients_data[k];
+    }
+    emlrtPopJmpBuf(&st, &emlrtJBStack);
+    emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  i = springs->size[0] * springs->size[1];
-  springs->size[0] = (int32_T)numSpringsGuess;
-  springs->size[1] = 4;
-  emxEnsureCapacity_real_T(sp, springs, i, &ob_emlrtRTEI);
-  springs_data = springs->data;
-  if (numSpringsGuess != (int32_T)numSpringsGuess) {
-    emlrtIntegerCheckR2012b(numSpringsGuess, &k_emlrtDCI, (emlrtConstCTX)sp);
+  b_st.site = &q_emlrtRSI;
+  c_st.site = &r_emlrtRSI;
+  if (numFil > 2147483646) {
+    d_st.site = &s_emlrtRSI;
+    check_forloop_overflow_error(&d_st);
   }
-  loop_ub = (int32_T)numSpringsGuess << 2;
-  if (loop_ub < 3200) {
-    for (i1 = 0; i1 < loop_ub; i1++) {
-      springs_data[i1] = 0.0;
+  if (i) {
+    for (k = 0; k < numFil; k++) {
+      cosines_data[k] = muDoubleScalarCos(cosines_data[k]);
+    }
+  } else {
+    emlrtEnterParallelRegion(&b_st, omp_in_parallel());
+    emlrtPushJmpBuf(&b_st, &emlrtJBStack);
+    findNodes_numThreads =
+        emlrtAllocRegionTLSs(b_st.tls, omp_in_parallel(), omp_get_max_threads(),
+                             omp_get_num_procs());
+#pragma omp parallel for num_threads(findNodes_numThreads)
+
+    for (k = 0; k < numFil; k++) {
+      cosines_data[k] = muDoubleScalarCos(cosines_data[k]);
+    }
+    emlrtPopJmpBuf(&b_st, &emlrtJBStack);
+    emlrtExitParallelRegion(&b_st, omp_in_parallel());
+  }
+  st.site = &o_emlrtRSI;
+  emxInit_real_T(&st, &sines, 2, &eb_emlrtRTEI);
+  i1 = sines->size[0] * sines->size[1];
+  sines->size[0] = numAsters_tmp;
+  sines->size[1] = astralNum_tmp;
+  emxEnsureCapacity_real_T(&st, sines, i1, &eb_emlrtRTEI);
+  sines_data = sines->data;
+  if (i) {
+    for (k = 0; k < numFil; k++) {
+      sines_data[k] = orients_data[k];
+    }
+  } else {
+    emlrtEnterParallelRegion(&st, omp_in_parallel());
+    emlrtPushJmpBuf(&st, &emlrtJBStack);
+    findNodes_numThreads = emlrtAllocRegionTLSs(
+        st.tls, omp_in_parallel(), omp_get_max_threads(), omp_get_num_procs());
+#pragma omp parallel for num_threads(findNodes_numThreads)
+
+    for (k = 0; k < numFil; k++) {
+      sines_data[k] = orients_data[k];
+    }
+    emlrtPopJmpBuf(&st, &emlrtJBStack);
+    emlrtExitParallelRegion(&st, omp_in_parallel());
+  }
+  b_st.site = &t_emlrtRSI;
+  c_st.site = &r_emlrtRSI;
+  if (i) {
+    for (k = 0; k < numFil; k++) {
+      sines_data[k] = muDoubleScalarSin(sines_data[k]);
+    }
+  } else {
+    emlrtEnterParallelRegion(&b_st, omp_in_parallel());
+    emlrtPushJmpBuf(&b_st, &emlrtJBStack);
+    findNodes_numThreads =
+        emlrtAllocRegionTLSs(b_st.tls, omp_in_parallel(), omp_get_max_threads(),
+                             omp_get_num_procs());
+#pragma omp parallel for num_threads(findNodes_numThreads)
+
+    for (k = 0; k < numFil; k++) {
+      sines_data[k] = muDoubleScalarSin(sines_data[k]);
+    }
+    emlrtPopJmpBuf(&b_st, &emlrtJBStack);
+    emlrtExitParallelRegion(&b_st, omp_in_parallel());
+  }
+  numNodesGuess = 4.0 * l * (real_T)numFil;
+  /*  Note: this is an empirical guess! */
+  if (!(numNodesGuess >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(numNodesGuess, &h_emlrtDCI, (emlrtConstCTX)sp);
+  }
+  i = (int32_T)muDoubleScalarFloor(numNodesGuess);
+  if (numNodesGuess != i) {
+    emlrtIntegerCheckR2012b(numNodesGuess, &g_emlrtDCI, (emlrtConstCTX)sp);
+  }
+  i1 = (int32_T)numNodesGuess;
+  i2 = nodes->size[0] * nodes->size[1];
+  nodes->size[0] = (int32_T)numNodesGuess;
+  nodes->size[1] = 2;
+  emxEnsureCapacity_real_T(sp, nodes, i2, &fb_emlrtRTEI);
+  nodes_data = nodes->data;
+  if (numNodesGuess != i) {
+    emlrtIntegerCheckR2012b(numNodesGuess, &n_emlrtDCI, (emlrtConstCTX)sp);
+  }
+  loop_ub_tmp = (int32_T)numNodesGuess << 1;
+  if (loop_ub_tmp < 3200) {
+    for (k = 0; k < loop_ub_tmp; k++) {
+      nodes_data[k] = 0.0;
     }
   } else {
     emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
     emlrtPushJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-    defineSprings_numThreads = emlrtAllocRegionTLSs(
+    findNodes_numThreads = emlrtAllocRegionTLSs(
         sp->tls, omp_in_parallel(), omp_get_max_threads(), omp_get_num_procs());
-#pragma omp parallel for num_threads(defineSprings_numThreads)
+#pragma omp parallel for num_threads(findNodes_numThreads)
 
-    for (i1 = 0; i1 < loop_ub; i1++) {
-      springs_data[i1] = 0.0;
+    for (k = 0; k < loop_ub_tmp; k++) {
+      nodes_data[k] = 0.0;
     }
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  if (!(numFil >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(numFil, &l_emlrtDCI, (emlrtConstCTX)sp);
+  if ((int32_T)numNodesGuess != i) {
+    emlrtIntegerCheckR2012b(numNodesGuess, &i_emlrtDCI, (emlrtConstCTX)sp);
   }
-  i = (int32_T)muDoubleScalarFloor(numFil);
-  if (numFil != i) {
-    emlrtIntegerCheckR2012b(numFil, &m_emlrtDCI, (emlrtConstCTX)sp);
+  i2 = filCross->size[0] * filCross->size[1];
+  filCross->size[0] = i1;
+  filCross->size[1] = 2;
+  emxEnsureCapacity_real_T(sp, filCross, i2, &gb_emlrtRTEI);
+  filCross_data = filCross->data;
+  if ((int32_T)numNodesGuess != i) {
+    emlrtIntegerCheckR2012b(numNodesGuess, &o_emlrtDCI, (emlrtConstCTX)sp);
   }
-  i2 = (int32_T)numFil;
-  i3 = ends->size[0] * ends->size[1];
-  ends->size[0] = i2;
-  ends->size[1] = 2;
-  emxEnsureCapacity_real_T(sp, ends, i3, &pb_emlrtRTEI);
-  ends_data = ends->data;
-  if (i2 != i) {
-    emlrtIntegerCheckR2012b(numFil, &j_emlrtDCI, (emlrtConstCTX)sp);
-  }
-  loop_ub = i2 << 1;
-  if (loop_ub < 3200) {
-    for (i1 = 0; i1 < loop_ub; i1++) {
-      ends_data[i1] = 0.0;
+  if (loop_ub_tmp < 3200) {
+    for (k = 0; k < loop_ub_tmp; k++) {
+      filCross_data[k] = 0.0;
     }
   } else {
     emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
     emlrtPushJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-    defineSprings_numThreads = emlrtAllocRegionTLSs(
+    findNodes_numThreads = emlrtAllocRegionTLSs(
         sp->tls, omp_in_parallel(), omp_get_max_threads(), omp_get_num_procs());
-#pragma omp parallel for num_threads(defineSprings_numThreads)
+#pragma omp parallel for num_threads(findNodes_numThreads)
 
-    for (i1 = 0; i1 < loop_ub; i1++) {
-      ends_data[i1] = 0.0;
+    for (k = 0; k < loop_ub_tmp; k++) {
+      filCross_data[k] = 0.0;
     }
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  springCount = 0U;
-  augNodes->size[0] = 0;
-  augNodes->size[1] = 2;
-  emxInit_real_T(sp, &thisOrder, 2, &tb_emlrtRTEI);
-  if (astralNum == 1.0) {
+  nodeCount = 0U;
+  emxInit_real_T(sp, &centerSepSQR, 1, &yb_emlrtRTEI);
+  emxInit_real_T(sp, &oldNodes, 2, &qb_emlrtRTEI);
+  emxInit_real_T(sp, &otherAsters, 2, &jb_emlrtRTEI);
+  otherAsters_data = otherAsters->data;
+  emxInit_real_T(sp, &r, 2, &ac_emlrtRTEI);
+  emxInit_real_T(sp, &r1, 2, &nb_emlrtRTEI);
+  if (orients->size[1] == 1) {
     /*  routine for "Classical Mikado" networks */
-    numAsters = nodes->size[0];
-    i = augNodes->size[0] * augNodes->size[1];
-    augNodes->size[0] = nodes->size[0];
-    augNodes->size[1] = 2;
-    emxEnsureCapacity_real_T(sp, augNodes, i, &rb_emlrtRTEI);
-    augNodes_data = augNodes->data;
-    loop_ub = nodes->size[0] << 1;
-    if (loop_ub < 3200) {
-      for (i1 = 0; i1 < loop_ub; i1++) {
-        augNodes_data[i1] = nodes_data[i1];
-      }
-    } else {
-      emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
-      emlrtPushJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-      defineSprings_numThreads =
-          emlrtAllocRegionTLSs(sp->tls, omp_in_parallel(),
-                               omp_get_max_threads(), omp_get_num_procs());
-#pragma omp parallel for num_threads(defineSprings_numThreads)
-
-      for (i1 = 0; i1 < loop_ub; i1++) {
-        augNodes_data[i1] = nodes_data[i1];
-      }
-      emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-      emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
+    if (numFil - 2 >= 0) {
+      b_otherAsters[1] = 1.0;
+      b_centers = centers->size[0];
+      a = 2.0 * l;
     }
-    /*  centers are fictitious */
-    emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
-                                  (int32_T)numFil, &j_emlrtRTEI,
-                                  (emlrtConstCTX)sp);
-    for (idx = 0; idx < i2; idx++) {
-      st.site = &sb_emlrtRSI;
-      sortNodes(&st, (real_T)idx + 1.0, nodes, filCross, centers, 1.0,
-                thisOrder);
-      augNodes_data = thisOrder->data;
-      if ((thisOrder->size[0] == 0) || (thisOrder->size[1] == 0)) {
-        /*  0 nodes = filament doesn't touch any other asters! */
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &jc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        ends_data[idx + ends->size[0]] = l;
-        /*  treat unused filament as "right" dangling end */
-      } else if (thisOrder->size[0] == 1) {
-        real_T y[2];
-        /*  1 node + astralNum == 1 -> two dangling ends */
-        if (idx + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &ed_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        if (((int32_T)augNodes_data[0] < 1) ||
-            ((int32_T)augNodes_data[0] > numAsters)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)augNodes_data[0], 1, numAsters,
-                                        &dd_emlrtBCI, (emlrtConstCTX)sp);
-        }
-        numFil = nodes_data[(int32_T)augNodes_data[0] - 1] - centers_data[idx];
-        y[0] = numFil * numFil;
-        numFil = nodes_data[((int32_T)augNodes_data[0] + nodes->size[0]) - 1] -
-                 centers_data[idx + centers->size[0]];
-        y[1] = numFil * numFil;
-        numFil = sumColumnB(y);
-        st.site = &rb_emlrtRSI;
-        if (numFil < 0.0) {
-          emlrtErrorWithMessageIdR2018a(
-              &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-        }
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &ic_emlrtBCI, &st);
-        }
-        ends_data[idx] = muDoubleScalarSqrt(numFil);
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &hc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        ends_data[idx + ends->size[0]] = l - ends_data[idx + ends->size[0]];
+    emxInit_int32_T(sp, &r2, &bc_emlrtRTEI);
+    for (idx = 0; idx <= numFil - 2; idx++) {
+      real_T c_centers[2];
+      int32_T b_loop_ub;
+      /*  only look for intersections if filaments are close enough */
+      st.site = &n_emlrtRSI;
+      b_st.site = &u_emlrtRSI;
+      if (numFil < ((real_T)idx + 1.0) + 1.0) {
+        otherAsters->size[0] = 1;
+        otherAsters->size[1] = 0;
       } else {
-        real_T y[2];
-        real_T totSpringLength;
-        int32_T n;
-        /*  >=2 nodes = there are certainly springs along this filament */
-        if (idx + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numAsters_tmp, &cd_emlrtBCI,
+        i = otherAsters->size[0] * otherAsters->size[1];
+        otherAsters->size[0] = 1;
+        i1 = numFil - idx;
+        otherAsters->size[1] = i1 - 1;
+        emxEnsureCapacity_real_T(&b_st, otherAsters, i, &ib_emlrtRTEI);
+        otherAsters_data = otherAsters->data;
+        loop_ub = i1 - 2;
+        for (i = 0; i <= loop_ub; i++) {
+          otherAsters_data[i] = (real_T)((uint32_T)idx + (uint32_T)i) + 2.0;
+        }
+      }
+      i = centers->size[0];
+      if (((int32_T)((uint32_T)idx + 1U) < 1) ||
+          ((int32_T)((uint32_T)idx + 1U) > centers->size[0])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
+                                      centers->size[0], &nc_emlrtBCI,
+                                      (emlrtConstCTX)sp);
+      }
+      c_centers[0] = centers_data[idx];
+      c_centers[1] = centers_data[idx + centers->size[0]];
+      b_otherAsters[0] = otherAsters->size[1];
+      st.site = &m_emlrtRSI;
+      repmat(&st, c_centers, b_otherAsters, oldNodes);
+      oldNodes_data = oldNodes->data;
+      loop_ub = otherAsters->size[1];
+      i1 = r->size[0] * r->size[1];
+      r->size[0] = otherAsters->size[1];
+      r->size[1] = 2;
+      emxEnsureCapacity_real_T(sp, r, i1, &lb_emlrtRTEI);
+      r3 = r->data;
+      for (i1 = 0; i1 < 2; i1++) {
+        for (i2 = 0; i2 < loop_ub; i2++) {
+          i3 = (int32_T)otherAsters_data[i2];
+          if (otherAsters_data[i2] != i3) {
+            emlrtIntegerCheckR2012b(otherAsters_data[i2], &p_emlrtDCI,
+                                    (emlrtConstCTX)sp);
+          }
+          if ((i3 < 1) || (i3 > b_centers)) {
+            emlrtDynamicBoundsCheckR2012b(i3, 1, b_centers, &oc_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          r3[i2 + r->size[0] * i1] =
+              centers_data[(i3 + centers->size[0] * i1) - 1];
+        }
+      }
+      if ((oldNodes->size[0] != otherAsters->size[1]) &&
+          ((oldNodes->size[0] != 1) && (otherAsters->size[1] != 1))) {
+        emlrtDimSizeImpxCheckR2021b(oldNodes->size[0], otherAsters->size[1],
+                                    &g_emlrtECI, (emlrtConstCTX)sp);
+      }
+      if (oldNodes->size[0] == r->size[0]) {
+        i1 = r1->size[0] * r1->size[1];
+        r1->size[0] = oldNodes->size[0];
+        r1->size[1] = 2;
+        emxEnsureCapacity_real_T(sp, r1, i1, &nb_emlrtRTEI);
+        r4 = r1->data;
+        loop_ub = oldNodes->size[0] << 1;
+        for (i1 = 0; i1 < loop_ub; i1++) {
+          real_T filSubJdx;
+          filSubJdx = oldNodes_data[i1] - r3[i1];
+          r4[i1] = filSubJdx * filSubJdx;
+        }
+        st.site = &m_emlrtRSI;
+        sum(&st, r1, centerSepSQR);
+        oldNodes_data = centerSepSQR->data;
+      } else {
+        st.site = &m_emlrtRSI;
+        binary_expand_op(&st, centerSepSQR, m_emlrtRSI, oldNodes, r);
+        oldNodes_data = centerSepSQR->data;
+      }
+      st.site = &l_emlrtRSI;
+      b_st.site = &gb_emlrtRSI;
+      c_st.site = &hb_emlrtRSI;
+      loop_ub = centerSepSQR->size[0] - 1;
+      b_loop_ub = 0;
+      for (astralNum_tmp = 0; astralNum_tmp <= loop_ub; astralNum_tmp++) {
+        if (oldNodes_data[astralNum_tmp] <= a * a) {
+          b_loop_ub++;
+        }
+      }
+      i1 = r2->size[0];
+      r2->size[0] = b_loop_ub;
+      emxEnsureCapacity_int32_T(sp, r2, i1, &ob_emlrtRTEI);
+      r5 = r2->data;
+      b_loop_ub = 0;
+      for (astralNum_tmp = 0; astralNum_tmp <= loop_ub; astralNum_tmp++) {
+        if (oldNodes_data[astralNum_tmp] <= a * a) {
+          r5[b_loop_ub] = astralNum_tmp;
+          b_loop_ub++;
+        }
+      }
+      loop_ub_tmp = r2->size[0];
+      for (i1 = 0; i1 < loop_ub_tmp; i1++) {
+        if (r5[i1] > otherAsters->size[1] - 1) {
+          emlrtDynamicBoundsCheckR2012b(r5[i1], 0, otherAsters->size[1] - 1,
+                                        &qc_emlrtBCI, (emlrtConstCTX)sp);
+        }
+      }
+      for (jdx = 0; jdx < loop_ub_tmp; jdx++) {
+        real_T b1;
+        real_T b2;
+        real_T denom;
+        real_T denom_tmp;
+        real_T t1;
+        if (jdx + 1 > loop_ub_tmp) {
+          emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, loop_ub_tmp, &mc_emlrtBCI,
                                         (emlrtConstCTX)sp);
         }
-        totSpringLength = 0.0;
-        /*  pair adjacent nodes to form springs */
-        n = thisOrder->size[0] - 2;
-        loop_ub = thisOrder->size[0];
-        for (jdx = 0; jdx <= n; jdx++) {
-          real_T springLength;
-          springCount++;
-          if (jdx + 1 > loop_ub) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, loop_ub, &bd_emlrtBCI,
-                                          (emlrtConstCTX)sp);
-          }
-          i = (int32_T)augNodes_data[jdx];
-          if ((i < 1) || (i > numAsters)) {
-            emlrtDynamicBoundsCheckR2012b(i, 1, numAsters, &ad_emlrtBCI,
-                                          (emlrtConstCTX)sp);
-          }
-          if (jdx + 2 > loop_ub) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, loop_ub, &yc_emlrtBCI,
-                                          (emlrtConstCTX)sp);
-          }
-          i3 = (int32_T)augNodes_data[jdx + 1];
-          if ((i3 < 1) || (i3 > numAsters)) {
-            emlrtDynamicBoundsCheckR2012b(i3, 1, numAsters, &xc_emlrtBCI,
-                                          (emlrtConstCTX)sp);
-          }
-          numFil = nodes_data[i - 1] - nodes_data[i3 - 1];
-          y[0] = numFil * numFil;
-          numFil = nodes_data[(i + nodes->size[0]) - 1] -
-                   nodes_data[(i3 + nodes->size[0]) - 1];
-          y[1] = numFil * numFil;
-          springLength = sumColumnB(y);
-          st.site = &qb_emlrtRSI;
-          if (springLength < 0.0) {
-            emlrtErrorWithMessageIdR2018a(
-                &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-          }
-          springLength = muDoubleScalarSqrt(springLength);
-          numSpringsGuess = augNodes_data[jdx + 1];
-          if ((augNodes_data[jdx] > numSpringsGuess) ||
-              (muDoubleScalarIsNaN(augNodes_data[jdx]) &&
-               (!muDoubleScalarIsNaN(numSpringsGuess)))) {
-            numFil = augNodes_data[jdx + 1];
-          } else {
-            numFil = augNodes_data[jdx];
-          }
-          if ((!(augNodes_data[jdx] < numSpringsGuess)) &&
-              ((!muDoubleScalarIsNaN(augNodes_data[jdx])) ||
-               muDoubleScalarIsNaN(numSpringsGuess))) {
-            numSpringsGuess = augNodes_data[jdx];
-          }
-          if (((int32_T)springCount < 1) ||
-              ((int32_T)springCount > springs->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
-                                          springs->size[0], &gd_emlrtBCI,
-                                          (emlrtConstCTX)sp);
-          }
-          springs_data[(int32_T)springCount - 1] = numFil;
-          springs_data[((int32_T)springCount + springs->size[0]) - 1] =
-              numSpringsGuess;
-          springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
-              (real_T)idx + 1.0;
-          springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
-              springLength;
-          totSpringLength += springLength;
-          if (*emlrtBreakCheckR2012bFlagVar != 0) {
-            emlrtBreakCheckR2012b((emlrtConstCTX)sp);
-          }
-        }
-        if (((int32_T)augNodes_data[0] < 1) ||
-            ((int32_T)augNodes_data[0] > numAsters)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)augNodes_data[0], 1, numAsters,
-                                        &wc_emlrtBCI, (emlrtConstCTX)sp);
-        }
-        numFil = nodes_data[(int32_T)augNodes_data[0] - 1] - centers_data[idx];
-        y[0] = numFil * numFil;
-        numFil = nodes_data[((int32_T)augNodes_data[0] + nodes->size[0]) - 1] -
-                 centers_data[idx + centers->size[0]];
-        y[1] = numFil * numFil;
-        numFil = sumColumnB(y);
-        st.site = &pb_emlrtRSI;
-        if (numFil < 0.0) {
-          emlrtErrorWithMessageIdR2018a(
-              &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-        }
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
+        /*  legacy code in these comments for readability */
+        /*  A = [cosines(idx), - cosines(filOfJdx); */
+        /*      sines(idx), - sines(filOfJdx)]; */
+        /*  denom = det(A); */
+        /*  b = 1/l * [centers(filOfJdx,1) - centers(idx,1); */
+        /*      centers(filOfJdx,2) - centers(idx,2)]; */
+        /*  t1 = det([b,A(:,2)]) / denom; */
+        /*  t2 = det([A(:,1),b]) / denom; */
+        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
+            ((int32_T)((uint32_T)idx + 1U) > numFil)) {
           emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &gc_emlrtBCI, &st);
-        }
-        ends_data[idx] = muDoubleScalarSqrt(numFil);
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &fc_emlrtBCI,
+                                        numFil, &sc_emlrtBCI,
                                         (emlrtConstCTX)sp);
         }
-        ends_data[idx + ends->size[0]] = (l - totSpringLength) - ends_data[idx];
+        i1 = (int32_T)otherAsters_data[r5[jdx]];
+        if ((i1 < 1) || (i1 > numFil)) {
+          emlrtDynamicBoundsCheckR2012b(i1, 1, numFil, &tc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
+            ((int32_T)((uint32_T)idx + 1U) > numFil)) {
+          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
+                                        numFil, &uc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        if (i1 > numFil) {
+          emlrtDynamicBoundsCheckR2012b(i1, 1, numFil, &vc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        t1 = -sines_data[i1 - 1];
+        denom_tmp = cosines_data[i1 - 1];
+        denom = cosines_data[idx] * t1 + sines_data[idx] * denom_tmp;
+        if (i1 > i) {
+          emlrtDynamicBoundsCheckR2012b(i1, 1, i, &wc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
+            ((int32_T)((uint32_T)idx + 1U) > i)) {
+          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1, i,
+                                        &xc_emlrtBCI, (emlrtConstCTX)sp);
+        }
+        b1 = (centers_data[i1 - 1] - centers_data[idx]) / l;
+        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
+            ((int32_T)((uint32_T)idx + 1U) > i)) {
+          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1, i,
+                                        &yc_emlrtBCI, (emlrtConstCTX)sp);
+        }
+        b2 = (centers_data[(i1 + centers->size[0]) - 1] -
+              centers_data[idx + centers->size[0]]) /
+             l;
+        if (i1 > numFil) {
+          emlrtDynamicBoundsCheckR2012b(i1, 1, numFil, &ad_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        t1 = (b1 * t1 + b2 * denom_tmp) / denom;
+        if ((idx + 1 < 1) || (idx + 1 > numFil)) {
+          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numFil, &lc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        if ((muDoubleScalarAbs(t1 - 0.5) <= 0.5) &&
+            (muDoubleScalarAbs((cosines_data[idx] * b2 - sines_data[idx] * b1) /
+                                   denom -
+                               0.5) <= 0.5)) {
+          nodeCount++;
+          if (nodeCount > numNodesGuess) {
+            numNodesGuess += (real_T)numFil;
+            i1 = oldNodes->size[0] * oldNodes->size[1];
+            oldNodes->size[0] = nodes->size[0];
+            oldNodes->size[1] = 2;
+            emxEnsureCapacity_real_T(sp, oldNodes, i1, &qb_emlrtRTEI);
+            oldNodes_data = oldNodes->data;
+            loop_ub = nodes->size[0] << 1;
+            for (i1 = 0; i1 < loop_ub; i1++) {
+              oldNodes_data[i1] = nodes_data[i1];
+            }
+            if (numNodesGuess != (int32_T)numNodesGuess) {
+              emlrtIntegerCheckR2012b(numNodesGuess, &j_emlrtDCI,
+                                      (emlrtConstCTX)sp);
+            }
+            i1 = nodes->size[0] * nodes->size[1];
+            nodes->size[0] = (int32_T)numNodesGuess;
+            nodes->size[1] = 2;
+            emxEnsureCapacity_real_T(sp, nodes, i1, &rb_emlrtRTEI);
+            nodes_data = nodes->data;
+            if ((int32_T)numNodesGuess != (int32_T)numNodesGuess) {
+              emlrtIntegerCheckR2012b(numNodesGuess, &t_emlrtDCI,
+                                      (emlrtConstCTX)sp);
+            }
+            b_loop_ub = (int32_T)numNodesGuess << 1;
+            for (i1 = 0; i1 < b_loop_ub; i1++) {
+              nodes_data[i1] = 0.0;
+            }
+            if ((int32_T)(nodeCount - 1U) < 1) {
+              loop_ub = 0;
+            } else {
+              if (numNodesGuess < 1.0) {
+                emlrtDynamicBoundsCheckR2012b(1, 1, (int32_T)numNodesGuess,
+                                              &kc_emlrtBCI, (emlrtConstCTX)sp);
+              }
+              if (((int32_T)(nodeCount - 1U) < 1) ||
+                  ((int32_T)(nodeCount - 1U) > (int32_T)numNodesGuess)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)(nodeCount - 1U), 1,
+                                              (int32_T)numNodesGuess,
+                                              &jc_emlrtBCI, (emlrtConstCTX)sp);
+              }
+              loop_ub = (int32_T)(nodeCount - 1U);
+            }
+            iv[0] = loop_ub;
+            iv[1] = 2;
+            emlrtSubAssignSizeCheckR2012b(&iv[0], 2, &oldNodes->size[0], 2,
+                                          &f_emlrtECI, (emlrtCTX)sp);
+            for (i1 = 0; i1 < 2; i1++) {
+              for (i2 = 0; i2 < loop_ub; i2++) {
+                nodes_data[i2 + nodes->size[0] * i1] =
+                    oldNodes_data[i2 + oldNodes->size[0] * i1];
+              }
+            }
+            i1 = oldNodes->size[0] * oldNodes->size[1];
+            oldNodes->size[0] = filCross->size[0];
+            oldNodes->size[1] = 2;
+            emxEnsureCapacity_real_T(sp, oldNodes, i1, &sb_emlrtRTEI);
+            oldNodes_data = oldNodes->data;
+            loop_ub = filCross->size[0] << 1;
+            for (i1 = 0; i1 < loop_ub; i1++) {
+              oldNodes_data[i1] = filCross_data[i1];
+            }
+            i1 = (int32_T)numNodesGuess;
+            if (i1 != (int32_T)numNodesGuess) {
+              emlrtIntegerCheckR2012b(numNodesGuess, &k_emlrtDCI,
+                                      (emlrtConstCTX)sp);
+            }
+            i2 = filCross->size[0] * filCross->size[1];
+            filCross->size[0] = i1;
+            filCross->size[1] = 2;
+            emxEnsureCapacity_real_T(sp, filCross, i2, &tb_emlrtRTEI);
+            filCross_data = filCross->data;
+            if (i1 != (int32_T)numNodesGuess) {
+              emlrtIntegerCheckR2012b(numNodesGuess, &v_emlrtDCI,
+                                      (emlrtConstCTX)sp);
+            }
+            for (i2 = 0; i2 < b_loop_ub; i2++) {
+              filCross_data[i2] = 0.0;
+            }
+            if ((int32_T)(nodeCount - 1U) < 1) {
+              loop_ub = 0;
+            } else {
+              if (numNodesGuess < 1.0) {
+                emlrtDynamicBoundsCheckR2012b(1, 1, (int32_T)numNodesGuess,
+                                              &ic_emlrtBCI, (emlrtConstCTX)sp);
+              }
+              if (((int32_T)(nodeCount - 1U) < 1) ||
+                  ((int32_T)(nodeCount - 1U) > i1)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)(nodeCount - 1U), 1,
+                                              (int32_T)numNodesGuess,
+                                              &hc_emlrtBCI, (emlrtConstCTX)sp);
+              }
+              loop_ub = (int32_T)(nodeCount - 1U);
+            }
+            iv[0] = loop_ub;
+            iv[1] = 2;
+            emlrtSubAssignSizeCheckR2012b(&iv[0], 2, &oldNodes->size[0], 2,
+                                          &e_emlrtECI, (emlrtCTX)sp);
+            for (i1 = 0; i1 < 2; i1++) {
+              for (i2 = 0; i2 < loop_ub; i2++) {
+                filCross_data[i2 + filCross->size[0] * i1] =
+                    oldNodes_data[i2 + oldNodes->size[0] * i1];
+              }
+            }
+          }
+          if ((idx + 1 < 1) || (idx + 1 > i)) {
+            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i, &gc_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          if ((idx + 1 < 1) || (idx + 1 > numFil)) {
+            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numFil, &fc_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          if ((idx + 1 < 1) || (idx + 1 > i)) {
+            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i, &ec_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          if ((idx + 1 < 1) || (idx + 1 > numFil)) {
+            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numFil, &dc_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          if (((int32_T)nodeCount < 1) ||
+              ((int32_T)nodeCount > nodes->size[0])) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1, nodes->size[0],
+                                          &cc_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          nodes_data[(int32_T)nodeCount - 1] =
+              centers_data[idx] + l * cosines_data[idx] * t1;
+          nodes_data[((int32_T)nodeCount + nodes->size[0]) - 1] =
+              centers_data[idx + centers->size[0]] + l * sines_data[idx] * t1;
+          if (((int32_T)nodeCount < 1) ||
+              ((int32_T)nodeCount > filCross->size[0])) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
+                                          filCross->size[0], &bc_emlrtBCI,
+                                          (emlrtConstCTX)sp);
+          }
+          filCross_data[(int32_T)nodeCount - 1] = (real_T)idx + 1.0;
+          filCross_data[((int32_T)nodeCount + filCross->size[0]) - 1] =
+              otherAsters_data[r5[jdx]];
+        }
+        if (*emlrtBreakCheckR2012bFlagVar != 0) {
+          emlrtBreakCheckR2012b((emlrtConstCTX)sp);
+        }
       }
       if (*emlrtBreakCheckR2012bFlagVar != 0) {
         emlrtBreakCheckR2012b((emlrtConstCTX)sp);
       }
     }
-  } else if (astralNum >= 2.0) {
-    int32_T loop_ub_tmp;
+    emxFree_int32_T(sp, &r2);
+  } else if (orients->size[1] >= 2) {
+    real_T d;
     /*  routine for "Astral Mikado" networks */
-    i = augNodes->size[0] * augNodes->size[1];
-    augNodes->size[0] = centers->size[0] + nodes->size[0];
-    augNodes->size[1] = 2;
-    emxEnsureCapacity_real_T(sp, augNodes, i, &qb_emlrtRTEI);
-    augNodes_data = augNodes->data;
-    loop_ub_tmp = nodes->size[0];
-    loop_ub = nodes->size[0];
-    if ((muIntScalarMax_sint32(numAsters_tmp, loop_ub_tmp) << 1) < 3200) {
-      for (i1 = 0; i1 < 2; i1++) {
-        for (i4 = 0; i4 < numAsters_tmp; i4++) {
-          augNodes_data[i4 + augNodes->size[0] * i1] =
-              centers_data[i4 + centers->size[0] * i1];
-        }
-        for (i4 = 0; i4 < loop_ub_tmp; i4++) {
-          augNodes_data[(i4 + centers->size[0]) + augNodes->size[0] * i1] =
-              nodes_data[i4 + nodes->size[0] * i1];
-        }
-      }
-    } else {
-      emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
-      emlrtPushJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-      defineSprings_numThreads =
-          emlrtAllocRegionTLSs(sp->tls, omp_in_parallel(),
-                               omp_get_max_threads(), omp_get_num_procs());
-#pragma omp parallel for num_threads(defineSprings_numThreads) private(i4)
-
-      for (i1 = 0; i1 < 2; i1++) {
-        for (i4 = 0; i4 < numAsters_tmp; i4++) {
-          augNodes_data[i4 + augNodes->size[0] * i1] =
-              centers_data[i4 + centers->size[0] * i1];
-        }
-        for (i4 = 0; i4 < loop_ub; i4++) {
-          augNodes_data[(i4 + centers->size[0]) + augNodes->size[0] * i1] =
-              nodes_data[i4 + nodes->size[0] * i1];
-        }
-      }
-      emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
-      emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
+    /*  loop only needs to run through the last filament on penultimate aster */
+    d = ((real_T)orients->size[0] - 1.0) * (real_T)orients->size[1];
+    i = (int32_T)d;
+    emlrtForLoopVectorCheckR2021a(1.0, 1.0, d, mxDOUBLE_CLASS, (int32_T)d,
+                                  &h_emlrtRTEI, (emlrtConstCTX)sp);
+    if ((int32_T)d - 1 >= 0) {
+      b_otherAsters[1] = 1.0;
+      b_centers = centers->size[0];
+      a = 2.0 * l;
+      c = a * a;
     }
-    emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
-                                  (int32_T)numFil, &i_emlrtRTEI,
-                                  (emlrtConstCTX)sp);
-    for (idx = 0; idx < i2; idx++) {
-      st.site = &ob_emlrtRSI;
-      sortNodes(&st, (real_T)idx + 1.0, nodes, filCross, centers, astralNum,
-                thisOrder);
-      augNodes_data = thisOrder->data;
-      loop_ub =
-          (int32_T)muDoubleScalarFloor((((real_T)idx + 1.0) - 1.0) / astralNum);
-      if ((thisOrder->size[0] == 0) || (thisOrder->size[1] == 0)) {
-        /*  0 nodes = filament doesn't touch any other asters! */
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &kc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
+    emxInit_boolean_T(sp, &tooFar, 1, &pb_emlrtRTEI);
+    for (idx = 0; idx < i; idx++) {
+      real_T c_centers[2];
+      real_T b_centers_tmp;
+      real_T centers_tmp;
+      real_T filSubJdx;
+      real_T y;
+      boolean_T b;
+      y = muDoubleScalarFloor((((real_T)idx + 1.0) - 1.0) / (real_T)astralNum);
+      st.site = &k_emlrtRSI;
+      b_st.site = &u_emlrtRSI;
+      if (numAsters < (y + 1.0) + 1.0) {
+        otherAsters->size[0] = 1;
+        otherAsters->size[1] = 0;
+      } else if ((y + 1.0) + 1.0 == (y + 1.0) + 1.0) {
+        i1 = otherAsters->size[0] * otherAsters->size[1];
+        otherAsters->size[0] = 1;
+        loop_ub = (int32_T)((real_T)numAsters - ((y + 1.0) + 1.0));
+        otherAsters->size[1] = loop_ub + 1;
+        emxEnsureCapacity_real_T(&b_st, otherAsters, i1, &jb_emlrtRTEI);
+        otherAsters_data = otherAsters->data;
+        for (i1 = 0; i1 <= loop_ub; i1++) {
+          otherAsters_data[i1] = ((y + 1.0) + 1.0) + (real_T)i1;
         }
-        ends_data[idx + ends->size[0]] = l;
-        /*  treat unused filament as "right" dangling end */
-      } else if (thisOrder->size[0] == 1) {
-        real_T y[2];
-        real_T springLength;
-        /*  1 node + astralNum >=2 -> spring between astral center & node */
-        springCount++;
-        if (loop_ub + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, numAsters_tmp,
-                                        &vc_emlrtBCI, (emlrtConstCTX)sp);
-        }
-        if (((int32_T)augNodes_data[0] < 1) ||
-            ((int32_T)augNodes_data[0] > loop_ub_tmp)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)augNodes_data[0], 1,
-                                        loop_ub_tmp, &uc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        numFil =
-            nodes_data[(int32_T)augNodes_data[0] - 1] - centers_data[loop_ub];
-        y[0] = numFil * numFil;
-        numFil = nodes_data[((int32_T)augNodes_data[0] + nodes->size[0]) - 1] -
-                 centers_data[loop_ub + centers->size[0]];
-        y[1] = numFil * numFil;
-        springLength = sumColumnB(y);
-        st.site = &nb_emlrtRSI;
-        if (springLength < 0.0) {
-          emlrtErrorWithMessageIdR2018a(
-              &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-        }
-        springLength = muDoubleScalarSqrt(springLength);
-        augNodes_data[0] += (real_T)numAsters;
-        newSpring_size[0] = 1;
-        newSpring_size[1] = 4;
-        numFil = augNodes_data[0];
-        if (((int32_T)springCount < 1) ||
-            ((int32_T)springCount > springs->size[0])) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
-                                        springs->size[0], &nc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        iv[0] = 1;
-        iv[1] = 4;
-        emlrtSubAssignSizeCheckR2012b(&iv[0], 2, &newSpring_size[0], 2,
-                                      &c_emlrtECI, (emlrtCTX)sp);
-        springs_data[(int32_T)springCount - 1] = loop_ub + 1;
-        springs_data[((int32_T)springCount + springs->size[0]) - 1] = numFil;
-        springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
-            idx + 1;
-        springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
-            springLength;
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &dc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        ends_data[idx + ends->size[0]] = l - springLength;
       } else {
-        real_T y[2];
-        real_T springLength;
-        real_T totSpringLength;
-        int32_T n;
-        /*  >=2 nodes = there are certainly springs along this filament */
-        if (loop_ub + 1 > numAsters_tmp) {
-          emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, numAsters_tmp,
-                                        &tc_emlrtBCI, (emlrtConstCTX)sp);
-        }
-        totSpringLength = 0.0;
-        /*  like "Classical", but proximal segment to center is spring */
-        /*  also need to account for augmented node indices */
-        n = thisOrder->size[0] - 2;
-        for (jdx = 0; jdx <= n; jdx++) {
-          springCount++;
-          if (jdx + 1 > thisOrder->size[0]) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, thisOrder->size[0],
-                                          &sc_emlrtBCI, (emlrtConstCTX)sp);
+        c_st.site = &v_emlrtRSI;
+        eml_float_colon(&c_st, (y + 1.0) + 1.0, numAsters, otherAsters);
+        otherAsters_data = otherAsters->data;
+      }
+      i1 = centers->size[0];
+      b = (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > centers->size[0]));
+      if (b) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, centers->size[0],
+                                      &ac_emlrtBCI, (emlrtConstCTX)sp);
+      }
+      centers_tmp = centers_data[(int32_T)(y + 1.0) - 1];
+      c_centers[0] = centers_tmp;
+      b_centers_tmp = centers_data[((int32_T)(y + 1.0) + centers->size[0]) - 1];
+      c_centers[1] = b_centers_tmp;
+      b_otherAsters[0] = otherAsters->size[1];
+      st.site = &j_emlrtRSI;
+      repmat(&st, c_centers, b_otherAsters, oldNodes);
+      oldNodes_data = oldNodes->data;
+      loop_ub = otherAsters->size[1];
+      i2 = r->size[0] * r->size[1];
+      r->size[0] = otherAsters->size[1];
+      r->size[1] = 2;
+      emxEnsureCapacity_real_T(sp, r, i2, &mb_emlrtRTEI);
+      r3 = r->data;
+      for (i2 = 0; i2 < 2; i2++) {
+        for (i3 = 0; i3 < loop_ub; i3++) {
+          if (otherAsters_data[i3] !=
+              (int32_T)muDoubleScalarFloor(otherAsters_data[i3])) {
+            emlrtIntegerCheckR2012b(otherAsters_data[i3], &q_emlrtDCI,
+                                    (emlrtConstCTX)sp);
           }
-          i = (int32_T)augNodes_data[jdx];
-          if ((i < 1) || (i > loop_ub_tmp)) {
-            emlrtDynamicBoundsCheckR2012b(i, 1, loop_ub_tmp, &rc_emlrtBCI,
+          i4 = (int32_T)otherAsters_data[i3];
+          if ((i4 < 1) || (i4 > b_centers)) {
+            emlrtDynamicBoundsCheckR2012b(i4, 1, b_centers, &pc_emlrtBCI,
                                           (emlrtConstCTX)sp);
           }
-          if (jdx + 2 > thisOrder->size[0]) {
-            emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, thisOrder->size[0],
-                                          &qc_emlrtBCI, (emlrtConstCTX)sp);
+          r3[i3 + r->size[0] * i2] =
+              centers_data[(i4 + centers->size[0] * i2) - 1];
+        }
+      }
+      if ((oldNodes->size[0] != otherAsters->size[1]) &&
+          ((oldNodes->size[0] != 1) && (otherAsters->size[1] != 1))) {
+        emlrtDimSizeImpxCheckR2021b(oldNodes->size[0], otherAsters->size[1],
+                                    &d_emlrtECI, (emlrtConstCTX)sp);
+      }
+      if (oldNodes->size[0] == r->size[0]) {
+        i2 = r1->size[0] * r1->size[1];
+        r1->size[0] = oldNodes->size[0];
+        r1->size[1] = 2;
+        emxEnsureCapacity_real_T(sp, r1, i2, &nb_emlrtRTEI);
+        r4 = r1->data;
+        loop_ub = oldNodes->size[0] << 1;
+        for (i2 = 0; i2 < loop_ub; i2++) {
+          filSubJdx = oldNodes_data[i2] - r3[i2];
+          r4[i2] = filSubJdx * filSubJdx;
+        }
+        st.site = &j_emlrtRSI;
+        sum(&st, r1, centerSepSQR);
+        oldNodes_data = centerSepSQR->data;
+      } else {
+        st.site = &j_emlrtRSI;
+        binary_expand_op(&st, centerSepSQR, j_emlrtRSI, oldNodes, r);
+        oldNodes_data = centerSepSQR->data;
+      }
+      st.site = &i_emlrtRSI;
+      b_st.site = &gb_emlrtRSI;
+      c_st.site = &hb_emlrtRSI;
+      loop_ub = centerSepSQR->size[0];
+      i2 = tooFar->size[0];
+      tooFar->size[0] = centerSepSQR->size[0];
+      emxEnsureCapacity_boolean_T(sp, tooFar, i2, &pb_emlrtRTEI);
+      tooFar_data = tooFar->data;
+      for (i2 = 0; i2 < loop_ub; i2++) {
+        tooFar_data[i2] = (oldNodes_data[i2] > c);
+      }
+      /*  start second loop at first filament on the next aster */
+      d = (y + 1.0) * (real_T)astralNum + 1.0;
+      i2 = (int32_T)((real_T)numFil + (1.0 - d));
+      emlrtForLoopVectorCheckR2021a(d, 1.0, numFil, mxDOUBLE_CLASS, i2,
+                                    &g_emlrtRTEI, (emlrtConstCTX)sp);
+      for (jdx = 0; jdx < i2; jdx++) {
+        real_T b_jdx;
+        b_jdx = d + (real_T)jdx;
+        a = muDoubleScalarFloor((b_jdx - 1.0) / (real_T)astralNum);
+        /*  whichOtherAster finds correct row in centerSepSQR, tooFar */
+        i3 = (int32_T)((a + 1.0) - (y + 1.0));
+        if ((i3 < 1) || (i3 > loop_ub)) {
+          emlrtDynamicBoundsCheckR2012b(i3, 1, loop_ub, &rc_emlrtBCI,
+                                        (emlrtConstCTX)sp);
+        }
+        if (!tooFar_data[i3 - 1]) {
+          real_T b1;
+          real_T b2;
+          real_T denom;
+          real_T denom_tmp;
+          real_T filSubIdx;
+          real_T t1;
+          /*  otherwise, check for intersection */
+          filSubJdx = b_mod((real_T)idx + 1.0, astralNum);
+          filSubIdx = filSubJdx + (real_T)(astralNum * (filSubJdx == 0.0));
+          filSubJdx = b_mod(b_jdx, astralNum);
+          filSubJdx += (real_T)(astralNum * (filSubJdx == 0.0));
+          /*  legacy code in these comments for readability */
+          /*  A = [cosines(asterIdx,filSubIdx), - cosines(asterJdx,filSubJdx);
+           */
+          /*      sines(asterIdx,filSubIdx), - sines(asterJdx,filSubJdx)]; */
+          /*  denom = det(A); */
+          /*  b = 1/l * [centers(asterJdx,1) - centers(asterIdx,1); */
+          /*      centers(asterJdx,2) - centers(asterIdx,2)]; */
+          /*  t1 = det([b,A(:,2)]) / denom; */
+          /*  t2 = det([A(:,1),b]) / denom; */
+          if (((int32_T)(y + 1.0) < 1) ||
+              ((int32_T)(y + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, numAsters_tmp,
+                                          &bd_emlrtBCI, (emlrtConstCTX)sp);
           }
-          i3 = (int32_T)augNodes_data[jdx + 1];
-          if ((i3 < 1) || (i3 > loop_ub_tmp)) {
-            emlrtDynamicBoundsCheckR2012b(i3, 1, loop_ub_tmp, &pc_emlrtBCI,
+          if (filSubIdx != (int32_T)muDoubleScalarFloor(filSubIdx)) {
+            emlrtIntegerCheckR2012b(filSubIdx, &r_emlrtDCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubIdx < 1) ||
+              ((int32_T)filSubIdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, astralNum_tmp,
+                                          &cd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(a + 1.0) < 1) ||
+              ((int32_T)(a + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
+                                          &dd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (filSubJdx != (int32_T)muDoubleScalarFloor(filSubJdx)) {
+            emlrtIntegerCheckR2012b(filSubJdx, &s_emlrtDCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubJdx < 1) ||
+              ((int32_T)filSubJdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubJdx, 1, astralNum_tmp,
+                                          &ed_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(y + 1.0) < 1) ||
+              ((int32_T)(y + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, numAsters_tmp,
+                                          &fd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubIdx < 1) ||
+              ((int32_T)filSubIdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, astralNum_tmp,
+                                          &gd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(a + 1.0) < 1) ||
+              ((int32_T)(a + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
+                                          &hd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubJdx < 1) ||
+              ((int32_T)filSubJdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubJdx, 1, astralNum_tmp,
+                                          &id_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          t1 = cosines_data[((int32_T)(a + 1.0) +
+                             cosines->size[0] * ((int32_T)filSubJdx - 1)) -
+                            1];
+          denom_tmp = sines_data[((int32_T)(y + 1.0) +
+                                  sines->size[0] * ((int32_T)filSubIdx - 1)) -
+                                 1];
+          denom = cosines_data[((int32_T)(y + 1.0) +
+                                cosines->size[0] * ((int32_T)filSubIdx - 1)) -
+                               1] *
+                      -sines_data[((int32_T)(a + 1.0) +
+                                   sines->size[0] * ((int32_T)filSubJdx - 1)) -
+                                  1] +
+                  denom_tmp * t1;
+          if (((int32_T)(a + 1.0) < 1) || ((int32_T)(a + 1.0) > i1)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, i1,
+                                          &jd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
+                                          &kd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          b1 = (centers_data[(int32_T)(a + 1.0) - 1] - centers_tmp) / l;
+          if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
+                                          &ld_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          b2 = (centers_data[((int32_T)(a + 1.0) + centers->size[0]) - 1] -
+                b_centers_tmp) /
+               l;
+          if (((int32_T)(a + 1.0) < 1) ||
+              ((int32_T)(a + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
+                                          &md_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubJdx < 1) ||
+              ((int32_T)filSubJdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubJdx, 1, astralNum_tmp,
+                                          &nd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(a + 1.0) < 1) ||
+              ((int32_T)(a + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
+                                          &od_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubJdx < 1) ||
+              ((int32_T)filSubJdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubJdx, 1, astralNum_tmp,
+                                          &pd_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          t1 = (b1 * -sines_data[((int32_T)(a + 1.0) +
+                                  sines->size[0] * ((int32_T)filSubJdx - 1)) -
+                                 1] +
+                b2 * t1) /
+               denom;
+          if (((int32_T)filSubIdx < 1) ||
+              ((int32_T)filSubIdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, astralNum_tmp,
+                                          &yb_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)(y + 1.0) < 1) ||
+              ((int32_T)(y + 1.0) > numAsters_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, numAsters_tmp,
+                                          &xb_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (((int32_T)filSubIdx < 1) ||
+              ((int32_T)filSubIdx > astralNum_tmp)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, astralNum_tmp,
+                                          &wb_emlrtBCI, (emlrtConstCTX)sp);
+          }
+          if (muDoubleScalarAbs(t1 - 0.5) <= 0.5) {
+            filSubJdx =
+                cosines_data[((int32_T)(y + 1.0) +
+                              cosines->size[0] * ((int32_T)filSubIdx - 1)) -
+                             1];
+            if (muDoubleScalarAbs((filSubJdx * b2 - denom_tmp * b1) / denom -
+                                  0.5) <= 0.5) {
+              nodeCount++;
+              if (nodeCount > numNodesGuess) {
+                int32_T b_loop_ub;
+                numNodesGuess += (real_T)numFil;
+                i3 = oldNodes->size[0] * oldNodes->size[1];
+                oldNodes->size[0] = nodes->size[0];
+                oldNodes->size[1] = 2;
+                emxEnsureCapacity_real_T(sp, oldNodes, i3, &ub_emlrtRTEI);
+                oldNodes_data = oldNodes->data;
+                b_loop_ub = nodes->size[0] << 1;
+                for (i3 = 0; i3 < b_loop_ub; i3++) {
+                  oldNodes_data[i3] = nodes_data[i3];
+                }
+                if (numNodesGuess != (int32_T)numNodesGuess) {
+                  emlrtIntegerCheckR2012b(numNodesGuess, &l_emlrtDCI,
                                           (emlrtConstCTX)sp);
-          }
-          numFil = nodes_data[i - 1] - nodes_data[i3 - 1];
-          y[0] = numFil * numFil;
-          numFil = nodes_data[(i + nodes->size[0]) - 1] -
-                   nodes_data[(i3 + nodes->size[0]) - 1];
-          y[1] = numFil * numFil;
-          springLength = sumColumnB(y);
-          st.site = &lb_emlrtRSI;
-          if (springLength < 0.0) {
-            emlrtErrorWithMessageIdR2018a(
-                &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-          }
-          springLength = muDoubleScalarSqrt(springLength);
-          numFil = augNodes_data[jdx + 1];
-          if ((!(augNodes_data[jdx] > numFil)) &&
-              ((!muDoubleScalarIsNaN(augNodes_data[jdx])) ||
-               muDoubleScalarIsNaN(numFil))) {
-            numFil = augNodes_data[jdx];
-          }
-          numSpringsGuess = augNodes_data[jdx + 1];
-          if ((!(augNodes_data[jdx] < numSpringsGuess)) &&
-              ((!muDoubleScalarIsNaN(augNodes_data[jdx])) ||
-               muDoubleScalarIsNaN(numSpringsGuess))) {
-            numSpringsGuess = augNodes_data[jdx];
-          }
-          if (((int32_T)springCount < 1) ||
-              ((int32_T)springCount > springs->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
-                                          springs->size[0], &hd_emlrtBCI,
+                }
+                i3 = nodes->size[0] * nodes->size[1];
+                nodes->size[0] = (int32_T)numNodesGuess;
+                nodes->size[1] = 2;
+                emxEnsureCapacity_real_T(sp, nodes, i3, &vb_emlrtRTEI);
+                nodes_data = nodes->data;
+                if ((int32_T)numNodesGuess != (int32_T)numNodesGuess) {
+                  emlrtIntegerCheckR2012b(numNodesGuess, &u_emlrtDCI,
                                           (emlrtConstCTX)sp);
+                }
+                loop_ub_tmp = (int32_T)numNodesGuess << 1;
+                for (i3 = 0; i3 < loop_ub_tmp; i3++) {
+                  nodes_data[i3] = 0.0;
+                }
+                if ((int32_T)(nodeCount - 1U) < 1) {
+                  b_loop_ub = 0;
+                } else {
+                  if (numNodesGuess < 1.0) {
+                    emlrtDynamicBoundsCheckR2012b(1, 1, (int32_T)numNodesGuess,
+                                                  &vb_emlrtBCI,
+                                                  (emlrtConstCTX)sp);
+                  }
+                  if (((int32_T)(nodeCount - 1U) < 1) ||
+                      ((int32_T)(nodeCount - 1U) > (int32_T)numNodesGuess)) {
+                    emlrtDynamicBoundsCheckR2012b(
+                        (int32_T)(nodeCount - 1U), 1, (int32_T)numNodesGuess,
+                        &ub_emlrtBCI, (emlrtConstCTX)sp);
+                  }
+                  b_loop_ub = (int32_T)(nodeCount - 1U);
+                }
+                iv[0] = b_loop_ub;
+                iv[1] = 2;
+                emlrtSubAssignSizeCheckR2012b(&iv[0], 2, &oldNodes->size[0], 2,
+                                              &c_emlrtECI, (emlrtCTX)sp);
+                for (i3 = 0; i3 < 2; i3++) {
+                  for (i4 = 0; i4 < b_loop_ub; i4++) {
+                    nodes_data[i4 + nodes->size[0] * i3] =
+                        oldNodes_data[i4 + oldNodes->size[0] * i3];
+                  }
+                }
+                i3 = oldNodes->size[0] * oldNodes->size[1];
+                oldNodes->size[0] = filCross->size[0];
+                oldNodes->size[1] = 2;
+                emxEnsureCapacity_real_T(sp, oldNodes, i3, &wb_emlrtRTEI);
+                oldNodes_data = oldNodes->data;
+                b_loop_ub = filCross->size[0] << 1;
+                for (i3 = 0; i3 < b_loop_ub; i3++) {
+                  oldNodes_data[i3] = filCross_data[i3];
+                }
+                if ((int32_T)numNodesGuess != (int32_T)numNodesGuess) {
+                  emlrtIntegerCheckR2012b(numNodesGuess, &m_emlrtDCI,
+                                          (emlrtConstCTX)sp);
+                }
+                i3 = filCross->size[0] * filCross->size[1];
+                filCross->size[0] = (int32_T)numNodesGuess;
+                filCross->size[1] = 2;
+                emxEnsureCapacity_real_T(sp, filCross, i3, &xb_emlrtRTEI);
+                filCross_data = filCross->data;
+                if ((int32_T)numNodesGuess != (int32_T)numNodesGuess) {
+                  emlrtIntegerCheckR2012b(numNodesGuess, &w_emlrtDCI,
+                                          (emlrtConstCTX)sp);
+                }
+                for (i3 = 0; i3 < loop_ub_tmp; i3++) {
+                  filCross_data[i3] = 0.0;
+                }
+                if ((int32_T)(nodeCount - 1U) < 1) {
+                  b_loop_ub = 0;
+                } else {
+                  if (numNodesGuess < 1.0) {
+                    emlrtDynamicBoundsCheckR2012b(1, 1, (int32_T)numNodesGuess,
+                                                  &tb_emlrtBCI,
+                                                  (emlrtConstCTX)sp);
+                  }
+                  if (((int32_T)(nodeCount - 1U) < 1) ||
+                      ((int32_T)(nodeCount - 1U) > (int32_T)numNodesGuess)) {
+                    emlrtDynamicBoundsCheckR2012b(
+                        (int32_T)(nodeCount - 1U), 1, (int32_T)numNodesGuess,
+                        &sb_emlrtBCI, (emlrtConstCTX)sp);
+                  }
+                  b_loop_ub = (int32_T)(nodeCount - 1U);
+                }
+                iv[0] = b_loop_ub;
+                iv[1] = 2;
+                emlrtSubAssignSizeCheckR2012b(&iv[0], 2, &oldNodes->size[0], 2,
+                                              &b_emlrtECI, (emlrtCTX)sp);
+                for (i3 = 0; i3 < 2; i3++) {
+                  for (i4 = 0; i4 < b_loop_ub; i4++) {
+                    filCross_data[i4 + filCross->size[0] * i3] =
+                        oldNodes_data[i4 + oldNodes->size[0] * i3];
+                  }
+                }
+              }
+              if (((int32_T)(y + 1.0) < 1) ||
+                  ((int32_T)(y + 1.0) > numAsters_tmp)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1,
+                                              numAsters_tmp, &rb_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              if (((int32_T)filSubIdx < 1) ||
+                  ((int32_T)filSubIdx > astralNum_tmp)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1,
+                                              astralNum_tmp, &qb_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
+                                              &pb_emlrtBCI, (emlrtConstCTX)sp);
+              }
+              if (((int32_T)(y + 1.0) < 1) ||
+                  ((int32_T)(y + 1.0) > numAsters_tmp)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1,
+                                              numAsters_tmp, &ob_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              if (((int32_T)filSubIdx < 1) ||
+                  ((int32_T)filSubIdx > astralNum_tmp)) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1,
+                                              astralNum_tmp, &nb_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              if (((int32_T)nodeCount < 1) ||
+                  ((int32_T)nodeCount > nodes->size[0])) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
+                                              nodes->size[0], &mb_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              nodes_data[(int32_T)nodeCount - 1] =
+                  centers_tmp + l * filSubJdx * t1;
+              nodes_data[((int32_T)nodeCount + nodes->size[0]) - 1] =
+                  b_centers_tmp + l * denom_tmp * t1;
+              if (((int32_T)nodeCount < 1) ||
+                  ((int32_T)nodeCount > filCross->size[0])) {
+                emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
+                                              filCross->size[0], &lb_emlrtBCI,
+                                              (emlrtConstCTX)sp);
+              }
+              filCross_data[(int32_T)nodeCount - 1] = (real_T)idx + 1.0;
+              filCross_data[((int32_T)nodeCount + filCross->size[0]) - 1] =
+                  b_jdx;
+            }
           }
-          springs_data[(int32_T)springCount - 1] = (real_T)numAsters + numFil;
-          springs_data[((int32_T)springCount + springs->size[0]) - 1] =
-              (real_T)numAsters + numSpringsGuess;
-          springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
-              (real_T)idx + 1.0;
-          springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
-              springLength;
-          totSpringLength += springLength;
-          if (*emlrtBreakCheckR2012bFlagVar != 0) {
-            emlrtBreakCheckR2012b((emlrtConstCTX)sp);
-          }
         }
-        /*  recording proximal segment as spring */
-        springCount++;
-        if (((int32_T)augNodes_data[0] < 1) ||
-            ((int32_T)augNodes_data[0] > loop_ub_tmp)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)augNodes_data[0], 1,
-                                        loop_ub_tmp, &oc_emlrtBCI,
-                                        (emlrtConstCTX)sp);
+        if (*emlrtBreakCheckR2012bFlagVar != 0) {
+          emlrtBreakCheckR2012b((emlrtConstCTX)sp);
         }
-        numFil =
-            nodes_data[(int32_T)augNodes_data[0] - 1] - centers_data[loop_ub];
-        y[0] = numFil * numFil;
-        numFil = nodes_data[((int32_T)augNodes_data[0] + nodes->size[0]) - 1] -
-                 centers_data[loop_ub + centers->size[0]];
-        y[1] = numFil * numFil;
-        springLength = sumColumnB(y);
-        st.site = &kb_emlrtRSI;
-        if (springLength < 0.0) {
-          emlrtErrorWithMessageIdR2018a(
-              &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
-              "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
-        }
-        springLength = muDoubleScalarSqrt(springLength);
-        if (((int32_T)springCount < 1) ||
-            ((int32_T)springCount > springs->size[0])) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
-                                        springs->size[0], &fd_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        springs_data[(int32_T)springCount - 1] = (real_T)loop_ub + 1.0;
-        springs_data[((int32_T)springCount + springs->size[0]) - 1] =
-            (real_T)numAsters + augNodes_data[0];
-        springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
-            (real_T)idx + 1.0;
-        springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
-            springLength;
-        totSpringLength += springLength;
-        if ((int32_T)((uint32_T)idx + 1U) > ends->size[0]) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        ends->size[0], &ec_emlrtBCI,
-                                        (emlrtConstCTX)sp);
-        }
-        ends_data[idx + ends->size[0]] = l - totSpringLength;
       }
       if (*emlrtBreakCheckR2012bFlagVar != 0) {
         emlrtBreakCheckR2012b((emlrtConstCTX)sp);
       }
     }
+    emxFree_boolean_T(sp, &tooFar);
   }
-  emxFree_real_T(sp, &thisOrder);
-  if ((int32_T)springCount == 0) {
-    springs->size[0] = 0;
-    springs->size[1] = 4;
+  emxFree_real_T(sp, &r1);
+  emxFree_real_T(sp, &r);
+  emxFree_real_T(sp, &otherAsters);
+  emxFree_real_T(sp, &oldNodes);
+  emxFree_real_T(sp, &centerSepSQR);
+  emxFree_real_T(sp, &sines);
+  emxFree_real_T(sp, &cosines);
+  if ((int32_T)nodeCount == 0) {
+    nodes->size[0] = 0;
+    nodes->size[1] = 2;
+    filCross->size[0] = 0;
+    filCross->size[1] = 2;
   } else {
-    if (springs->size[0] < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, springs->size[0], &mc_emlrtBCI,
+    if (nodes->size[0] < 1) {
+      emlrtDynamicBoundsCheckR2012b(1, 1, nodes->size[0], &kb_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    loop_ub = (int32_T)springCount;
-    if (((int32_T)springCount < 1) ||
-        ((int32_T)springCount > springs->size[0])) {
-      emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1, springs->size[0],
-                                    &lc_emlrtBCI, (emlrtConstCTX)sp);
+    loop_ub = (int32_T)nodeCount;
+    if (((int32_T)nodeCount < 1) || ((int32_T)nodeCount > nodes->size[0])) {
+      emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1, nodes->size[0],
+                                    &jb_emlrtBCI, (emlrtConstCTX)sp);
     }
-    for (i = 0; i < 4; i++) {
-      for (i2 = 0; i2 < loop_ub; i2++) {
-        springs_data[i2 + (int32_T)springCount * i] =
-            springs_data[i2 + springs->size[0] * i];
+    for (i = 0; i < 2; i++) {
+      for (i1 = 0; i1 < loop_ub; i1++) {
+        nodes_data[i1 + (int32_T)nodeCount * i] =
+            nodes_data[i1 + nodes->size[0] * i];
       }
     }
-    i = springs->size[0] * springs->size[1];
-    springs->size[0] = (int32_T)springCount;
-    springs->size[1] = 4;
-    emxEnsureCapacity_real_T(sp, springs, i, &sb_emlrtRTEI);
+    i = nodes->size[0] * nodes->size[1];
+    nodes->size[0] = (int32_T)nodeCount;
+    nodes->size[1] = 2;
+    emxEnsureCapacity_real_T(sp, nodes, i, &hb_emlrtRTEI);
+    if (filCross->size[0] < 1) {
+      emlrtDynamicBoundsCheckR2012b(1, 1, filCross->size[0], &ib_emlrtBCI,
+                                    (emlrtConstCTX)sp);
+    }
+    if (((int32_T)nodeCount < 1) || ((int32_T)nodeCount > filCross->size[0])) {
+      emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1, filCross->size[0],
+                                    &hb_emlrtBCI, (emlrtConstCTX)sp);
+    }
+    for (i = 0; i < 2; i++) {
+      for (i1 = 0; i1 < loop_ub; i1++) {
+        filCross_data[i1 + (int32_T)nodeCount * i] =
+            filCross_data[i1 + filCross->size[0] * i];
+      }
+    }
+    i = filCross->size[0] * filCross->size[1];
+    filCross->size[0] = (int32_T)nodeCount;
+    filCross->size[1] = 2;
+    emxEnsureCapacity_real_T(sp, filCross, i, &kb_emlrtRTEI);
   }
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
@@ -2560,12 +3313,12 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
    */
   /*        astral center. If there are no nodes on this filament, returns [].
    */
-  st.site = &tb_emlrtRSI;
-  emxInit_boolean_T(&st, &x, 2, &ub_emlrtRTEI);
+  st.site = &sb_emlrtRSI;
+  emxInit_boolean_T(&st, &x, 2, &fc_emlrtRTEI);
   i = x->size[0] * x->size[1];
   x->size[0] = filCross->size[0];
   x->size[1] = 2;
-  emxEnsureCapacity_boolean_T(&st, x, i, &ub_emlrtRTEI);
+  emxEnsureCapacity_boolean_T(&st, x, i, &fc_emlrtRTEI);
   x_data = x->data;
   loop_ub_tmp = filCross->size[0] << 1;
   if (loop_ub_tmp < 3200) {
@@ -2585,17 +3338,17 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     emlrtPopJmpBuf(&st, &emlrtJBStack);
     emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  b_st.site = &yb_emlrtRSI;
-  emxInit_int32_T(&b_st, &i_tmp, &hc_emlrtRTEI);
+  b_st.site = &xb_emlrtRSI;
+  emxInit_int32_T(&b_st, &i_tmp, &rc_emlrtRTEI);
   i_tmp_data = i_tmp->data;
   if (loop_ub_tmp == 0) {
     i_tmp->size[0] = 0;
   } else {
-    c_st.site = &bc_emlrtRSI;
+    c_st.site = &ac_emlrtRSI;
     idx = 0;
     i = i_tmp->size[0];
     i_tmp->size[0] = loop_ub_tmp;
-    emxEnsureCapacity_int32_T(&c_st, i_tmp, i, &vb_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&c_st, i_tmp, i, &gc_emlrtRTEI);
     i_tmp_data = i_tmp->data;
     ii = 1;
     jj = 1;
@@ -2622,7 +3375,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       }
     }
     if (idx > loop_ub_tmp) {
-      emlrtErrorWithMessageIdR2018a(&c_st, &l_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&c_st, &k_emlrtRTEI,
                                     "Coder:builtins:AssertionFailed",
                                     "Coder:builtins:AssertionFailed", 0);
     }
@@ -2638,32 +3391,32 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       }
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &cc_emlrtRSI;
+      d_st.site = &bc_emlrtRSI;
       indexShapeCheck(&d_st, i_tmp->size[0], iv);
       ii = i_tmp->size[0];
       i_tmp->size[0] = i;
-      emxEnsureCapacity_int32_T(&c_st, i_tmp, ii, &xb_emlrtRTEI);
+      emxEnsureCapacity_int32_T(&c_st, i_tmp, ii, &ic_emlrtRTEI);
       i_tmp_data = i_tmp->data;
+      iv[0] = 1;
+      iv[1] = i;
+      d_st.site = &cc_emlrtRSI;
+      indexShapeCheck(&d_st, loop_ub_tmp, iv);
       iv[0] = 1;
       iv[1] = i;
       d_st.site = &dc_emlrtRSI;
       indexShapeCheck(&d_st, loop_ub_tmp, iv);
-      iv[0] = 1;
-      iv[1] = i;
-      d_st.site = &ec_emlrtRSI;
-      indexShapeCheck(&d_st, loop_ub_tmp, iv);
     }
   }
   if ((x->size[0] == 1) && (i_tmp->size[0] != 1)) {
-    c_st.site = &ac_emlrtRSI;
+    c_st.site = &yb_emlrtRSI;
     warning(&c_st);
   }
   emxFree_boolean_T(&b_st, &x);
-  emxInit_int32_T(&st, &nodesOnFil, &gc_emlrtRTEI);
+  emxInit_int32_T(&st, &nodesOnFil, &qc_emlrtRTEI);
   loop_ub = i_tmp->size[0];
   i = nodesOnFil->size[0];
   nodesOnFil->size[0] = i_tmp->size[0];
-  emxEnsureCapacity_int32_T(&st, nodesOnFil, i, &wb_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&st, nodesOnFil, i, &hc_emlrtRTEI);
   nodesOnFil_data = nodesOnFil->data;
   loop_ub_tmp = i_tmp->size[0];
   if (i_tmp->size[0] < 3200) {
@@ -2683,9 +3436,9 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     emlrtPopJmpBuf(&st, &emlrtJBStack);
     emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  emxInit_real_T(sp, &nodeCoordsOnFil, 2, &ac_emlrtRTEI);
-  emxInit_real_T(sp, &dotProducts, 1, &fc_emlrtRTEI);
-  emxInit_real_T(sp, &a, 2, &ic_emlrtRTEI);
+  emxInit_real_T(sp, &nodeCoordsOnFil, 2, &kc_emlrtRTEI);
+  emxInit_real_T(sp, &dotProducts, 1, &pc_emlrtRTEI);
+  emxInit_real_T(sp, &a, 2, &sc_emlrtRTEI);
   if (nodesOnFil->size[0] == 0) {
     nodeOrdering->size[0] = 0;
     nodeOrdering->size[1] = 0;
@@ -2693,7 +3446,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     i = nodeOrdering->size[0] * nodeOrdering->size[1];
     nodeOrdering->size[0] = 1;
     nodeOrdering->size[1] = 1;
-    emxEnsureCapacity_real_T(sp, nodeOrdering, i, &yb_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, nodeOrdering, i, &jc_emlrtRTEI);
     nodeOrdering_data = nodeOrdering->data;
     nodeOrdering_data[0] = nodesOnFil_data[0];
   } else {
@@ -2701,14 +3454,14 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     i = nodeCoordsOnFil->size[0] * nodeCoordsOnFil->size[1];
     nodeCoordsOnFil->size[0] = loop_ub;
     nodeCoordsOnFil->size[1] = 2;
-    emxEnsureCapacity_real_T(sp, nodeCoordsOnFil, i, &ac_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, nodeCoordsOnFil, i, &kc_emlrtRTEI);
     nodeCoordsOnFil_data = nodeCoordsOnFil->data;
     if ((nodesOnFil->size[0] << 1) < 3200) {
       for (i1 = 0; i1 < 2; i1++) {
         for (i2 = 0; i2 < loop_ub; i2++) {
           if ((nodesOnFil_data[i2] < 1) || (nodesOnFil_data[i2] > ii)) {
             emlrtDynamicBoundsCheckR2012b(nodesOnFil_data[i2], 1, ii,
-                                          &jd_emlrtBCI, (emlrtConstCTX)sp);
+                                          &rd_emlrtBCI, (emlrtConstCTX)sp);
           }
           nodeCoordsOnFil_data[i2 + nodeCoordsOnFil->size[0] * i1] =
               nodes_data[(nodesOnFil_data[i2] + nodes->size[0] * i1) - 1];
@@ -2740,7 +3493,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
             for (i2 = 0; i2 < loop_ub; i2++) {
               if ((nodesOnFil_data[i2] < 1) || (nodesOnFil_data[i2] > ii)) {
                 emlrtDynamicBoundsCheckR2012b(nodesOnFil_data[i2], 1, ii,
-                                              &jd_emlrtBCI, &e_st);
+                                              &rd_emlrtBCI, &e_st);
               }
               nodeCoordsOnFil_data[i2 + nodeCoordsOnFil->size[0] * i1] =
                   nodes_data[(nodesOnFil_data[i2] + nodes->size[0] * i1) - 1];
@@ -2757,7 +3510,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     if (((int32_T)(y_tmp + 1.0) < 1) ||
         ((int32_T)(y_tmp + 1.0) > centers->size[0])) {
       emlrtDynamicBoundsCheckR2012b((int32_T)(y_tmp + 1.0), 1, centers->size[0],
-                                    &id_emlrtBCI, (emlrtConstCTX)sp);
+                                    &qd_emlrtBCI, (emlrtConstCTX)sp);
     }
     d = centers_data[(int32_T)(y_tmp + 1.0) - 1];
     d1 = nodeCoordsOnFil_data[0] - d;
@@ -2768,10 +3521,10 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     a_tmp[1] = d1;
     y[1] = d1 * d1;
     y_tmp = sumColumnB(y);
-    st.site = &ub_emlrtRSI;
+    st.site = &tb_emlrtRSI;
     if (y_tmp < 0.0) {
       emlrtErrorWithMessageIdR2018a(
-          &st, &k_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+          &st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
           "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
     }
     y_tmp = muDoubleScalarSqrt(y_tmp);
@@ -2782,17 +3535,17 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     idx = nodesOnFil->size[0];
     b_nodesOnFil[0] = nodesOnFil->size[0];
     b_nodesOnFil[1] = 1.0;
-    st.site = &vb_emlrtRSI;
+    st.site = &ub_emlrtRSI;
     repmat(&st, y, b_nodesOnFil, a);
     nodeOrdering_data = a->data;
     if ((loop_ub != a->size[0]) && (a->size[0] != 1)) {
-      emlrtDimSizeImpxCheckR2021b(loop_ub, a->size[0], &d_emlrtECI,
+      emlrtDimSizeImpxCheckR2021b(loop_ub, a->size[0], &h_emlrtECI,
                                   (emlrtConstCTX)sp);
     }
     loop_ub_tmp = nodeCoordsOnFil->size[0] << 1;
     i = nodeCoordsOnFil->size[0] * nodeCoordsOnFil->size[1];
     nodeCoordsOnFil->size[1] = 2;
-    emxEnsureCapacity_real_T(sp, nodeCoordsOnFil, i, &bc_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, nodeCoordsOnFil, i, &lc_emlrtRTEI);
     nodeCoordsOnFil_data = nodeCoordsOnFil->data;
     ii = (loop_ub_tmp / 2) << 1;
     jj = ii - 2;
@@ -2819,12 +3572,12 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
       emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
     }
-    st.site = &wb_emlrtRSI;
+    st.site = &vb_emlrtRSI;
     r = _mm_loadu_pd(&a_tmp[0]);
     _mm_storeu_pd(&a_tmp[0], _mm_div_pd(r, _mm_set1_pd(y_tmp)));
     b_nodesOnFil[0] = idx;
     b_nodesOnFil[1] = 1.0;
-    b_st.site = &wb_emlrtRSI;
+    b_st.site = &vb_emlrtRSI;
     repmat(&b_st, a_tmp, b_nodesOnFil, a);
     nodeOrdering_data = a->data;
     a_tmp[0] = a->size[0];
@@ -2850,12 +3603,12 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     i = a->size[0];
     ii = dotProducts->size[0];
     dotProducts->size[0] = a->size[0];
-    emxEnsureCapacity_real_T(&st, dotProducts, ii, &cc_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, dotProducts, ii, &mc_emlrtRTEI);
     dotProducts_data = dotProducts->data;
     ii = -1;
-    b_st.site = &gc_emlrtRSI;
+    b_st.site = &fc_emlrtRSI;
     if (a->size[0] > 2147483646) {
-      c_st.site = &t_emlrtRSI;
+      c_st.site = &s_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     for (idx = 0; idx < i; idx++) {
@@ -2867,14 +3620,14 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     /*  now sort the dot products in increasing order and sort the node indices
      */
     /*  using the same permutation */
-    st.site = &xb_emlrtRSI;
-    b_st.site = &hc_emlrtRSI;
+    st.site = &wb_emlrtRSI;
+    b_st.site = &gc_emlrtRSI;
     sort(&b_st, dotProducts, i_tmp);
     i_tmp_data = i_tmp->data;
     loop_ub_tmp = i_tmp->size[0];
     i = dotProducts->size[0];
     dotProducts->size[0] = i_tmp->size[0];
-    emxEnsureCapacity_real_T(sp, dotProducts, i, &dc_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, dotProducts, i, &nc_emlrtRTEI);
     dotProducts_data = dotProducts->data;
     ii = i_tmp->size[0];
     i = (i_tmp->size[0] < 3200);
@@ -2882,7 +3635,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       for (i1 = 0; i1 < loop_ub_tmp; i1++) {
         if ((i_tmp_data[i1] < 1) || (i_tmp_data[i1] > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b(i_tmp_data[i1], 1, loop_ub,
-                                        &kd_emlrtBCI, (emlrtConstCTX)sp);
+                                        &sd_emlrtBCI, (emlrtConstCTX)sp);
         }
         dotProducts_data[i1] = nodesOnFil_data[i_tmp_data[i1] - 1];
       }
@@ -2911,7 +3664,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
           if (setjmp(emlrtJBEnviron) == 0) {
             if ((i_tmp_data[i1] < 1) || (i_tmp_data[i1] > loop_ub)) {
               emlrtDynamicBoundsCheckR2012b(i_tmp_data[i1], 1, loop_ub,
-                                            &kd_emlrtBCI, &f_st);
+                                            &sd_emlrtBCI, &f_st);
             }
             dotProducts_data[i1] = nodesOnFil_data[i_tmp_data[i1] - 1];
           } else {
@@ -2925,7 +3678,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     ii = nodeOrdering->size[0] * nodeOrdering->size[1];
     nodeOrdering->size[0] = loop_ub_tmp;
     nodeOrdering->size[1] = 1;
-    emxEnsureCapacity_real_T(sp, nodeOrdering, ii, &ec_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, nodeOrdering, ii, &oc_emlrtRTEI);
     nodeOrdering_data = nodeOrdering->data;
     if (i) {
       for (i1 = 0; i1 < loop_ub_tmp; i1++) {
@@ -2975,60 +3728,32 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   __m128d r;
   jmp_buf *volatile emlrtJBStack;
   emlrtStack b_st;
-  emlrtStack c_st;
-  emlrtStack d_st;
-  emlrtStack e_st;
   emlrtStack st;
-  emxArray_boolean_T *tooFar;
-  emxArray_int32_T *r4;
-  emxArray_real_T *centerSepSQR;
-  emxArray_real_T *cosines;
-  emxArray_real_T *otherAsters;
+  emxArray_real_T *b;
   emxArray_real_T *r1;
-  emxArray_real_T *r2;
-  emxArray_real_T *r3;
-  emxArray_real_T *sines;
+  emxArray_real_T *springs;
+  emxArray_real_T *thisOrder;
   real_T b_numAsters[2];
-  real_T b_otherAsters[2];
-  real_T a;
-  real_T c;
-  real_T numNodesGuess;
-  real_T *centerSepSQR_data;
-  real_T *cosines_data;
-  real_T *otherAsters_data;
-  real_T *r5;
-  real_T *r6;
-  real_T *sines_data;
-  int32_T b_asters;
-  int32_T b_astralNum;
-  int32_T c_numAsters;
+  real_T numFil;
+  real_T *springs_data;
+  real_T *thisOrder_data;
+  int32_T a[2];
+  int32_T newSpring_size[2];
   int32_T generateAstralNetwork_numThreads;
   int32_T i;
   int32_T i1;
   int32_T i2;
   int32_T i3;
-  int32_T idx;
   int32_T jdx;
-  int32_T k;
   int32_T loop_ub;
   int32_T maxdimlen;
-  int32_T numAsters_tmp;
-  int32_T numFil;
+  int32_T n;
   int32_T vectorUB;
-  int32_T *r7;
-  uint32_T nodeCount;
   boolean_T out;
-  boolean_T *tooFar_data;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  c_st.prev = &b_st;
-  c_st.tls = b_st.tls;
-  d_st.prev = &c_st;
-  d_st.tls = c_st.tls;
-  e_st.prev = &d_st;
-  e_st.tls = d_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   /*  GENERATEASTRALNETWORK Constructs an astral network and reports properties
    */
@@ -3081,777 +3806,53 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   }
   b_numAsters[0] = numAsters;
   b_numAsters[1] = astralNum;
-  emxInit_real_T(sp, &cosines, 2, &r_emlrtRTEI);
+  emxInit_real_T(sp, &b, 2, &ab_emlrtRTEI);
   st.site = &b_emlrtRSI;
-  c_rand(&st, b_numAsters, cosines);
-  cosines_data = cosines->data;
+  c_rand(&st, b_numAsters, b);
+  thisOrder_data = b->data;
   i = asters->orients->size[0] * asters->orients->size[1];
-  asters->orients->size[0] = cosines->size[0];
-  asters->orients->size[1] = cosines->size[1];
+  asters->orients->size[0] = b->size[0];
+  asters->orients->size[1] = b->size[1];
   emxEnsureCapacity_real_T(sp, asters->orients, i, &q_emlrtRTEI);
-  loop_ub = cosines->size[0] * cosines->size[1];
+  loop_ub = b->size[0] * b->size[1];
   maxdimlen = (loop_ub / 2) << 1;
   vectorUB = maxdimlen - 2;
   for (i = 0; i <= vectorUB; i += 2) {
-    r = _mm_loadu_pd(&cosines_data[i]);
+    r = _mm_loadu_pd(&thisOrder_data[i]);
     _mm_storeu_pd(&asters->orients->data[i],
                   _mm_mul_pd(_mm_set1_pd(6.2831853071795862), r));
   }
   for (i = maxdimlen; i < loop_ub; i++) {
-    asters->orients->data[i] = 6.2831853071795862 * cosines_data[i];
+    asters->orients->data[i] = 6.2831853071795862 * thisOrder_data[i];
   }
+  emxFree_real_T(sp, &b);
   st.site = &c_emlrtRSI;
-  /*  Auxiliary functions */
-  /*  FINDNODES identifies where filaments cross and records which filaments */
-  /*  crossed  */
-  /*  (Note: filaments are indexed as one would read left to right across the */
-  /*  rows of 'orients', and each row represents an aster. This function does */
-  /*  NOT search for intersections between filaments on the same aster) */
-  /*    Inputs: */
-  /*        centers (numAsters x 2 double): (x,y) coordinates of astral centers
-   */
-  /*        orients (numAsters x astralNum double): angles giving each  */
-  /*        filament's orientation about its astral center */
-  /*        l (scalar): length of individual filament */
-  /*        centerCross (numAsters x astralNum double): filament indices */
-  /*        grouped by each aster */
-  /*    Outputs: */
-  /*        nodes (numNodes x 2 double): list of (x,y) coordinates of filament
-   */
-  /*        crossings (EXCLUDING astral centers) */
-  /*        filCross (numNodes x 2 double): list of pairs of filament indices */
-  /*        corresponding to the filaments that cross at a particular node; */
-  /*        listed so that filCross(idx,1) < filCross(idx,2) */
-  vectorUB = asters->orients->size[1];
-  b_astralNum = asters->orients->size[1];
-  numAsters_tmp = asters->orients->size[0];
-  c_numAsters = asters->orients->size[0];
-  numFil = asters->orients->size[0] * asters->orients->size[1];
-  b_st.site = &q_emlrtRSI;
-  i = cosines->size[0] * cosines->size[1];
-  cosines->size[0] = asters->orients->size[0];
-  cosines->size[1] = asters->orients->size[1];
-  emxEnsureCapacity_real_T(&b_st, cosines, i, &r_emlrtRTEI);
-  cosines_data = cosines->data;
-  for (i = 0; i < numFil; i++) {
-    cosines_data[i] = asters->orients->data[i];
-  }
-  c_st.site = &r_emlrtRSI;
-  d_st.site = &s_emlrtRSI;
-  if (numFil > 2147483646) {
-    e_st.site = &t_emlrtRSI;
-    check_forloop_overflow_error(&e_st);
-  }
-  if (numFil < 3200) {
-    for (k = 0; k < numFil; k++) {
-      cosines_data[k] = muDoubleScalarCos(cosines_data[k]);
-    }
-  } else {
-    emlrtEnterParallelRegion(&c_st, omp_in_parallel());
-    emlrtPushJmpBuf(&c_st, &emlrtJBStack);
-    generateAstralNetwork_numThreads =
-        emlrtAllocRegionTLSs(c_st.tls, omp_in_parallel(), omp_get_max_threads(),
-                             omp_get_num_procs());
-#pragma omp parallel for num_threads(generateAstralNetwork_numThreads)
-
-    for (k = 0; k < numFil; k++) {
-      cosines_data[k] = muDoubleScalarCos(cosines_data[k]);
-    }
-    emlrtPopJmpBuf(&c_st, &emlrtJBStack);
-    emlrtExitParallelRegion(&c_st, omp_in_parallel());
-  }
-  emxInit_real_T(&st, &sines, 2, &s_emlrtRTEI);
-  i = sines->size[0] * sines->size[1];
-  sines->size[0] = numAsters_tmp;
-  sines->size[1] = vectorUB;
-  emxEnsureCapacity_real_T(&st, sines, i, &s_emlrtRTEI);
-  sines_data = sines->data;
-  for (i = 0; i < numFil; i++) {
-    sines_data[i] = asters->orients->data[i];
-  }
-  b_st.site = &p_emlrtRSI;
-  b_sin(&b_st, sines);
-  sines_data = sines->data;
-  b_st.site = &o_emlrtRSI;
-  c_st.site = &v_emlrtRSI;
-  d_st.site = &w_emlrtRSI;
-  numNodesGuess = muDoubleScalarRound((real_T)numFil * (real_T)numFil / 10.0);
-  if (numNodesGuess != (int32_T)numNodesGuess) {
-    emlrtIntegerCheckR2012b(numNodesGuess, &emlrtDCI, &st);
-  }
-  i = network->nodes->size[0] * network->nodes->size[1];
-  network->nodes->size[0] = (int32_T)numNodesGuess;
-  network->nodes->size[1] = 2;
-  emxEnsureCapacity_real_T(&st, network->nodes, i, &t_emlrtRTEI);
-  if (numNodesGuess != (int32_T)numNodesGuess) {
-    emlrtIntegerCheckR2012b(numNodesGuess, &c_emlrtDCI, &st);
-  }
-  maxdimlen = (int32_T)numNodesGuess << 1;
-  for (i = 0; i < maxdimlen; i++) {
-    network->nodes->data[i] = 0.0;
-  }
-  if (numNodesGuess != (int32_T)numNodesGuess) {
-    emlrtIntegerCheckR2012b(numNodesGuess, &b_emlrtDCI, &st);
-  }
-  i = crossings->filCross->size[0] * crossings->filCross->size[1];
-  crossings->filCross->size[0] = (int32_T)numNodesGuess;
-  crossings->filCross->size[1] = 2;
-  emxEnsureCapacity_real_T(&st, crossings->filCross, i, &u_emlrtRTEI);
-  if (numNodesGuess != (int32_T)numNodesGuess) {
-    emlrtIntegerCheckR2012b(numNodesGuess, &d_emlrtDCI, &st);
-  }
-  for (i = 0; i < maxdimlen; i++) {
-    crossings->filCross->data[i] = 0.0;
-  }
-  nodeCount = 0U;
-  emxInit_real_T(&st, &centerSepSQR, 1, &hb_emlrtRTEI);
-  emxInit_real_T(&st, &otherAsters, 2, &y_emlrtRTEI);
-  otherAsters_data = otherAsters->data;
-  emxInit_real_T(&st, &r1, 2, &ib_emlrtRTEI);
-  emxInit_real_T(&st, &r2, 2, &ib_emlrtRTEI);
-  emxInit_real_T(&st, &r3, 2, &db_emlrtRTEI);
-  if (asters->orients->size[1] == 1) {
-    /*  routine for "Classical Mikado" networks */
-    if (numFil - 2 >= 0) {
-      b_otherAsters[1] = 1.0;
-      b_asters = asters->centers->size[0];
-      a = 2.0 * l;
-    }
-    emxInit_int32_T(&st, &r4, &jb_emlrtRTEI);
-    for (idx = 0; idx <= numFil - 2; idx++) {
-      /*  only look for intersections if filaments are close enough */
-      b_st.site = &n_emlrtRSI;
-      c_st.site = &x_emlrtRSI;
-      if (numFil < ((real_T)idx + 1.0) + 1.0) {
-        otherAsters->size[0] = 1;
-        otherAsters->size[1] = 0;
-      } else {
-        i = otherAsters->size[0] * otherAsters->size[1];
-        otherAsters->size[0] = 1;
-        i1 = numFil - idx;
-        otherAsters->size[1] = i1 - 1;
-        emxEnsureCapacity_real_T(&c_st, otherAsters, i, &w_emlrtRTEI);
-        otherAsters_data = otherAsters->data;
-        loop_ub = i1 - 2;
-        for (i = 0; i <= loop_ub; i++) {
-          otherAsters_data[i] = (real_T)((uint32_T)idx + (uint32_T)i) + 2.0;
-        }
-      }
-      i = asters->centers->size[0];
-      if (((int32_T)((uint32_T)idx + 1U) < 1) ||
-          ((int32_T)((uint32_T)idx + 1U) > asters->centers->size[0])) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                      asters->centers->size[0], &y_emlrtBCI,
-                                      &st);
-      }
-      b_numAsters[0] = asters->centers->data[idx];
-      b_numAsters[1] = asters->centers->data[idx + asters->centers->size[0]];
-      b_otherAsters[0] = otherAsters->size[1];
-      b_st.site = &m_emlrtRSI;
-      repmat(&b_st, b_numAsters, b_otherAsters, r1);
-      centerSepSQR_data = r1->data;
-      loop_ub = otherAsters->size[1];
-      i1 = r2->size[0] * r2->size[1];
-      r2->size[0] = otherAsters->size[1];
-      r2->size[1] = 2;
-      emxEnsureCapacity_real_T(&st, r2, i1, &bb_emlrtRTEI);
-      r5 = r2->data;
-      for (i1 = 0; i1 < 2; i1++) {
-        for (i2 = 0; i2 < loop_ub; i2++) {
-          i3 = (int32_T)otherAsters_data[i2];
-          if (otherAsters_data[i2] != i3) {
-            emlrtIntegerCheckR2012b(otherAsters_data[i2], &e_emlrtDCI, &st);
-          }
-          if ((i3 < 1) || (i3 > b_asters)) {
-            emlrtDynamicBoundsCheckR2012b(i3, 1, b_asters, &ab_emlrtBCI, &st);
-          }
-          r5[i2 + r2->size[0] * i1] =
-              asters->centers->data[(i3 + asters->centers->size[0] * i1) - 1];
-        }
-      }
-      if ((r1->size[0] != otherAsters->size[1]) &&
-          ((r1->size[0] != 1) && (otherAsters->size[1] != 1))) {
-        emlrtDimSizeImpxCheckR2021b(r1->size[0], otherAsters->size[1],
-                                    &b_emlrtECI, &st);
-      }
-      if (r1->size[0] == r2->size[0]) {
-        i1 = r3->size[0] * r3->size[1];
-        r3->size[0] = r1->size[0];
-        r3->size[1] = 2;
-        emxEnsureCapacity_real_T(&st, r3, i1, &db_emlrtRTEI);
-        r6 = r3->data;
-        loop_ub = r1->size[0] << 1;
-        for (i1 = 0; i1 < loop_ub; i1++) {
-          numNodesGuess = centerSepSQR_data[i1] - r5[i1];
-          r6[i1] = numNodesGuess * numNodesGuess;
-        }
-        b_st.site = &m_emlrtRSI;
-        sum(&b_st, r3, centerSepSQR);
-        centerSepSQR_data = centerSepSQR->data;
-      } else {
-        b_st.site = &m_emlrtRSI;
-        binary_expand_op(&b_st, centerSepSQR, m_emlrtRSI, r1, r2);
-        centerSepSQR_data = centerSepSQR->data;
-      }
-      b_st.site = &l_emlrtRSI;
-      c_st.site = &v_emlrtRSI;
-      d_st.site = &w_emlrtRSI;
-      vectorUB = centerSepSQR->size[0] - 1;
-      maxdimlen = 0;
-      for (b_astralNum = 0; b_astralNum <= vectorUB; b_astralNum++) {
-        if (centerSepSQR_data[b_astralNum] <= a * a) {
-          maxdimlen++;
-        }
-      }
-      i1 = r4->size[0];
-      r4->size[0] = maxdimlen;
-      emxEnsureCapacity_int32_T(&st, r4, i1, &eb_emlrtRTEI);
-      r7 = r4->data;
-      maxdimlen = 0;
-      for (b_astralNum = 0; b_astralNum <= vectorUB; b_astralNum++) {
-        if (centerSepSQR_data[b_astralNum] <= a * a) {
-          r7[maxdimlen] = b_astralNum;
-          maxdimlen++;
-        }
-      }
-      maxdimlen = r4->size[0];
-      for (i1 = 0; i1 < maxdimlen; i1++) {
-        if (r7[i1] > otherAsters->size[1] - 1) {
-          emlrtDynamicBoundsCheckR2012b(r7[i1], 0, otherAsters->size[1] - 1,
-                                        &cb_emlrtBCI, &st);
-        }
-      }
-      for (jdx = 0; jdx < maxdimlen; jdx++) {
-        real_T b1;
-        real_T b2;
-        real_T denom;
-        real_T denom_tmp;
-        real_T t1;
-        if (jdx + 1 > maxdimlen) {
-          emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, maxdimlen, &x_emlrtBCI,
-                                        &st);
-        }
-        /*  legacy code in these comments for readability */
-        /*  A = [cosines(idx), - cosines(filOfJdx); */
-        /*      sines(idx), - sines(filOfJdx)]; */
-        /*  denom = det(A); */
-        /*  b = 1/l * [centers(filOfJdx,1) - centers(idx,1); */
-        /*      centers(filOfJdx,2) - centers(idx,2)]; */
-        /*  t1 = det([b,A(:,2)]) / denom; */
-        /*  t2 = det([A(:,1),b]) / denom; */
-        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
-            ((int32_T)((uint32_T)idx + 1U) > numFil)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1,
-                                        numFil, &eb_emlrtBCI, &st);
-        }
-        i1 = sines->size[0] * sines->size[1];
-        i2 = (int32_T)otherAsters_data[r7[jdx]];
-        if ((i2 < 1) || (i2 > i1)) {
-          emlrtDynamicBoundsCheckR2012b(i2, 1, i1, &fb_emlrtBCI, &st);
-        }
-        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
-            ((int32_T)((uint32_T)idx + 1U) > i1)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1, i1,
-                                        &gb_emlrtBCI, &st);
-        }
-        if (i2 > numFil) {
-          emlrtDynamicBoundsCheckR2012b(i2, 1, numFil, &hb_emlrtBCI, &st);
-        }
-        t1 = -sines_data[i2 - 1];
-        denom_tmp = cosines_data[i2 - 1];
-        denom = cosines_data[idx] * t1 + sines_data[idx] * denom_tmp;
-        if (i2 > i) {
-          emlrtDynamicBoundsCheckR2012b(i2, 1, i, &ib_emlrtBCI, &st);
-        }
-        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
-            ((int32_T)((uint32_T)idx + 1U) > i)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1, i,
-                                        &jb_emlrtBCI, &st);
-        }
-        b1 = (asters->centers->data[i2 - 1] - asters->centers->data[idx]) / l;
-        if (((int32_T)((uint32_T)idx + 1U) < 1) ||
-            ((int32_T)((uint32_T)idx + 1U) > i)) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)idx + 1U), 1, i,
-                                        &kb_emlrtBCI, &st);
-        }
-        b2 = (asters->centers->data[(i2 + asters->centers->size[0]) - 1] -
-              asters->centers->data[idx + asters->centers->size[0]]) /
-             l;
-        if (i2 > i1) {
-          emlrtDynamicBoundsCheckR2012b(i2, 1, i1, &lb_emlrtBCI, &st);
-        }
-        if (i2 > numFil) {
-          emlrtDynamicBoundsCheckR2012b(i2, 1, numFil, &mb_emlrtBCI, &st);
-        }
-        t1 = (b1 * t1 + b2 * denom_tmp) / denom;
-        if ((idx + 1 < 1) || (idx + 1 > numFil)) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numFil, &w_emlrtBCI, &st);
-        }
-        if ((idx + 1 < 1) || (idx + 1 > i1)) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i1, &v_emlrtBCI, &st);
-        }
-        if ((muDoubleScalarAbs(t1 - 0.5) <= 0.5) &&
-            (muDoubleScalarAbs((cosines_data[idx] * b2 - sines_data[idx] * b1) /
-                                   denom -
-                               0.5) <= 0.5)) {
-          nodeCount++;
-          if ((idx + 1 < 1) || (idx + 1 > i)) {
-            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i, &u_emlrtBCI, &st);
-          }
-          if ((idx + 1 < 1) || (idx + 1 > numFil)) {
-            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, numFil, &t_emlrtBCI, &st);
-          }
-          if ((idx + 1 < 1) || (idx + 1 > i)) {
-            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i, &s_emlrtBCI, &st);
-          }
-          if ((idx + 1 < 1) || (idx + 1 > i1)) {
-            emlrtDynamicBoundsCheckR2012b(idx + 1, 1, i1, &r_emlrtBCI, &st);
-          }
-          if (((int32_T)nodeCount < 1) ||
-              ((int32_T)nodeCount > network->nodes->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
-                                          network->nodes->size[0], &h_emlrtBCI,
-                                          &st);
-          }
-          network->nodes->data[(int32_T)nodeCount - 1] =
-              asters->centers->data[idx] + l * cosines_data[idx] * t1;
-          network->nodes
-              ->data[((int32_T)nodeCount + network->nodes->size[0]) - 1] =
-              asters->centers->data[idx + asters->centers->size[0]] +
-              l * sines_data[idx] * t1;
-          if (((int32_T)nodeCount < 1) ||
-              ((int32_T)nodeCount > crossings->filCross->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
-                                          crossings->filCross->size[0],
-                                          &d_emlrtBCI, &st);
-          }
-          crossings->filCross->data[(int32_T)nodeCount - 1] = (real_T)idx + 1.0;
-          crossings->filCross
-              ->data[((int32_T)nodeCount + crossings->filCross->size[0]) - 1] =
-              otherAsters_data[r7[jdx]];
-        }
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b(&st);
-        }
-      }
-      if (*emlrtBreakCheckR2012bFlagVar != 0) {
-        emlrtBreakCheckR2012b(&st);
-      }
-    }
-    emxFree_int32_T(&st, &r4);
-  } else if (asters->orients->size[1] >= 2) {
-    real_T d;
-    /*  routine for "Astral Mikado" networks */
-    /*  loop only needs to run through the last filament on penultimate aster */
-    d = ((real_T)asters->orients->size[0] - 1.0) *
-        (real_T)asters->orients->size[1];
-    i = (int32_T)d;
-    emlrtForLoopVectorCheckR2021a(1.0, 1.0, d, mxDOUBLE_CLASS, (int32_T)d,
-                                  &e_emlrtRTEI, &st);
-    if ((int32_T)d - 1 >= 0) {
-      b_otherAsters[1] = 1.0;
-      b_asters = asters->centers->size[0];
-      a = 2.0 * l;
-      c = a * a;
-    }
-    emxInit_boolean_T(&st, &tooFar, 1, &gb_emlrtRTEI);
-    for (idx = 0; idx < i; idx++) {
-      real_T b_numAsters_tmp;
-      real_T c_numAsters_tmp;
-      real_T y;
-      y = muDoubleScalarFloor((((real_T)idx + 1.0) - 1.0) /
-                              (real_T)b_astralNum);
-      b_st.site = &k_emlrtRSI;
-      c_st.site = &x_emlrtRSI;
-      if (c_numAsters < (y + 1.0) + 1.0) {
-        otherAsters->size[0] = 1;
-        otherAsters->size[1] = 0;
-      } else if ((y + 1.0) + 1.0 == (y + 1.0) + 1.0) {
-        i1 = otherAsters->size[0] * otherAsters->size[1];
-        otherAsters->size[0] = 1;
-        loop_ub = (int32_T)((real_T)c_numAsters - ((y + 1.0) + 1.0));
-        otherAsters->size[1] = loop_ub + 1;
-        emxEnsureCapacity_real_T(&c_st, otherAsters, i1, &y_emlrtRTEI);
-        otherAsters_data = otherAsters->data;
-        for (i1 = 0; i1 <= loop_ub; i1++) {
-          otherAsters_data[i1] = ((y + 1.0) + 1.0) + (real_T)i1;
-        }
-      } else {
-        d_st.site = &y_emlrtRSI;
-        eml_float_colon(&d_st, (y + 1.0) + 1.0, c_numAsters, otherAsters);
-        otherAsters_data = otherAsters->data;
-      }
-      i1 = asters->centers->size[0];
-      out = (((int32_T)(y + 1.0) < 1) ||
-             ((int32_T)(y + 1.0) > asters->centers->size[0]));
-      if (out) {
-        emlrtDynamicBoundsCheckR2012b(
-            (int32_T)(y + 1.0), 1, asters->centers->size[0], &q_emlrtBCI, &st);
-      }
-      b_numAsters_tmp = asters->centers->data[(int32_T)(y + 1.0) - 1];
-      b_numAsters[0] = b_numAsters_tmp;
-      c_numAsters_tmp =
-          asters->centers
-              ->data[((int32_T)(y + 1.0) + asters->centers->size[0]) - 1];
-      b_numAsters[1] = c_numAsters_tmp;
-      b_otherAsters[0] = otherAsters->size[1];
-      b_st.site = &j_emlrtRSI;
-      repmat(&b_st, b_numAsters, b_otherAsters, r1);
-      centerSepSQR_data = r1->data;
-      loop_ub = otherAsters->size[1];
-      i2 = r2->size[0] * r2->size[1];
-      r2->size[0] = otherAsters->size[1];
-      r2->size[1] = 2;
-      emxEnsureCapacity_real_T(&st, r2, i2, &cb_emlrtRTEI);
-      r5 = r2->data;
-      for (i2 = 0; i2 < 2; i2++) {
-        for (i3 = 0; i3 < loop_ub; i3++) {
-          if (otherAsters_data[i3] !=
-              (int32_T)muDoubleScalarFloor(otherAsters_data[i3])) {
-            emlrtIntegerCheckR2012b(otherAsters_data[i3], &f_emlrtDCI, &st);
-          }
-          maxdimlen = (int32_T)otherAsters_data[i3];
-          if ((maxdimlen < 1) || (maxdimlen > b_asters)) {
-            emlrtDynamicBoundsCheckR2012b(maxdimlen, 1, b_asters, &bb_emlrtBCI,
-                                          &st);
-          }
-          r5[i3 + r2->size[0] * i2] =
-              asters->centers
-                  ->data[(maxdimlen + asters->centers->size[0] * i2) - 1];
-        }
-      }
-      if ((r1->size[0] != otherAsters->size[1]) &&
-          ((r1->size[0] != 1) && (otherAsters->size[1] != 1))) {
-        emlrtDimSizeImpxCheckR2021b(r1->size[0], otherAsters->size[1],
-                                    &emlrtECI, &st);
-      }
-      if (r1->size[0] == r2->size[0]) {
-        i2 = r3->size[0] * r3->size[1];
-        r3->size[0] = r1->size[0];
-        r3->size[1] = 2;
-        emxEnsureCapacity_real_T(&st, r3, i2, &db_emlrtRTEI);
-        r6 = r3->data;
-        loop_ub = r1->size[0] << 1;
-        for (i2 = 0; i2 < loop_ub; i2++) {
-          numNodesGuess = centerSepSQR_data[i2] - r5[i2];
-          r6[i2] = numNodesGuess * numNodesGuess;
-        }
-        b_st.site = &j_emlrtRSI;
-        sum(&b_st, r3, centerSepSQR);
-        centerSepSQR_data = centerSepSQR->data;
-      } else {
-        b_st.site = &j_emlrtRSI;
-        binary_expand_op(&b_st, centerSepSQR, j_emlrtRSI, r1, r2);
-        centerSepSQR_data = centerSepSQR->data;
-      }
-      b_st.site = &i_emlrtRSI;
-      c_st.site = &v_emlrtRSI;
-      d_st.site = &w_emlrtRSI;
-      loop_ub = centerSepSQR->size[0];
-      i2 = tooFar->size[0];
-      tooFar->size[0] = centerSepSQR->size[0];
-      emxEnsureCapacity_boolean_T(&st, tooFar, i2, &gb_emlrtRTEI);
-      tooFar_data = tooFar->data;
-      for (i2 = 0; i2 < loop_ub; i2++) {
-        tooFar_data[i2] = (centerSepSQR_data[i2] > c);
-      }
-      /*  start second loop at first filament on the next aster */
-      d = (y + 1.0) * (real_T)b_astralNum + 1.0;
-      i2 = (int32_T)((real_T)numFil + (1.0 - d));
-      emlrtForLoopVectorCheckR2021a(d, 1.0, numFil, mxDOUBLE_CLASS, i2,
-                                    &d_emlrtRTEI, &st);
-      for (jdx = 0; jdx < i2; jdx++) {
-        real_T b_jdx;
-        b_jdx = d + (real_T)jdx;
-        a = muDoubleScalarFloor((b_jdx - 1.0) / (real_T)b_astralNum);
-        /*  whichOtherAster finds corrent row in centerSepSQR, tooFar */
-        i3 = (int32_T)((a + 1.0) - (y + 1.0));
-        if ((i3 < 1) || (i3 > loop_ub)) {
-          emlrtDynamicBoundsCheckR2012b(i3, 1, loop_ub, &db_emlrtBCI, &st);
-        }
-        if (!tooFar_data[i3 - 1]) {
-          real_T b1;
-          real_T b2;
-          real_T denom;
-          real_T denom_tmp;
-          real_T filSubIdx;
-          real_T t1;
-          /*  otherwise, check for intersection */
-          numNodesGuess = b_mod((real_T)idx + 1.0, b_astralNum);
-          filSubIdx =
-              numNodesGuess + (real_T)(b_astralNum * (numNodesGuess == 0.0));
-          numNodesGuess = b_mod(b_jdx, b_astralNum);
-          numNodesGuess += (real_T)(b_astralNum * (numNodesGuess == 0.0));
-          /*  legacy code in these comments for readability */
-          /*  A = [cosines(asterIdx,filSubIdx), - cosines(asterJdx,filSubJdx);
-           */
-          /*      sines(asterIdx,filSubIdx), - sines(asterJdx,filSubJdx)]; */
-          /*  denom = det(A); */
-          /*  b = 1/l * [centers(asterJdx,1) - centers(asterIdx,1); */
-          /*      centers(asterJdx,2) - centers(asterIdx,2)]; */
-          /*  t1 = det([b,A(:,2)]) / denom; */
-          /*  t2 = det([A(:,1),b]) / denom; */
-          if (((int32_T)(y + 1.0) < 1) ||
-              ((int32_T)(y + 1.0) > numAsters_tmp)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, numAsters_tmp,
-                                          &nb_emlrtBCI, &st);
-          }
-          if (filSubIdx != (int32_T)muDoubleScalarFloor(filSubIdx)) {
-            emlrtIntegerCheckR2012b(filSubIdx, &g_emlrtDCI, &st);
-          }
-          if (((int32_T)filSubIdx < 1) || ((int32_T)filSubIdx > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, vectorUB,
-                                          &ob_emlrtBCI, &st);
-          }
-          if (((int32_T)(a + 1.0) < 1) ||
-              ((int32_T)(a + 1.0) > sines->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, sines->size[0],
-                                          &pb_emlrtBCI, &st);
-          }
-          if (numNodesGuess != (int32_T)muDoubleScalarFloor(numNodesGuess)) {
-            emlrtIntegerCheckR2012b(numNodesGuess, &h_emlrtDCI, &st);
-          }
-          if (((int32_T)numNodesGuess < 1) ||
-              ((int32_T)numNodesGuess > sines->size[1])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)numNodesGuess, 1,
-                                          sines->size[1], &qb_emlrtBCI, &st);
-          }
-          if (((int32_T)(y + 1.0) < 1) ||
-              ((int32_T)(y + 1.0) > sines->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, sines->size[0],
-                                          &rb_emlrtBCI, &st);
-          }
-          if (((int32_T)filSubIdx < 1) ||
-              ((int32_T)filSubIdx > sines->size[1])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, sines->size[1],
-                                          &sb_emlrtBCI, &st);
-          }
-          if (((int32_T)(a + 1.0) < 1) ||
-              ((int32_T)(a + 1.0) > numAsters_tmp)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
-                                          &tb_emlrtBCI, &st);
-          }
-          if (((int32_T)numNodesGuess < 1) ||
-              ((int32_T)numNodesGuess > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)numNodesGuess, 1, vectorUB,
-                                          &ub_emlrtBCI, &st);
-          }
-          t1 = cosines_data[((int32_T)(a + 1.0) +
-                             cosines->size[0] * ((int32_T)numNodesGuess - 1)) -
-                            1];
-          denom_tmp = sines_data[((int32_T)(y + 1.0) +
-                                  sines->size[0] * ((int32_T)filSubIdx - 1)) -
-                                 1];
-          denom =
-              cosines_data[((int32_T)(y + 1.0) +
-                            cosines->size[0] * ((int32_T)filSubIdx - 1)) -
-                           1] *
-                  -sines_data[((int32_T)(a + 1.0) +
-                               sines->size[0] * ((int32_T)numNodesGuess - 1)) -
-                              1] +
-              denom_tmp * t1;
-          if (((int32_T)(a + 1.0) < 1) || ((int32_T)(a + 1.0) > i1)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, i1,
-                                          &vb_emlrtBCI, &st);
-          }
-          if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
-                                          &wb_emlrtBCI, &st);
-          }
-          b1 = (asters->centers->data[(int32_T)(a + 1.0) - 1] -
-                b_numAsters_tmp) /
-               l;
-          if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
-                                          &xb_emlrtBCI, &st);
-          }
-          b2 =
-              (asters->centers
-                   ->data[((int32_T)(a + 1.0) + asters->centers->size[0]) - 1] -
-               c_numAsters_tmp) /
-              l;
-          if (((int32_T)(a + 1.0) < 1) ||
-              ((int32_T)(a + 1.0) > sines->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, sines->size[0],
-                                          &yb_emlrtBCI, &st);
-          }
-          if (((int32_T)numNodesGuess < 1) ||
-              ((int32_T)numNodesGuess > sines->size[1])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)numNodesGuess, 1,
-                                          sines->size[1], &ac_emlrtBCI, &st);
-          }
-          if (((int32_T)(a + 1.0) < 1) ||
-              ((int32_T)(a + 1.0) > numAsters_tmp)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(a + 1.0), 1, numAsters_tmp,
-                                          &bc_emlrtBCI, &st);
-          }
-          if (((int32_T)numNodesGuess < 1) ||
-              ((int32_T)numNodesGuess > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)numNodesGuess, 1, vectorUB,
-                                          &cc_emlrtBCI, &st);
-          }
-          t1 =
-              (b1 *
-                   -sines_data[((int32_T)(a + 1.0) +
-                                sines->size[0] * ((int32_T)numNodesGuess - 1)) -
-                               1] +
-               b2 * t1) /
-              denom;
-          if (((int32_T)filSubIdx < 1) || ((int32_T)filSubIdx > vectorUB)) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, vectorUB,
-                                          &p_emlrtBCI, &st);
-          }
-          if (((int32_T)(y + 1.0) < 1) ||
-              ((int32_T)(y + 1.0) > sines->size[0])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, sines->size[0],
-                                          &o_emlrtBCI, &st);
-          }
-          if (((int32_T)filSubIdx < 1) ||
-              ((int32_T)filSubIdx > sines->size[1])) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, sines->size[1],
-                                          &n_emlrtBCI, &st);
-          }
-          if (muDoubleScalarAbs(t1 - 0.5) <= 0.5) {
-            numNodesGuess =
-                cosines_data[((int32_T)(y + 1.0) +
-                              cosines->size[0] * ((int32_T)filSubIdx - 1)) -
-                             1];
-            if (muDoubleScalarAbs(
-                    (numNodesGuess * b2 - denom_tmp * b1) / denom - 0.5) <=
-                0.5) {
-              nodeCount++;
-              if (((int32_T)(y + 1.0) < 1) ||
-                  ((int32_T)(y + 1.0) > numAsters_tmp)) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1,
-                                              numAsters_tmp, &m_emlrtBCI, &st);
-              }
-              if (((int32_T)filSubIdx < 1) || ((int32_T)filSubIdx > vectorUB)) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1, vectorUB,
-                                              &l_emlrtBCI, &st);
-              }
-              if (((int32_T)(y + 1.0) < 1) || ((int32_T)(y + 1.0) > i1)) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1, i1,
-                                              &k_emlrtBCI, &st);
-              }
-              if (((int32_T)(y + 1.0) < 1) ||
-                  ((int32_T)(y + 1.0) > sines->size[0])) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)(y + 1.0), 1,
-                                              sines->size[0], &j_emlrtBCI, &st);
-              }
-              if (((int32_T)filSubIdx < 1) ||
-                  ((int32_T)filSubIdx > sines->size[1])) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)filSubIdx, 1,
-                                              sines->size[1], &i_emlrtBCI, &st);
-              }
-              if (((int32_T)nodeCount < 1) ||
-                  ((int32_T)nodeCount > network->nodes->size[0])) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
-                                              network->nodes->size[0],
-                                              &g_emlrtBCI, &st);
-              }
-              network->nodes->data[(int32_T)nodeCount - 1] =
-                  b_numAsters_tmp + l * numNodesGuess * t1;
-              network->nodes
-                  ->data[((int32_T)nodeCount + network->nodes->size[0]) - 1] =
-                  c_numAsters_tmp + l * denom_tmp * t1;
-              if (((int32_T)nodeCount < 1) ||
-                  ((int32_T)nodeCount > crossings->filCross->size[0])) {
-                emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
-                                              crossings->filCross->size[0],
-                                              &c_emlrtBCI, &st);
-              }
-              crossings->filCross->data[(int32_T)nodeCount - 1] =
-                  (real_T)idx + 1.0;
-              crossings->filCross
-                  ->data[((int32_T)nodeCount + crossings->filCross->size[0]) -
-                         1] = b_jdx;
-            }
-          }
-        }
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b(&st);
-        }
-      }
-      if (*emlrtBreakCheckR2012bFlagVar != 0) {
-        emlrtBreakCheckR2012b(&st);
-      }
-    }
-    emxFree_boolean_T(&st, &tooFar);
-  }
-  emxFree_real_T(&st, &r3);
-  emxFree_real_T(&st, &r2);
-  emxFree_real_T(&st, &r1);
-  emxFree_real_T(&st, &centerSepSQR);
-  emxFree_real_T(&st, &sines);
-  emxFree_real_T(&st, &cosines);
-  if ((int32_T)nodeCount == 0) {
-    network->nodes->size[0] = 0;
-    network->nodes->size[1] = 2;
-    crossings->filCross->size[0] = 0;
-    crossings->filCross->size[1] = 2;
-  } else {
-    if (network->nodes->size[0] < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, network->nodes->size[0], &f_emlrtBCI,
-                                    &st);
-    }
-    loop_ub = (int32_T)nodeCount;
-    if (((int32_T)nodeCount < 1) ||
-        ((int32_T)nodeCount > network->nodes->size[0])) {
-      emlrtDynamicBoundsCheckR2012b((int32_T)nodeCount, 1,
-                                    network->nodes->size[0], &e_emlrtBCI, &st);
-    }
-    for (i = 0; i < 2; i++) {
-      for (i1 = 0; i1 < loop_ub; i1++) {
-        network->nodes->data[i1 + (int32_T)nodeCount * i] =
-            network->nodes->data[i1 + network->nodes->size[0] * i];
-      }
-    }
-    i = network->nodes->size[0] * network->nodes->size[1];
-    network->nodes->size[0] = (int32_T)nodeCount;
-    network->nodes->size[1] = 2;
-    emxEnsureCapacity_real_T(&st, network->nodes, i, &v_emlrtRTEI);
-    if (crossings->filCross->size[0] < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, crossings->filCross->size[0],
-                                    &b_emlrtBCI, &st);
-    }
-    if (((int32_T)nodeCount < 1) ||
-        ((int32_T)nodeCount > crossings->filCross->size[0])) {
-      emlrtDynamicBoundsCheckR2012b(
-          (int32_T)nodeCount, 1, crossings->filCross->size[0], &emlrtBCI, &st);
-    }
-    for (i = 0; i < 2; i++) {
-      for (i1 = 0; i1 < loop_ub; i1++) {
-        crossings->filCross->data[i1 + (int32_T)nodeCount * i] =
-            crossings->filCross->data[i1 + crossings->filCross->size[0] * i];
-      }
-    }
-    i = crossings->filCross->size[0] * crossings->filCross->size[1];
-    crossings->filCross->size[0] = (int32_T)nodeCount;
-    crossings->filCross->size[1] = 2;
-    emxEnsureCapacity_real_T(&st, crossings->filCross, i, &ab_emlrtRTEI);
-  }
-  numNodesGuess = numAsters * astralNum;
+  findNodes(&st, asters->centers, asters->orients, l, network->nodes,
+            crossings->filCross);
+  numFil = numAsters * astralNum;
   /*  aster idx 1 groups filaments 1,2,...,astralNum; and so on */
-  if (muDoubleScalarIsNaN(numNodesGuess)) {
-    i = otherAsters->size[0] * otherAsters->size[1];
-    otherAsters->size[0] = 1;
-    otherAsters->size[1] = 1;
-    emxEnsureCapacity_real_T(sp, otherAsters, i, &x_emlrtRTEI);
-    otherAsters_data = otherAsters->data;
-    otherAsters_data[0] = rtNaN;
-  } else if (numNodesGuess < 1.0) {
-    otherAsters->size[0] = 1;
-    otherAsters->size[1] = 0;
+  emxInit_real_T(sp, &r1, 2, &y_emlrtRTEI);
+  thisOrder_data = r1->data;
+  if (muDoubleScalarIsNaN(numFil)) {
+    i = r1->size[0] * r1->size[1];
+    r1->size[0] = 1;
+    r1->size[1] = 1;
+    emxEnsureCapacity_real_T(sp, r1, i, &r_emlrtRTEI);
+    thisOrder_data = r1->data;
+    thisOrder_data[0] = rtNaN;
+  } else if (numFil < 1.0) {
+    r1->size[0] = 1;
+    r1->size[1] = 0;
   } else {
-    i = otherAsters->size[0] * otherAsters->size[1];
-    otherAsters->size[0] = 1;
-    otherAsters->size[1] = (int32_T)(numNodesGuess - 1.0) + 1;
-    emxEnsureCapacity_real_T(sp, otherAsters, i, &x_emlrtRTEI);
-    otherAsters_data = otherAsters->data;
-    loop_ub = (int32_T)(numNodesGuess - 1.0);
-    if ((int32_T)(numNodesGuess - 1.0) + 1 < 3200) {
-      for (k = 0; k <= loop_ub; k++) {
-        otherAsters_data[k] = (real_T)k + 1.0;
+    i = r1->size[0] * r1->size[1];
+    r1->size[0] = 1;
+    r1->size[1] = (int32_T)(numFil - 1.0) + 1;
+    emxEnsureCapacity_real_T(sp, r1, i, &r_emlrtRTEI);
+    thisOrder_data = r1->data;
+    loop_ub = (int32_T)(numFil - 1.0);
+    if ((int32_T)(numFil - 1.0) + 1 < 3200) {
+      for (i1 = 0; i1 <= loop_ub; i1++) {
+        thisOrder_data[i1] = (real_T)i1 + 1.0;
       }
     } else {
       emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
@@ -3861,8 +3862,8 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                                omp_get_max_threads(), omp_get_num_procs());
 #pragma omp parallel for num_threads(generateAstralNetwork_numThreads)
 
-      for (k = 0; k <= loop_ub; k++) {
-        otherAsters_data[k] = (real_T)k + 1.0;
+      for (i1 = 0; i1 <= loop_ub; i1++) {
+        thisOrder_data[i1] = (real_T)i1 + 1.0;
       }
       emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
       emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
@@ -3871,16 +3872,16 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   b_numAsters[0] = astralNum;
   b_numAsters[1] = numAsters;
   st.site = &d_emlrtRSI;
-  maxdimlen = otherAsters->size[1];
-  b_st.site = &jb_emlrtRSI;
+  maxdimlen = r1->size[1];
+  b_st.site = &ib_emlrtRSI;
   assertValidSizeArg(&b_st, b_numAsters);
-  b_astralNum = (int32_T)astralNum;
-  numAsters_tmp = (int32_T)numAsters;
-  vectorUB = 1;
-  if (otherAsters->size[1] > 1) {
-    vectorUB = otherAsters->size[1];
+  vectorUB = (int32_T)astralNum;
+  loop_ub = (int32_T)numAsters;
+  n = 1;
+  if (r1->size[1] > 1) {
+    n = r1->size[1];
   }
-  maxdimlen = muIntScalarMax_sint32(maxdimlen, vectorUB);
+  maxdimlen = muIntScalarMax_sint32(maxdimlen, n);
   if ((int32_T)astralNum > maxdimlen) {
     emlrtErrorWithMessageIdR2018a(&st, &emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
@@ -3900,7 +3901,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                                   "MATLAB:checkDimCommon:nonnegativeSize",
                                   "MATLAB:checkDimCommon:nonnegativeSize", 0);
   }
-  if ((int32_T)astralNum * (int32_T)numAsters != otherAsters->size[1]) {
+  if ((int32_T)astralNum * (int32_T)numAsters != r1->size[1]) {
     emlrtErrorWithMessageIdR2018a(
         &st, &c_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
         "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
@@ -3908,14 +3909,14 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   i = crossings->centerCross->size[0] * crossings->centerCross->size[1];
   crossings->centerCross->size[0] = (int32_T)numAsters;
   crossings->centerCross->size[1] = (int32_T)astralNum;
-  emxEnsureCapacity_real_T(sp, crossings->centerCross, i, &fb_emlrtRTEI);
-  for (i = 0; i < b_astralNum; i++) {
-    for (i1 = 0; i1 < numAsters_tmp; i1++) {
-      crossings->centerCross->data[i1 + crossings->centerCross->size[0] * i] =
-          otherAsters_data[i + (int32_T)astralNum * i1];
+  emxEnsureCapacity_real_T(sp, crossings->centerCross, i, &s_emlrtRTEI);
+  for (i = 0; i < vectorUB; i++) {
+    for (i2 = 0; i2 < loop_ub; i2++) {
+      crossings->centerCross->data[i2 + crossings->centerCross->size[0] * i] =
+          thisOrder_data[i + (int32_T)astralNum * i2];
     }
   }
-  emxFree_real_T(sp, &otherAsters);
+  emxFree_real_T(sp, &r1);
   if (nodesOnly) {
     /*  skip spring definition */
     network->augNodes->size[0] = 0;
@@ -3925,11 +3926,551 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
     network->ends->size[0] = 0;
     network->ends->size[1] = 2;
   } else {
+    real_T numSpringsGuess;
+    int32_T c_numAsters;
+    int32_T numAsters_tmp;
+    uint32_T springCount;
     /*  full network generation */
     st.site = &e_emlrtRSI;
-    defineSprings(&st, network->nodes, crossings->filCross, asters->centers, l,
-                  astralNum, network->augNodes, network->springs,
-                  network->ends);
+    /*  DEFINESPRINGS partitions filaments into node-bounded sub-segments  */
+    /*  (springs) and dangling ends */
+    /*    Inputs: */
+    /*        nodes (numNodes x 2 double): list of (x,y) coordinates of filament
+     */
+    /*        crossings (EXCLUDING astral centers) */
+    /*        filCross (numNodes x 2 double): list of pairs of filament indices
+     */
+    /*        corresponding to the filaments that cross at a particular node; */
+    /*        listed so that filCross(idx,1) < filCross(idx,2) */
+    /*        centers (numAsters x 2 double): (x,y) coordinates of astral
+     * centers */
+    /*        l (scalar): length of individual filament */
+    /*        astralNum (scalar): number of filaments per aster */
+    /*    Outputs: */
+    /*        augNodes (numAsters+numNodes x 2 double)**: conditionally
+     * augmented  */
+    /*        node list; if astralNum >= 2, rows 1:numAsters contain (x,y)  */
+    /*        coordinates of astral centers, remaining rows contain (x,y)  */
+    /*        coordinates of inter-aster nodes */
+    /*        **NOTE: if astralNum == 1, augNodes is the same as nodes (centers
+     */
+    /*        are fictitious), so its size is (numNodes x 2) */
+    /*        springs (numSprings x 4 double): descriptions of segments bounded
+     */
+    /*        by nodes at each end, each row has the structure */
+    /*            (1) lesser augNode index at one end of the spring */
+    /*            (2) greater augNode index at the other end of the spring */
+    /*            (3) filament index (which filament is the spring on) */
+    /*            (4) the original distance between the nodes */
+    /*        ends (numFil x 2 double): lengths of segments on the ends of each
+     */
+    /*        filament. ends(:,2) lists the "right" dangling ends, distal to the
+     */
+    /*        astral center. ends(:,1) lists the "left" dangling ends, proximal
+     */
+    /*        to the astral center; these are all 0 if astralNum >= 2. */
+    numAsters_tmp = asters->centers->size[0];
+    c_numAsters = asters->centers->size[0];
+    numFil = (real_T)asters->centers->size[0] * astralNum;
+    numSpringsGuess = 10.0 * (real_T)network->nodes->size[0];
+    emxInit_real_T(&st, &springs, 2, &x_emlrtRTEI);
+    if (numSpringsGuess != (int32_T)numSpringsGuess) {
+      emlrtIntegerCheckR2012b(numSpringsGuess, &e_emlrtDCI, &st);
+    }
+    i = springs->size[0] * springs->size[1];
+    springs->size[0] = (int32_T)numSpringsGuess;
+    springs->size[1] = 4;
+    emxEnsureCapacity_real_T(&st, springs, i, &t_emlrtRTEI);
+    springs_data = springs->data;
+    if (numSpringsGuess != (int32_T)numSpringsGuess) {
+      emlrtIntegerCheckR2012b(numSpringsGuess, &b_emlrtDCI, &st);
+    }
+    loop_ub = (int32_T)numSpringsGuess << 2;
+    if (loop_ub < 3200) {
+      for (i1 = 0; i1 < loop_ub; i1++) {
+        springs_data[i1] = 0.0;
+      }
+    } else {
+      emlrtEnterParallelRegion(&st, omp_in_parallel());
+      emlrtPushJmpBuf(&st, &emlrtJBStack);
+      generateAstralNetwork_numThreads =
+          emlrtAllocRegionTLSs(st.tls, omp_in_parallel(), omp_get_max_threads(),
+                               omp_get_num_procs());
+#pragma omp parallel for num_threads(generateAstralNetwork_numThreads)
+
+      for (i1 = 0; i1 < loop_ub; i1++) {
+        springs_data[i1] = 0.0;
+      }
+      emlrtPopJmpBuf(&st, &emlrtJBStack);
+      emlrtExitParallelRegion(&st, omp_in_parallel());
+    }
+    if (!(numFil >= 0.0)) {
+      emlrtNonNegativeCheckR2012b(numFil, &c_emlrtDCI, &st);
+    }
+    i = (int32_T)muDoubleScalarFloor(numFil);
+    if (numFil != i) {
+      emlrtIntegerCheckR2012b(numFil, &d_emlrtDCI, &st);
+    }
+    i2 = (int32_T)numFil;
+    i3 = network->ends->size[0] * network->ends->size[1];
+    network->ends->size[0] = i2;
+    network->ends->size[1] = 2;
+    emxEnsureCapacity_real_T(&st, network->ends, i3, &u_emlrtRTEI);
+    if (i2 != i) {
+      emlrtIntegerCheckR2012b(numFil, &emlrtDCI, &st);
+    }
+    loop_ub = i2 << 1;
+    for (i = 0; i < loop_ub; i++) {
+      network->ends->data[i] = 0.0;
+    }
+    springCount = 0U;
+    network->augNodes->size[0] = 0;
+    network->augNodes->size[1] = 2;
+    emxInit_real_T(&st, &thisOrder, 2, &bb_emlrtRTEI);
+    if (astralNum == 1.0) {
+      /*  routine for "Classical Mikado" networks */
+      i = network->nodes->size[0];
+      i3 = network->augNodes->size[0] * network->augNodes->size[1];
+      network->augNodes->size[0] = network->nodes->size[0];
+      network->augNodes->size[1] = 2;
+      emxEnsureCapacity_real_T(&st, network->augNodes, i3, &v_emlrtRTEI);
+      loop_ub = network->nodes->size[0] << 1;
+      for (i3 = 0; i3 < loop_ub; i3++) {
+        network->augNodes->data[i3] = network->nodes->data[i3];
+      }
+      /*  centers are fictitious */
+      emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
+                                    (int32_T)numFil, &e_emlrtRTEI, &st);
+      for (loop_ub = 0; loop_ub < i2; loop_ub++) {
+        b_st.site = &rb_emlrtRSI;
+        sortNodes(&b_st, (real_T)loop_ub + 1.0, network->nodes,
+                  crossings->filCross, asters->centers, 1.0, thisOrder);
+        thisOrder_data = thisOrder->data;
+        if ((thisOrder->size[0] == 0) || (thisOrder->size[1] == 0)) {
+          /*  0 nodes = filament doesn't touch any other asters! */
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &i_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] = l;
+          /*  treat unused filament as "right" dangling end */
+        } else if (thisOrder->size[0] == 1) {
+          /*  1 node + astralNum == 1 -> two dangling ends */
+          if (loop_ub + 1 > numAsters_tmp) {
+            emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, numAsters_tmp,
+                                          &db_emlrtBCI, &st);
+          }
+          if (((int32_T)thisOrder_data[0] < 1) ||
+              ((int32_T)thisOrder_data[0] > i)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)thisOrder_data[0], 1, i,
+                                          &cb_emlrtBCI, &st);
+          }
+          numFil = network->nodes->data[(int32_T)thisOrder_data[0] - 1] -
+                   asters->centers->data[loop_ub];
+          b_numAsters[0] = numFil * numFil;
+          numFil = network->nodes->data[((int32_T)thisOrder_data[0] +
+                                         network->nodes->size[0]) -
+                                        1] -
+                   asters->centers->data[loop_ub + asters->centers->size[0]];
+          b_numAsters[1] = numFil * numFil;
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &h_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub] = sumColumnB(b_numAsters);
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &h_emlrtBCI,
+                                          &st);
+          }
+          b_st.site = &qb_emlrtRSI;
+          thisOrder_data = &network->ends->data[loop_ub];
+          if (*thisOrder_data < 0.0) {
+            emlrtErrorWithMessageIdR2018a(
+                &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+          }
+          *thisOrder_data = muDoubleScalarSqrt(*thisOrder_data);
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &f_emlrtBCI,
+                                          &st);
+          }
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &g_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] =
+              l - network->ends->data[loop_ub + network->ends->size[0]];
+        } else {
+          real_T totSpringLength;
+          /*  >=2 nodes = there are certainly springs along this filament */
+          if (loop_ub + 1 > numAsters_tmp) {
+            emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, numAsters_tmp,
+                                          &bb_emlrtBCI, &st);
+          }
+          totSpringLength = 0.0;
+          /*  pair adjacent nodes to form springs */
+          n = thisOrder->size[0] - 2;
+          maxdimlen = thisOrder->size[0];
+          for (jdx = 0; jdx <= n; jdx++) {
+            real_T springLength;
+            springCount++;
+            if (jdx + 1 > maxdimlen) {
+              emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, maxdimlen, &ab_emlrtBCI,
+                                            &st);
+            }
+            i3 = (int32_T)thisOrder_data[jdx];
+            if ((i3 < 1) || (i3 > i)) {
+              emlrtDynamicBoundsCheckR2012b(i3, 1, i, &y_emlrtBCI, &st);
+            }
+            if (jdx + 2 > maxdimlen) {
+              emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, maxdimlen, &x_emlrtBCI,
+                                            &st);
+            }
+            vectorUB = (int32_T)thisOrder_data[jdx + 1];
+            if ((vectorUB < 1) || (vectorUB > i)) {
+              emlrtDynamicBoundsCheckR2012b(vectorUB, 1, i, &w_emlrtBCI, &st);
+            }
+            numFil = network->nodes->data[i3 - 1] -
+                     network->nodes->data[vectorUB - 1];
+            b_numAsters[0] = numFil * numFil;
+            numFil =
+                network->nodes->data[(i3 + network->nodes->size[0]) - 1] -
+                network->nodes->data[(vectorUB + network->nodes->size[0]) - 1];
+            b_numAsters[1] = numFil * numFil;
+            springLength = sumColumnB(b_numAsters);
+            b_st.site = &pb_emlrtRSI;
+            if (springLength < 0.0) {
+              emlrtErrorWithMessageIdR2018a(
+                  &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                  "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+            }
+            springLength = muDoubleScalarSqrt(springLength);
+            numSpringsGuess = thisOrder_data[jdx + 1];
+            if ((thisOrder_data[jdx] > numSpringsGuess) ||
+                (muDoubleScalarIsNaN(thisOrder_data[jdx]) &&
+                 (!muDoubleScalarIsNaN(numSpringsGuess)))) {
+              numFil = thisOrder_data[jdx + 1];
+            } else {
+              numFil = thisOrder_data[jdx];
+            }
+            if ((!(thisOrder_data[jdx] < numSpringsGuess)) &&
+                ((!muDoubleScalarIsNaN(thisOrder_data[jdx])) ||
+                 muDoubleScalarIsNaN(numSpringsGuess))) {
+              numSpringsGuess = thisOrder_data[jdx];
+            }
+            if (((int32_T)springCount < 1) ||
+                ((int32_T)springCount > springs->size[0])) {
+              emlrtDynamicBoundsCheckR2012b(
+                  (int32_T)springCount, 1, springs->size[0], &fb_emlrtBCI, &st);
+            }
+            springs_data[(int32_T)springCount - 1] = numFil;
+            springs_data[((int32_T)springCount + springs->size[0]) - 1] =
+                numSpringsGuess;
+            springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
+                (real_T)loop_ub + 1.0;
+            springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
+                springLength;
+            totSpringLength += springLength;
+            if (*emlrtBreakCheckR2012bFlagVar != 0) {
+              emlrtBreakCheckR2012b(&st);
+            }
+          }
+          if (((int32_T)thisOrder_data[0] < 1) ||
+              ((int32_T)thisOrder_data[0] > i)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)thisOrder_data[0], 1, i,
+                                          &v_emlrtBCI, &st);
+          }
+          numFil = network->nodes->data[(int32_T)thisOrder_data[0] - 1] -
+                   asters->centers->data[loop_ub];
+          b_numAsters[0] = numFil * numFil;
+          numFil = network->nodes->data[((int32_T)thisOrder_data[0] +
+                                         network->nodes->size[0]) -
+                                        1] -
+                   asters->centers->data[loop_ub + asters->centers->size[0]];
+          b_numAsters[1] = numFil * numFil;
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &e_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub] = sumColumnB(b_numAsters);
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &e_emlrtBCI,
+                                          &st);
+          }
+          b_st.site = &ob_emlrtRSI;
+          thisOrder_data = &network->ends->data[loop_ub];
+          if (*thisOrder_data < 0.0) {
+            emlrtErrorWithMessageIdR2018a(
+                &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+          }
+          *thisOrder_data = muDoubleScalarSqrt(*thisOrder_data);
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &c_emlrtBCI,
+                                          &st);
+          }
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &d_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] =
+              (l - totSpringLength) - network->ends->data[loop_ub];
+        }
+        if (*emlrtBreakCheckR2012bFlagVar != 0) {
+          emlrtBreakCheckR2012b(&st);
+        }
+      }
+    } else if (astralNum >= 2.0) {
+      /*  routine for "Astral Mikado" networks */
+      i = network->augNodes->size[0] * network->augNodes->size[1];
+      network->augNodes->size[0] =
+          asters->centers->size[0] + network->nodes->size[0];
+      network->augNodes->size[1] = 2;
+      emxEnsureCapacity_real_T(&st, network->augNodes, i, &v_emlrtRTEI);
+      for (i = 0; i < 2; i++) {
+        for (i3 = 0; i3 < numAsters_tmp; i3++) {
+          network->augNodes->data[i3 + network->augNodes->size[0] * i] =
+              asters->centers->data[i3 + asters->centers->size[0] * i];
+        }
+      }
+      maxdimlen = network->nodes->size[0];
+      for (i = 0; i < 2; i++) {
+        for (i3 = 0; i3 < maxdimlen; i3++) {
+          network->augNodes->data[(i3 + asters->centers->size[0]) +
+                                  network->augNodes->size[0] * i] =
+              network->nodes->data[i3 + network->nodes->size[0] * i];
+        }
+      }
+      emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
+                                    (int32_T)numFil, &d_emlrtRTEI, &st);
+      for (loop_ub = 0; loop_ub < i2; loop_ub++) {
+        b_st.site = &nb_emlrtRSI;
+        sortNodes(&b_st, (real_T)loop_ub + 1.0, network->nodes,
+                  crossings->filCross, asters->centers, astralNum, thisOrder);
+        thisOrder_data = thisOrder->data;
+        vectorUB = (int32_T)muDoubleScalarFloor(
+            (((real_T)loop_ub + 1.0) - 1.0) / astralNum);
+        if ((thisOrder->size[0] == 0) || (thisOrder->size[1] == 0)) {
+          /*  0 nodes = filament doesn't touch any other asters! */
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &j_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] = l;
+          /*  treat unused filament as "right" dangling end */
+        } else if (thisOrder->size[0] == 1) {
+          real_T springLength;
+          /*  1 node + astralNum >=2 -> spring between astral center & node */
+          springCount++;
+          if (vectorUB + 1 > numAsters_tmp) {
+            emlrtDynamicBoundsCheckR2012b(vectorUB + 1, 1, numAsters_tmp,
+                                          &u_emlrtBCI, &st);
+          }
+          if (((int32_T)thisOrder_data[0] < 1) ||
+              ((int32_T)thisOrder_data[0] > maxdimlen)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)thisOrder_data[0], 1,
+                                          maxdimlen, &t_emlrtBCI, &st);
+          }
+          numFil = network->nodes->data[(int32_T)thisOrder_data[0] - 1] -
+                   asters->centers->data[vectorUB];
+          b_numAsters[0] = numFil * numFil;
+          numFil = network->nodes->data[((int32_T)thisOrder_data[0] +
+                                         network->nodes->size[0]) -
+                                        1] -
+                   asters->centers->data[vectorUB + asters->centers->size[0]];
+          b_numAsters[1] = numFil * numFil;
+          springLength = sumColumnB(b_numAsters);
+          b_st.site = &mb_emlrtRSI;
+          if (springLength < 0.0) {
+            emlrtErrorWithMessageIdR2018a(
+                &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+          }
+          springLength = muDoubleScalarSqrt(springLength);
+          thisOrder_data[0] += (real_T)c_numAsters;
+          newSpring_size[0] = 1;
+          newSpring_size[1] = 4;
+          numFil = thisOrder_data[0];
+          if (((int32_T)springCount < 1) ||
+              ((int32_T)springCount > springs->size[0])) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
+                                          springs->size[0], &m_emlrtBCI, &st);
+          }
+          a[0] = 1;
+          a[1] = 4;
+          emlrtSubAssignSizeCheckR2012b(&a[0], 2, &newSpring_size[0], 2,
+                                        &emlrtECI, &st);
+          springs_data[(int32_T)springCount - 1] = vectorUB + 1;
+          springs_data[((int32_T)springCount + springs->size[0]) - 1] = numFil;
+          springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
+              loop_ub + 1;
+          springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
+              springLength;
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] =
+              l - springLength;
+        } else {
+          real_T springLength;
+          real_T totSpringLength;
+          /*  >=2 nodes = there are certainly springs along this filament */
+          if (vectorUB + 1 > numAsters_tmp) {
+            emlrtDynamicBoundsCheckR2012b(vectorUB + 1, 1, numAsters_tmp,
+                                          &s_emlrtBCI, &st);
+          }
+          totSpringLength = 0.0;
+          /*  like "Classical", but proximal segment to center is spring */
+          /*  also need to account for augmented node indices */
+          n = thisOrder->size[0] - 2;
+          for (jdx = 0; jdx <= n; jdx++) {
+            springCount++;
+            if (jdx + 1 > thisOrder->size[0]) {
+              emlrtDynamicBoundsCheckR2012b(jdx + 1, 1, thisOrder->size[0],
+                                            &r_emlrtBCI, &st);
+            }
+            i = (int32_T)thisOrder_data[jdx];
+            if ((i < 1) || (i > maxdimlen)) {
+              emlrtDynamicBoundsCheckR2012b(i, 1, maxdimlen, &q_emlrtBCI, &st);
+            }
+            if (jdx + 2 > thisOrder->size[0]) {
+              emlrtDynamicBoundsCheckR2012b(jdx + 2, 1, thisOrder->size[0],
+                                            &p_emlrtBCI, &st);
+            }
+            i3 = (int32_T)thisOrder_data[jdx + 1];
+            if ((i3 < 1) || (i3 > maxdimlen)) {
+              emlrtDynamicBoundsCheckR2012b(i3, 1, maxdimlen, &o_emlrtBCI, &st);
+            }
+            numFil = network->nodes->data[i - 1] - network->nodes->data[i3 - 1];
+            b_numAsters[0] = numFil * numFil;
+            numFil = network->nodes->data[(i + network->nodes->size[0]) - 1] -
+                     network->nodes->data[(i3 + network->nodes->size[0]) - 1];
+            b_numAsters[1] = numFil * numFil;
+            springLength = sumColumnB(b_numAsters);
+            b_st.site = &kb_emlrtRSI;
+            if (springLength < 0.0) {
+              emlrtErrorWithMessageIdR2018a(
+                  &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                  "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+            }
+            springLength = muDoubleScalarSqrt(springLength);
+            numFil = thisOrder_data[jdx + 1];
+            if ((!(thisOrder_data[jdx] > numFil)) &&
+                ((!muDoubleScalarIsNaN(thisOrder_data[jdx])) ||
+                 muDoubleScalarIsNaN(numFil))) {
+              numFil = thisOrder_data[jdx];
+            }
+            numSpringsGuess = thisOrder_data[jdx + 1];
+            if ((!(thisOrder_data[jdx] < numSpringsGuess)) &&
+                ((!muDoubleScalarIsNaN(thisOrder_data[jdx])) ||
+                 muDoubleScalarIsNaN(numSpringsGuess))) {
+              numSpringsGuess = thisOrder_data[jdx];
+            }
+            if (((int32_T)springCount < 1) ||
+                ((int32_T)springCount > springs->size[0])) {
+              emlrtDynamicBoundsCheckR2012b(
+                  (int32_T)springCount, 1, springs->size[0], &gb_emlrtBCI, &st);
+            }
+            springs_data[(int32_T)springCount - 1] =
+                (real_T)c_numAsters + numFil;
+            springs_data[((int32_T)springCount + springs->size[0]) - 1] =
+                (real_T)c_numAsters + numSpringsGuess;
+            springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
+                (real_T)loop_ub + 1.0;
+            springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
+                springLength;
+            totSpringLength += springLength;
+            if (*emlrtBreakCheckR2012bFlagVar != 0) {
+              emlrtBreakCheckR2012b(&st);
+            }
+          }
+          /*  recording proximal segment as spring */
+          springCount++;
+          if (((int32_T)thisOrder_data[0] < 1) ||
+              ((int32_T)thisOrder_data[0] > maxdimlen)) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)thisOrder_data[0], 1,
+                                          maxdimlen, &n_emlrtBCI, &st);
+          }
+          numFil = network->nodes->data[(int32_T)thisOrder_data[0] - 1] -
+                   asters->centers->data[vectorUB];
+          b_numAsters[0] = numFil * numFil;
+          numFil = network->nodes->data[((int32_T)thisOrder_data[0] +
+                                         network->nodes->size[0]) -
+                                        1] -
+                   asters->centers->data[vectorUB + asters->centers->size[0]];
+          b_numAsters[1] = numFil * numFil;
+          springLength = sumColumnB(b_numAsters);
+          b_st.site = &jb_emlrtRSI;
+          if (springLength < 0.0) {
+            emlrtErrorWithMessageIdR2018a(
+                &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
+                "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
+          }
+          springLength = muDoubleScalarSqrt(springLength);
+          if (((int32_T)springCount < 1) ||
+              ((int32_T)springCount > springs->size[0])) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1,
+                                          springs->size[0], &eb_emlrtBCI, &st);
+          }
+          springs_data[(int32_T)springCount - 1] = (real_T)vectorUB + 1.0;
+          springs_data[((int32_T)springCount + springs->size[0]) - 1] =
+              (real_T)c_numAsters + thisOrder_data[0];
+          springs_data[((int32_T)springCount + springs->size[0] * 2) - 1] =
+              (real_T)loop_ub + 1.0;
+          springs_data[((int32_T)springCount + springs->size[0] * 3) - 1] =
+              springLength;
+          totSpringLength += springLength;
+          if ((int32_T)((uint32_T)loop_ub + 1U) > network->ends->size[0]) {
+            emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)loop_ub + 1U), 1,
+                                          network->ends->size[0], &b_emlrtBCI,
+                                          &st);
+          }
+          network->ends->data[loop_ub + network->ends->size[0]] =
+              l - totSpringLength;
+        }
+        if (*emlrtBreakCheckR2012bFlagVar != 0) {
+          emlrtBreakCheckR2012b(&st);
+        }
+      }
+    }
+    emxFree_real_T(&st, &thisOrder);
+    if ((int32_T)springCount == 0) {
+      network->springs->size[0] = 0;
+      network->springs->size[1] = 4;
+    } else {
+      if (springs->size[0] < 1) {
+        emlrtDynamicBoundsCheckR2012b(1, 1, springs->size[0], &l_emlrtBCI, &st);
+      }
+      loop_ub = (int32_T)springCount;
+      if (((int32_T)springCount < 1) ||
+          ((int32_T)springCount > springs->size[0])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)springCount, 1, springs->size[0],
+                                      &k_emlrtBCI, &st);
+      }
+      i = network->springs->size[0] * network->springs->size[1];
+      network->springs->size[0] = (int32_T)springCount;
+      network->springs->size[1] = 4;
+      emxEnsureCapacity_real_T(&st, network->springs, i, &w_emlrtRTEI);
+      for (i = 0; i < 4; i++) {
+        for (i2 = 0; i2 < loop_ub; i2++) {
+          network->springs->data[i2 + network->springs->size[0] * i] =
+              springs_data[i2 + springs->size[0] * i];
+        }
+      }
+    }
+    emxFree_real_T(&st, &springs);
   }
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }

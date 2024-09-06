@@ -75,7 +75,7 @@ function [nodes, filCross] = findNodes(centers,orients,l)
 numFil = numel(orients);
 cosines = cos(orients);
 sines = sin(orients);
-numNodesGuess = round(numFil^2 / 10);
+numNodesGuess = 4 * l * numFil;     % Note: this is an empirical guess!
 nodes = zeros(numNodesGuess,2);
 filCross = zeros(numNodesGuess,2);
 nodeCount = 0;
@@ -105,6 +105,15 @@ if astralNum == 1
             t2 = (cosines(idx)*b2 - sines(idx)*b1) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
+                if nodeCount > numNodesGuess
+                    numNodesGuess = numNodesGuess + numFil;
+                    oldNodes = nodes;
+                    nodes = zeros(numNodesGuess,2);
+                    nodes(1:(nodeCount-1),1:2) = oldNodes;
+                    oldFilCross = filCross;
+                    filCross = zeros(numNodesGuess,2);
+                    filCross(1:(nodeCount-1),1:2) = oldFilCross;
+                end
                 nodeX = centers(idx,1) + l * cosines(idx) * t1;
                 nodeY = centers(idx,2) + l * sines(idx) * t1;
                 nodes(nodeCount,1:2) = [nodeX, nodeY];
@@ -150,6 +159,15 @@ elseif astralNum >= 2
                 sines(asterIdx,filSubIdx)*b1) / denom;
             if (abs(t1 - 0.5) <= 0.5) && (abs(t2 - 0.5) <= 0.5)
                 nodeCount = nodeCount + 1;
+                if nodeCount > numNodesGuess
+                    numNodesGuess = numNodesGuess + numFil;
+                    oldNodes = nodes;
+                    nodes = zeros(numNodesGuess,2);
+                    nodes(1:(nodeCount-1),1:2) = oldNodes;
+                    oldFilCross = filCross;
+                    filCross = zeros(numNodesGuess,2);
+                    filCross(1:(nodeCount-1),1:2) = oldFilCross;
+                end
                 nodeX = centers(asterIdx,1) + l * cosines(asterIdx,filSubIdx) * t1;
                 nodeY = centers(asterIdx,2) + l * sines(asterIdx,filSubIdx) * t1;
                 nodes(nodeCount,1:2) = [nodeX, nodeY];

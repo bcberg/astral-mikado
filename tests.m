@@ -65,7 +65,7 @@ numFil = numel(orients);
 
 rho = 10;
 astralNum = 5;
-l = 5;
+l = 1;
 D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic

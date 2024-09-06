@@ -19,21 +19,21 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo bb_emlrtRSI = {
+static emlrtRSInfo x_emlrtRSI = {
     38,       /* lineNo */
     "repmat", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName
                                                                       */
 };
 
-static emlrtRSInfo cb_emlrtRSI = {
+static emlrtRSInfo y_emlrtRSI = {
     79,       /* lineNo */
     "repmat", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName
                                                                       */
 };
 
-static emlrtRTEInfo mb_emlrtRTEI = {
+static emlrtRTEInfo dc_emlrtRTEI = {
     69,       /* lineNo */
     28,       /* colNo */
     "repmat", /* fName */
@@ -54,7 +54,7 @@ void repmat(const emlrtStack *sp, const real_T a[2], const real_T varargin_1[2],
   boolean_T overflow;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &bb_emlrtRSI;
+  st.site = &x_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   assertValidSizeArg(&st, varargin_1);
@@ -62,14 +62,14 @@ void repmat(const emlrtStack *sp, const real_T a[2], const real_T varargin_1[2],
   ibmat = b->size[0] * b->size[1];
   b->size[0] = (int32_T)varargin_1[0];
   b->size[1] = 2;
-  emxEnsureCapacity_real_T(sp, b, ibmat, &mb_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b, ibmat, &dc_emlrtRTEI);
   b_data = b->data;
   overflow = ((int32_T)varargin_1[0] > 2147483646);
   for (jcol = 0; jcol < 2; jcol++) {
     ibmat = jcol * i;
-    st.site = &cb_emlrtRSI;
+    st.site = &y_emlrtRSI;
     if (overflow) {
-      b_st.site = &t_emlrtRSI;
+      b_st.site = &s_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
     for (itilerow = 0; itilerow < i; itilerow++) {

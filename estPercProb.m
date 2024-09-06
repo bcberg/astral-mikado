@@ -8,13 +8,14 @@ function p = estPercProb(numAsters,l,D,astralNum,Nsamp,useMEX)
 %       with corners at (0,0) and (D,D)
 %       astralNum (scalar): (whole) number of filaments per aster
 %       Nsamp (scalar): integer number of networks to sample
-%       useMEX (boolean): passing true uses MEX function for network
-%       generation, passing false uses pure Matlab function
+%       useMEX (boolean): passing true allows use of MEX function for
+%       network generation, passing false uses pure Matlab function
 %   Outputs:
 %       p (scalar): estimated one-sided percolation probability for astral
 %       networks with the given parameters
 percCount = 0;
-if useMEX
+numFil = numAsters * astralNum;     % mex gets slow if numFil too high
+if useMEX && numFil <= 1e4
     for idx = 1:Nsamp
         [network,crossings,~] = generateAstralNetwork_mex(numAsters,l,D,...
             astralNum, true);
