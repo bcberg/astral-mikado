@@ -63,10 +63,10 @@ numFil = numel(orients);
 
 %% astral network generation
 
-rho = 10;
-astralNum = 5;
+rho = 1;
+astralNum = 1;
 l = 1;
-D = 50;
+D = 100;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic
 [network1,crossings1,asters1] = generateAstralNetwork(numAsters,l,D, ...

@@ -36,15 +36,15 @@ useMEX = true;      % adjust depending on machine
 Njobs = sum(numUniqueDensVals_byrow);
 F = parallel.FevalFuture.empty(Njobs,0);
 F_partition = zeros(Njobs,2);
-part_idx = 1;
+job_idx = 1;
 for idx = 1:numRatioVals
     for jdx = 1:numUniqueDensVals_byrow(idx)
-        F(part_idx) = parfeval(pool,@estPercProb,1, ...
+        F(job_idx) = parfeval(pool,@estPercProb,1, ...
             numAstersUsed{idx}(jdx),lOverD(idx)*D,D,astralNum, ...
             sampPerDensity,useMEX);
-        F_partition(part_idx,1) = idx;  % record this future's ratio idx
-        F_partition(part_idx,2) = jdx;  % record density sub-index, too
-        part_idx = part_idx + 1;
+        F_partition(job_idx,1) = idx;  % record this future's ratio idx
+        F_partition(job_idx,2) = jdx;  % record density sub-index, too
+        job_idx = job_idx + 1;
     end
 end
 waitMessage = 'Waiting for FevalFutures to complete... (%3i/%3i)';

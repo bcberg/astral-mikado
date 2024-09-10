@@ -9,55 +9,73 @@ set(0,'defaultLegendInterpreter','latex')
 %% Parameters
 
 recompute = input("Recompute percolation probabilities (1=yes, 0=no)? ");
+if recompute
+    D = input("Enter system size: ");
+    l = input("Enter filament length: (default = 1)");
+    if isempty(l)
+        l = 1;
+    end
+else
+    % load a particular existing dataset
+    D = 50;
+    l = 5;
+end
+filename = sprintf('percProbs_D%02i_l%02i',D,l);
 numDensVals = 50;
 % Note: there may be fewer density values in certain percolation curves due
 % to requiring integer numbers of asters (density resolution is coarser at
 % higher astral number)
-sampPerDensity = 2000;
-l = 5;
-if recompute
-    D = input("Enter system size:");
-else
-    % load a particular existing dataset
-    D = 50;
-end
-filename = sprintf('percProbs_D%02i',D);
+sampPerDensity = 2e3;
 densityRange = logspace(-1,1,numDensVals);
-astralNumList = 1:48;
+astralNumList = (1:48)';
 numNetTypes = length(astralNumList);
 
 %% Percolation probability estimation
 
 if recompute
     numFilRange = densityRange * D^2 / l;
+    numAstersArray = round(repmat(numFilRange,[numNetTypes,1]) ./ ...
+        repmat(astralNumList,[1,numDensVals]));
     numAstersUsed = cell(numNetTypes,1);
+    numUniqueDensVals_byrow = zeros(numNetTypes,1);
     actualDensities = cell(numNetTypes,1);
     percProbs = cell(numNetTypes,1);
-    pool = parpool(8);
-    addAttachedFiles(pool,'percCheck.m')
-    parfor idx = 1:numNetTypes
-        astralNum = astralNumList(idx);
-        numAsterRange = unique(round(numFilRange/astralNum));
-        thisNumDensVals = length(numAsterRange);
-        theseProbs = zeros(1,thisNumDensVals);
-        for jdx = 1:thisNumDensVals
-            percCount = 0;
-            for kdx = 1:sampPerDensity
-                [network,crossings,~] = generateAstralNetwork_mex(numAsterRange(jdx), ...
-                    l, D, astralNum, true);
-                [percTF,~] = percCheck(crossings,network.nodes,D);
-                if percTF(1) || percTF(2)
-                    percCount = percCount + 1;
-                end
-            end
-            theseProbs(jdx) = percCount / sampPerDensity;
-        end
-        numAstersUsed{idx} = numAsterRange;
-        actualDensities{idx} = numAsterRange * (astralNum * l / D^2);
-        percProbs{idx} = theseProbs;
-        fprintf('Astral number %i finished\n',astralNum)
+    for idx = 1:numNetTypes
+        numAstersUsed{idx} = unique(numAstersArray(idx,:));
+        numUniqueDensVals_byrow(idx) = numel(numAstersUsed{idx});
+        actualDensities{idx} = astralNumList(idx)*numAstersUsed{idx}*l/D^2;
+        percProbs{idx} = zeros(1,numUniqueDensVals_byrow(idx));
     end
-    delete(pool);
+    
+    Njobs = sum(numUniqueDensVals_byrow);
+    pool = parpool(8);  % adjust depending on machine
+    useMEX = true;      % adjust depending on machine
+    addAttachedFiles(pool,'estPercProb.m')
+    F = parallel.FevalFuture.empty(Njobs,0);
+    F_partition = zeros(Njobs,2);
+    job_idx = 1;
+    for idx = 1:numNetTypes
+        for jdx = 1:numUniqueDensVals_byrow(idx)
+            F(job_idx) = parfeval(pool,@estPercProb,1, ...
+                numAstersUsed{idx}(jdx),l,D,astralNumList(idx), ...
+                sampPerDensity,useMEX);
+            F_partition(job_idx,1) = idx;  % record this future's ratio idx
+            F_partition(job_idx,2) = jdx;  % record density sub-index, too
+            job_idx = job_idx + 1;
+        end
+    end
+    waitMessage = 'Waiting for FevalFutures to complete... (%4i/%4i)';
+    h = waitbar(0,sprintf(waitMessage,0,Njobs));
+    for idx = 1:Njobs
+        [completedIdx,p] = fetchNext(F);
+        whereToStore = F_partition(completedIdx,:);
+        percProbs{whereToStore(1)}(whereToStore(2)) = p;
+        waitbar(idx/Njobs,h,sprintf(waitMessage,idx,Njobs));
+    end
+    delete(pool)
+    delete(h)
+    clear('F')
+    % Ubuntu path
     save(['~/Documents/AstralMikadoCYM/data/',filename,'.mat'])
 end
 
@@ -72,8 +90,6 @@ set(fig1,'defaultLineLineWidth',0.75)
 cmap = colormap(turbo(numNetTypes));
 hold on
 for idx = 1:numNetTypes
-    % plot(actualDensities(idx,:),percProbs(idx,:),'DisplayName', ...
-    %     sprintf('nAST%02i',astralNumList(idx)),'Color',cmap(idx,:))
     plot(actualDensities{idx},percProbs{idx},'DisplayName', ...
         sprintf('nAST%02i',astralNumList(idx)),'Color',cmap(idx,:))
 end
