@@ -26,7 +26,9 @@ numDensVals = 50;
 % to requiring integer numbers of asters (density resolution is coarser at
 % higher astral number)
 sampPerDensity = 2e3;
-densityRange = logspace(-1,1,numDensVals);
+% at smaller l/D, probabilities are 0 until higher densities
+% manually adjust densityRange to capture the transition
+densityRange = logspace(0,log10(50),numDensVals);
 astralNumList = (1:48)';
 numNetTypes = length(astralNumList);
 
@@ -98,6 +100,7 @@ xscale('log')    % 'linear' or 'log'
 legend('Location','eastoutside','NumColumns',2)
 xlabel('Filament density [$\mu m^{-1}$]')
 ylabel('Percolation probability')
+title(sprintf('Domain size: %2.1f, Filament length: %1.1f',D,l))
 % Ubuntu path
 exportgraphics(fig1,['~/Documents/AstralMikadoCYM/data/', ...
     filename, '_curves.png'], 'Resolution',300)
@@ -121,7 +124,7 @@ pcolor(densityRange,astralNumList,percProbsHeatmap)
 xscale('log')
 xlabel('Filament density [$\mu m^{-1}$]')
 ylabel('Astral number')
-title(sprintf('Domain size: %i',D))
+title(sprintf('Domain size: %2.1f, Filament length: %1.1f',D,l))
 % Ubuntu path
 exportgraphics(fig2,['~/Documents/AstralMikadoCYM/data/', ...
     filename, '_heat.png'], 'Resolution',300)

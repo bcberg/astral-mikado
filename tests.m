@@ -71,13 +71,13 @@ numAsters = round(rho * D^2 / (l * astralNum));
 tic
 [network1,crossings1,asters1] = generateAstralNetwork(numAsters,l,D, ...
     astralNum,true);
-matTime = toc;
+matTime100_1 = toc;
 tic
 [network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D, ...
     astralNum,true);
-mexTime = toc;
+mexTime100_1 = toc;
 
-% 2024.08.28 build (mex is C-based)
+% 2024.08.28 build, l=5, D=50 (mex is C-based)
 %           matTime vs. mexTime
 % rho = 1:  0.0054s     0.0022s
 % rho = 5:  0.0409s     0.0300s

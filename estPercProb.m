@@ -15,7 +15,7 @@ function p = estPercProb(numAsters,l,D,astralNum,Nsamp,useMEX)
 %       networks with the given parameters
 percCount = 0;
 numFil = numAsters * astralNum;     % mex gets slow if numFil too high
-if useMEX && numFil <= 1e4
+if useMEX && numFil < 1e4
     for idx = 1:Nsamp
         [network,crossings,~] = generateAstralNetwork_mex(numAsters,l,D,...
             astralNum, true);
