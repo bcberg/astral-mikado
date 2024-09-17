@@ -1,4 +1,5 @@
-function runtime = estRuntime(l,D,astralNum,densRange,numDensVals,Nsamp)
+function runtime = estRuntime(l,D,astralNum,densRange,numDensVals,Nsamp,...
+    Nworkers)
 %ESTRUNTIME Estimates CPU hours needed to compute a percolation curve
 %   Inputs:
 %       l (scalar): length of individual filament
@@ -10,6 +11,7 @@ function runtime = estRuntime(l,D,astralNum,densRange,numDensVals,Nsamp)
 %       numDensVals (scalar): number of log-spaced points to sample from 
 %       10.^densRange
 %       Nsamp (scalar): number of networks to sample per density value
+%       Nworkers (scalar): number of CPU cores allotted to job
 %   Outputs:
 %       runtime (duration): estimated number of CPU hours needed to run
 %       getPercCurve with given parameters
@@ -27,6 +29,9 @@ for idx = 1:numUniqueDensVals
     timings(idx) = toc(thisTime);
 end
 runtime = seconds(Nsamp/10 * sum(timings));
-runtime.Format = "dd:hh:mm:ss";
+runtime.Format = "hh:mm:ss";
 disp("Estimated CPU hrs: " + string(runtime))
+parallelMsg = "If ideally parallel on %i cores: " + ...
+    string(runtime/Nworkers) + "\n";
+fprintf(parallelMsg, Nworkers);
 end
