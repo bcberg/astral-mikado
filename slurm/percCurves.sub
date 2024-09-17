@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#SBATCH --job-name=perc50      ## Name of the job.
+#SBATCH -A JALLARD_LAB            ## account to charge 
+#SBATCH -p standard               ## partition name
+#SBATCH --nodes=1                 ## (-N) number of nodes to use
+#SBATCH --ntasks=8                ## (-n) number of tasks to launch
+#SBATCH --cpus-per-task=1        ## number of cores the job needs
+#SBATCH --tmp=4G                 ## requesting 4GB local scratch
+#SBATCH --array=1-48            ## $SLURM_ARRAY_TASK_ID takes values from 1 to 48 inclusive
+#SBATCH --time=36:00:00
+#SBATCH --error=%x.%A_%a.err  ## error log file: %x - job name, %A - job ID, %a - task ID
+#SBATCH --output=%x.%A_%a.out ## output log file: %x - job name, %A - job ID, %a - task ID
+#SBATCH --mail-type=fail,end      ## email notification events
+#SBATCH --mail-user=bberg1@uci.edu
+
+# load module(s)
+module load MATLAB/R2023b
+
+# define initial directories (note: each array job gets its own TMPDIR)
+cd $TMPDIR
+mkdir -p $TMPDIR/output
+pubDir="/pub/bberg1/astral-mikado"
+# copy required Matlab code to compute node
+cp $pubDir/generateAstralNetwork.m $TMPDIR/generateAstralNetwork.m
+cp $pubDir/percCheck.m $TMPDIR/percCheck.m
+cp $pubDir/estPercProb.m $TMPDIR/estPercProb.m
+cp $pubDir/getPercCurve.m $TMPDIR/getPercCurve.m
+
+# function syntax: getPercCurve(l,D,astralNum,densRange,saveDirectory)
+l=1
+D=50
+matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[0,log10(50)],'$TMPDIR/output')"
+
+# copy to DFS
+cd $TMPDIR
+mv output /pub/bberg1/percCurves/out_${SLURM_ARRAY_TASK_ID}
+mv output.tar.gz /pub/bberg1/cymruns/full_shear_aster_${SLURM_ARRAY_TASK_ID}.tar.gz
