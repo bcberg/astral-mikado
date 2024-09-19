@@ -1,21 +1,19 @@
-function runtime = estRuntime(l,D,astralNum,densRange,numDensVals,Nsamp,...
-    Nworkers)
+function runtime = estRuntime(l,D,astralNum,densSpec,Nsamp,Nworkers)
 %ESTRUNTIME Estimates CPU hours needed to compute a percolation curve
 %   Inputs:
 %       l (scalar): length of individual filament
 %       D (scalar): domain size; asters are distributed in the square
 %       with corners at (0,0) and (D,D)
 %       astralNum (scalar): (whole) number of filaments per aster
-%       densRange (1x2 double): specifies densities to sample; range is
-%       set as 10.^densRange
-%       numDensVals (scalar): number of log-spaced points to sample from 
-%       10.^densRange
+%       densSpec (1x3 double): specifies density sweep range and number of
+%       log-spaced points; range is 10.^densSpec(1:2), number of points is
+%       densSpec(3)
 %       Nsamp (scalar): number of networks to sample per density value
 %       Nworkers (scalar): number of CPU cores allotted to job
 %   Outputs:
 %       runtime (duration): estimated number of CPU hours needed to run
 %       getPercCurve with given parameters
-densityRange = logspace(densRange(1),densRange(2),numDensVals);
+densityRange = logspace(densSpec(1),densSpec(2),densSpec(3));
 numFilRange = densityRange * D^2 / l;
 numAstersRange = round(numFilRange / astralNum);
 numAstersUsed = unique(numAstersRange);

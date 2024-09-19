@@ -1,12 +1,13 @@
-function curve = getPercCurve(l,D,astralNum,densRange,saveDirectory)
+function curve = getPercCurve(l,D,astralNum,densSpec,saveDirectory)
 %GETPERCCURVE Computes a percolation probability curve for astral networks
 %   Inputs:
 %       l (scalar): length of individual filament
 %       D (scalar): domain size; asters are distributed in the square
 %       with corners at (0,0) and (D,D)
 %       astralNum (scalar): (whole) number of filaments per aster
-%       densRange (1x2 double): specifies densities to sample; range is
-%       set as 10.^densRange
+%       densSpec (1x3 double): specifies density sweep range and number of
+%       log-spaced points; range is 10.^densSpec(1:2), number of points is
+%       densSpec(3)
 %       saveDirectory (char vector or string): name of folder in which to 
 %       save simulation data
 %   Outputs:
@@ -18,10 +19,9 @@ function curve = getPercCurve(l,D,astralNum,densRange,saveDirectory)
 filename = sprintf("percProbs_l%02i_D%02i_an%02i",l,D,astralNum);
 
 %%%%%%%%%%%%%% Sampling parameters %%%%%%%%%%%%%%
-numDensVals = 50;
 % at smaller l/D, probabilities are 0 until higher densities
-% manually adjust densRange to capture the transition
-densityRange = logspace(densRange(1),densRange(2),numDensVals);
+% manually adjust densSpec to capture the transition
+densityRange = logspace(densSpec(1),densSpec(2),densSpec(3));
 % Note: there may be fewer density values in certain percolation curves due
 % to requiring integer numbers of asters (density resolution is coarser at
 % higher astral number)
@@ -38,16 +38,17 @@ percProbs = zeros(1,numUniqueDensVals);
 
 pool = parpool(8);  % adjust depending on machine
 useMEX = false;      % adjust depending on machine
-addAttachedFiles(pool,'generateAstralNetwork.m','percCheck.m', ...
-    'estPercProb.m')
+addAttachedFiles(pool,{'generateAstralNetwork.m','percCheck.m', ...
+    'estPercProb.m'})
 F = parallel.FevalFuture.empty(numUniqueDensVals,0);
 for idx = 1:numUniqueDensVals
     F(idx) = parfeval(pool,@estPercProb,1, ...
         numAstersUsed(idx),l,D,astralNum,Nsamp,useMEX);
 end
-for idx = 1:Njobs
+for idx = 1:numUniqueDensVals
     [completedIdx,p] = fetchNext(F);
     percProbs(completedIdx) = p;
+    fprintf('Completed %02i/%02i densities\n',idx,numUniqueDensVals)
 end
 delete(pool)
 clear('F')

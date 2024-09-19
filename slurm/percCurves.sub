@@ -30,7 +30,7 @@ cp $pubDir/getPercCurve.m $TMPDIR/getPercCurve.m
 # function syntax: getPercCurve(l,D,astralNum,densRange,saveDirectory)
 l=1
 D=50
-matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[0,log10(50)],'$TMPDIR/output')"
+matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[-1,log10(50),75],'$TMPDIR/output')"
 
 # copy to DFS
 cd $TMPDIR
