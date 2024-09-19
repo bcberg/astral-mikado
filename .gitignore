@@ -1,2 +1,5 @@
 # Matlab autosave files
 *.asv
+# Slurm log files
+*.out
+*.err
