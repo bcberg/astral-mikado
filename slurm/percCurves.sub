@@ -7,8 +7,8 @@
 #SBATCH --ntasks=1                ## (-n) number of tasks to launch
 #SBATCH --cpus-per-task=24        ## number of cores the job needs
 #SBATCH --tmp=4G                 ## requesting 4GB local scratch
-#SBATCH --array=1-48            ## $SLURM_ARRAY_TASK_ID takes values from 1 to 48 inclusive
-#SBATCH --time=36:00:00
+#SBATCH --array=1-24            ## $SLURM_ARRAY_TASK_ID takes values from 1 to 24 inclusive
+#SBATCH --time=48:00:00
 #SBATCH --error=%x.%A_%a.err  ## error log file: %x - job name, %A - job ID, %a - task ID
 #SBATCH --output=%x.%A_%a.out ## output log file: %x - job name, %A - job ID, %a - task ID
 #SBATCH --mail-type=fail,end      ## email notification events
@@ -24,15 +24,13 @@ pubDir="/pub/bberg1/astral-mikado"
 # copy required Matlab code to compute node
 cp $pubDir/generateAstralNetwork.m $TMPDIR/generateAstralNetwork.m
 cp $pubDir/percCheck.m $TMPDIR/percCheck.m
-cp $pubDir/estPercProb.m $TMPDIR/estPercProb.m
+cp $pubDir/percOneSample.m $TMPDIR/percOneSample.m
 cp $pubDir/getPercCurve.m $TMPDIR/getPercCurve.m
 
-# function syntax: getPercCurve(l,D,astralNum,densRange,saveDirectory)
+# function syntax: getPercCurve(l,D,astralNum,densSpec,Nsamp,Ncores,saveDirectory)
 l=1
 D=50
-matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[-1,log10(50),75],'$TMPDIR/output')"
+matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[0,log10(50),50],2000,24,'$TMPDIR/output')"
 
 # copy to DFS
-cd $TMPDIR
 mv output /pub/bberg1/percCurves/out_${SLURM_ARRAY_TASK_ID}
-mv output.tar.gz /pub/bberg1/cymruns/full_shear_aster_${SLURM_ARRAY_TASK_ID}.tar.gz
