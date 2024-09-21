@@ -63,19 +63,19 @@ numFil = numel(orients);
 
 %% astral network generation
 
-rho = 1;
+rho = 50;
 astralNum = 1;
 l = 1;
-D = 100;
+D = 50;
 numAsters = round(rho * D^2 / (l * astralNum));
 tic
 [network1,crossings1,asters1] = generateAstralNetwork(numAsters,l,D, ...
     astralNum,true);
-matTime100_1 = toc;
+matTime = toc;
 tic
 [network2,crossings2,asters2] = generateAstralNetwork_mex(numAsters,l,D, ...
     astralNum,true);
-mexTime100_1 = toc;
+mexTime = toc;
 
 % 2024.08.28 build, l=5, D=50 (mex is C-based)
 %           matTime vs. mexTime

@@ -1,4 +1,4 @@
-function runtime = estRuntime(l,D,astralNum,densSpec,Nsamp,Nworkers)
+function runtime = estRuntime(l,D,astralNum,densSpec,Nsamp,Ncores)
 %ESTRUNTIME Estimates CPU hours needed to compute a percolation curve
 %   Inputs:
 %       l (scalar): length of individual filament
@@ -8,28 +8,19 @@ function runtime = estRuntime(l,D,astralNum,densSpec,Nsamp,Nworkers)
 %       densSpec (1x3 double): specifies density sweep range and number of
 %       log-spaced points; range is 10.^densSpec(1:2), number of points is
 %       densSpec(3)
-%       Nsamp (scalar): number of networks to sample per density value
-%       Nworkers (scalar): number of CPU cores allotted to job
+%       Nsamp (scalar): desired number of networks per density value
+%       Ncores (scalar): number of CPU cores allotted to job
 %   Outputs:
 %       runtime (duration): estimated number of CPU hours needed to run
 %       getPercCurve with given parameters
-densityRange = logspace(densSpec(1),densSpec(2),densSpec(3));
-numFilRange = densityRange * D^2 / l;
-numAstersRange = round(numFilRange / astralNum);
-numAstersUsed = unique(numAstersRange);
-numUniqueDensVals = length(numAstersUsed);
-timings = zeros(numUniqueDensVals,1);
-useMEX = false;
-for idx = 1:numUniqueDensVals
-    thisTime = tic;
-    % record time used to generate 10 networks and check for percolation
-    estPercProb(numAstersUsed(idx),l,D,astralNum,10,useMEX);
-    timings(idx) = toc(thisTime);
-end
-runtime = seconds(Nsamp/10 * sum(timings));
+tinySample = 10;
+tic;
+curve = getPercCurve(l,D,astralNum,densSpec,tinySample,Ncores,[]);
+timing = toc;
+runtime = seconds(Nsamp/tinySample * timing);
 runtime.Format = "hh:mm:ss";
-disp("Estimated CPU hrs: " + string(runtime))
-parallelMsg = "If ideally parallel on %i cores: " + ...
-    string(runtime/Nworkers) + "\n";
-fprintf(parallelMsg, Nworkers);
+msg = "Time estimate in parallel w/ %i workers: " + string(runtime) + "\n";
+billmsg = "Billable CPU hours: " + string(runtime*Ncores);
+fprintf(msg,Ncores);
+disp(billmsg);
 end

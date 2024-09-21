@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#SBATCH --job-name=HPCtime      ## Name of the job.
+#SBATCH -A bberg1            ## account to charge 
+#SBATCH -p free               ## partition name
+#SBATCH --nodes=1                 ## (-N) number of nodes to use
+#SBATCH --ntasks=1                ## (-n) number of tasks to launch
+#SBATCH --cpus-per-task=24        ## number of cores the job needs
+#SBATCH --tmp=4G                 ## requesting 4GB local scratch
+#SBATCH --time=6:00:00
+#SBATCH --error=%x.%A.err  ## error log file: %x - job name, %A - job ID, %a - task ID
+#SBATCH --output=%x.%A.out ## output log file: %x - job name, %A - job ID, %a - task ID
+
+# load module(s)
+module load MATLAB/R2023b
+
+# copy required Matlab functions to node
+cd $TMPDIR
+pubDir="/pub/bberg1/astral-mikado"
+# copy required Matlab code to compute node
+cp $pubDir/generateAstralNetwork.m $TMPDIR/generateAstralNetwork.m
+cp $pubDir/percCheck.m $TMPDIR/percCheck.m
+cp $pubDir/percOneSample.m $TMPDIR/percOneSample.m
+cp $pubDir/getPercCurve.m $TMPDIR/getPercCurve.m
+cp $pubDir/estRuntime.m $TMPDIR/estRuntime.m
+
+# syntax: estRuntime(l,D,astralNum,densSpec,Nsamp,Ncores)
+matlab -nodesktop -r "estRuntime(1,50,1,[0,log10(50),50],2000,24)"
