@@ -14,7 +14,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtMCInfo emlrtMCI = {
+static emlrtMCInfo b_emlrtMCI = {
     14,        /* lineNo */
     25,        /* colNo */
     "warning", /* fName */
@@ -22,7 +22,7 @@ static emlrtMCInfo emlrtMCI = {
     "warning.m" /* pName */
 };
 
-static emlrtMCInfo b_emlrtMCI = {
+static emlrtMCInfo c_emlrtMCI = {
     14,        /* lineNo */
     9,         /* colNo */
     "warning", /* fName */
@@ -30,7 +30,7 @@ static emlrtMCInfo b_emlrtMCI = {
     "warning.m" /* pName */
 };
 
-static emlrtRSInfo jd_emlrtRSI = {
+static emlrtRSInfo ld_emlrtRSI = {
     14,        /* lineNo */
     "warning", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/lib/+coder/+internal/"
@@ -96,8 +96,8 @@ void warning(const emlrtStack *sp)
   m = emlrtCreateCharArray(2, &iv2[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 43, m, &msgID[0]);
   emlrtAssign(&c_y, m);
-  st.site = &jd_emlrtRSI;
-  b_feval(&st, y, feval(&st, b_y, c_y, &emlrtMCI), &b_emlrtMCI);
+  st.site = &ld_emlrtRSI;
+  b_feval(&st, y, feval(&st, b_y, c_y, &b_emlrtMCI), &c_emlrtMCI);
 }
 
 /* End of code generation (warning.c) */

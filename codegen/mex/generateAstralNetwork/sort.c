@@ -19,42 +19,42 @@
 #include "sortIdx.h"
 
 /* Variable Definitions */
-static emlrtRSInfo hc_emlrtRSI = {
+static emlrtRSInfo ic_emlrtRSI = {
     76,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
                                                                         */
 };
 
-static emlrtRSInfo ic_emlrtRSI = {
+static emlrtRSInfo jc_emlrtRSI = {
     79,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
                                                                         */
 };
 
-static emlrtRSInfo jc_emlrtRSI = {
+static emlrtRSInfo kc_emlrtRSI = {
     81,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
                                                                         */
 };
 
-static emlrtRSInfo kc_emlrtRSI = {
+static emlrtRSInfo lc_emlrtRSI = {
     84,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
                                                                         */
 };
 
-static emlrtRSInfo lc_emlrtRSI = {
+static emlrtRSInfo mc_emlrtRSI = {
     87,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
                                                                         */
 };
 
-static emlrtRSInfo mc_emlrtRSI = {
+static emlrtRSInfo nc_emlrtRSI = {
     90,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" /* pathName
@@ -124,23 +124,23 @@ void sort(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
   idx->size[0] = k;
   emxEnsureCapacity_int32_T(sp, idx, i, &vc_emlrtRTEI);
   idx_data = idx->data;
-  st.site = &hc_emlrtRSI;
   st.site = &ic_emlrtRSI;
   st.site = &jc_emlrtRSI;
   st.site = &kc_emlrtRSI;
+  st.site = &lc_emlrtRSI;
   if (k > 2147483646) {
-    b_st.site = &s_emlrtRSI;
+    b_st.site = &t_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   for (k = 0; k <= vlen; k++) {
     vwork_data[k] = x_data[k];
   }
   emxInit_int32_T(sp, &iidx, &xc_emlrtRTEI);
-  st.site = &lc_emlrtRSI;
+  st.site = &mc_emlrtRSI;
   sortIdx(&st, vwork, iidx);
   iidx_data = iidx->data;
   vwork_data = vwork->data;
-  st.site = &mc_emlrtRSI;
+  st.site = &nc_emlrtRSI;
   for (k = 0; k <= vlen; k++) {
     x_data[k] = vwork_data[k];
     idx_data[k] = iidx_data[k];

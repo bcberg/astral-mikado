@@ -33,6 +33,7 @@ densityRange = logspace(densSpec(1),densSpec(2),densSpec(3));
 numFilRange = densityRange * D^2 / l;
 numAstersRange = round(numFilRange / astralNum);
 numAstersUsed = unique(numAstersRange);
+numAstersUsed = numAstersUsed(numAstersUsed > 0);
 numUniqueDensVals = length(numAstersUsed);
 actualDensities = numAstersUsed * (astralNum * l / D^2);
 percProbs = zeros(1,numUniqueDensVals);
@@ -60,7 +61,7 @@ delete(pool)
 
 curve = [actualDensities; percProbs];
 if ~isempty(saveDirectory)
-    fileToSave = string(saveDirectory) + "/" + filename + ".mat";
+    fileToSave = fullfile(saveDirectory,filename + ".mat");
     save(fileToSave)    % saves all variables, including function call args
 end
 end

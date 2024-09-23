@@ -41,6 +41,7 @@ build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
 build $builddir/generateAstralNetwork_initialize.o : cc $root/generateAstralNetwork_initialize.c
 build $builddir/generateAstralNetwork_terminate.o : cc $root/generateAstralNetwork_terminate.c
 build $builddir/generateAstralNetwork.o : cc $root/generateAstralNetwork.c
+build $builddir/error.o : cc $root/error.c
 build $builddir/rand.o : cc $root/rand.c
 build $builddir/mustBeInteger.o : cc $root/mustBeInteger.c
 build $builddir/colon.o : cc $root/colon.c
@@ -61,4 +62,4 @@ build $builddir/_coder_generateAstralNetwork_info.o : cc $root/interface/_coder_
 build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root/generateAstralNetwork_mex.mexa64 : link $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/sumMatrixIncludeNaN.o $builddir/eml_int_forloop_overflow_check.o $builddir/sort.o $builddir/sortIdx.o $builddir/generateAstralNetwork_emxutil.o $builddir/_coder_generateAstralNetwork_info.o $builddir/c_mexapi_version.o 
+build $root/generateAstralNetwork_mex.mexa64 : link $builddir/generateAstralNetwork_data.o $builddir/rt_nonfinite.o $builddir/generateAstralNetwork_initialize.o $builddir/generateAstralNetwork_terminate.o $builddir/generateAstralNetwork.o $builddir/error.o $builddir/rand.o $builddir/mustBeInteger.o $builddir/colon.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/sum.o $builddir/mod.o $builddir/indexShapeCheck.o $builddir/warning.o $builddir/_coder_generateAstralNetwork_api.o $builddir/_coder_generateAstralNetwork_mex.o $builddir/sumMatrixIncludeNaN.o $builddir/eml_int_forloop_overflow_check.o $builddir/sort.o $builddir/sortIdx.o $builddir/generateAstralNetwork_emxutil.o $builddir/_coder_generateAstralNetwork_info.o $builddir/c_mexapi_version.o 

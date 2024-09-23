@@ -20,14 +20,14 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ab_emlrtRSI = {
+static emlrtRSInfo bb_emlrtRSI = {
     20,    /* lineNo */
     "sum", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sum.m" /* pathName
                                                                      */
 };
 
-static emlrtRSInfo bb_emlrtRSI =
+static emlrtRSInfo cb_emlrtRSI =
     {
         99,        /* lineNo */
         "sumprod", /* fcnName */
@@ -35,28 +35,28 @@ static emlrtRSInfo bb_emlrtRSI =
         "sumprod.m" /* pathName */
 };
 
-static emlrtRSInfo cb_emlrtRSI = {
+static emlrtRSInfo db_emlrtRSI = {
     86,                      /* lineNo */
     "combineVectorElements", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "combineVectorElements.m" /* pathName */
 };
 
-static emlrtRSInfo db_emlrtRSI = {
+static emlrtRSInfo eb_emlrtRSI = {
     112,                /* lineNo */
     "blockedSummation", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "blockedSummation.m" /* pathName */
 };
 
-static emlrtRSInfo eb_emlrtRSI = {
+static emlrtRSInfo fb_emlrtRSI = {
     173,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "blockedSummation.m" /* pathName */
 };
 
-static emlrtRSInfo fb_emlrtRSI = {
+static emlrtRSInfo gb_emlrtRSI = {
     192,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
@@ -98,25 +98,25 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
   x_data = x->data;
-  st.site = &ab_emlrtRSI;
-  b_st.site = &bb_emlrtRSI;
-  c_st.site = &cb_emlrtRSI;
+  st.site = &bb_emlrtRSI;
+  b_st.site = &cb_emlrtRSI;
+  c_st.site = &db_emlrtRSI;
   if (x->size[0] == 0) {
     y->size[0] = 0;
   } else {
     int32_T scalarLB;
     int32_T vstride;
     int32_T vstride_tmp;
-    d_st.site = &db_emlrtRSI;
+    d_st.site = &eb_emlrtRSI;
     vstride_tmp = x->size[0];
     vstride = x->size[0];
     scalarLB = y->size[0];
     y->size[0] = x->size[0];
     emxEnsureCapacity_real_T(&d_st, y, scalarLB, &ec_emlrtRTEI);
     y_data = y->data;
-    e_st.site = &eb_emlrtRSI;
+    e_st.site = &fb_emlrtRSI;
     if (x->size[0] > 2147483646) {
-      f_st.site = &s_emlrtRSI;
+      f_st.site = &t_emlrtRSI;
       check_forloop_overflow_error(&f_st);
     }
     if (x->size[0] < 3200) {
@@ -137,7 +137,7 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
       emlrtPopJmpBuf(&d_st, &emlrtJBStack);
       emlrtExitParallelRegion(&d_st, omp_in_parallel());
     }
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     scalarLB = (vstride / 2) << 1;
     vstride_tmp = scalarLB - 2;
     for (xj = 0; xj <= vstride_tmp; xj += 2) {

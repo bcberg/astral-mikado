@@ -17,21 +17,21 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo f_emlrtRSI = {
+static emlrtRSInfo g_emlrtRSI = {
     103,    /* lineNo */
     "rand", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/randfun/rand.m" /* pathName
                                                                       */
 };
 
-static emlrtRSInfo g_emlrtRSI = {
+static emlrtRSInfo h_emlrtRSI = {
     104,    /* lineNo */
     "rand", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/randfun/rand.m" /* pathName
                                                                       */
 };
 
-static emlrtRSInfo h_emlrtRSI = {
+static emlrtRSInfo i_emlrtRSI = {
     20,                /* lineNo */
     "zerosWithChecks", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
@@ -64,10 +64,10 @@ void b_rand(const emlrtStack *sp, const real_T varargin_1[2],
   int32_T i;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &f_emlrtRSI;
+  st.site = &g_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  b_st.site = &h_emlrtRSI;
+  b_st.site = &i_emlrtRSI;
   mustBeInteger(&b_st, varargin_1);
   if (!(varargin_1[0] >= 0.0)) {
     emlrtNonNegativeCheckR2012b(varargin_1[0], &f_emlrtDCI, &st);
@@ -80,7 +80,7 @@ void b_rand(const emlrtStack *sp, const real_T varargin_1[2],
   r->size[1] = 2;
   emxEnsureCapacity_real_T(&st, r, i, &cb_emlrtRTEI);
   r_data = r->data;
-  st.site = &g_emlrtRSI;
+  st.site = &h_emlrtRSI;
   if ((int32_T)varargin_1[0] != 0) {
     emlrtRandu(&r_data[0], (int32_T)varargin_1[0] << 1);
   }
@@ -95,10 +95,10 @@ void c_rand(const emlrtStack *sp, const real_T varargin_1[2],
   int32_T i;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &f_emlrtRSI;
+  st.site = &g_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  b_st.site = &h_emlrtRSI;
+  b_st.site = &i_emlrtRSI;
   mustBeInteger(&b_st, varargin_1);
   if (!(varargin_1[0] >= 0.0)) {
     emlrtNonNegativeCheckR2012b(varargin_1[0], &f_emlrtDCI, &st);
@@ -111,7 +111,7 @@ void c_rand(const emlrtStack *sp, const real_T varargin_1[2],
   r->size[1] = (int32_T)varargin_1[1];
   emxEnsureCapacity_real_T(&st, r, i, &cb_emlrtRTEI);
   r_data = r->data;
-  st.site = &g_emlrtRSI;
+  st.site = &h_emlrtRSI;
   if (((int32_T)varargin_1[0] != 0) && ((int32_T)varargin_1[1] != 0)) {
     emlrtRandu(&r_data[0], (int32_T)varargin_1[0] * (int32_T)varargin_1[1]);
   }

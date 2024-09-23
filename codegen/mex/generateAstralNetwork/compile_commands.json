@@ -31,6 +31,12 @@
   },
   {
     "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  error.c -o build/glnxa64/error.o",
+    "file": "error.c",
+    "output": "build/glnxa64/error.o"
+  },
+  {
+    "directory": "/home/bcberg/Documents/astral-mikado/codegen/mex/generateAstralNetwork",
     "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/bcberg/Documents/astral-mikado\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=generateAstralNetwork_mex -msse2 -fno-predictive-commoning -c -fopenmp -DOMPLIBNAME=\"/usr/local/MATLAB/R2024a/sys/os/glnxa64/libiomp5.so\"  rand.c -o build/glnxa64/rand.o",
     "file": "rand.c",
     "output": "build/glnxa64/rand.o"

@@ -20,119 +20,119 @@
 #include "omp.h"
 
 /* Variable Definitions */
-static emlrtRSInfo oc_emlrtRSI = {
+static emlrtRSInfo pc_emlrtRSI = {
     105,       /* lineNo */
     "sortIdx", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo pc_emlrtRSI = {
+static emlrtRSInfo qc_emlrtRSI = {
     301,                /* lineNo */
     "block_merge_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo qc_emlrtRSI = {
+static emlrtRSInfo rc_emlrtRSI = {
     309,                /* lineNo */
     "block_merge_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo rc_emlrtRSI = {
+static emlrtRSInfo sc_emlrtRSI = {
     310,                /* lineNo */
     "block_merge_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo sc_emlrtRSI = {
+static emlrtRSInfo tc_emlrtRSI = {
     318,                /* lineNo */
     "block_merge_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo tc_emlrtRSI = {
+static emlrtRSInfo uc_emlrtRSI = {
     326,                /* lineNo */
     "block_merge_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo uc_emlrtRSI = {
+static emlrtRSInfo vc_emlrtRSI = {
     381,                      /* lineNo */
     "initialize_vector_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo vc_emlrtRSI = {
+static emlrtRSInfo wc_emlrtRSI = {
     409,                      /* lineNo */
     "initialize_vector_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo wc_emlrtRSI = {
+static emlrtRSInfo xc_emlrtRSI = {
     416,                      /* lineNo */
     "initialize_vector_sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo xc_emlrtRSI = {
+static emlrtRSInfo yc_emlrtRSI = {
     576,                /* lineNo */
     "merge_pow2_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo yc_emlrtRSI = {
+static emlrtRSInfo ad_emlrtRSI = {
     578,                /* lineNo */
     "merge_pow2_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo ad_emlrtRSI = {
+static emlrtRSInfo bd_emlrtRSI = {
     606,                /* lineNo */
     "merge_pow2_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo bd_emlrtRSI = {
+static emlrtRSInfo cd_emlrtRSI = {
     488,           /* lineNo */
     "merge_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo dd_emlrtRSI = {
+static emlrtRSInfo ed_emlrtRSI = {
     496,           /* lineNo */
     "merge_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo ed_emlrtRSI = {
+static emlrtRSInfo fd_emlrtRSI = {
     503,           /* lineNo */
     "merge_block", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo fd_emlrtRSI = {
+static emlrtRSInfo gd_emlrtRSI = {
     550,     /* lineNo */
     "merge", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
                                                                            */
 };
 
-static emlrtRSInfo gd_emlrtRSI = {
+static emlrtRSInfo hd_emlrtRSI = {
     519,     /* lineNo */
     "merge", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName
@@ -209,9 +209,9 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
     int32_T p;
     int32_T q;
     n = np + nq;
-    st.site = &gd_emlrtRSI;
+    st.site = &hd_emlrtRSI;
     if (n > 2147483646) {
-      b_st.site = &s_emlrtRSI;
+      b_st.site = &t_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
     if (n < 3200) {
@@ -257,9 +257,9 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
           q++;
         } else {
           q = iout - p;
-          st.site = &fd_emlrtRSI;
+          st.site = &gd_emlrtRSI;
           if ((p + 1 <= np) && (np > 2147483646)) {
-            b_st.site = &s_emlrtRSI;
+            b_st.site = &t_emlrtRSI;
             check_forloop_overflow_error(&b_st);
           }
           if (np - p < 3200) {
@@ -310,7 +310,7 @@ static void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
       tailOffset = bLen * nPairs;
       nTail = n - tailOffset;
       if (nTail > bLen) {
-        st.site = &bd_emlrtRSI;
+        st.site = &cd_emlrtRSI;
         merge(&st, idx, x, offset + tailOffset, bLen, nTail - bLen, iwork,
               xwork);
       }
@@ -318,13 +318,13 @@ static void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
     tailOffset = bLen << 1;
     nPairs >>= 1;
     for (nTail = 0; nTail < nPairs; nTail++) {
-      st.site = &dd_emlrtRSI;
+      st.site = &ed_emlrtRSI;
       merge(&st, idx, x, offset + nTail * tailOffset, bLen, bLen, iwork, xwork);
     }
     bLen = tailOffset;
   }
   if (n > bLen) {
-    st.site = &ed_emlrtRSI;
+    st.site = &fd_emlrtRSI;
     merge(&st, idx, x, offset, bLen, n - bLen, iwork, xwork);
   }
 }
@@ -393,7 +393,7 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &oc_emlrtRSI;
+  st.site = &pc_emlrtRSI;
   emxInit_int32_T(&st, &iwork, &ad_emlrtRTEI);
   bLen = iwork->size[0];
   iwork->size[0] = nBlocks;
@@ -421,7 +421,7 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
   xwork->size[0] = nBlocks;
   emxEnsureCapacity_real_T(&st, xwork, i, &bd_emlrtRTEI);
   xwork_data = xwork->data;
-  b_st.site = &pc_emlrtRSI;
+  b_st.site = &qc_emlrtRSI;
   x4[0] = 0.0;
   idx4[0] = 0;
   x4[1] = 0.0;
@@ -432,9 +432,9 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
   idx4[3] = 0;
   bLen2 = 0;
   ib = 0;
-  c_st.site = &uc_emlrtRSI;
+  c_st.site = &vc_emlrtRSI;
   if (x->size[0] > 2147483646) {
-    d_st.site = &s_emlrtRSI;
+    d_st.site = &t_emlrtRSI;
     check_forloop_overflow_error(&d_st);
   }
   for (k = 0; k < nBlocks; k++) {
@@ -557,9 +557,9 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
       perm[1] = 2;
       perm[2] = 1;
     }
-    c_st.site = &vc_emlrtRSI;
+    c_st.site = &wc_emlrtRSI;
     if (ib > 2147483646) {
-      d_st.site = &s_emlrtRSI;
+      d_st.site = &t_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
     i = (uint8_T)ib;
@@ -571,7 +571,7 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
     }
   }
   b_i1 = bLen2 >> 1;
-  c_st.site = &wc_emlrtRSI;
+  c_st.site = &xc_emlrtRSI;
   for (k = 0; k < b_i1; k++) {
     ib = wOffset_tmp + k;
     i2 = idx_data[ib];
@@ -590,20 +590,20 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
     if (x->size[0] >= 256) {
       nBlocks = wOffset_tmp >> 8;
       if (nBlocks > 0) {
-        b_st.site = &qc_emlrtRSI;
+        b_st.site = &rc_emlrtRSI;
         for (b = 0; b < nBlocks; b++) {
           real_T b_xwork[256];
           int32_T b_iwork[256];
-          b_st.site = &rc_emlrtRSI;
+          b_st.site = &sc_emlrtRSI;
           i4 = (b << 8) - 1;
           for (b_b = 0; b_b < 6; b_b++) {
             bLen = 1 << (b_b + 2);
             bLen2 = bLen << 1;
             i = 256 >> (b_b + 3);
-            c_st.site = &xc_emlrtRSI;
+            c_st.site = &yc_emlrtRSI;
             for (k = 0; k < i; k++) {
               i2 = (i4 + k * bLen2) + 1;
-              c_st.site = &yc_emlrtRSI;
+              c_st.site = &ad_emlrtRSI;
               for (b_i1 = 0; b_i1 < bLen2; b_i1++) {
                 ib = i2 + b_i1;
                 b_iwork[b_i1] = idx_data[ib];
@@ -631,7 +631,7 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
                     b_i1++;
                   } else {
                     ib -= i3;
-                    c_st.site = &ad_emlrtRSI;
+                    c_st.site = &bd_emlrtRSI;
                     for (b_i1 = i3 + 1; b_i1 <= bLen; b_i1++) {
                       idx_tmp = ib + b_i1;
                       idx_data[idx_tmp] = b_iwork[b_i1 - 1];
@@ -647,13 +647,13 @@ void sortIdx(const emlrtStack *sp, emxArray_real_T *x, emxArray_int32_T *idx)
         ib = nBlocks << 8;
         b_i1 = wOffset_tmp - ib;
         if (b_i1 > 0) {
-          b_st.site = &sc_emlrtRSI;
+          b_st.site = &tc_emlrtRSI;
           merge_block(&b_st, idx, x, ib, b_i1, 2, iwork, xwork);
         }
         ib = 8;
       }
     }
-    b_st.site = &tc_emlrtRSI;
+    b_st.site = &uc_emlrtRSI;
     merge_block(&b_st, idx, x, 0, wOffset_tmp, ib, iwork, xwork);
   }
   emxFree_real_T(&st, &xwork);

@@ -14,6 +14,7 @@
 #include "assertValidSizeArg.h"
 #include "colon.h"
 #include "eml_int_forloop_overflow_check.h"
+#include "error.h"
 #include "generateAstralNetwork_data.h"
 #include "generateAstralNetwork_emxutil.h"
 #include "generateAstralNetwork_types.h"
@@ -32,288 +33,295 @@
 
 /* Variable Definitions */
 static emlrtRSInfo emlrtRSI = {
-    29,                                                            /* lineNo */
-    "generateAstralNetwork",                                       /* fcnName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
-                                                                    */
-};
-
-static emlrtRSInfo b_emlrtRSI = {
     30,                                                            /* lineNo */
     "generateAstralNetwork",                                       /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo c_emlrtRSI = {
-    31,                                                            /* lineNo */
+static emlrtRSInfo b_emlrtRSI = {
+    33,                                                            /* lineNo */
     "generateAstralNetwork",                                       /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo d_emlrtRSI = {
+static emlrtRSInfo c_emlrtRSI = {
     34,                                                            /* lineNo */
     "generateAstralNetwork",                                       /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo e_emlrtRSI = {
-    44,                                                            /* lineNo */
+static emlrtRSInfo d_emlrtRSI = {
+    35,                                                            /* lineNo */
     "generateAstralNetwork",                                       /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo i_emlrtRSI = {
-    132,                                                           /* lineNo */
-    "findNodes",                                                   /* fcnName */
+static emlrtRSInfo e_emlrtRSI = {
+    38,                                                            /* lineNo */
+    "generateAstralNetwork",                                       /* fcnName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
+                                                                    */
+};
+
+static emlrtRSInfo f_emlrtRSI = {
+    48,                                                            /* lineNo */
+    "generateAstralNetwork",                                       /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo j_emlrtRSI = {
-    130,                                                           /* lineNo */
+    136,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo k_emlrtRSI = {
-    129,                                                           /* lineNo */
+    134,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo l_emlrtRSI = {
-    89,                                                            /* lineNo */
+    133,                                                           /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo m_emlrtRSI = {
-    87,                                                            /* lineNo */
+    93,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo n_emlrtRSI = {
-    86,                                                            /* lineNo */
+    91,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo o_emlrtRSI = {
-    77,                                                            /* lineNo */
+    90,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo p_emlrtRSI = {
-    76,                                                            /* lineNo */
+    81,                                                            /* lineNo */
     "findNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo q_emlrtRSI = {
+    80,                                                            /* lineNo */
+    "findNodes",                                                   /* fcnName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
+                                                                    */
+};
+
+static emlrtRSInfo r_emlrtRSI = {
     11,                                                           /* lineNo */
     "cos",                                                        /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/cos.m" /* pathName */
 };
 
-static emlrtRSInfo r_emlrtRSI = {
+static emlrtRSInfo s_emlrtRSI = {
     33,                           /* lineNo */
     "applyScalarFunctionInPlace", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "applyScalarFunctionInPlace.m" /* pathName */
 };
 
-static emlrtRSInfo t_emlrtRSI = {
+static emlrtRSInfo u_emlrtRSI = {
     11,                                                           /* lineNo */
     "sin",                                                        /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sin.m" /* pathName */
 };
 
-static emlrtRSInfo u_emlrtRSI = {
+static emlrtRSInfo v_emlrtRSI = {
     28,                                                           /* lineNo */
     "colon",                                                      /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
 };
 
-static emlrtRSInfo v_emlrtRSI = {
+static emlrtRSInfo w_emlrtRSI = {
     125,                                                          /* lineNo */
     "colon",                                                      /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
 };
 
-static emlrtRSInfo gb_emlrtRSI = {
+static emlrtRSInfo hb_emlrtRSI = {
     44,       /* lineNo */
     "mpower", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/mpower.m" /* pathName
                                                                        */
 };
 
-static emlrtRSInfo hb_emlrtRSI = {
+static emlrtRSInfo ib_emlrtRSI = {
     71,                                                           /* lineNo */
     "power",                                                      /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/power.m" /* pathName */
 };
 
-static emlrtRSInfo ib_emlrtRSI = {
+static emlrtRSInfo jb_emlrtRSI = {
     40,                  /* lineNo */
     "reshapeSizeChecks", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "reshapeSizeChecks.m" /* pathName */
 };
 
-static emlrtRSInfo jb_emlrtRSI = {
-    339,                                                           /* lineNo */
-    "defineSprings",                                               /* fcnName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
-                                                                    */
-};
-
 static emlrtRSInfo kb_emlrtRSI = {
-    330,                                                           /* lineNo */
+    343,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo mb_emlrtRSI = {
-    314,                                                           /* lineNo */
+static emlrtRSInfo lb_emlrtRSI = {
+    334,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo nb_emlrtRSI = {
-    304,                                                           /* lineNo */
+    318,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo ob_emlrtRSI = {
-    296,                                                           /* lineNo */
+    308,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo pb_emlrtRSI = {
-    289,                                                           /* lineNo */
+    300,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo qb_emlrtRSI = {
-    276,                                                           /* lineNo */
+    293,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo rb_emlrtRSI = {
-    267,                                                           /* lineNo */
+    280,                                                           /* lineNo */
     "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo sb_emlrtRSI = {
-    203,                                                           /* lineNo */
-    "sortNodes",                                                   /* fcnName */
+    271,                                                           /* lineNo */
+    "defineSprings",                                               /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo tb_emlrtRSI = {
-    216,                                                           /* lineNo */
+    207,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo ub_emlrtRSI = {
-    218,                                                           /* lineNo */
+    220,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
 static emlrtRSInfo vb_emlrtRSI = {
-    219,                                                           /* lineNo */
-    "sortNodes",                                                   /* fcnName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
-                                                                    */
-};
-
-static emlrtRSInfo wb_emlrtRSI = {
     222,                                                           /* lineNo */
     "sortNodes",                                                   /* fcnName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
                                                                     */
 };
 
+static emlrtRSInfo wb_emlrtRSI = {
+    223,                                                           /* lineNo */
+    "sortNodes",                                                   /* fcnName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
+                                                                    */
+};
+
 static emlrtRSInfo xb_emlrtRSI = {
+    226,                                                           /* lineNo */
+    "sortNodes",                                                   /* fcnName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pathName
+                                                                    */
+};
+
+static emlrtRSInfo yb_emlrtRSI = {
     35,                                                            /* lineNo */
     "find",                                                        /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo yb_emlrtRSI = {
+static emlrtRSInfo ac_emlrtRSI = {
     158,                                                           /* lineNo */
     "eml_find",                                                    /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo ac_emlrtRSI = {
+static emlrtRSInfo bc_emlrtRSI = {
     138,                                                           /* lineNo */
     "eml_find",                                                    /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo bc_emlrtRSI = {
+static emlrtRSInfo cc_emlrtRSI = {
     253,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo cc_emlrtRSI = {
+static emlrtRSInfo dc_emlrtRSI = {
     254,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo dc_emlrtRSI = {
+static emlrtRSInfo ec_emlrtRSI = {
     255,                                                           /* lineNo */
     "find_first_nonempty_triples",                                 /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" /* pathName
                                                                     */
 };
 
-static emlrtRSInfo fc_emlrtRSI = {
+static emlrtRSInfo gc_emlrtRSI = {
     70,    /* lineNo */
     "dot", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/specfun/dot.m" /* pathName
                                                                      */
 };
 
-static emlrtRSInfo gc_emlrtRSI = {
+static emlrtRSInfo hc_emlrtRSI = {
     37,     /* lineNo */
     "sort", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m" /* pathName
@@ -323,7 +331,7 @@ static emlrtRSInfo gc_emlrtRSI = {
 static emlrtBCInfo emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    317,                                                            /* lineNo */
+    321,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -334,7 +342,7 @@ static emlrtBCInfo emlrtBCI = {
 static emlrtBCInfo b_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    343,                                                            /* lineNo */
+    347,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -345,7 +353,7 @@ static emlrtBCInfo b_emlrtBCI = {
 static emlrtBCInfo c_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    297,                                                            /* lineNo */
+    301,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -356,7 +364,7 @@ static emlrtBCInfo c_emlrtBCI = {
 static emlrtBCInfo d_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    297,                                                            /* lineNo */
+    301,                                                            /* lineNo */
     54,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -367,7 +375,7 @@ static emlrtBCInfo d_emlrtBCI = {
 static emlrtBCInfo e_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    296,                                                            /* lineNo */
+    300,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -378,7 +386,7 @@ static emlrtBCInfo e_emlrtBCI = {
 static emlrtBCInfo f_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    277,                                                            /* lineNo */
+    281,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -389,7 +397,7 @@ static emlrtBCInfo f_emlrtBCI = {
 static emlrtBCInfo g_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    277,                                                            /* lineNo */
+    281,                                                            /* lineNo */
     36,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -400,7 +408,7 @@ static emlrtBCInfo g_emlrtBCI = {
 static emlrtBCInfo h_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    276,                                                            /* lineNo */
+    280,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -411,7 +419,7 @@ static emlrtBCInfo h_emlrtBCI = {
 static emlrtBCInfo i_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    271,                                                            /* lineNo */
+    275,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -422,7 +430,7 @@ static emlrtBCInfo i_emlrtBCI = {
 static emlrtBCInfo j_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    308,                                                            /* lineNo */
+    312,                                                            /* lineNo */
     18,                                                             /* colNo */
     "ends",                                                         /* aName */
     "defineSprings",                                                /* fName */
@@ -431,7 +439,7 @@ static emlrtBCInfo j_emlrtBCI = {
 };
 
 static emlrtDCInfo emlrtDCI = {
-    260,                                                            /* lineNo */
+    264,                                                            /* lineNo */
     1,                                                              /* colNo */
     "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -439,7 +447,7 @@ static emlrtDCInfo emlrtDCI = {
 };
 
 static emlrtDCInfo b_emlrtDCI = {
-    259,                                                            /* lineNo */
+    263,                                                            /* lineNo */
     1,                                                              /* colNo */
     "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -447,7 +455,7 @@ static emlrtDCInfo b_emlrtDCI = {
 };
 
 static emlrtDCInfo c_emlrtDCI = {
-    260,                                                            /* lineNo */
+    264,                                                            /* lineNo */
     14,                                                             /* colNo */
     "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -455,7 +463,7 @@ static emlrtDCInfo c_emlrtDCI = {
 };
 
 static emlrtDCInfo d_emlrtDCI = {
-    260,                                                            /* lineNo */
+    264,                                                            /* lineNo */
     14,                                                             /* colNo */
     "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -463,7 +471,7 @@ static emlrtDCInfo d_emlrtDCI = {
 };
 
 static emlrtDCInfo e_emlrtDCI = {
-    259,                                                            /* lineNo */
+    263,                                                            /* lineNo */
     17,                                                             /* colNo */
     "defineSprings",                                                /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -497,7 +505,7 @@ static emlrtRTEInfo c_emlrtRTEI = {
 static emlrtBCInfo k_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    350,                                                            /* lineNo */
+    354,                                                            /* lineNo */
     25,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -508,7 +516,7 @@ static emlrtBCInfo k_emlrtBCI = {
 static emlrtBCInfo l_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    350,                                                            /* lineNo */
+    354,                                                            /* lineNo */
     23,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -518,7 +526,7 @@ static emlrtBCInfo l_emlrtBCI = {
 
 static emlrtECInfo emlrtECI = {
     -1,                                                            /* nDims */
-    316,                                                           /* lineNo */
+    320,                                                           /* lineNo */
     13,                                                            /* colNo */
     "defineSprings",                                               /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -527,7 +535,7 @@ static emlrtECInfo emlrtECI = {
 static emlrtBCInfo m_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    316,                                                            /* lineNo */
+    320,                                                            /* lineNo */
     21,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -538,7 +546,7 @@ static emlrtBCInfo m_emlrtBCI = {
 static emlrtBCInfo n_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    338,                                                            /* lineNo */
+    342,                                                            /* lineNo */
     30,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -549,7 +557,7 @@ static emlrtBCInfo n_emlrtBCI = {
 static emlrtBCInfo o_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    329,                                                            /* lineNo */
+    333,                                                            /* lineNo */
     31,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -560,7 +568,7 @@ static emlrtBCInfo o_emlrtBCI = {
 static emlrtBCInfo p_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    328,                                                            /* lineNo */
+    332,                                                            /* lineNo */
     38,                                                             /* colNo */
     "thisOrder",                                                    /* aName */
     "defineSprings",                                                /* fName */
@@ -571,7 +579,7 @@ static emlrtBCInfo p_emlrtBCI = {
 static emlrtBCInfo q_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    327,                                                            /* lineNo */
+    331,                                                            /* lineNo */
     31,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -582,7 +590,7 @@ static emlrtBCInfo q_emlrtBCI = {
 static emlrtBCInfo r_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    326,                                                            /* lineNo */
+    330,                                                            /* lineNo */
     38,                                                             /* colNo */
     "thisOrder",                                                    /* aName */
     "defineSprings",                                                /* fName */
@@ -593,7 +601,7 @@ static emlrtBCInfo r_emlrtBCI = {
 static emlrtBCInfo s_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    320,                                                            /* lineNo */
+    324,                                                            /* lineNo */
     26,                                                             /* colNo */
     "centers",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -604,7 +612,7 @@ static emlrtBCInfo s_emlrtBCI = {
 static emlrtBCInfo t_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    313,                                                            /* lineNo */
+    317,                                                            /* lineNo */
     32,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -615,7 +623,7 @@ static emlrtBCInfo t_emlrtBCI = {
 static emlrtBCInfo u_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    312,                                                            /* lineNo */
+    316,                                                            /* lineNo */
     26,                                                             /* colNo */
     "centers",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -624,7 +632,7 @@ static emlrtBCInfo u_emlrtBCI = {
 };
 
 static emlrtRTEInfo d_emlrtRTEI = {
-    303,                                                           /* lineNo */
+    307,                                                           /* lineNo */
     15,                                                            /* colNo */
     "defineSprings",                                               /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -633,7 +641,7 @@ static emlrtRTEInfo d_emlrtRTEI = {
 static emlrtBCInfo v_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    295,                                                            /* lineNo */
+    299,                                                            /* lineNo */
     30,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -644,7 +652,7 @@ static emlrtBCInfo v_emlrtBCI = {
 static emlrtBCInfo w_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    288,                                                            /* lineNo */
+    292,                                                            /* lineNo */
     31,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -655,7 +663,7 @@ static emlrtBCInfo w_emlrtBCI = {
 static emlrtBCInfo x_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    287,                                                            /* lineNo */
+    291,                                                            /* lineNo */
     38,                                                             /* colNo */
     "thisOrder",                                                    /* aName */
     "defineSprings",                                                /* fName */
@@ -666,7 +674,7 @@ static emlrtBCInfo x_emlrtBCI = {
 static emlrtBCInfo y_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    286,                                                            /* lineNo */
+    290,                                                            /* lineNo */
     31,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -677,7 +685,7 @@ static emlrtBCInfo y_emlrtBCI = {
 static emlrtBCInfo ab_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    285,                                                            /* lineNo */
+    289,                                                            /* lineNo */
     38,                                                             /* colNo */
     "thisOrder",                                                    /* aName */
     "defineSprings",                                                /* fName */
@@ -688,7 +696,7 @@ static emlrtBCInfo ab_emlrtBCI = {
 static emlrtBCInfo bb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    280,                                                            /* lineNo */
+    284,                                                            /* lineNo */
     26,                                                             /* colNo */
     "centers",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -699,7 +707,7 @@ static emlrtBCInfo bb_emlrtBCI = {
 static emlrtBCInfo cb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    275,                                                            /* lineNo */
+    279,                                                            /* lineNo */
     32,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "defineSprings",                                                /* fName */
@@ -710,7 +718,7 @@ static emlrtBCInfo cb_emlrtBCI = {
 static emlrtBCInfo db_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    274,                                                            /* lineNo */
+    278,                                                            /* lineNo */
     26,                                                             /* colNo */
     "centers",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -719,7 +727,7 @@ static emlrtBCInfo db_emlrtBCI = {
 };
 
 static emlrtRTEInfo e_emlrtRTEI = {
-    266,                                                           /* lineNo */
+    270,                                                           /* lineNo */
     15,                                                            /* colNo */
     "defineSprings",                                               /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -728,7 +736,7 @@ static emlrtRTEInfo e_emlrtRTEI = {
 static emlrtBCInfo eb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    341,                                                            /* lineNo */
+    345,                                                            /* lineNo */
     21,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -739,7 +747,7 @@ static emlrtBCInfo eb_emlrtBCI = {
 static emlrtBCInfo fb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    292,                                                            /* lineNo */
+    296,                                                            /* lineNo */
     25,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -750,7 +758,7 @@ static emlrtBCInfo fb_emlrtBCI = {
 static emlrtBCInfo gb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    333,                                                            /* lineNo */
+    337,                                                            /* lineNo */
     25,                                                             /* colNo */
     "springs",                                                      /* aName */
     "defineSprings",                                                /* fName */
@@ -761,7 +769,7 @@ static emlrtBCInfo gb_emlrtBCI = {
 static emlrtBCInfo hb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    184,                                                            /* lineNo */
+    188,                                                            /* lineNo */
     27,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -772,7 +780,7 @@ static emlrtBCInfo hb_emlrtBCI = {
 static emlrtBCInfo ib_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    184,                                                            /* lineNo */
+    188,                                                            /* lineNo */
     25,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -783,7 +791,7 @@ static emlrtBCInfo ib_emlrtBCI = {
 static emlrtBCInfo jb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    183,                                                            /* lineNo */
+    187,                                                            /* lineNo */
     21,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -794,7 +802,7 @@ static emlrtBCInfo jb_emlrtBCI = {
 static emlrtBCInfo kb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    183,                                                            /* lineNo */
+    187,                                                            /* lineNo */
     19,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -805,7 +813,7 @@ static emlrtBCInfo kb_emlrtBCI = {
 static emlrtBCInfo lb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    174,                                                            /* lineNo */
+    178,                                                            /* lineNo */
     26,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -816,7 +824,7 @@ static emlrtBCInfo lb_emlrtBCI = {
 static emlrtBCInfo mb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    173,                                                            /* lineNo */
+    177,                                                            /* lineNo */
     23,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -827,7 +835,7 @@ static emlrtBCInfo mb_emlrtBCI = {
 static emlrtBCInfo nb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    172,                                                            /* lineNo */
+    176,                                                            /* lineNo */
     66,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -838,7 +846,7 @@ static emlrtBCInfo nb_emlrtBCI = {
 static emlrtBCInfo ob_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    172,                                                            /* lineNo */
+    176,                                                            /* lineNo */
     57,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -849,7 +857,7 @@ static emlrtBCInfo ob_emlrtBCI = {
 static emlrtBCInfo pb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    172,                                                            /* lineNo */
+    176,                                                            /* lineNo */
     33,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -860,7 +868,7 @@ static emlrtBCInfo pb_emlrtBCI = {
 static emlrtBCInfo qb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    171,                                                            /* lineNo */
+    175,                                                            /* lineNo */
     68,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -871,7 +879,7 @@ static emlrtBCInfo qb_emlrtBCI = {
 static emlrtBCInfo rb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    171,                                                            /* lineNo */
+    175,                                                            /* lineNo */
     59,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -881,7 +889,7 @@ static emlrtBCInfo rb_emlrtBCI = {
 
 static emlrtECInfo b_emlrtECI = {
     -1,                                                            /* nDims */
-    169,                                                           /* lineNo */
+    173,                                                           /* lineNo */
     21,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -890,7 +898,7 @@ static emlrtECInfo b_emlrtECI = {
 static emlrtBCInfo sb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    169,                                                            /* lineNo */
+    173,                                                            /* lineNo */
     33,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -901,7 +909,7 @@ static emlrtBCInfo sb_emlrtBCI = {
 static emlrtBCInfo tb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    169,                                                            /* lineNo */
+    173,                                                            /* lineNo */
     30,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -911,7 +919,7 @@ static emlrtBCInfo tb_emlrtBCI = {
 
 static emlrtECInfo c_emlrtECI = {
     -1,                                                            /* nDims */
-    166,                                                           /* lineNo */
+    170,                                                           /* lineNo */
     21,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -920,7 +928,7 @@ static emlrtECInfo c_emlrtECI = {
 static emlrtBCInfo ub_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    166,                                                            /* lineNo */
+    170,                                                            /* lineNo */
     30,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -931,7 +939,7 @@ static emlrtBCInfo ub_emlrtBCI = {
 static emlrtBCInfo vb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    166,                                                            /* lineNo */
+    170,                                                            /* lineNo */
     27,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -942,7 +950,7 @@ static emlrtBCInfo vb_emlrtBCI = {
 static emlrtBCInfo wb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    159,                                                            /* lineNo */
+    163,                                                            /* lineNo */
     32,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -953,7 +961,7 @@ static emlrtBCInfo wb_emlrtBCI = {
 static emlrtBCInfo xb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    159,                                                            /* lineNo */
+    163,                                                            /* lineNo */
     23,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -964,7 +972,7 @@ static emlrtBCInfo xb_emlrtBCI = {
 static emlrtBCInfo yb_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    158,                                                            /* lineNo */
+    162,                                                            /* lineNo */
     36,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -973,7 +981,7 @@ static emlrtBCInfo yb_emlrtBCI = {
 };
 
 static emlrtRTEInfo g_emlrtRTEI = {
-    134,                                                           /* lineNo */
+    138,                                                           /* lineNo */
     19,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -981,7 +989,7 @@ static emlrtRTEInfo g_emlrtRTEI = {
 
 static emlrtECInfo d_emlrtECI = {
     1,                                                             /* nDims */
-    130,                                                           /* lineNo */
+    134,                                                           /* lineNo */
     29,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -990,7 +998,7 @@ static emlrtECInfo d_emlrtECI = {
 static emlrtBCInfo ac_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    130,                                                            /* lineNo */
+    134,                                                            /* lineNo */
     44,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -999,7 +1007,7 @@ static emlrtBCInfo ac_emlrtBCI = {
 };
 
 static emlrtRTEInfo h_emlrtRTEI = {
-    127,                                                           /* lineNo */
+    131,                                                           /* lineNo */
     15,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1008,7 +1016,7 @@ static emlrtRTEInfo h_emlrtRTEI = {
 static emlrtBCInfo bc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    120,                                                            /* lineNo */
+    124,                                                            /* lineNo */
     26,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -1019,7 +1027,7 @@ static emlrtBCInfo bc_emlrtBCI = {
 static emlrtBCInfo cc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    119,                                                            /* lineNo */
+    123,                                                            /* lineNo */
     23,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1030,7 +1038,7 @@ static emlrtBCInfo cc_emlrtBCI = {
 static emlrtBCInfo dc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    118,                                                            /* lineNo */
+    122,                                                            /* lineNo */
     52,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1041,7 +1049,7 @@ static emlrtBCInfo dc_emlrtBCI = {
 static emlrtBCInfo ec_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    118,                                                            /* lineNo */
+    122,                                                            /* lineNo */
     33,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1052,7 +1060,7 @@ static emlrtBCInfo ec_emlrtBCI = {
 static emlrtBCInfo fc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    117,                                                            /* lineNo */
+    121,                                                            /* lineNo */
     54,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1063,7 +1071,7 @@ static emlrtBCInfo fc_emlrtBCI = {
 static emlrtBCInfo gc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    117,                                                            /* lineNo */
+    121,                                                            /* lineNo */
     33,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1073,7 +1081,7 @@ static emlrtBCInfo gc_emlrtBCI = {
 
 static emlrtECInfo e_emlrtECI = {
     -1,                                                            /* nDims */
-    115,                                                           /* lineNo */
+    119,                                                           /* lineNo */
     21,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1082,7 +1090,7 @@ static emlrtECInfo e_emlrtECI = {
 static emlrtBCInfo hc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    115,                                                            /* lineNo */
+    119,                                                            /* lineNo */
     33,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -1093,7 +1101,7 @@ static emlrtBCInfo hc_emlrtBCI = {
 static emlrtBCInfo ic_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    115,                                                            /* lineNo */
+    119,                                                            /* lineNo */
     30,                                                             /* colNo */
     "filCross",                                                     /* aName */
     "findNodes",                                                    /* fName */
@@ -1103,7 +1111,7 @@ static emlrtBCInfo ic_emlrtBCI = {
 
 static emlrtECInfo f_emlrtECI = {
     -1,                                                            /* nDims */
-    112,                                                           /* lineNo */
+    116,                                                           /* lineNo */
     21,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1112,7 +1120,7 @@ static emlrtECInfo f_emlrtECI = {
 static emlrtBCInfo jc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    112,                                                            /* lineNo */
+    116,                                                            /* lineNo */
     30,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1123,7 +1131,7 @@ static emlrtBCInfo jc_emlrtBCI = {
 static emlrtBCInfo kc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    112,                                                            /* lineNo */
+    116,                                                            /* lineNo */
     27,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1134,7 +1142,7 @@ static emlrtBCInfo kc_emlrtBCI = {
 static emlrtBCInfo lc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    105,                                                            /* lineNo */
+    109,                                                            /* lineNo */
     27,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1145,7 +1153,7 @@ static emlrtBCInfo lc_emlrtBCI = {
 static emlrtBCInfo mc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    91,                                                             /* lineNo */
+    95,                                                             /* lineNo */
     36,                                                             /* colNo */
     "closeEnough",                                                  /* aName */
     "findNodes",                                                    /* fName */
@@ -1155,7 +1163,7 @@ static emlrtBCInfo mc_emlrtBCI = {
 
 static emlrtECInfo g_emlrtECI = {
     1,                                                             /* nDims */
-    87,                                                            /* lineNo */
+    91,                                                            /* lineNo */
     29,                                                            /* colNo */
     "findNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1164,7 +1172,7 @@ static emlrtECInfo g_emlrtECI = {
 static emlrtBCInfo nc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    87,                                                             /* lineNo */
+    91,                                                             /* lineNo */
     44,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1173,7 +1181,7 @@ static emlrtBCInfo nc_emlrtBCI = {
 };
 
 static emlrtDCInfo g_emlrtDCI = {
-    79,                                                             /* lineNo */
+    83,                                                             /* lineNo */
     15,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1181,7 +1189,7 @@ static emlrtDCInfo g_emlrtDCI = {
 };
 
 static emlrtDCInfo h_emlrtDCI = {
-    79,                                                             /* lineNo */
+    83,                                                             /* lineNo */
     15,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1189,7 +1197,7 @@ static emlrtDCInfo h_emlrtDCI = {
 };
 
 static emlrtDCInfo i_emlrtDCI = {
-    80,                                                             /* lineNo */
+    84,                                                             /* lineNo */
     18,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1197,7 +1205,7 @@ static emlrtDCInfo i_emlrtDCI = {
 };
 
 static emlrtDCInfo j_emlrtDCI = {
-    111,                                                            /* lineNo */
+    115,                                                            /* lineNo */
     35,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1205,7 +1213,7 @@ static emlrtDCInfo j_emlrtDCI = {
 };
 
 static emlrtDCInfo k_emlrtDCI = {
-    114,                                                            /* lineNo */
+    118,                                                            /* lineNo */
     38,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1213,7 +1221,7 @@ static emlrtDCInfo k_emlrtDCI = {
 };
 
 static emlrtDCInfo l_emlrtDCI = {
-    165,                                                            /* lineNo */
+    169,                                                            /* lineNo */
     35,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1221,7 +1229,7 @@ static emlrtDCInfo l_emlrtDCI = {
 };
 
 static emlrtDCInfo m_emlrtDCI = {
-    168,                                                            /* lineNo */
+    172,                                                            /* lineNo */
     38,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1229,7 +1237,7 @@ static emlrtDCInfo m_emlrtDCI = {
 };
 
 static emlrtDCInfo n_emlrtDCI = {
-    79,                                                             /* lineNo */
+    83,                                                             /* lineNo */
     1,                                                              /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1237,7 +1245,7 @@ static emlrtDCInfo n_emlrtDCI = {
 };
 
 static emlrtDCInfo o_emlrtDCI = {
-    80,                                                             /* lineNo */
+    84,                                                             /* lineNo */
     1,                                                              /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1247,7 +1255,7 @@ static emlrtDCInfo o_emlrtDCI = {
 static emlrtBCInfo oc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    88,                                                             /* lineNo */
+    92,                                                             /* lineNo */
     21,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1256,7 +1264,7 @@ static emlrtBCInfo oc_emlrtBCI = {
 };
 
 static emlrtDCInfo p_emlrtDCI = {
-    88,                                                             /* lineNo */
+    92,                                                             /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1266,7 +1274,7 @@ static emlrtDCInfo p_emlrtDCI = {
 static emlrtBCInfo pc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    131,                                                            /* lineNo */
+    135,                                                            /* lineNo */
     47,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1275,7 +1283,7 @@ static emlrtBCInfo pc_emlrtBCI = {
 };
 
 static emlrtDCInfo q_emlrtDCI = {
-    131,                                                            /* lineNo */
+    135,                                                            /* lineNo */
     47,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1285,7 +1293,7 @@ static emlrtDCInfo q_emlrtDCI = {
 static emlrtBCInfo qc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    89,                                                             /* lineNo */
+    93,                                                             /* lineNo */
     33,                                                             /* colNo */
     "otherFils",                                                    /* aName */
     "findNodes",                                                    /* fName */
@@ -1296,7 +1304,7 @@ static emlrtBCInfo qc_emlrtBCI = {
 static emlrtBCInfo rc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    138,                                                            /* lineNo */
+    142,                                                            /* lineNo */
     23,                                                             /* colNo */
     "tooFar",                                                       /* aName */
     "findNodes",                                                    /* fName */
@@ -1307,7 +1315,7 @@ static emlrtBCInfo rc_emlrtBCI = {
 static emlrtBCInfo sc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    100,                                                            /* lineNo */
+    104,                                                            /* lineNo */
     29,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1318,7 +1326,7 @@ static emlrtBCInfo sc_emlrtBCI = {
 static emlrtBCInfo tc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    100,                                                            /* lineNo */
+    104,                                                            /* lineNo */
     44,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1329,7 +1337,7 @@ static emlrtBCInfo tc_emlrtBCI = {
 static emlrtBCInfo uc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    101,                                                            /* lineNo */
+    105,                                                            /* lineNo */
     23,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1340,7 +1348,7 @@ static emlrtBCInfo uc_emlrtBCI = {
 static emlrtBCInfo vc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    101,                                                            /* lineNo */
+    105,                                                            /* lineNo */
     36,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1351,7 +1359,7 @@ static emlrtBCInfo vc_emlrtBCI = {
 static emlrtBCInfo wc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    102,                                                            /* lineNo */
+    106,                                                            /* lineNo */
     27,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1362,7 +1370,7 @@ static emlrtBCInfo wc_emlrtBCI = {
 static emlrtBCInfo xc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    102,                                                            /* lineNo */
+    106,                                                            /* lineNo */
     49,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1373,7 +1381,7 @@ static emlrtBCInfo xc_emlrtBCI = {
 static emlrtBCInfo yc_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    103,                                                            /* lineNo */
+    107,                                                            /* lineNo */
     49,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1384,7 +1392,7 @@ static emlrtBCInfo yc_emlrtBCI = {
 static emlrtBCInfo ad_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    104,                                                            /* lineNo */
+    108,                                                            /* lineNo */
     30,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1395,7 +1403,7 @@ static emlrtBCInfo ad_emlrtBCI = {
 static emlrtBCInfo bd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     29,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1406,7 +1414,7 @@ static emlrtBCInfo bd_emlrtBCI = {
 static emlrtBCInfo cd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     38,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1415,7 +1423,7 @@ static emlrtBCInfo cd_emlrtBCI = {
 };
 
 static emlrtDCInfo r_emlrtDCI = {
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     38,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1425,7 +1433,7 @@ static emlrtDCInfo r_emlrtDCI = {
 static emlrtBCInfo dd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     57,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1436,7 +1444,7 @@ static emlrtBCInfo dd_emlrtBCI = {
 static emlrtBCInfo ed_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     66,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1445,7 +1453,7 @@ static emlrtBCInfo ed_emlrtBCI = {
 };
 
 static emlrtDCInfo s_emlrtDCI = {
-    152,                                                            /* lineNo */
+    156,                                                            /* lineNo */
     66,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1455,7 +1463,7 @@ static emlrtDCInfo s_emlrtDCI = {
 static emlrtBCInfo fd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
+    157,                                                            /* lineNo */
     23,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1466,7 +1474,7 @@ static emlrtBCInfo fd_emlrtBCI = {
 static emlrtBCInfo gd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
+    157,                                                            /* lineNo */
     32,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1477,7 +1485,7 @@ static emlrtBCInfo gd_emlrtBCI = {
 static emlrtBCInfo hd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
+    157,                                                            /* lineNo */
     51,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1488,7 +1496,7 @@ static emlrtBCInfo hd_emlrtBCI = {
 static emlrtBCInfo id_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    153,                                                            /* lineNo */
+    157,                                                            /* lineNo */
     60,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1499,7 +1507,7 @@ static emlrtBCInfo id_emlrtBCI = {
 static emlrtBCInfo jd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    154,                                                            /* lineNo */
+    158,                                                            /* lineNo */
     27,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1510,7 +1518,7 @@ static emlrtBCInfo jd_emlrtBCI = {
 static emlrtBCInfo kd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    154,                                                            /* lineNo */
+    158,                                                            /* lineNo */
     49,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1521,7 +1529,7 @@ static emlrtBCInfo kd_emlrtBCI = {
 static emlrtBCInfo ld_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    155,                                                            /* lineNo */
+    159,                                                            /* lineNo */
     49,                                                             /* colNo */
     "centers",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1532,7 +1540,7 @@ static emlrtBCInfo ld_emlrtBCI = {
 static emlrtBCInfo md_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    156,                                                            /* lineNo */
+    160,                                                            /* lineNo */
     30,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1543,7 +1551,7 @@ static emlrtBCInfo md_emlrtBCI = {
 static emlrtBCInfo nd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    156,                                                            /* lineNo */
+    160,                                                            /* lineNo */
     39,                                                             /* colNo */
     "sines",                                                        /* aName */
     "findNodes",                                                    /* fName */
@@ -1554,7 +1562,7 @@ static emlrtBCInfo nd_emlrtBCI = {
 static emlrtBCInfo od_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    157,                                                            /* lineNo */
+    161,                                                            /* lineNo */
     28,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1565,7 +1573,7 @@ static emlrtBCInfo od_emlrtBCI = {
 static emlrtBCInfo pd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    157,                                                            /* lineNo */
+    161,                                                            /* lineNo */
     37,                                                             /* colNo */
     "cosines",                                                      /* aName */
     "findNodes",                                                    /* fName */
@@ -1574,7 +1582,7 @@ static emlrtBCInfo pd_emlrtBCI = {
 };
 
 static emlrtDCInfo t_emlrtDCI = {
-    111,                                                            /* lineNo */
+    115,                                                            /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1582,7 +1590,7 @@ static emlrtDCInfo t_emlrtDCI = {
 };
 
 static emlrtDCInfo u_emlrtDCI = {
-    165,                                                            /* lineNo */
+    169,                                                            /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1590,7 +1598,7 @@ static emlrtDCInfo u_emlrtDCI = {
 };
 
 static emlrtDCInfo v_emlrtDCI = {
-    114,                                                            /* lineNo */
+    118,                                                            /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1598,7 +1606,7 @@ static emlrtDCInfo v_emlrtDCI = {
 };
 
 static emlrtDCInfo w_emlrtDCI = {
-    168,                                                            /* lineNo */
+    172,                                                            /* lineNo */
     21,                                                             /* colNo */
     "findNodes",                                                    /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m", /* pName */
@@ -1608,7 +1616,7 @@ static emlrtDCInfo w_emlrtDCI = {
 static emlrtBCInfo qd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    214,                                                            /* lineNo */
+    218,                                                            /* lineNo */
     14,                                                             /* colNo */
     "centers",                                                      /* aName */
     "sortNodes",                                                    /* fName */
@@ -1618,7 +1626,7 @@ static emlrtBCInfo qd_emlrtBCI = {
 
 static emlrtECInfo h_emlrtECI = {
     1,                                                             /* nDims */
-    218,                                                           /* lineNo */
+    222,                                                           /* lineNo */
     16,                                                            /* colNo */
     "sortNodes",                                                   /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1648,7 +1656,7 @@ static emlrtRTEInfo m_emlrtRTEI = {
 static emlrtBCInfo rd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    212,                                                            /* lineNo */
+    216,                                                            /* lineNo */
     25,                                                             /* colNo */
     "nodes",                                                        /* aName */
     "sortNodes",                                                    /* fName */
@@ -1659,7 +1667,7 @@ static emlrtBCInfo rd_emlrtBCI = {
 static emlrtBCInfo sd_emlrtBCI = {
     -1,                                                             /* iFirst */
     -1,                                                             /* iLast */
-    223,                                                            /* lineNo */
+    227,                                                            /* lineNo */
     27,                                                             /* colNo */
     "nodesOnFil",                                                   /* aName */
     "sortNodes",                                                    /* fName */
@@ -1668,56 +1676,56 @@ static emlrtBCInfo sd_emlrtBCI = {
 };
 
 static emlrtRTEInfo p_emlrtRTEI = {
-    29,                                                            /* lineNo */
+    33,                                                            /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo q_emlrtRTEI = {
-    30,                                                            /* lineNo */
+    34,                                                            /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo r_emlrtRTEI = {
-    34,                                                            /* lineNo */
+    38,                                                            /* lineNo */
     43,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo s_emlrtRTEI = {
-    34,                                                            /* lineNo */
+    38,                                                            /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo t_emlrtRTEI = {
-    259,                                                           /* lineNo */
+    263,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo u_emlrtRTEI = {
-    260,                                                           /* lineNo */
+    264,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo v_emlrtRTEI = {
-    47,                                                            /* lineNo */
+    51,                                                            /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo w_emlrtRTEI = {
-    48,                                                            /* lineNo */
+    52,                                                            /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1731,91 +1739,91 @@ static emlrtRTEInfo x_emlrtRTEI = {
 };
 
 static emlrtRTEInfo y_emlrtRTEI = {
-    34,                                                            /* lineNo */
+    38,                                                            /* lineNo */
     35,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo ab_emlrtRTEI = {
-    30,                                                            /* lineNo */
+    34,                                                            /* lineNo */
     27,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo bb_emlrtRTEI = {
-    267,                                                           /* lineNo */
+    271,                                                           /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo db_emlrtRTEI = {
-    76,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo eb_emlrtRTEI = {
-    77,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo fb_emlrtRTEI = {
-    79,                                                            /* lineNo */
-    1,                                                             /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo gb_emlrtRTEI = {
     80,                                                            /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
+static emlrtRTEInfo eb_emlrtRTEI = {
+    81,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo fb_emlrtRTEI = {
+    83,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo gb_emlrtRTEI = {
+    84,                                                            /* lineNo */
+    1,                                                             /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
 static emlrtRTEInfo hb_emlrtRTEI = {
-    183,                                                           /* lineNo */
+    187,                                                           /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo ib_emlrtRTEI = {
-    86,                                                            /* lineNo */
+    90,                                                            /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo jb_emlrtRTEI = {
-    129,                                                           /* lineNo */
+    133,                                                           /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo kb_emlrtRTEI = {
-    184,                                                           /* lineNo */
+    188,                                                           /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo lb_emlrtRTEI = {
-    88,                                                            /* lineNo */
+    92,                                                            /* lineNo */
     13,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo mb_emlrtRTEI = {
-    131,                                                           /* lineNo */
+    135,                                                           /* lineNo */
     39,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1831,98 +1839,98 @@ static emlrtRTEInfo nb_emlrtRTEI =
 };
 
 static emlrtRTEInfo ob_emlrtRTEI = {
-    55,                                                            /* lineNo */
+    59,                                                            /* lineNo */
     30,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo pb_emlrtRTEI = {
-    132,                                                           /* lineNo */
+    136,                                                           /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo qb_emlrtRTEI = {
-    110,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo rb_emlrtRTEI = {
-    111,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo sb_emlrtRTEI = {
-    113,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo tb_emlrtRTEI = {
     114,                                                           /* lineNo */
     21,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
+static emlrtRTEInfo rb_emlrtRTEI = {
+    115,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo sb_emlrtRTEI = {
+    117,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo tb_emlrtRTEI = {
+    118,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
 static emlrtRTEInfo ub_emlrtRTEI = {
-    164,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo vb_emlrtRTEI = {
-    165,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo wb_emlrtRTEI = {
-    167,                                                           /* lineNo */
-    21,                                                            /* colNo */
-    "generateAstralNetwork",                                       /* fName */
-    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
-};
-
-static emlrtRTEInfo xb_emlrtRTEI = {
     168,                                                           /* lineNo */
     21,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
+static emlrtRTEInfo vb_emlrtRTEI = {
+    169,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo wb_emlrtRTEI = {
+    171,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
+static emlrtRTEInfo xb_emlrtRTEI = {
+    172,                                                           /* lineNo */
+    21,                                                            /* colNo */
+    "generateAstralNetwork",                                       /* fName */
+    "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
+};
+
 static emlrtRTEInfo yb_emlrtRTEI = {
-    87,                                                            /* lineNo */
+    91,                                                            /* lineNo */
     9,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo ac_emlrtRTEI = {
-    130,                                                           /* lineNo */
+    134,                                                           /* lineNo */
     29,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo bc_emlrtRTEI = {
-    89,                                                            /* lineNo */
+    93,                                                            /* lineNo */
     33,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo fc_emlrtRTEI = {
-    203,                                                           /* lineNo */
+    207,                                                           /* lineNo */
     23,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1950,21 +1958,21 @@ static emlrtRTEInfo ic_emlrtRTEI = {
 };
 
 static emlrtRTEInfo jc_emlrtRTEI = {
-    208,                                                           /* lineNo */
+    212,                                                           /* lineNo */
     5,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo kc_emlrtRTEI = {
-    212,                                                           /* lineNo */
+    216,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo lc_emlrtRTEI = {
-    218,                                                           /* lineNo */
+    222,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -1978,28 +1986,28 @@ static emlrtRTEInfo mc_emlrtRTEI = {
 };
 
 static emlrtRTEInfo nc_emlrtRTEI = {
-    223,                                                           /* lineNo */
+    227,                                                           /* lineNo */
     16,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo oc_emlrtRTEI = {
-    223,                                                           /* lineNo */
+    227,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo pc_emlrtRTEI = {
-    219,                                                           /* lineNo */
+    223,                                                           /* lineNo */
     1,                                                             /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo qc_emlrtRTEI = {
-    188,                                                           /* lineNo */
+    192,                                                           /* lineNo */
     25,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -2013,14 +2021,14 @@ static emlrtRTEInfo rc_emlrtRTEI = {
 };
 
 static emlrtRTEInfo sc_emlrtRTEI = {
-    219,                                                           /* lineNo */
+    223,                                                           /* lineNo */
     19,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
 };
 
 static emlrtRTEInfo dd_emlrtRTEI = {
-    87,                                                            /* lineNo */
+    91,                                                            /* lineNo */
     29,                                                            /* colNo */
     "generateAstralNetwork",                                       /* fName */
     "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m" /* pName */
@@ -2232,7 +2240,7 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
   numAsters_tmp = orients->size[0];
   numAsters = orients->size[0];
   numFil = orients->size[0] * orients->size[1];
-  st.site = &p_emlrtRSI;
+  st.site = &q_emlrtRSI;
   emxInit_real_T(&st, &cosines, 2, &db_emlrtRTEI);
   i = cosines->size[0] * cosines->size[1];
   cosines->size[0] = orients->size[0];
@@ -2257,10 +2265,10 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
     emlrtPopJmpBuf(&st, &emlrtJBStack);
     emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  b_st.site = &q_emlrtRSI;
-  c_st.site = &r_emlrtRSI;
+  b_st.site = &r_emlrtRSI;
+  c_st.site = &s_emlrtRSI;
   if (numFil > 2147483646) {
-    d_st.site = &s_emlrtRSI;
+    d_st.site = &t_emlrtRSI;
     check_forloop_overflow_error(&d_st);
   }
   if (i) {
@@ -2281,7 +2289,7 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
     emlrtPopJmpBuf(&b_st, &emlrtJBStack);
     emlrtExitParallelRegion(&b_st, omp_in_parallel());
   }
-  st.site = &o_emlrtRSI;
+  st.site = &p_emlrtRSI;
   emxInit_real_T(&st, &sines, 2, &eb_emlrtRTEI);
   i1 = sines->size[0] * sines->size[1];
   sines->size[0] = numAsters_tmp;
@@ -2305,8 +2313,8 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
     emlrtPopJmpBuf(&st, &emlrtJBStack);
     emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  b_st.site = &t_emlrtRSI;
-  c_st.site = &r_emlrtRSI;
+  b_st.site = &u_emlrtRSI;
+  c_st.site = &s_emlrtRSI;
   if (i) {
     for (k = 0; k < numFil; k++) {
       sines_data[k] = muDoubleScalarSin(sines_data[k]);
@@ -2408,8 +2416,8 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
       real_T c_centers[2];
       int32_T b_loop_ub;
       /*  only look for intersections if filaments are close enough */
-      st.site = &n_emlrtRSI;
-      b_st.site = &u_emlrtRSI;
+      st.site = &o_emlrtRSI;
+      b_st.site = &v_emlrtRSI;
       if (numFil < ((real_T)idx + 1.0) + 1.0) {
         otherAsters->size[0] = 1;
         otherAsters->size[1] = 0;
@@ -2435,7 +2443,7 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
       c_centers[0] = centers_data[idx];
       c_centers[1] = centers_data[idx + centers->size[0]];
       b_otherAsters[0] = otherAsters->size[1];
-      st.site = &m_emlrtRSI;
+      st.site = &n_emlrtRSI;
       repmat(&st, c_centers, b_otherAsters, oldNodes);
       oldNodes_data = oldNodes->data;
       loop_ub = otherAsters->size[1];
@@ -2476,17 +2484,17 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
           filSubJdx = oldNodes_data[i1] - r3[i1];
           r4[i1] = filSubJdx * filSubJdx;
         }
-        st.site = &m_emlrtRSI;
+        st.site = &n_emlrtRSI;
         sum(&st, r1, centerSepSQR);
         oldNodes_data = centerSepSQR->data;
       } else {
-        st.site = &m_emlrtRSI;
-        binary_expand_op(&st, centerSepSQR, m_emlrtRSI, oldNodes, r);
+        st.site = &n_emlrtRSI;
+        binary_expand_op(&st, centerSepSQR, n_emlrtRSI, oldNodes, r);
         oldNodes_data = centerSepSQR->data;
       }
-      st.site = &l_emlrtRSI;
-      b_st.site = &gb_emlrtRSI;
-      c_st.site = &hb_emlrtRSI;
+      st.site = &m_emlrtRSI;
+      b_st.site = &hb_emlrtRSI;
+      c_st.site = &ib_emlrtRSI;
       loop_ub = centerSepSQR->size[0] - 1;
       b_loop_ub = 0;
       for (astralNum_tmp = 0; astralNum_tmp <= loop_ub; astralNum_tmp++) {
@@ -2758,8 +2766,8 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
       real_T y;
       boolean_T b;
       y = muDoubleScalarFloor((((real_T)idx + 1.0) - 1.0) / (real_T)astralNum);
-      st.site = &k_emlrtRSI;
-      b_st.site = &u_emlrtRSI;
+      st.site = &l_emlrtRSI;
+      b_st.site = &v_emlrtRSI;
       if (numAsters < (y + 1.0) + 1.0) {
         otherAsters->size[0] = 1;
         otherAsters->size[1] = 0;
@@ -2774,7 +2782,7 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
           otherAsters_data[i1] = ((y + 1.0) + 1.0) + (real_T)i1;
         }
       } else {
-        c_st.site = &v_emlrtRSI;
+        c_st.site = &w_emlrtRSI;
         eml_float_colon(&c_st, (y + 1.0) + 1.0, numAsters, otherAsters);
         otherAsters_data = otherAsters->data;
       }
@@ -2789,7 +2797,7 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
       b_centers_tmp = centers_data[((int32_T)(y + 1.0) + centers->size[0]) - 1];
       c_centers[1] = b_centers_tmp;
       b_otherAsters[0] = otherAsters->size[1];
-      st.site = &j_emlrtRSI;
+      st.site = &k_emlrtRSI;
       repmat(&st, c_centers, b_otherAsters, oldNodes);
       oldNodes_data = oldNodes->data;
       loop_ub = otherAsters->size[1];
@@ -2830,17 +2838,17 @@ static void findNodes(const emlrtStack *sp, const emxArray_real_T *centers,
           filSubJdx = oldNodes_data[i2] - r3[i2];
           r4[i2] = filSubJdx * filSubJdx;
         }
-        st.site = &j_emlrtRSI;
+        st.site = &k_emlrtRSI;
         sum(&st, r1, centerSepSQR);
         oldNodes_data = centerSepSQR->data;
       } else {
-        st.site = &j_emlrtRSI;
-        binary_expand_op(&st, centerSepSQR, j_emlrtRSI, oldNodes, r);
+        st.site = &k_emlrtRSI;
+        binary_expand_op(&st, centerSepSQR, k_emlrtRSI, oldNodes, r);
         oldNodes_data = centerSepSQR->data;
       }
-      st.site = &i_emlrtRSI;
-      b_st.site = &gb_emlrtRSI;
-      c_st.site = &hb_emlrtRSI;
+      st.site = &j_emlrtRSI;
+      b_st.site = &hb_emlrtRSI;
+      c_st.site = &ib_emlrtRSI;
       loop_ub = centerSepSQR->size[0];
       i2 = tooFar->size[0];
       tooFar->size[0] = centerSepSQR->size[0];
@@ -3313,7 +3321,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
    */
   /*        astral center. If there are no nodes on this filament, returns [].
    */
-  st.site = &sb_emlrtRSI;
+  st.site = &tb_emlrtRSI;
   emxInit_boolean_T(&st, &x, 2, &fc_emlrtRTEI);
   i = x->size[0] * x->size[1];
   x->size[0] = filCross->size[0];
@@ -3338,13 +3346,13 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     emlrtPopJmpBuf(&st, &emlrtJBStack);
     emlrtExitParallelRegion(&st, omp_in_parallel());
   }
-  b_st.site = &xb_emlrtRSI;
+  b_st.site = &yb_emlrtRSI;
   emxInit_int32_T(&b_st, &i_tmp, &rc_emlrtRTEI);
   i_tmp_data = i_tmp->data;
   if (loop_ub_tmp == 0) {
     i_tmp->size[0] = 0;
   } else {
-    c_st.site = &ac_emlrtRSI;
+    c_st.site = &bc_emlrtRSI;
     idx = 0;
     i = i_tmp->size[0];
     i_tmp->size[0] = loop_ub_tmp;
@@ -3391,7 +3399,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       }
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &bc_emlrtRSI;
+      d_st.site = &cc_emlrtRSI;
       indexShapeCheck(&d_st, i_tmp->size[0], iv);
       ii = i_tmp->size[0];
       i_tmp->size[0] = i;
@@ -3399,16 +3407,16 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       i_tmp_data = i_tmp->data;
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &cc_emlrtRSI;
+      d_st.site = &dc_emlrtRSI;
       indexShapeCheck(&d_st, loop_ub_tmp, iv);
       iv[0] = 1;
       iv[1] = i;
-      d_st.site = &dc_emlrtRSI;
+      d_st.site = &ec_emlrtRSI;
       indexShapeCheck(&d_st, loop_ub_tmp, iv);
     }
   }
   if ((x->size[0] == 1) && (i_tmp->size[0] != 1)) {
-    c_st.site = &yb_emlrtRSI;
+    c_st.site = &ac_emlrtRSI;
     warning(&c_st);
   }
   emxFree_boolean_T(&b_st, &x);
@@ -3521,7 +3529,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     a_tmp[1] = d1;
     y[1] = d1 * d1;
     y_tmp = sumColumnB(y);
-    st.site = &tb_emlrtRSI;
+    st.site = &ub_emlrtRSI;
     if (y_tmp < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -3535,7 +3543,7 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     idx = nodesOnFil->size[0];
     b_nodesOnFil[0] = nodesOnFil->size[0];
     b_nodesOnFil[1] = 1.0;
-    st.site = &ub_emlrtRSI;
+    st.site = &vb_emlrtRSI;
     repmat(&st, y, b_nodesOnFil, a);
     nodeOrdering_data = a->data;
     if ((loop_ub != a->size[0]) && (a->size[0] != 1)) {
@@ -3572,12 +3580,12 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
       emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
       emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
     }
-    st.site = &vb_emlrtRSI;
+    st.site = &wb_emlrtRSI;
     r = _mm_loadu_pd(&a_tmp[0]);
     _mm_storeu_pd(&a_tmp[0], _mm_div_pd(r, _mm_set1_pd(y_tmp)));
     b_nodesOnFil[0] = idx;
     b_nodesOnFil[1] = 1.0;
-    b_st.site = &vb_emlrtRSI;
+    b_st.site = &wb_emlrtRSI;
     repmat(&b_st, a_tmp, b_nodesOnFil, a);
     nodeOrdering_data = a->data;
     a_tmp[0] = a->size[0];
@@ -3606,9 +3614,9 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     emxEnsureCapacity_real_T(&st, dotProducts, ii, &mc_emlrtRTEI);
     dotProducts_data = dotProducts->data;
     ii = -1;
-    b_st.site = &fc_emlrtRSI;
+    b_st.site = &gc_emlrtRSI;
     if (a->size[0] > 2147483646) {
-      c_st.site = &s_emlrtRSI;
+      c_st.site = &t_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     for (idx = 0; idx < i; idx++) {
@@ -3620,8 +3628,8 @@ static void sortNodes(const emlrtStack *sp, real_T filIdx,
     /*  now sort the dot products in increasing order and sort the node indices
      */
     /*  using the same permutation */
-    st.site = &wb_emlrtRSI;
-    b_st.site = &gc_emlrtRSI;
+    st.site = &xb_emlrtRSI;
+    b_st.site = &hc_emlrtRSI;
     sort(&b_st, dotProducts, i_tmp);
     i_tmp_data = i_tmp->data;
     loop_ub_tmp = i_tmp->size[0];
@@ -3786,9 +3794,13 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   /*    Note: currently no boundary/edge is constructed, and the implementation
    */
   /*    does not store/compile information for running Metropolis-Hastings */
+  if (numAsters == 0.0) {
+    st.site = &emlrtRSI;
+    b_error(&st);
+  }
   b_numAsters[0] = numAsters;
   b_numAsters[1] = 2.0;
-  st.site = &emlrtRSI;
+  st.site = &b_emlrtRSI;
   b_rand(&st, b_numAsters, network->nodes);
   i = asters->centers->size[0] * asters->centers->size[1];
   asters->centers->size[0] = network->nodes->size[0];
@@ -3807,7 +3819,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   b_numAsters[0] = numAsters;
   b_numAsters[1] = astralNum;
   emxInit_real_T(sp, &b, 2, &ab_emlrtRTEI);
-  st.site = &b_emlrtRSI;
+  st.site = &c_emlrtRSI;
   c_rand(&st, b_numAsters, b);
   thisOrder_data = b->data;
   i = asters->orients->size[0] * asters->orients->size[1];
@@ -3826,7 +3838,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
     asters->orients->data[i] = 6.2831853071795862 * thisOrder_data[i];
   }
   emxFree_real_T(sp, &b);
-  st.site = &c_emlrtRSI;
+  st.site = &d_emlrtRSI;
   findNodes(&st, asters->centers, asters->orients, l, network->nodes,
             crossings->filCross);
   numFil = numAsters * astralNum;
@@ -3871,9 +3883,9 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
   }
   b_numAsters[0] = astralNum;
   b_numAsters[1] = numAsters;
-  st.site = &d_emlrtRSI;
+  st.site = &e_emlrtRSI;
   maxdimlen = r1->size[1];
-  b_st.site = &ib_emlrtRSI;
+  b_st.site = &jb_emlrtRSI;
   assertValidSizeArg(&b_st, b_numAsters);
   vectorUB = (int32_T)astralNum;
   loop_ub = (int32_T)numAsters;
@@ -3931,7 +3943,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
     int32_T numAsters_tmp;
     uint32_T springCount;
     /*  full network generation */
-    st.site = &e_emlrtRSI;
+    st.site = &f_emlrtRSI;
     /*  DEFINESPRINGS partitions filaments into node-bounded sub-segments  */
     /*  (springs) and dangling ends */
     /*    Inputs: */
@@ -4042,7 +4054,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
       emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
                                     (int32_T)numFil, &e_emlrtRTEI, &st);
       for (loop_ub = 0; loop_ub < i2; loop_ub++) {
-        b_st.site = &rb_emlrtRSI;
+        b_st.site = &sb_emlrtRSI;
         sortNodes(&b_st, (real_T)loop_ub + 1.0, network->nodes,
                   crossings->filCross, asters->centers, 1.0, thisOrder);
         thisOrder_data = thisOrder->data;
@@ -4085,7 +4097,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                                           network->ends->size[0], &h_emlrtBCI,
                                           &st);
           }
-          b_st.site = &qb_emlrtRSI;
+          b_st.site = &rb_emlrtRSI;
           thisOrder_data = &network->ends->data[loop_ub];
           if (*thisOrder_data < 0.0) {
             emlrtErrorWithMessageIdR2018a(
@@ -4143,7 +4155,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                 network->nodes->data[(vectorUB + network->nodes->size[0]) - 1];
             b_numAsters[1] = numFil * numFil;
             springLength = sumColumnB(b_numAsters);
-            b_st.site = &pb_emlrtRSI;
+            b_st.site = &qb_emlrtRSI;
             if (springLength < 0.0) {
               emlrtErrorWithMessageIdR2018a(
                   &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -4204,7 +4216,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                                           network->ends->size[0], &e_emlrtBCI,
                                           &st);
           }
-          b_st.site = &ob_emlrtRSI;
+          b_st.site = &pb_emlrtRSI;
           thisOrder_data = &network->ends->data[loop_ub];
           if (*thisOrder_data < 0.0) {
             emlrtErrorWithMessageIdR2018a(
@@ -4253,7 +4265,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
       emlrtForLoopVectorCheckR2021a(1.0, 1.0, numFil, mxDOUBLE_CLASS,
                                     (int32_T)numFil, &d_emlrtRTEI, &st);
       for (loop_ub = 0; loop_ub < i2; loop_ub++) {
-        b_st.site = &nb_emlrtRSI;
+        b_st.site = &ob_emlrtRSI;
         sortNodes(&b_st, (real_T)loop_ub + 1.0, network->nodes,
                   crossings->filCross, asters->centers, astralNum, thisOrder);
         thisOrder_data = thisOrder->data;
@@ -4290,7 +4302,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                    asters->centers->data[vectorUB + asters->centers->size[0]];
           b_numAsters[1] = numFil * numFil;
           springLength = sumColumnB(b_numAsters);
-          b_st.site = &mb_emlrtRSI;
+          b_st.site = &nb_emlrtRSI;
           if (springLength < 0.0) {
             emlrtErrorWithMessageIdR2018a(
                 &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -4359,7 +4371,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                      network->nodes->data[(i3 + network->nodes->size[0]) - 1];
             b_numAsters[1] = numFil * numFil;
             springLength = sumColumnB(b_numAsters);
-            b_st.site = &kb_emlrtRSI;
+            b_st.site = &lb_emlrtRSI;
             if (springLength < 0.0) {
               emlrtErrorWithMessageIdR2018a(
                   &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -4412,7 +4424,7 @@ void generateAstralNetwork(const emlrtStack *sp, real_T numAsters, real_T l,
                    asters->centers->data[vectorUB + asters->centers->size[0]];
           b_numAsters[1] = numFil * numFil;
           springLength = sumColumnB(b_numAsters);
-          b_st.site = &jb_emlrtRSI;
+          b_st.site = &kb_emlrtRSI;
           if (springLength < 0.0) {
             emlrtErrorWithMessageIdR2018a(
                 &b_st, &l_emlrtRTEI, "Coder:toolbox:ElFunDomainError",

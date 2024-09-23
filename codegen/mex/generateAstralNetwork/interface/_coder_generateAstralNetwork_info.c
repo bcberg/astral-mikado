@@ -61,14 +61,14 @@ mxArray *emlrtMexFcnProperties(void)
       emlrtMxCreateString(
           "/home/bcberg/Documents/astral-mikado/generateAstralNetwork.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739500.69158564811));
+                emlrtMxCreateDoubleScalar(739518.682824074));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
   xResult =
       emlrtCreateStructMatrix(1, 1, 9, (const char_T **)&propFieldName[0]);
   emlrtSetField(xResult, 0, "Version",
-                emlrtMxCreateString("24.1.0.2653294 (R2024a) Update 5"));
+                emlrtMxCreateString("24.1.0.2689473 (R2024a) Update 6"));
   emlrtSetField(xResult, 0, "ResolvedFunctions",
                 (mxArray *)c_emlrtMexFcnResolvedFunctionsI());
   emlrtSetField(xResult, 0, "Checksum",

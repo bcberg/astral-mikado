@@ -19,14 +19,14 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo x_emlrtRSI = {
+static emlrtRSInfo y_emlrtRSI = {
     38,       /* lineNo */
     "repmat", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName
                                                                       */
 };
 
-static emlrtRSInfo y_emlrtRSI = {
+static emlrtRSInfo ab_emlrtRSI = {
     79,       /* lineNo */
     "repmat", /* fcnName */
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName
@@ -54,7 +54,7 @@ void repmat(const emlrtStack *sp, const real_T a[2], const real_T varargin_1[2],
   boolean_T overflow;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &x_emlrtRSI;
+  st.site = &y_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   assertValidSizeArg(&st, varargin_1);
@@ -67,9 +67,9 @@ void repmat(const emlrtStack *sp, const real_T a[2], const real_T varargin_1[2],
   overflow = ((int32_T)varargin_1[0] > 2147483646);
   for (jcol = 0; jcol < 2; jcol++) {
     ibmat = jcol * i;
-    st.site = &y_emlrtRSI;
+    st.site = &ab_emlrtRSI;
     if (overflow) {
-      b_st.site = &s_emlrtRSI;
+      b_st.site = &t_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
     for (itilerow = 0; itilerow < i; itilerow++) {

@@ -26,6 +26,10 @@ function [network,crossings,asters] = generateAstralNetwork(numAsters, ...
 %           astral center
 %   Note: currently no boundary/edge is constructed, and the implementation
 %   does not store/compile information for running Metropolis-Hastings
+if numAsters == 0
+    error(['Network generation failed (numAsters = 0). Argument ' ...
+        'numAsters must be a positive integer.'])
+end
 asters.centers = D * rand([numAsters,2]);
 asters.orients = 2 * pi * rand([numAsters,astralNum]);
 [nodes, filCross] = findNodes(asters.centers,asters.orients,l);
