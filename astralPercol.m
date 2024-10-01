@@ -16,12 +16,12 @@ if recompute
         l = 1;
     end
     astralNumList = (1:48)';
-    densSpec = [-1,1,50];
+    densSpec = [0,2,50];
     Nsamp = 2000;
     Ncores = 8;
 else
     % load a particular existing dataset
-    D = 50;
+    D = 5;
     l = 1;
 end
 % Ubuntu path
@@ -75,5 +75,5 @@ xscale('log')
 xlabel('Filament density [$\mu m^{-1}$]')
 ylabel('Astral number')
 title(sprintf('Domain size: %2.1f, Filament length: %1.1f',D,l))
-exportgraphics(fig1,fullfile(saveDirectory,filename + "_heat.png"), ...
+exportgraphics(fig2,fullfile(saveDirectory,filename + "_heat.png"), ...
     'Resolution',300)

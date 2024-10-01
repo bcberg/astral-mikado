@@ -1,7 +1,13 @@
 function curves = getAllPercCurves(l,D,astralNumList,densSpec,Nsamp, ...
     Ncores,saveDirectory)
-%GETALLPERCCURVES Computes many percolation probability curves for astral
-%networks
+%GETALLPERCCURVES Computes percolation probability curves for a list of
+% astral network types
+% Percolation definitions are ordered as follows:
+%   (1): single component spans top to bottom
+%   (2): single component spans left to right
+%   (3): single component spans top to bottom OR left to right
+%   (4): single component spans top to bottom AND left to right
+%   (5): single component contains all filaments/asters
 %   Inputs:
 %       l (scalar): length of individual filament
 %       D (scalar): domain size; asters are distributed in the square
@@ -17,8 +23,8 @@ function curves = getAllPercCurves(l,D,astralNumList,densSpec,Nsamp, ...
 %       save simulation data; pass empty value to skip writing .mat file
 %   Outputs:
 %       curves (struct): curves.an%02i(1,:) gives line density values,
-%       curves.an%02i(2,:) gives percolation probability estimates (replace
-%       %02i with desired astral number)
+%       curves.an%02i(2:6,:) gives percolation probability estimates in the
+%       order specified above (replace %02i with desired astral number)
 filename = sprintf("percProbs_l%02i_D%02i",l,D);
 
 %%%%%%%%%%%%%% Sampling notes %%%%%%%%%%%%%%
@@ -27,6 +33,9 @@ filename = sprintf("percProbs_l%02i_D%02i",l,D);
 % (2): There may be fewer density values in certain percolation curves due
 % to requiring integer numbers of asters (density resolution is coarser at
 % higher astral number, larger l/D)
+% (c): Once two consecutive densities (for a given astralNum) satisfy ALL
+% percProbs = 1, all sampling at higher density values is skipped and 
+% remaining probabilities are set to 1
 
 %%%%%%%%%%%%%% Percolation probability estimation %%%%%%%%%%%%%%
 densityRange = logspace(densSpec(1),densSpec(2),densSpec(3));
@@ -44,35 +53,63 @@ for idx = 1:numNetTypes
     numAstersUsed{idx} = numAstersUsed{idx}(numAstersUsed{idx}>0);
     numUniqueDensVals_byrow(idx) = numel(numAstersUsed{idx});
     actualDensities{idx} = astralNumList(idx)*numAstersUsed{idx}*l/D^2;
-    percProbs{idx} = zeros(1,numUniqueDensVals_byrow(idx));
+    percProbs{idx} = zeros(5,numUniqueDensVals_byrow(idx));
 end
 
+Njobs = sum(numUniqueDensVals_byrow);
+storeHere = zeros(Njobs,2);
 pool = parpool(Ncores);
 useMEX = true;      % adjust depending on machine
 addAttachedFiles(pool,{'generateAstralNetwork.m','percCheck.m', ...
-    'percOneSample.m'})
-F = cell(numNetTypes,max(numUniqueDensVals_byrow));
+    'estPercProb.m'})
+F = parallel.FevalFuture.empty(Njobs,0);
+job_idx = 1;
 for idx = 1:numNetTypes
     for jdx = 1:numUniqueDensVals_byrow(idx)
-        F{idx,jdx} = parallel.FevalFuture.empty(Nsamp,0);
-        for kdx = 1:Nsamp
-            F{idx,jdx}(kdx) = parfeval(pool,@percOneSample,1, ...
-                numAstersUsed{idx}(jdx),l,D,astralNumList(idx),useMEX);
-        end
+        F(job_idx) = parfeval(pool,@estPercProb,1, ...
+            numAstersUsed{idx}(jdx),l,D,astralNumList(idx),Nsamp,useMEX);
+        storeHere(job_idx,:) = [idx, jdx];
+        job_idx = job_idx + 1;
     end
 end
-
-for idx = 1:numNetTypes
-    for jdx = 1:numUniqueDensVals_byrow(idx)
-        samples = fetchOutputs(F{idx,jdx});
-        percProbs{idx}(jdx) = sum(samples) / Nsamp;
+doneJobs = 0;
+while doneJobs < Njobs
+    try
+        [completeIdx,p] = fetchNext(F);
+        doneJobs = doneJobs + 1;
+        p = reshape(p,[5,1]);
+        net_idx = storeHere(completeIdx,1);
+        dens_idx = storeHere(completeIdx,2);
+        percProbs{net_idx}(1:5,dens_idx) = p;
+        fprintf('Completed job %04i/%04i (%2.1f%%)\n',doneJobs,Njobs, ...
+            doneJobs/Njobs*100)
+        if dens_idx > 1 && dens_idx < numUniqueDensVals_byrow(net_idx)
+            % note that z=0 if dens_idx-1 job has not been fetched
+            z = prod(percProbs{net_idx}(1:5,(dens_idx-1):dens_idx)) == 1;
+            if z
+                fprintf('Skipping %i densities for astral number %i\n', ...
+                    numUniqueDensVals_byrow(net_idx)-dens_idx, ...
+                    astralNumList(net_idx));
+                percProbs{net_idx}(1:5, ...
+                    (dens_idx+1):numUniqueDensVals_byrow(net_idx)) = 1;
+                toSkip = (storeHere(:,1) == net_idx).*(storeHere(:,2) > ...
+                    dens_idx);
+                doneJobs = doneJobs + sum(toSkip);
+                cancel(F(logical(toSkip)))
+            end
+        end
+    catch
+        warning(['Failed to fetch an output. The corresponding future ' ...
+            'may have been canceled.']);
     end
-    fprintf('Completed astral number %02i\n',astralNumList(idx))
-    netLabel = sprintf('an%02i',astralNumList(idx));
-    curves.(netLabel) = [actualDensities{idx}; percProbs{idx}];
 end
 clear('F')
 delete(pool)
+
+for idx = 1:numNetTypes
+    netLabel = sprintf('an%02i',astralNumList(idx));
+    curves.(netLabel) = [actualDensities{idx}; percProbs{idx}];
+end
 
 if ~isempty(saveDirectory)
     fileToSave = fullfile(saveDirectory,filename + ".mat");

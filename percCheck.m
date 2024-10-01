@@ -14,25 +14,26 @@ function [percTF,percStats] = percCheck(crossings,nodes,D)
 %       crossings (EXCLUDING astral centers)
 %       D (scalar): domain size
 %   Outputs:
-%       percTF (1x2 logical): logical values indicating if network is 
-%       top-to-bottom percolated or left-to-right percolated, has form 
-%       [percTB, percLR]
+%       percTF (1x5 logical): results of various percolation tests:
+%           (1): single component spans top to bottom
+%           (2): single component spans left to right
+%           (3): single component spans top to bottom OR left to right
+%           (4): single component spans top to bottom AND left to right
+%           (5): single component contains all filaments/asters
 %       percStats (struct): info re: connected components in network,
-%       has fields 'bins', 'binsizes', 'spanclstr'
+%       has fields 'bins', 'binsizes'
 %           'bins': bins(idx) gives index of connected component that
 %           contains the filament specified by idx
 %           'binsizes': binsizes(jdx) gives the number of filaments in
 %           component jdx
-%           'spanclstr' (scalar): index of connected component which passed
-%           percolation criterion, or [] if no component passes
 [numAsters, astralNum] = size(crossings.centerCross);
-% numFil = numAsters * astralNum;
+numFil = numAsters * astralNum;
 
 if astralNum == 1
     G = graph(crossings.filCross(:,1),crossings.filCross(:,2));
 elseif astralNum >= 2
     edgesPerCenter = nchoosek(astralNum,2);
-    centerEdges = zeros([numAsters * nchoosek(astralNum,2), 2]);
+    centerEdges = zeros([numAsters * edgesPerCenter, 2]);
     for idx = 1:numAsters
         centerEdges((1+(idx-1)*edgesPerCenter):idx*edgesPerCenter,:) = ...
             nchoosek(crossings.centerCross(idx,:),2);
@@ -77,8 +78,20 @@ else
     lrSpanningComps = intersect(compsLeft,compsRight);
     percLR = any(lrSpanningComps);
 end
+% all-sided percolation check
+if isempty(tbSpanningComps) || isempty(lrSpanningComps)
+    percTBLR = false;
+else
+    tblrSpanningComps = intersect(tbSpanningComps,lrSpanningComps);
+    percTBLR = any(tblrSpanningComps);
+end
+% connected graph check
+if max(binsizes) == numFil
+    connTF = true;
+else
+    connTF = false;
+end
 
-percTF = [percTB, percLR];
+percTF = [percTB, percLR, (percTB || percLR), percTBLR, connTF];
 percStats.bins = bins;
 percStats.binsizes = binsizes;
-percStats.spanclstr = unique([tbSpanningComps,lrSpanningComps]);

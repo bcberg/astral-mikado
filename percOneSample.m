@@ -10,23 +10,20 @@ function samp = percOneSample(numAsters,l,D,astralNum,useMEX)
 %       useMEX (boolean): passing true allows use of MEX function for
 %       network generation, passing false uses pure Matlab function
 %   Outputs:
-%       samp (1x1 logical): true if generated network passes percCheck,
-%       false otherwise
-samp = false;
+%       samp (1x5 logical): results of various percolation tests:
+%           (1): single component spans top to bottom
+%           (2): single component spans left to right
+%           (3): single component spans top to bottom OR left to right
+%           (4): single component spans top to bottom AND left to right
+%           (5): single component contains all filaments/asters
 numFil = numAsters * astralNum;     % mex gets slow if numFil too high
 if useMEX && numFil < 1e4
     [network,crossings,~] = generateAstralNetwork_mex(numAsters,l,D,...
         astralNum, true);
-    [percTF,~] = percCheck(crossings,network.nodes,D);
-    if percTF(1) || percTF(2)
-        samp = true;
-    end
+    [samp,~] = percCheck(crossings,network.nodes,D);
 else
     [network,crossings,~] = generateAstralNetwork(numAsters,l,D, ...
         astralNum, true);
-    [percTF,~] = percCheck(crossings,network.nodes,D);
-    if percTF(1) || percTF(2)
-        samp = true;
-    end
+    [samp,~] = percCheck(crossings,network.nodes,D);
 end
 end
