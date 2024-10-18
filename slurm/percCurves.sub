@@ -6,8 +6,8 @@
 #SBATCH --nodes=1                 ## (-N) number of nodes to use
 #SBATCH --ntasks=1                ## (-n) number of tasks to launch
 #SBATCH --cpus-per-task=24        ## number of cores the job needs
-#SBATCH --tmp=4G                 ## requesting 4GB local scratch
-#SBATCH --array=25-48            ## $SLURM_ARRAY_TASK_ID takes values from 25 to 48 inclusive
+#SBATCH --mem-per-cpu=4G                 ## requesting 4GB local scratch
+#SBATCH --array=1-48            ## $SLURM_ARRAY_TASK_ID takes values from 1 to 48 inclusive
 #SBATCH --time=48:00:00
 #SBATCH --error=%x.%A_%a.err  ## error log file: %x - job name, %A - job ID, %a - task ID
 #SBATCH --output=%x.%A_%a.out ## output log file: %x - job name, %A - job ID, %a - task ID
@@ -30,7 +30,7 @@ cp $pubDir/getPercCurve.m $TMPDIR/getPercCurve.m
 # function syntax: getPercCurve(l,D,astralNum,densSpec,Nsamp,Ncores,saveDirectory)
 l=1
 D=50
-matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[log10(5),2,40],2000,24,'$TMPDIR/output')"
+matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[0,2+log10(5),60],2000,24,'$TMPDIR/output')"
 
 # copy to DFS
-mv output /pub/bberg1/percCurves/run240923
+mv output /pub/bberg1/percCurves/run241016
