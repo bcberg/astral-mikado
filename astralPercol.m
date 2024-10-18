@@ -21,7 +21,7 @@ if recompute
     Ncores = 8;
 else
     % load a particular existing dataset
-    D = 10;
+    D = 5;
     l = 1;
 end
 % Ubuntu path
