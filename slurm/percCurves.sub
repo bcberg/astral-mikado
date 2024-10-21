@@ -33,4 +33,4 @@ D=50
 matlab -nodesktop -r "getPercCurve($l,$D,$SLURM_ARRAY_TASK_ID,[0,2+log10(5),60],2000,24,'$TMPDIR/output')"
 
 # copy to DFS
-mv output /pub/bberg1/percCurves/run241016
+mv output/* /pub/bberg1/percCurves/run241016
