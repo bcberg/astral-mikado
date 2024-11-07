@@ -15,8 +15,8 @@ if recompute
     if isempty(l)
         l = 1;
     end
-    astralNumList = (1:48)';
-    densSpec = [0,2+log10(5),60];
+    astralNumList = (1:24)';
+    densSpec = [0,2+log10(2),50];
     Nsamp = 2000;
     Ncores = 8;
 else

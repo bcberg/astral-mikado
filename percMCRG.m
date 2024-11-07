@@ -36,11 +36,11 @@ numPercTypes = length(percTypes); % i.e., = 5
 fig1 = figure('units','inches','Position',[1,1,8.5,11]);
 set(fig1,'visible','off','defaultLineLineWidth',0.6)
 for idx = 1:numNetTypes
-    fig1 = tiledlayout(3,2,'TileSpacing','compact');
+    tl = tiledlayout(3,2,'TileSpacing','compact');
     netLabel = sprintf('an%02i',allAstralNums(idx));
     tileIdx = 1;
     for jdx = 1:numPercTypes
-        nexttile(fig1,tileIdx)
+        nexttile(tl,tileIdx)
         hold on
         for kdx = 1:numD
             curves = allCurves{kdx};
@@ -60,15 +60,15 @@ for idx = 1:numNetTypes
         end
         tileIdx = tileIdx + 1;
     end
-    title(fig1,netLabel)
+    title(tl,netLabel)
     if idx == 1
         % export first page
-        exportgraphics(fig1,fullfile(saveDir,'percMCRG_curves.pdf'), ...
+        exportgraphics(fig1,fullfile(saveDir,'percMCRG_data.pdf'), ...
             'Resolution',300)
         fig1 = clf(fig1);
     else
         % export next pages
-        exportgraphics(fig1,fullfile(saveDir,'percMCRG_curves.pdf'), ...
+        exportgraphics(fig1,fullfile(saveDir,'percMCRG_data.pdf'), ...
             'Resolution',300,'Append',true)
         fig1 = clf(fig1);
     end
@@ -76,48 +76,69 @@ for idx = 1:numNetTypes
         'defaultLineLineWidth',0.6)
 end
 
-%% Fit logistic models for a particular astral number
+%% Fit sigmoidal models
 
 % default logistic model has form f(x) = a / (1+e^{-b*(x-c)})
 % Currently fixing a=1
+% Gompertz model has form g(x) = d + (a-d)e^{-e^{-b*(x-c)}}
+% Currently fixing a=1, d=0
 
-logisFits_v0 = cell(1,numPercTypes,numD);
-fitopts = fitoptions('Method','NonlinearLeastSquares','Lower', ...
-    [1,-Inf,-Inf],'Upper',[1,Inf,Inf],'StartPoint',[1,1,10]);
-an = 1;
+sigFits = cell(numNetTypes,numPercTypes,numD);
+fitopts_logis = fitoptions('Method','NonlinearLeastSquares','Lower', ...
+    [1,-5,-5],'Upper',[1,20,100],'StartPoint',[1,1,10]);
+fitopts_gomp = fitoptions('Method','NonlinearLeastSquares','Lower', ...
+    [1,0,-5,0],'Upper',[1,25,100,0],'StartPoint',[1,1,10,0]);
 fig2 = figure('units','inches','Position',[1,1,8.5,11]);
-set(fig2,'defaultLineLineWidth',0.5,'defaultLineMarkerSize',4)
-fig2 = tiledlayout(3,2,'TileSpacing','compact');
+set(fig2,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3,'visible', ...
+    'off')
 C = colororder("gem");
-netLabel = sprintf('an%02i',an);
-tileIdx = 1;
-for jdx = 1:numPercTypes
-    nexttile(fig2,tileIdx)
-    hold on
-    for kdx = 1:numD
-        curves = allCurves{kdx};
-        if isfield(curves,netLabel)
-            x = transpose(curves.(netLabel)(1,:));
-            y = transpose(curves.(netLabel)(1+jdx,:));
-            % plot(x,y,'*','DisplayName',sprintf('D=%2.1f',Dlist(kdx)), ...
-            %     'MarkerSize',4,'Color',C(kdx,:))
-            logisFits_v0{1,jdx,kdx} = fit(x,y,'logistic',fitopts);
-            % l = plot(logisFits_v0{1,jdx,kdx});
-            l = plot(logisFits_v0{1,jdx,kdx},x,y,'*');
-            [l.Color] = deal(C(kdx,:));
+for idx = 1:numNetTypes
+    t = tiledlayout(3,2,'TileSpacing','compact');
+    netLabel = sprintf('an%02i',allAstralNums(idx));
+    tileIdx = 1;
+    for jdx = 1:numPercTypes
+        nexttile(t,tileIdx)
+        hold on
+        for kdx = 1:numD
+            curves = allCurves{kdx};
+            if isfield(curves,netLabel)
+                x = transpose(curves.(netLabel)(1,:));
+                y = transpose(curves.(netLabel)(1+jdx,:));
+                if jdx <= 4
+                    sigFits{idx,jdx,kdx} = fit(x,y,'logistic',fitopts_logis);
+                elseif jdx == 5
+                    sigFits{idx,jdx,kdx} = fit(x,y,'gompertz',fitopts_gomp);
+                end
+                l = plot(sigFits{idx,jdx,kdx},x,y,'*');
+                [l.Color] = deal(C(kdx,:));
+            end
         end
+        hold off
+        xscale('log')
+        xlabel('Filament density [$\mu m^{-1}$]')
+        ylabel('Percolation probability')
+        title(percTypes{jdx})
+        if jdx == 1
+            lg = legend('FontSize',12);
+            lg.Layout.Tile = 6;
+        else
+            legend('off')
+        end
+        tileIdx = tileIdx + 1;
     end
-    hold off
-    xscale('log')
-    xlabel('Filament density [$\mu m^{-1}$]')
-    ylabel('Percolation probability')
-    title(percTypes{jdx})
-    if jdx == 1
-        lg = legend('FontSize',12);
-        lg.Layout.Tile = 6;
+    title(t,netLabel)
+    if idx == 1
+        % export first page
+        exportgraphics(fig2,fullfile(saveDir,'percMCRG_fits.pdf'), ...
+            'Resolution',300)
+        fig2 = clf(fig2);
     else
-        legend('off')
+        % export next pages
+        exportgraphics(fig2,fullfile(saveDir,'percMCRG_fits.pdf'), ...
+            'Resolution',300,'Append',true)
+        fig2 = clf(fig2);
     end
-    tileIdx = tileIdx + 1;
+    set(fig2,'units','inches','Position',[1,1,8.5,11], ...
+        'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
+        'visible','off')
 end
-title(fig2,netLabel)
