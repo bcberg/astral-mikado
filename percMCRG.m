@@ -9,9 +9,9 @@ set(0,'defaultLegendInterpreter','latex')
 %% Importing data and fits
 
 % Ubuntu path
-saveDir = "~/Documents/AstralMikadoCYM/data";
+% saveDir = "~/Documents/AstralMikadoCYM/data";
 % Windows path
-% saveDir = "C:\Users\bcber\Documents\AstralMikadoCYM\data";
+saveDir = "C:\Users\bcber\Documents\AstralMikadoCYM\data";
 filePattern = "percProbs_l%02i_D%02i";
 
 l = 1;
@@ -32,16 +32,19 @@ percTypes = {"Top-to-Bottom (TB)", "Left-to-Right (LR)", "TB OR LR", ...
 numPercTypes = length(percTypes); % i.e., = 5
 
 load(fullfile(saveDir,'percMCRG_nonparamFits.mat'),'smsplFits')
+load(fullfile(saveDir,'percMCRG_paramFits.mat'),'sigFits')
 
 %% Attempting MCRG (nonparametric fits)
 
 thisPercType = 1;
-testAstralNum = 1;
+testAstralNum = 14;
 crossings = zeros(numD-1,1);
 otherDers = zeros(numD-1,1);
-smallCurve = smsplFits{testAstralNum,thisPercType,1};
+% smallCurve = smsplFits{testAstralNum,thisPercType,1};
+smallCurve = sigFits{testAstralNum,thisPercType,1};
 for kdx = 1:(numD-1)
-    thisCurve = smsplFits{testAstralNum,thisPercType,kdx+1};
+    % thisCurve = smsplFits{testAstralNum,thisPercType,kdx+1};
+    thisCurve = sigFits{testAstralNum,thisPercType,kdx+1};
     fun = @(x) smallCurve(x) - thisCurve(x);
     [x,fval] = fsolve(fun,5);
     crossings(kdx) = x;
@@ -60,14 +63,16 @@ xlabel("$\ln(b/b')$")
 ylabel("$\ln \Lambda_{b,b'}$")
 title(sprintf("$\\nu\\approx %2.4f$",1/linefit.p1))
 
-% trying to estimate nu for all astral numbers
+%% trying to estimate nu for all astral numbers
 nu = zeros(24,1);
 for idx = 1:24
     crossings = zeros(numD-1,1);
     otherDers = zeros(numD-1,1);
-    smallCurve = smsplFits{idx,thisPercType,1};
+    % smallCurve = smsplFits{idx,thisPercType,1};
+    smallCurve = sigFits{idx,thisPercType,1};
     for kdx = 1:(numD-1)
-        thisCurve = smsplFits{idx,thisPercType,kdx+1};
+        % thisCurve = smsplFits{idx,thisPercType,kdx+1};
+        thisCurve = sigFits{idx,thisPercType,kdx+1};
         fun = @(x) smallCurve(x) - thisCurve(x);
         [x,fval] = fsolve(fun,5);
         crossings(kdx) = x;
