@@ -154,7 +154,7 @@ if makeFig2
             'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
             'visible','off')
     end
-    save(fullfile(saveDir,'percMCRG_paramFits.mat'),'sigFits')
+    save(fullfile(saveDir,'percMCRG_paramFits.mat'),'sigFits','Dlist')
 end
 
 %% Nonparametric fitting
@@ -223,5 +223,5 @@ if makeFig3
             'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
             'visible','off')
     end
-    save(fullfile(saveDir,'percMCRG_nonparamFits.mat'),'smsplFits')
+    save(fullfile(saveDir,'percMCRG_nonparamFits.mat'),'smsplFits','Dlist')
 end

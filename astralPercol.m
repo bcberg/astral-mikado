@@ -80,7 +80,7 @@ fig2 = tiledlayout(3,2,'TileSpacing','compact');
 percTypes = {"Top-to-Bottom (TB)", "Left-to-Right (LR)", "TB OR LR", ...
     "TB AND LR", "Single connected component"};
 numPercTypes = length(percTypes); % i.e., = 5
-cmap = colormap(parula(numNetTypes));
+% cmap = colormap(parula(numNetTypes));
 for pdx = 1:numPercTypes
     nexttile(fig2,mod(pdx,6) + 6 * (mod(pdx,6)==0))
     % For heatmap, need to interpolate values at each value of densityRange
