@@ -1,4 +1,4 @@
-% astralNetVisuals.m
+% astralNetTestVisuals.m
 % Brady Berg
 clear; close all;
 format long; format compact;
