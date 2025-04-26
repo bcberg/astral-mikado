@@ -9,9 +9,11 @@ set(0,'defaultLegendInterpreter','latex')
 %% Importing data
 
 % Ubuntu path
-saveDir = "~/Documents/AstralMikadoCYM/data";
+% saveDir = "~/Documents/astral-mikado-data/";
 % Windows path
-% saveDir = "C:\Users\bcber\Documents\AstralMikadoCYM\data";
+saveDir = "C:\Users\bcber\Documents\astral-mikado-data";
+matFileSubDir = "mat_files";
+figSubDir = "exploratory_figures";
 filePattern = "percProbs_l%02i_D%02i";
 
 l = 1;
@@ -20,8 +22,8 @@ numD = numel(Dlist);
 allCurves = cell(1,numD);
 allAstralNums = [];
 for idx = 1:numD
-    load(fullfile(saveDir,sprintf(filePattern,l,Dlist(idx))),'curves', ...
-        'astralNumList')
+    load(fullfile(saveDir,matFileSubDir, ...
+        sprintf(filePattern,l,Dlist(idx))),'curves','astralNumList')
     allCurves{idx} = curves;
     allAstralNums = union(allAstralNums,astralNumList);
     clear curves
@@ -33,10 +35,10 @@ numPercTypes = length(percTypes); % i.e., = 5
 
 %% Overplotting different system sizes (family of curves)
 
-makeFig1 = false;
-if makeFig1
-    fig1 = figure('units','inches','Position',[1,1,8.5,11]);
-    set(fig1,'visible','off','defaultLineLineWidth',0.6)
+makeRawDataFig = false;
+if makeRawDataFig
+    rawDataFig = figure('units','inches','Position',[1,1,8.5,11]); clf;
+    set(rawDataFig,'visible','off','defaultLineLineWidth',0.6)
     for idx = 1:numNetTypes
         tl = tiledlayout(3,2,'TileSpacing','compact');
         netLabel = sprintf('an%02i',allAstralNums(idx));
@@ -65,16 +67,16 @@ if makeFig1
         title(tl,netLabel)
         if idx == 1
             % export first page
-            exportgraphics(fig1,fullfile(saveDir,'percMCRG_data.pdf'), ...
+            exportgraphics(rawDataFig,fullfile(saveDir,'percMCRG_data.pdf'), ...
                 'Resolution',300)
-            fig1 = clf(fig1);
+            rawDataFig = clf(rawDataFig);
         else
             % export next pages
-            exportgraphics(fig1,fullfile(saveDir,'percMCRG_data.pdf'), ...
+            exportgraphics(rawDataFig,fullfile(saveDir,'percMCRG_data.pdf'), ...
                 'Resolution',300,'Append',true)
-            fig1 = clf(fig1);
+            rawDataFig = clf(rawDataFig);
         end
-        set(fig1,'units','inches','Position',[1,1,8.5,11],'visible','off', ...
+        set(rawDataFig,'units','inches','Position',[1,1,8.5,11],'visible','off', ...
             'defaultLineLineWidth',0.6)
     end
 end
@@ -86,16 +88,16 @@ end
 % Gompertz model has form g(x) = d + (a-d)e^{-e^{-b*(x-c)}}
 % Currently fixing a=1, d=0
 
-makeFig2 = false;
-if makeFig2
+makeSigFitsFig = true;
+if makeSigFitsFig
     sigFits = cell(numNetTypes,numPercTypes,numD);
     fitopts_logis = fitoptions('Method','NonlinearLeastSquares','Lower', ...
         [1,-5,-5],'Upper',[1,20,100],'StartPoint',[1,1,10]);
     fitopts_gomp = fitoptions('Method','NonlinearLeastSquares','Lower', ...
         [1,0,-5,0],'Upper',[1,25,100,0],'StartPoint',[1,1,10,0]);
-    fig2 = figure('units','inches','Position',[1,1,8.5,11]);
-    set(fig2,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3,'visible', ...
-        'off')
+    sigFitsFig = figure('units','inches','Position',[1,1,8.5,11]); clf;
+    set(sigFitsFig,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3,...
+        'visible','off')
     C = colororder("gem");
     for idx = 1:numNetTypes
         legendLabels = cell(2*numD,1);
@@ -110,6 +112,30 @@ if makeFig2
                 if isfield(curves,netLabel)
                     x = transpose(curves.(netLabel)(1,:));
                     y = transpose(curves.(netLabel)(1+jdx,:));
+                    % restricting fit windows to exclude flat lines in data
+                    % at p=0 and p=1
+                    greaterThanZero = find(y>0,1);
+                    % discard decreasing portions of connectivity perc
+                    % curves that appear at low density & high astral num.
+                    if greaterThanZero==1
+                        lowerLim = 1;
+                        while y(lowerLim+1) < y(lowerLim)
+                            lowerLim = lowerLim + 1;
+                        end
+                    else
+                        lowerLim = greaterThanZero - 1;
+                    end
+                    % upper limit is where the curve increases to 1 for the
+                    % first time, otherwise the last data point
+                    if any(y==1)
+                        upperLimOptions = find(y==1);
+                        reachedOne = find(upperLimOptions>lowerLim,1);
+                        upperLim = upperLimOptions(reachedOne);
+                    else
+                        upperLim = length(y);
+                    end
+                    x = x(lowerLim:upperLim);
+                    y = y(lowerLim:upperLim);
                     if jdx <= 4
                         sigFits{idx,jdx,kdx} = fit(x,y,'logistic',fitopts_logis);
                     elseif jdx == 5
@@ -141,30 +167,31 @@ if makeFig2
         title(t,netLabel)
         if idx == 1
             % export first page
-            exportgraphics(fig2,fullfile(saveDir,'percMCRG_paramFits.pdf'), ...
-                'Resolution',300)
-            fig2 = clf(fig2);
+            exportgraphics(sigFitsFig,fullfile(saveDir,figSubDir, ...
+                'percMCRG_paramFits_tzOnly.pdf'),'Resolution',300)
+            sigFitsFig = clf(sigFitsFig);
         else
             % export next pages
-            exportgraphics(fig2,fullfile(saveDir,'percMCRG_paramFits.pdf'), ...
-                'Resolution',300,'Append',true)
-            fig2 = clf(fig2);
+            exportgraphics(sigFitsFig,fullfile(saveDir,figSubDir, ...
+                'percMCRG_paramFits_tzOnly.pdf'),'Resolution',300,'Append',true)
+            sigFitsFig = clf(sigFitsFig);
         end
-        set(fig2,'units','inches','Position',[1,1,8.5,11], ...
+        set(sigFitsFig,'units','inches','Position',[1,1,8.5,11], ...
             'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
             'visible','off')
     end
-    save(fullfile(saveDir,'percMCRG_paramFits.mat'),'sigFits','Dlist')
+    save(fullfile(saveDir,matFileSubDir,'percMCRG_paramFits_tzOnly.mat'), ...
+        'sigFits','Dlist')
 end
 
 %% Nonparametric fitting
 
 % current scheme: smoothing spline with automatic smoothing parameter
-makeFig3 = false;
-if makeFig3
+makeSmsplFitsFig = true;
+if makeSmsplFitsFig
     smsplFits = cell(numNetTypes,numPercTypes,numD);
-    fig3 = figure('units','inches','Position',[1,1,8.5,11]);
-    set(fig3,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3, ...
+    smsplFitsFig = figure('units','inches','Position',[1,1,8.5,11]); clf;
+    set(smsplFitsFig,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3, ...
         'visible','off')
     C = colororder("gem");
     for idx = 1:numNetTypes
@@ -180,6 +207,30 @@ if makeFig3
                 if isfield(curves,netLabel)
                     x = transpose(curves.(netLabel)(1,:));
                     y = transpose(curves.(netLabel)(1+jdx,:));
+                    % restricting fit windows to exclude flat lines in data
+                    % at p=0 and p=1
+                    greaterThanZero = find(y>0,1);
+                    % discard decreasing portions of connectivity perc
+                    % curves that appear at low density & high astral num.
+                    if greaterThanZero==1
+                        lowerLim = 1;
+                        while y(lowerLim+1) < y(lowerLim)
+                            lowerLim = lowerLim + 1;
+                        end
+                    else
+                        lowerLim = greaterThanZero - 1;
+                    end
+                    % upper limit is where the curve increases to 1 for the
+                    % first time, otherwise the last data point
+                    if any(y==1)
+                        upperLimOptions = find(y==1);
+                        reachedOne = find(upperLimOptions>lowerLim,1);
+                        upperLim = upperLimOptions(reachedOne);
+                    else
+                        upperLim = length(y);
+                    end
+                    x = x(lowerLim:upperLim);
+                    y = y(lowerLim:upperLim);
                     % smsplFits{idx,jdx,kdx} = fit(x,y, ...
                     %     'smoothingspline','SmoothingParam',0.99);
                     smsplFits{idx,jdx,kdx} = fit(x,y, ...
@@ -210,18 +261,19 @@ if makeFig3
         title(t,netLabel)
         if idx == 1
             % export first page
-            exportgraphics(fig3,fullfile(saveDir, ...
-                'percMCRG_nonparamFits.pdf'),'Resolution',300)
-            fig3 = clf(fig3);
+            exportgraphics(smsplFitsFig,fullfile(saveDir,figSubDir, ...
+                'percMCRG_nonparamFits_tzOnly.pdf'),'Resolution',300)
+            smsplFitsFig = clf(smsplFitsFig);
         else
             % export next pages
-            exportgraphics(fig3,fullfile(saveDir, ...
-                'percMCRG_nonparamFits.pdf'),'Resolution',300,'Append',true)
-            fig3 = clf(fig3);
+            exportgraphics(smsplFitsFig,fullfile(saveDir,figSubDir, ...
+                'percMCRG_nonparamFits_tzOnly.pdf'),'Resolution',300,'Append',true)
+            smsplFitsFig = clf(smsplFitsFig);
         end
-        set(fig3,'units','inches','Position',[1,1,8.5,11], ...
+        set(smsplFitsFig,'units','inches','Position',[1,1,8.5,11], ...
             'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
             'visible','off')
     end
-    save(fullfile(saveDir,'percMCRG_nonparamFits.mat'),'smsplFits','Dlist')
+    save(fullfile(saveDir,matFileSubDir,'percMCRG_nonparamFits_tzOnly.mat'), ...
+        'smsplFits','Dlist')
 end
