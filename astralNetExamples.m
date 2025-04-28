@@ -55,6 +55,9 @@ else
         'crossings_classic','asters_classic')
 end
 
+centerMarkSz = 16;
+crslnkMarkSz = 12;
+
 %% Non-astral example
 
 anclassicEx = figure(1); clf;
@@ -80,8 +83,8 @@ end
 %         filamentWidth,'Color',springYellow)
 % end
 % OPTION 2: PLOT ALL CROSSLINKS (NODES)
-plot(net_classic.nodes(:,1),net_classic.nodes(:,2),'.','MarkerSize',12, ...
-    'Color',springYellow)
+plot(net_classic.nodes(:,1),net_classic.nodes(:,2),'.','MarkerSize', ...
+    crslnkMarkSz,'Color',springYellow)
 hold off
 xlim('tight')
 xl = xlim;
@@ -132,12 +135,12 @@ end
 %     % end
 % end
 % OPTION 2: plot all crosslinks (nodes)
-plot(net_low.nodes(:,1),net_low.nodes(:,2),'.','MarkerSize',12, ...
-    'Color',springYellow)
+plot(net_low.nodes(:,1),net_low.nodes(:,2),'.','MarkerSize', ...
+    crslnkMarkSz,'Color',springYellow)
 % OPTION B: plot all astral centers
 if an_low >= 2
     plot(asters_low.centers(:,1),asters_low.centers(:,2),'.r', ...
-        'MarkerSize',18)
+        'MarkerSize',centerMarkSz)
     % could use "scatter" to enable transparency for center marks
 end
 hold off
@@ -190,12 +193,12 @@ end
 %     % end
 % end
 % OPTION 2: plot all crosslinks (nodes)
-plot(net_hi.nodes(:,1),net_hi.nodes(:,2),'.','MarkerSize',12, ...
-    'Color',springYellow)
+plot(net_hi.nodes(:,1),net_hi.nodes(:,2),'.','MarkerSize', ...
+    crslnkMarkSz,'Color',springYellow)
 % OPTION B: plot all astral centers
 if an_hi >= 2
     plot(asters_hi.centers(:,1),asters_hi.centers(:,2),'.r', ...
-        'MarkerSize',18)
+        'MarkerSize',centerMarkSz)
     % could use "scatter" to enable transparency for center marks
 end
 hold off
@@ -213,4 +216,41 @@ h.YAxis.Visible = 'off';
 exportgraphics(anhiEx,fullfile(saveDir,figSubfolder,"anhiEx" + ...
     figFiletype),'ContentType','vector')
 
+%% Individual asters
 
+regenerateIndividual = false;
+if regenerateIndividual
+    asterTypes = 1:5;
+    numAsterTypes = length(asterTypes);
+    l = 1;
+    centers = [2 * (1:numAsterTypes)', zeros(numAsterTypes,1)];
+    orients = cell(numAsterTypes,1);
+    for idx = 1:numAsterTypes
+        orients{idx} = 2*pi*rand(asterTypes(idx),1);
+    end
+    save(fullfile(saveDir,dataSubfolder,"individualAsters.mat"), ...
+        'centers','orients','l','numAsterTypes','asterTypes')
+else
+    load(fullfile(saveDir,dataSubfolder,"individualAsters.mat"), ...
+        'centers','orients','l','numAsterTypes','asterTypes')
+end
+
+astralNumIndividual = figure(4); clf;
+set(astralNumIndividual,'Units','centimeters','Position',[1,1,20,4])
+set(gca,'Color','k')
+axis equal
+axis padded
+hold on
+for idx = 1:numAsterTypes
+    for jdx = 1:asterTypes(idx)
+        plot(centers(idx,1) + (0:1)*l*cos(orients{idx}(jdx)), ...
+            centers(idx,2) + (0:1)*l*sin(orients{idx}(jdx)), ...
+            '-','LineWidth',2*filamentWidth,'Color','w')
+        plot(centers(idx,1),centers(idx,2),'.r','MarkerSize',2*centerMarkSz)
+    end
+end
+hold off
+xticks([])
+yticks([])
+exportgraphics(astralNumIndividual,fullfile(saveDir,figSubfolder, ...
+    "astral_num_ex" + figFiletype),'ContentType','vector')
