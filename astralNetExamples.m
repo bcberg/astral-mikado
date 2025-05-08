@@ -236,21 +236,27 @@ else
 end
 
 astralNumIndividual = figure(4); clf;
-set(astralNumIndividual,'Units','centimeters','Position',[1,1,20,4])
+set(astralNumIndividual,'Units','centimeters','Position',[1,1,20,5])
 set(gca,'Color','k')
 axis equal
-axis padded
+% axis padded
 hold on
 for idx = 1:numAsterTypes
     for jdx = 1:asterTypes(idx)
         plot(centers(idx,1) + (0:1)*l*cos(orients{idx}(jdx)), ...
             centers(idx,2) + (0:1)*l*sin(orients{idx}(jdx)), ...
             '-','LineWidth',2*filamentWidth,'Color','w')
-        plot(centers(idx,1),centers(idx,2),'.r','MarkerSize',2*centerMarkSz)
+        if asterTypes(idx) > 1
+            plot(centers(idx,1),centers(idx,2),'.r','MarkerSize',2*centerMarkSz);
+        end
+        text(centers(idx,1),-1.5,num2str(asterTypes(idx)),'Color','w', ...
+            'FontSize',18,'FontName','CMU Serif')
     end
 end
+text(0.75,-1.5,"$a_n = $",'Interpreter','latex','FontSize',18,'Color','w')
 hold off
 xticks([])
+ylim([-1.75,1])
 yticks([])
 exportgraphics(astralNumIndividual,fullfile(saveDir,figSubfolder, ...
     "astral_num_ex" + figFiletype),'ContentType','vector')
