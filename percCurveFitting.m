@@ -9,9 +9,9 @@ set(0,'defaultLegendInterpreter','latex')
 %% Importing data
 
 % Ubuntu path
-% saveDir = "~/Documents/astral-mikado-data/";
+saveDir = "~/Documents/astral-mikado-data/";
 % Windows path
-saveDir = "C:\Users\bcber\Documents\astral-mikado-data";
+% saveDir = "C:\Users\bcber\Documents\astral-mikado-data";
 matFileSubDir = "mat_files";
 figSubDir = "exploratory_figures";
 filePattern = "percProbs_l%02i_D%02i";
@@ -88,7 +88,7 @@ end
 % Gompertz model has form g(x) = d + (a-d)e^{-e^{-b*(x-c)}}
 % Currently fixing a=1, d=0
 
-makeSigFitsFig = true;
+makeSigFitsFig = false;
 if makeSigFitsFig
     sigFits = cell(numNetTypes,numPercTypes,numD);
     fitopts_logis = fitoptions('Method','NonlinearLeastSquares','Lower', ...
@@ -177,7 +177,7 @@ if makeSigFitsFig
             sigFitsFig = clf(sigFitsFig);
         end
         set(sigFitsFig,'units','inches','Position',[1,1,8.5,11], ...
-            'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
+            'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3, ...
             'visible','off')
     end
     save(fullfile(saveDir,matFileSubDir,'percMCRG_paramFits_tzOnly.mat'), ...
@@ -190,8 +190,9 @@ end
 makeSmsplFitsFig = true;
 if makeSmsplFitsFig
     smsplFits = cell(numNetTypes,numPercTypes,numD);
+    percDataUsed = cell(numNetTypes,numPercTypes,numD);
     smsplFitsFig = figure('units','inches','Position',[1,1,8.5,11]); clf;
-    set(smsplFitsFig,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',3, ...
+    set(smsplFitsFig,'defaultLineLineWidth',0.4,'defaultLineMarkerSize',4, ...
         'visible','off')
     C = colororder("gem");
     for idx = 1:numNetTypes
@@ -218,14 +219,15 @@ if makeSmsplFitsFig
                             lowerLim = lowerLim + 1;
                         end
                     else
-                        lowerLim = greaterThanZero - 1;
+                        lowerLim = max([greaterThanZero - 3,1]);
                     end
-                    % upper limit is where the curve increases to 1 for the
-                    % first time, otherwise the last data point
+                    % upper limit is just past where the curve increases 
+                    % to 1 for the first time, otherwise last data point
                     if any(y==1)
                         upperLimOptions = find(y==1);
                         reachedOne = find(upperLimOptions>lowerLim,1);
-                        upperLim = upperLimOptions(reachedOne);
+                        upperLim = min([upperLimOptions(reachedOne) + 2,...
+                            length(y)]);
                     else
                         upperLim = length(y);
                     end
@@ -235,6 +237,7 @@ if makeSmsplFitsFig
                     %     'smoothingspline','SmoothingParam',0.99);
                     smsplFits{idx,jdx,kdx} = fit(x,y, ...
                         'smoothingspline');
+                    percDataUsed{idx,jdx,kdx} = cat(2,x,y);
                     l = plot(smsplFits{idx,jdx,kdx},x,y,'*');
                     [l.Color] = deal(C(kdx,:));
                     legendLabels{2*kdx - 1} = sprintf('D=%2.1f data', ...
@@ -271,9 +274,9 @@ if makeSmsplFitsFig
             smsplFitsFig = clf(smsplFitsFig);
         end
         set(smsplFitsFig,'units','inches','Position',[1,1,8.5,11], ...
-            'defaultLineLineWidth',0.5,'defaultLineMarkerSize',3, ...
+            'defaultLineLineWidth',0.4,'defaultLineMarkerSize',4, ...
             'visible','off')
     end
     save(fullfile(saveDir,matFileSubDir,'percMCRG_nonparamFits_tzOnly.mat'), ...
-        'smsplFits','Dlist')
+        'smsplFits','Dlist','percDataUsed')
 end
