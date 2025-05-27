@@ -84,7 +84,7 @@ end
 
 meanPlot = figure(1); clf;
 set(meanPlot,'units','centimeters','Position',[1,1,10,10])
-errorbar(an_list,means_by_net_type,ci_95,"both",'LineWidth',1)
+errorbar(an_list,means_by_net_type,ci_95,"vertical",'LineWidth',1)
 xticks([1,4:4:24])
 xlabel("Astral number $a_n$")
 ylim([3,4])
